@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1835" width="1800" height="1835" role="img" aria-labelledby="title">
+<title id="title">这条命令会运行哪个文件？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1835" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A01  这条命令会运行哪个文件？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A01先确定运行哪份脚本；A08文件读写与A09环境核对继续使用工作目录和路径关系。</text>
+<rect x="64" y="189.0" width="1672" height="88" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">编辑器打开前台 hello.py，命令却输出 BACK FILE：先把当前目录与脚本路径合成实际目标，再用文件独有输出核对。查看命令是取证工具，不是要先背的主</text>
+<text x="88" y="253.0" font-size="23" fill="#286f64" font-weight="700">线。</text>
+<text x="64" y="310.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="310.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="338.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="381.0" font-size="28" fill="#286f64" font-weight="700">运行入口、路径与目标文件</text>
+<polyline points="900.0,403.0 900.0,432.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,432.0 1466.3333333333335,432.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,432.0 333.6666666666667,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="463.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="497.0" font-size="23" fill="#286f64" font-weight="700">执行角色</text>
+<polyline points="73.0,520.0 73.0,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,520.0 73.0,562.0 91.0,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="540.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="570.0" font-size="21" fill="#233734" font-weight="700">脚本 .py</text>
+<text x="103.0" y="600.0" font-size="18" fill="#53635f" font-weight="400">保存Python代码的文本文件；编辑器打开它，不等于命令已</text>
+<text x="103.0" y="625.0" font-size="18" fill="#53635f" font-weight="400">经选择或执行它。</text>
+<polyline points="73.0,562.0 73.0,691.0 91.0,691.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="669.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="699.0" font-size="21" fill="#233734" font-weight="700">终端</text>
+<text x="103.0" y="729.0" font-size="18" fill="#53635f" font-weight="400">提供输入命令和查看结果的界面；屏幕出现某文件的输出，</text>
+<text x="103.0" y="754.0" font-size="18" fill="#53635f" font-weight="400">不说明当前位置改变。</text>
+<polyline points="73.0,691.0 73.0,820.0 91.0,820.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="798.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="828.0" font-size="21" fill="#233734" font-weight="700">系统命令入口（PowerShell）</text>
+<text x="103.0" y="858.0" font-size="18" fill="#53635f" font-weight="400">解释命令、找到并启动Python；直接启动时让子进程沿用当</text>
+<text x="103.0" y="883.0" font-size="18" fill="#53635f" font-weight="400">前工作目录。</text>
+<polyline points="73.0,820.0 73.0,949.0 91.0,949.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="927.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,935.0 92.0,1054.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="957.0" font-size="21" fill="#286f64" font-weight="700">执行代码的解释器（Python）</text>
+<text x="103.0" y="987.0" font-size="16" fill="#286f64" font-weight="400">执行程序</text>
+<text x="103.0" y="1009.0" font-size="18" fill="#233734" font-weight="400">取得脚本路径和工作目录，再打开文件执行代码；启动成功</text>
+<text x="103.0" y="1034.0" font-size="18" fill="#233734" font-weight="400">不等于脚本已打开。</text>
+<polyline points="900.0,432.0 900.0,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="463.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="497.0" font-size="23" fill="#286f64" font-weight="700">文件定位</text>
+<polyline points="639.3333333333334,520.0 639.3333333333334,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,520.0 639.3333333333334,562.0 657.3333333333334,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="540.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,548.0 658.3333333333334,667.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="570.0" font-size="21" fill="#286f64" font-weight="700">当前工作目录</text>
+<text x="669.3333333333334" y="600.0" font-size="16" fill="#286f64" font-weight="400">定位条件</text>
+<text x="669.3333333333334" y="622.0" font-size="18" fill="#233734" font-weight="400">当前进程用于解释相对路径的出发位置；可以不同于编辑器</text>
+<text x="669.3333333333334" y="647.0" font-size="18" fill="#233734" font-weight="400">文件或脚本所在目录。</text>
+<polyline points="639.3333333333334,562.0 639.3333333333334,713.0 657.3333333333334,713.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="691.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,699.0 658.3333333333334,818.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="721.0" font-size="21" fill="#286f64" font-weight="700">相对路径与 .</text>
+<text x="669.3333333333334" y="751.0" font-size="16" fill="#286f64" font-weight="400">路径写法</text>
+<text x="669.3333333333334" y="773.0" font-size="18" fill="#233734" font-weight="400">点号表示当前目录；相对路径要结合出发位置才能确定目</text>
+<text x="669.3333333333334" y="798.0" font-size="18" fill="#233734" font-weight="400">标，便于保持项目内关系。</text>
+<polyline points="639.3333333333334,713.0 639.3333333333334,864.0 657.3333333333334,864.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="842.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="872.0" font-size="21" fill="#233734" font-weight="700">绝对路径</text>
+<text x="669.3333333333334" y="902.0" font-size="18" fill="#53635f" font-weight="400">从盘符写清完整目标，不依赖当前位置补全；文件搬到其他</text>
+<text x="669.3333333333334" y="927.0" font-size="18" fill="#53635f" font-weight="400">位置后地址也需调整。</text>
+<polyline points="639.3333333333334,864.0 639.3333333333334,993.0 657.3333333333334,993.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="971.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="1001.0" font-size="21" fill="#233734" font-weight="700">切换工作目录（Set-Location）</text>
+<text x="669.3333333333334" y="1031.0" font-size="18" fill="#53635f" font-weight="400">改变当前PowerShell会话后续工作的出发位置；不移动文</text>
+<text x="669.3333333333334" y="1056.0" font-size="18" fill="#53635f" font-weight="400">件，也不修改其内容。</text>
+<polyline points="1466.3333333333335,432.0 1466.3333333333335,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="463.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="497.0" font-size="23" fill="#286f64" font-weight="700">定位与启动核对</text>
+<polyline points="1205.6666666666667,520.0 1205.6666666666667,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,520.0 1205.6666666666667,562.0 1223.6666666666667,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="540.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="570.0" font-size="21" fill="#233734" font-weight="700">读取当前目录（Get-Location）</text>
+<text x="1235.6666666666667" y="600.0" font-size="18" fill="#53635f" font-weight="400">查看PowerShell的当前位置，给相对路径推导提供依据；不</text>
+<text x="1235.6666666666667" y="625.0" font-size="18" fill="#53635f" font-weight="400">负责选择编辑器文件。</text>
+<polyline points="1205.6666666666667,562.0 1205.6666666666667,691.0 1223.6666666666667,691.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="669.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="699.0" font-size="21" fill="#233734" font-weight="700">核对完整路径（Resolve-Path）</text>
+<text x="1235.6666666666667" y="729.0" font-size="18" fill="#53635f" font-weight="400">核对已存在目标的完整路径；不运行脚本，也不是每次启动</text>
+<text x="1235.6666666666667" y="754.0" font-size="18" fill="#53635f" font-weight="400">的必经步骤。</text>
+<polyline points="1205.6666666666667,691.0 1205.6666666666667,820.0 1223.6666666666667,820.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="798.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="828.0" font-size="21" fill="#233734" font-weight="700">脚本打不开（can&#x27;t open file）</text>
+<text x="1235.6666666666667" y="858.0" font-size="18" fill="#53635f" font-weight="400">Python已启动但目标脚本未打开；先核对报错中的完整路</text>
+<text x="1235.6666666666667" y="883.0" font-size="18" fill="#53635f" font-weight="400">径，再检查文件内容。</text>
+<polyline points="1205.6666666666667,820.0 1205.6666666666667,949.0 1223.6666666666667,949.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="927.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="957.0" font-size="21" fill="#233734" font-weight="700">查找命令与版本（Get-Command / --version）</text>
+<text x="1235.6666666666667" y="987.0" font-size="18" fill="#53635f" font-weight="400">分别查看python命令指向的入口与尝试显示版本；用于区分</text>
+<text x="1235.6666666666667" y="1012.0" font-size="18" fill="#53635f" font-weight="400">入口问题和脚本定位问题。</text>
+<text x="64" y="1120.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1120.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1145.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1178.0" font-size="21" fill="#233734" font-weight="700">当前工作目录</text>
+<rect x="750" y="1145.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1178.0" font-size="21" fill="#233734" font-weight="700">相对路径与 .</text>
+<polyline points="538,1182.0 736,1182.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1182.0 726.9955289764732,1186.3496553411123 726.9955289764732,1177.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1170.0" font-size="17" fill="#286f64" font-weight="400">补全出发位置</text>
+<text x="80" y="1228.0" font-size="18" fill="#53635f" font-weight="400">同一段相对路径在不同目录下可能指向不同文件。</text>
+<rect x="64" y="1268.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1301.2" font-size="21" fill="#233734" font-weight="700">系统命令入口（PowerShell）</text>
+<rect x="750" y="1268.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1301.2" font-size="21" fill="#233734" font-weight="700">执行代码的解释器（Python）</text>
+<polyline points="538,1305.2 736,1305.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1305.2 726.9955289764732,1309.5496553411124 726.9955289764732,1300.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1293.2" font-size="17" fill="#286f64" font-weight="400">启动并传入路径</text>
+<text x="80" y="1351.2" font-size="18" fill="#53635f" font-weight="400">Python负责打开脚本，不能误写为shell自动解析Python内部所有相对文件路径。</text>
+<rect x="64" y="1391.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1424.4" font-size="21" fill="#233734" font-weight="700">切换工作目录（Set-Location）</text>
+<rect x="750" y="1391.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1424.4" font-size="21" fill="#233734" font-weight="700">当前工作目录</text>
+<polyline points="538,1428.4 736,1428.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1428.4 726.9955289764732,1432.7496553411124 726.9955289764732,1424.0503446588878" fill="#286f64"/>
+<text x="620.0" y="1416.4" font-size="17" fill="#286f64" font-weight="400">改变</text>
+<text x="80" y="1474.4" font-size="18" fill="#53635f" font-weight="400">运行另一目录内的脚本，不会自动完成这次目录切换。</text>
+<rect x="64" y="1514.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1547.6000000000001" font-size="21" fill="#233734" font-weight="700">脚本打不开（can&#x27;t open file）</text>
+<rect x="750" y="1514.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1547.6000000000001" font-size="21" fill="#233734" font-weight="700">核对完整路径（Resolve-Path）</text>
+<polyline points="538,1551.6000000000001 736,1551.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1551.6000000000001 726.9955289764732,1555.9496553411125 726.9955289764732,1547.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1539.6000000000001" font-size="17" fill="#286f64" font-weight="400">指向定位核对</text>
+<text x="80" y="1597.6000000000001" font-size="18" fill="#53635f" font-weight="400">先确认目标存在且位置正确；未打开的脚本还没有执行其内部代码。</text>
+<rect x="64" y="1637.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1670.8000000000002" font-size="21" fill="#233734" font-weight="700">绝对路径</text>
+<rect x="750" y="1637.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1670.8000000000002" font-size="21" fill="#233734" font-weight="700">执行代码的解释器（Python）</text>
+<polyline points="538,1674.8000000000002 736,1674.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1674.8000000000002 726.9955289764732,1679.1496553411125 726.9955289764732,1670.4503446588878" fill="#286f64"/>
+<text x="577.5" y="1662.8000000000002" font-size="17" fill="#286f64" font-weight="400">写全地址后交给</text>
+<text x="80" y="1720.8000000000002" font-size="18" fill="#53635f" font-weight="400">绝对路径不靠当前目录补全脚本地址；解释器沿用的工作目录仍可与脚本目录不同。</text>
+<polyline points="64,1779.0000000000002 1736,1779.0000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1809.0000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：A01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

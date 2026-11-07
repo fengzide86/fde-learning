@@ -1,0 +1,67 @@
+{
+  "id": "guide-D",
+  "title": "外部依赖可靠性：导读与查用",
+  "html": "<p>合作方已经创建维修案件，回复却在途中丢失。本地程序只看见一次超时：现在说“失败”，可能与对方已经完成的事实冲突；再发一次，又可能安排两次维修。</p>\n<p>外部依赖把问题从“我的函数算得对不对”推进到“另一套系统做了什么，我有什么证据”。本册学习怎样识别失败、限制等待、保护重复传输，并在不能确认时留下准确状态和下一处理者。它们共同决定：程序可以向用户承诺到哪一步。</p>\n<h2 id=\"guide-d-s1\">第一次只看这里</h2>\n<p>直接进入 D01。第一次只追一次受控调用：成功或失败发生在哪一层，本地程序怎样保持诚实。</p>\n<p>本册的详细关系图、章节路线和查用说明放在全书后部。遇到‘这一步和前后哪里相连’时再回看，不需要在第一轮先读完。</p>\n<h2 id=\"guide-d-s2\">全书收束｜外部依赖可靠性的知识关系总览</h2>\n<p>外部系统可能慢、出错、改变字段，或完成以后没有把回复送回来。本地无法控制这些事情始终不发生，但可以控制下一次是否继续、怎样避免重复、自己保存什么，以及向用户承诺什么。</p>\n<p>现在可以把本册知识按它们保护的关系重新放在一起：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">取得结果\n├─ 本地 validation：不符合约定的输入先停在本地\n├─ adapter：构造外部请求，检查 status 和内容，交回明确结果\n└─ fake + MockTransport：重复制造外部返回与失败\n\n决定下一步\n├─ timeout：限制某次等待\n├─ deadline + attempt limit：限制继续等待与调用的机会\n├─ backoff：下一次何时开始，仍花同一份时间预算\n└─ intent + 不可变输入 + key + 对方持久记录：重复是否安全\n\n保存与表达\n├─ 本地 transaction：完整保存意图、确认或人工接管\n├─ 日志：关联某次处理的尝试与失败证据\n├─ fallback：提供来源、时间和用途明确的有限参考\n└─ manual_review：把未知结果交给有权限的下一处理者\n</code></pre></div>\n<p>这些工具不是沿着一条固定流水线各用一次。失败类别影响是否重试，重试又需要预算与幂等保护；内容失败影响本地确认，确认写入失败又会回到持久意图的恢复；人工也必须遵守相同的业务身份和权限。</p>\n<h3 id=\"guide-d-s3\">最容易做错的判断，都在相邻责任之间</h3>\n<table>\n<thead>\n<tr>\n<th>现场看见什么</th>\n<th>应当找哪种关系</th>\n<th>近邻工具为什么不能代替</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>本地 422，却仍发出外部调用</td>\n<td>本地输入应先于业务执行</td>\n<td>外部没有效果不等于零调用</td>\n</tr>\n<tr>\n<td>合作方 500，本地 502</td>\n<td>区分两次 HTTP 交换</td>\n<td>最后一个状态码不能表示整个经过</td>\n</tr>\n<tr>\n<td>单次 timeout 一秒，整项等待很长</td>\n<td>总 deadline、次数与 backoff</td>\n<td>单次 timeout 不计算其他尝试</td>\n</tr>\n<tr>\n<td>401、坏字段反复出现</td>\n<td>判断错误是否有理由再次尝试</td>\n<td>更多 retry 不能修复凭据或解释字段</td>\n</tr>\n<tr>\n<td>timeout 后不敢再次创建</td>\n<td>稳定 intent/key 与对方结果记录</td>\n<td>request ID 和“已发送”日志不能去重</td>\n</tr>\n<tr>\n<td>旧 pending 只剩一个摘要</td>\n<td>完整可重放输入与合同版本</td>\n<td>摘要不能还原请求</td>\n</tr>\n<tr>\n<td>页面显示已创建，但没有可用编号</td>\n<td>结果合同和本地确认提交</td>\n<td>HTTP 200、旧容量或猜测不能补出事实</td>\n</tr>\n<tr>\n<td>队列写了人工处理，却无人能继续</td>\n<td>工作项身份、权限与下一动作</td>\n<td>manual_review 名称不能代替真实接管</td>\n</tr>\n</tbody>\n</table>\n<p>选择工具时先问缺了哪份证据。例如已经拿到合法 provider ID，但本地更新失败，应看本地提交和原 intent 恢复；不能把所有失败都交给网络 retry。反过来，本地事务完整也不能证明远端没有重复创建。</p>\n<h3 id=\"guide-d-s4\">同一个案件，为什么需要几个不同编号？</h3>\n<p>LOCAL-0042 指出业务对象。OUT-0042-V1 指出为它发起的这一次外部动作，原 key 绑定该动作。R-501 或 R-502 指出先后两次本地处理，供日志关联。P-0001 指出合作方最终保存的结果。</p>\n<p>重复处理同一意图时，request ID 可以变化，intent/key 和冻结输入不变。真实业务内容变化时，新建 intent/key，旧记录保留。provider 的结果编号只能通过它的合同取得，不从 local_case_id 的数字推算。</p>\n<p>这也解释为何公开工单 T-42 不会自动变成 LOCAL-0042：两者属于不同示例和标识空间。跨册连接的是责任与数据流，不是默认共享一份数据库。</p>\n<h3 id=\"guide-d-s5\">用一次失败把整条关系闭合</h3>\n<p>从尚未处理的 LOCAL-0042 开始，本地先把 OUT-0042-V1、partner-case-v1、canonical 输入、SHA-256 摘要、key 和 pending 一起提交，再开始网络调用。</p>\n<p>第一次 request 到达 provider，它保存 key 与结果 P-0001，提交后丢失回复。本地得到 timeout，只知道这次没有取得可用结果。策略检查这个 provider 的重放合同、次数与剩余预算；还允许继续时，第二次仍读取原输入和 key。provider 返回 P-0001，adapter 校验字段，本地确认提交后才向用户公开成功。</p>\n<p>这里最有解释力的结果是“2 次调用，1 次效果，partner_confirmed”。如果第二次仍未能得到可用结果，则停止自动路线，保存 manual_review 和接管工作项；provider 效果仍可能是 1。没有得到成功回复，不能把已有效果擦成 0。</p>\n<p>如果程序在第一次调用后退出，后来另一请求遇到 pending，必须先恢复完整输入和合同版本，并核对当前业务内容。如果资料不足，不能由摘要猜回请求；如果内容已变，不能继续拿旧 key 表示新意图。时间预算通常属于当前一次处理，业务身份却需要跨处理保留，这是两个不同寿命的关系。</p>\n<h3 id=\"guide-d-s6\">什么需要真正理解，什么可以遇到时查？</h3>\n<p>应当能独立解释四件事：失败最早在哪；当前证据是否足以再次传输；重新传输如何保持同一意图；最后哪些状态允许写成成功。它们会在支付、通知、派单、身份核验和模型调用中反复出现，不能只依赖看见代码才想起。</p>\n<p>构造测试场景、查看调用数和效果数、沿 request ID 找日志、确认停止条件，则会在实际运行中逐渐用顺。每个 provider 的精确 header、key 有效期、429/5xx 许可、SDK 参数以及配置名称，适合在接入时查官方合同，并用独立实验验证。记住别家服务的 retry 清单，不能替代这一步。</p>\n<p>复杂平台暂时没有成为本册的前提。只有已经出现可复现的并发重复，才进一步研究竞争与唯一性；只有需要可靠异步投递，才研究队列和 outbox；只有持续故障正在耗尽共享资源，才研究熔断和隔离。新机制应回到原来的调用、效果、本地状态和恢复矩阵，证明它解决了实际问题。</p>\n<h3 id=\"guide-d-s7\">模型调用会把哪条边界再往前推？</h3>\n<p>模型 provider 也可能超时、不可用、返回坏格式，仍需要本册的时间、秘密、重试和人工出口。但即使它返回 200，JSON 字段都正确，也可能没有事实依据或提出未获授权的动作。</p>\n<p>E 册因此从“取得一个格式合法的外部结果”继续，区分模型提出的内容、应用认可的用途、资料依据、工具权限和人工确认。D 册的 partner_confirmed 与 E 册的 needs_human 等状态属于不同对象，不能只因都表示“结果”就混在一起。</p>\n<h2 id=\"guide-d-s8\">来源与查用入口</h2>\n<p>本册的业务输入、fake、状态名与时间数字为自包含实验合同。协议与工具行为可以从下面官方入口找回：</p>\n<ul>\n<li><a href=\"https://www.rfc-editor.org/rfc/rfc9110.html\" target=\"_blank\" rel=\"noopener noreferrer\">RFC 9110：HTTP Semantics</a>：安全、幂等方法、自动重试与 202 语义，属于固定协议文本。</li>\n<li>HTTPX 的 <a href=\"https://www.python-httpx.org/advanced/timeouts/\" target=\"_blank\" rel=\"noopener noreferrer\">Timeouts</a>、<a href=\"https://www.python-httpx.org/exceptions/\" target=\"_blank\" rel=\"noopener noreferrer\">Exceptions</a> 和 <a href=\"https://www.python-httpx.org/advanced/transports/\" target=\"_blank\" rel=\"noopener noreferrer\">Transports</a>：阶段等待、异常层级与替换传输。</li>\n<li>FastAPI 的 <a href=\"https://fastapi.tiangolo.com/tutorial/testing/\" target=\"_blank\" rel=\"noopener noreferrer\">Testing</a> 与 <a href=\"https://fastapi.tiangolo.com/tutorial/handling-errors/\" target=\"_blank\" rel=\"noopener noreferrer\">Handling Errors</a>：进程内验证与公开错误处理。</li>\n<li>Python 的 <a href=\"https://docs.python.org/3/library/time.html#time.monotonic\" target=\"_blank\" rel=\"noopener noreferrer\">time.monotonic</a> 和 <a href=\"https://docs.python.org/3/library/sqlite3.html\" target=\"_blank\" rel=\"noopener noreferrer\">sqlite3</a>：经过时间与本地持久状态。</li>\n<li>Pydantic 的 <a href=\"https://docs.pydantic.dev/latest/concepts/pydantic_settings/\" target=\"_blank\" rel=\"noopener noreferrer\">Settings</a> 与 <a href=\"https://docs.pydantic.dev/latest/api/types/#pydantic.types.SecretStr\" target=\"_blank\" rel=\"noopener noreferrer\">SecretStr</a>：环境入口与普通显示遮盖。</li>\n<li>OWASP 的 <a href=\"https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html\" target=\"_blank\" rel=\"noopener noreferrer\">Logging Cheat Sheet</a> 和 <a href=\"https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html\" target=\"_blank\" rel=\"noopener noreferrer\">Secrets Management Cheat Sheet</a>：记录范围与秘密管理。</li>\n<li>AWS Builders' Library 的 <a href=\"https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/\" target=\"_blank\" rel=\"noopener noreferrer\">Timeouts, retries and backoff with jitter</a>：重试放大、等待与副作用的工程实践。</li>\n</ul>\n<p>除固定 RFC 外，上述网页是持续更新的 live 文档，升级或真实接入时需要重新核对。固定依赖文件用于复现配套，不表示其中版本永久最新。<code>Idempotency-Key</code> 在本册是 fake 明确实现的 header 合同；无论相关标准化工作处于什么阶段，都不能由这个名称推定任意目标 provider 已支持相同的保存期限、冲突规则或恢复能力。</p>\n<h2 id=\"guide-d-s9\">本册总览（需要时再回看）</h2>\n<p>这里保留整册地图、章节关系和查用入口；第一次阅读不需要先读完。</p>\n<h2 id=\"guide-d-s10\">本册知识结构总览</h2>\n<p>先看几个相互配合的问题。章节顺序是理解顺序；下图中的分组不是互相隔绝的程序层。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">一个步骤需要另一套系统完成\n│\n├─ 回来的东西能不能使用？\n│  ├─ 输入是否符合约定、回复是否收到且内容合用         D01\n│  └─ 用可控替身重复制造这些结果                      D01\n│\n├─ 没得到可用结果，下一次还能做什么？\n│  ├─ 时间和次数是否还够                              D02\n│  ├─ 再传一次，会不会再做一遍                        D03\n│  └─ 无法安全继续时，怎样说明未完成、交给人            D04\n│\n└─ 怎样证明这些决定在同一程序里成立？\n   └─ 分别核对调用、外部效果、本地状态和运行线索        D05\n</code></pre></div>\n<p>限制等待与避免重复，是两种会同时需要的保护。等待时间很短的请求也可能重复创建；不会重复创建的请求也可能一直占用资源。把二者结合起来，才有理由决定是否再次尝试。人工接管接住的是这组自动决定无法安全完成的部分，并不把未知结果改成成功。</p>\n<table>\n<thead>\n<tr>\n<th>容易混在一起的两件事</th>\n<th>本册怎样分开</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>收到 HTTP 回复与业务已完成</td>\n<td>状态码后面还要检查内容，并确认它能代表当前动作</td>\n</tr>\n<tr>\n<td>超时与对方没做</td>\n<td>超时描述调用者没有及时取得结果，对方可能已经执行</td>\n</tr>\n<tr>\n<td>再次发送与再次产生效果</td>\n<td>同一意图可以多次传输，但需要对方识别重复并返回原结果</td>\n</tr>\n<tr>\n<td>本地事务与远端事务</td>\n<td>本地撤回不能自动撤回另一套系统的提交</td>\n</tr>\n<tr>\n<td>测试通过与真实供应商可用</td>\n<td>可控测试证明指定情形下的本地行为，真实环境另有证据</td>\n</tr>\n</tbody>\n</table>\n<p>第一次阅读不必背这张表。先记住实际追踪的三份事实：<strong>调用了几次，对方做了几次，本地最后保存了什么。</strong> 后面的具体例子会让这些差别逐一可见。</p>\n<h3 id=\"guide-d-s11\">这一册接在数据库的什么位置？</h3>\n<p>本地已经能保存业务对象和处理记录。现在其中一步要交给合作方：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">本地输入 → 保存待执行意图 → 调用合作方 → 检查结果 → 更新本地状态\n                               │\n                               └─ 合作方拥有自己的持久数据\n</code></pre></div>\n<p>本地数据库与合作方数据库不是一个事务。请求在两边之间流动，事实由两边分别保存。程序必须允许一种暂时不一致：对方已有结果，本地还不能确认它。</p>\n<p>本册的本地案件写作 <code>LOCAL-0042</code>，问题是打印机离线。它不是公开工单号 <code>T-42</code> 的另一种拼法；不同示例程序没有自动共享数据库。稍后出现的 <code>OUT-*</code> 表示为本地案件发起的一次外部动作，<code>P-*</code> 表示合作方产生的结果。D 与 E 即使沿用 LOCAL-0042，配套程序的状态也各自独立。</p>\n<p>前两章只做读取：查询邮编服务范围、查询某日容量。它们让我们先看清失败和预算，不提前假设写请求可以随意重试。第三章才创建案件，第四章处理未确认的出口，第五章把各项关系放进一个可运行程序。</p>\n<h3 id=\"guide-d-s12\">实验怎样保持可重复？</h3>\n<p>本册所有程序都使用合成数据与可控替身，不连接真实 provider。provider 是提供外部能力的系统；fake 是模拟它行为的本地程序。fake 可以准确地“创建完结果再丢回复”，让同一条失败反复出现。</p>\n<p>读到完整代码时，先沿输入预测结果，再运行核对。需要熟悉的是判断失败位置、计算剩余预算、识别稳定业务意图和读回状态；整段环境配置与字段拼写可以查用。仅记得 timeout、retry 等名称，还不足以判断一次创建能否再次发送。</p>\n<p>所有需要保存脚本、建环境或修改状态的操作，先从资料包根目录的 <code>01_配套代码_A-E</code> 进入 <code>examples → d_dependency_reliability</code>，把 <code>partner-case</code> 整个复制到自选的独立实验目录。后文新增的章内脚本也保存在这个实验副本中。参考配套保留原样，实验可以随时从新副本重做；程序自己的数据库另在系统临时目录创建。</p>\n",
+  "toc": [
+    {
+      "id": "guide-d-s1",
+      "text": "第一次只看这里",
+      "level": 2
+    },
+    {
+      "id": "guide-d-s2",
+      "text": "全书收束｜外部依赖可靠性的知识关系总览",
+      "level": 2
+    },
+    {
+      "id": "guide-d-s3",
+      "text": "最容易做错的判断，都在相邻责任之间",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s4",
+      "text": "同一个案件，为什么需要几个不同编号？",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s5",
+      "text": "用一次失败把整条关系闭合",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s6",
+      "text": "什么需要真正理解，什么可以遇到时查？",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s7",
+      "text": "模型调用会把哪条边界再往前推？",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s8",
+      "text": "来源与查用入口",
+      "level": 2
+    },
+    {
+      "id": "guide-d-s9",
+      "text": "本册总览（需要时再回看）",
+      "level": 2
+    },
+    {
+      "id": "guide-d-s10",
+      "text": "本册知识结构总览",
+      "level": 2
+    },
+    {
+      "id": "guide-d-s11",
+      "text": "这一册接在数据库的什么位置？",
+      "level": 3
+    },
+    {
+      "id": "guide-d-s12",
+      "text": "实验怎样保持可重复？",
+      "level": 3
+    }
+  ]
+}

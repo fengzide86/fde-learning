@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1697" width="1800" height="1697" role="img" aria-labelledby="title">
+<title id="title">应用读库与可追踪结果</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1697" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C05  应用读库与可追踪结果</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">将 C01–C04 的结果与结构交给 Python 应用；C06沿相同读取合同测量与优化，不能用提速掩盖错行。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">固定查询接收客户编号并交回结果；参数绑定保护查询结构，访问权限决定能看谁，日志解释这次读取。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">读取合同、参数边界与运行观察</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 1537.125,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 262.875,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">读取入口与结果形状</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,675.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">固定读取合同</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">明确客户范围、取消过滤、列名及稳定顺</text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">序；本章独立小库的直接关联不等于C04</text>
+<text x="103.0" y="655.0" font-size="18" fill="#233734" font-weight="400">已迁移。</text>
+<polyline points="73.0,567.0 73.0,721.0 91.0,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="699.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="729.0" font-size="21" fill="#233734" font-weight="700">可复用读取定义（view）</text>
+<text x="103.0" y="759.0" font-size="16" fill="#286f64" font-weight="400">保存的查询定义</text>
+<text x="103.0" y="781.0" font-size="18" fill="#53635f" font-weight="400">保存可复用的查询定义而非长期数据副</text>
+<text x="103.0" y="806.0" font-size="18" fill="#53635f" font-weight="400">本；不自动排序、不授予权限，也不自动</text>
+<text x="103.0" y="831.0" font-size="18" fill="#53635f" font-weight="400">表示未来预约。</text>
+<polyline points="687.625,437.0 687.625,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="502.0" font-size="23" fill="#286f64" font-weight="700">程序与数据库交接（Python）</text>
+<polyline points="497.75,525.0 497.75,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,525.0 497.75,567.0 515.75,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="575.0" font-size="21" fill="#233734" font-weight="700">数据库连接与结果对象（engine / connection / Result）</text>
+<text x="527.75" y="605.0" font-size="18" fill="#53635f" font-weight="400">engine管理连接，connection执行SQL，</text>
+<text x="527.75" y="630.0" font-size="18" fill="#53635f" font-weight="400">Result映射列名后转普通字典；修改字典</text>
+<text x="527.75" y="655.0" font-size="18" fill="#53635f" font-weight="400">不自动改表。</text>
+<polyline points="497.75,567.0 497.75,721.0 515.75,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="729.0" font-size="21" fill="#233734" font-weight="700">配置与连接生命周期</text>
+<text x="527.75" y="759.0" font-size="18" fill="#53635f" font-weight="400">路径决定哪份库，with归还连接，dispose</text>
+<text x="527.75" y="784.0" font-size="18" fill="#53635f" font-weight="400">释放空闲资源；每条SQLite新连接都需配</text>
+<text x="527.75" y="809.0" font-size="18" fill="#53635f" font-weight="400">置外键。</text>
+<polyline points="1112.375,437.0 1112.375,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">查询结构与访问权限（SQL）</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">绑定参数</text>
+<text x="952.5" y="605.0" font-size="16" fill="#286f64" font-weight="400">输入值传递</text>
+<text x="952.5" y="627.0" font-size="18" fill="#233734" font-weight="400">将客户输入始终作为一个值传入，保护</text>
+<text x="952.5" y="652.0" font-size="18" fill="#233734" font-weight="400">SQL结构；占位符不能承载表名、列名或</text>
+<text x="952.5" y="677.0" font-size="18" fill="#233734" font-weight="400">排序语法。</text>
+<polyline points="922.5,567.0 922.5,743.0 940.5,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="721.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="751.0" font-size="21" fill="#233734" font-weight="700">授权与有限结构选项</text>
+<text x="952.5" y="781.0" font-size="18" fill="#53635f" font-weight="400">可信身份决定可读客户，页面排序选项映</text>
+<text x="952.5" y="806.0" font-size="18" fill="#53635f" font-weight="400">射固定查询；参数绑定和view都不自行提</text>
+<text x="952.5" y="831.0" font-size="18" fill="#53635f" font-weight="400">供授权。</text>
+<polyline points="1537.125,437.0 1537.125,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="502.0" font-size="23" fill="#286f64" font-weight="700">运行线索与隐私</text>
+<polyline points="1347.25,525.0 1347.25,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,525.0 1347.25,567.0 1365.25,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="545.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="575.0" font-size="21" fill="#233734" font-weight="700">请求关联日志（request ID）</text>
+<text x="1377.25" y="605.0" font-size="16" fill="#286f64" font-weight="400">运行观察</text>
+<text x="1377.25" y="627.0" font-size="18" fill="#53635f" font-weight="400">用一次处理身份关联固定操作、结果、耗</text>
+<text x="1377.25" y="652.0" font-size="18" fill="#53635f" font-weight="400">时与错误类别；不复制客户值、SQL参数</text>
+<text x="1377.25" y="677.0" font-size="18" fill="#53635f" font-weight="400">或原始异常。</text>
+<polyline points="1347.25,567.0 1347.25,743.0 1365.25,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="721.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,729.0 1366.25,851.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="751.0" font-size="21" fill="#286f64" font-weight="700">零行与查询失败</text>
+<text x="1377.25" y="781.0" font-size="18" fill="#233734" font-weight="400">成功空列表的row_count为0，失败未知为</text>
+<text x="1377.25" y="806.0" font-size="18" fill="#233734" font-weight="400">null；缺view应查结构，改客户编号不能修</text>
+<text x="1377.25" y="831.0" font-size="18" fill="#233734" font-weight="400">复。</text>
+<polyline points="1347.25,743.0 1347.25,897.0 1365.25,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="875.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="905.0" font-size="21" fill="#233734" font-weight="700">耗时证据范围（elapsed_ms）</text>
+<text x="1377.25" y="935.0" font-size="18" fill="#53635f" font-weight="400">计时包含函数所涵盖的连接、查询、取行</text>
+<text x="1377.25" y="960.0" font-size="18" fill="#53635f" font-weight="400">与释放；不是数据库内部纯SQL时间或预</text>
+<text x="1377.25" y="985.0" font-size="18" fill="#53635f" font-weight="400">约日期。</text>
+<text x="64" y="1049.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1049.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1074.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1107.0" font-size="21" fill="#233734" font-weight="700">数据库连接与结果对象（engine / connection / Result）</text>
+<rect x="750" y="1074.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1107.0" font-size="21" fill="#233734" font-weight="700">固定读取合同</text>
+<polyline points="538,1111.0 736,1111.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1111.0 726.9955289764732,1115.3496553411123 726.9955289764732,1106.6503446588877" fill="#286f64"/>
+<text x="560.5" y="1099.0" font-size="17" fill="#286f64" font-weight="400">把查询结果交给应用</text>
+<text x="80" y="1157.0" font-size="18" fill="#53635f" font-weight="400">connection 执行固定SQL，Result 按列名取行再转普通字典；修改这些字典不会自动改表。</text>
+<rect x="64" y="1197.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1230.2" font-size="21" fill="#233734" font-weight="700">绑定参数</text>
+<rect x="750" y="1197.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1230.2" font-size="21" fill="#233734" font-weight="700">授权与有限结构选项</text>
+<polyline points="538,1234.2 736,1234.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1234.2 726.9955289764732,1238.5496553411124 726.9955289764732,1229.8503446588877" fill="#286f64"/>
+<text x="611.5" y="1222.2" font-size="17" fill="#286f64" font-weight="400">不替代</text>
+<text x="80" y="1280.2" font-size="18" fill="#53635f" font-weight="400">合法绑定C-2仍会读取C-2；应用须先确认调用者是否被允许读取。</text>
+<rect x="64" y="1320.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1353.4" font-size="21" fill="#233734" font-weight="700">可复用读取定义（view）</text>
+<rect x="750" y="1320.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1353.4" font-size="21" fill="#233734" font-weight="700">固定读取合同</text>
+<polyline points="538,1357.4 736,1357.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1357.4 726.9955289764732,1361.7496553411124 726.9955289764732,1353.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1345.4" font-size="17" fill="#286f64" font-weight="400">向消费者提供</text>
+<text x="80" y="1403.4" font-size="18" fill="#53635f" font-weight="400">复用过滤和公开列名可减少多处规则漂移，调用者仍负责当前客户及排序。</text>
+<rect x="64" y="1443.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1476.6000000000001" font-size="21" fill="#233734" font-weight="700">请求关联日志（request ID）</text>
+<rect x="750" y="1443.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1476.6000000000001" font-size="21" fill="#233734" font-weight="700">零行与查询失败</text>
+<polyline points="538,1480.6000000000001 736,1480.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1480.6000000000001 726.9955289764732,1484.9496553411125 726.9955289764732,1476.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1468.6000000000001" font-size="17" fill="#286f64" font-weight="400">区分结果含义</text>
+<text x="80" y="1526.6000000000001" font-size="18" fill="#53635f" font-weight="400">日志应保留未知与已知零的区别，不能把异常伪装为查询成功但没有记录。</text>
+<text x="64" y="1578.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：变更与消费者兼容；报告需求改变时怎样选结果形状。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1641.4 1736,1641.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1671.4" font-size="17" fill="#53635f" font-weight="400">对照正文：C05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

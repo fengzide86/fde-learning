@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1468" width="1800" height="1468" role="img" aria-labelledby="title">
+<title id="title">对话状态与真实反馈</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1468" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E03  对话状态与真实反馈</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续输出用途验证；把界面、请求和存储分开，为后续检索资料与人工交接保留可靠输入。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">屏幕、已接受历史和用户字段各有用途；只有应用组装的 messages 才是本次输入。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">会话上下文与已验证状态</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">三类会话材料</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">应用保存的已核对事实（collected_facts）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">应用保存的用户字段</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">保存已检查的用户提交字段；表示用户说了什么，不代表现场检测或正式业务写入。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,679.0 92.0,773.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="701.0" font-size="21" fill="#286f64" font-weight="700">已确认对话历史（committed_messages）</text>
+<text x="103.0" y="731.0" font-size="16" fill="#286f64" font-weight="400">已接受的完整回合</text>
+<text x="103.0" y="753.0" font-size="18" fill="#233734" font-weight="400">保存输出通过结构和用途检查后的完整回合；这里的提交不等于数据库事务提交。</text>
+<polyline points="73.0,693.0 73.0,819.0 91.0,819.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="797.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="827.0" font-size="21" fill="#233734" font-weight="700">当前界面内容（screen）</text>
+<text x="103.0" y="857.0" font-size="16" fill="#286f64" font-weight="400">界面显示</text>
+<text x="103.0" y="879.0" font-size="18" fill="#53635f" font-weight="400">承载通知、输入与临时显示；界面看得见的内容不会自动成为模型请求或已接受历史。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">上下文组织</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">实际发送消息（messages）</text>
+<text x="952.5" y="605.0" font-size="16" fill="#286f64" font-weight="400">本次模型请求</text>
+<text x="952.5" y="627.0" font-size="18" fill="#233734" font-weight="400">由任务说明、获准资料和选定历史构成；角色用于组织输入，不能代替应用授权。</text>
+<polyline points="922.5,567.0 922.5,693.0 940.5,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="671.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="701.0" font-size="21" fill="#233734" font-weight="700">历史选择与摘要</text>
+<text x="952.5" y="731.0" font-size="18" fill="#53635f" font-weight="400">按任务保留相关历史和约束；生成摘要可能失真，应可追溯原文并另存关键可靠字段。</text>
+<polyline points="922.5,693.0 922.5,797.0 940.5,797.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="775.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="805.0" font-size="21" fill="#233734" font-weight="700">用途验证</text>
+<text x="952.5" y="835.0" font-size="18" fill="#53635f" font-weight="400">除结构外检查输出是否仍属澄清任务；本例精确模板边界不能外推为通用事实验证。</text>
+<text x="64" y="943.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="943.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="968.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1001.0" font-size="21" fill="#233734" font-weight="700">用途验证</text>
+<rect x="750" y="968.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1001.0" font-size="21" fill="#233734" font-weight="700">已确认对话历史（committed_messages）</text>
+<polyline points="538,1005.0 736,1005.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1005.0 726.9955289764732,1009.3496553411123 726.9955289764732,1000.6503446588877" fill="#286f64"/>
+<text x="603.0" y="993.0" font-size="17" fill="#286f64" font-weight="400">控制保留</text>
+<text x="80" y="1051.0" font-size="18" fill="#53635f" font-weight="400">拒绝错误承诺时不保留助手回合，但有效用户字段仍可留在 collected_facts。</text>
+<rect x="64" y="1091.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1124.2" font-size="21" fill="#233734" font-weight="700">应用保存的已核对事实（collected_facts）</text>
+<rect x="750" y="1091.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1124.2" font-size="21" fill="#233734" font-weight="700">实际发送消息（messages）</text>
+<polyline points="538,1128.2 736,1128.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1128.2 726.9955289764732,1132.5496553411124 726.9955289764732,1123.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1116.2" font-size="17" fill="#286f64" font-weight="400">重建输入</text>
+<text x="80" y="1174.2" font-size="18" fill="#53635f" font-weight="400">关键事实可由应用重建，避免只能靠旧助手回复回忆。</text>
+<rect x="64" y="1214.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1247.4" font-size="21" fill="#233734" font-weight="700">已确认对话历史（committed_messages）</text>
+<rect x="750" y="1214.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1247.4" font-size="21" fill="#233734" font-weight="700">实际发送消息（messages）</text>
+<polyline points="538,1251.4 736,1251.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1251.4 726.9955289764732,1255.7496553411124 726.9955289764732,1247.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1239.4" font-size="17" fill="#286f64" font-weight="400">被选择后才进入</text>
+<text x="80" y="1297.4" font-size="18" fill="#53635f" font-weight="400">保存整段历史不意味着每次全量发送；应用负责取舍和组合。</text>
+<text x="64" y="1349.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：请求与显示生命周期。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1412.2 1736,1412.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1442.2" font-size="17" fill="#53635f" font-weight="400">对照正文：E03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

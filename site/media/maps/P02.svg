@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1383" width="1800" height="1383" role="img" aria-labelledby="title">
+<title id="title">角色、价值与替代</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1383" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P02  角色、价值与替代</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 P01 的改善放进企业经营与角色关系，再由 P03 取得适用于各项决定的依据。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">同一方案会改变不同人的结果和负担；使用、付款和决定是不同关系。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">谁受益谁承担谁有权决定</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">业务与价值对象</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">业务与服务承诺</text>
+<text x="103.0" y="568.0" font-size="18" fill="#53635f" font-weight="400">企业用资源持续为客户完成约定工作并取得回报；服务入口</text>
+<text x="103.0" y="593.0" font-size="18" fill="#53635f" font-weight="400">只是支持交付的一种工具。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">客户结果、服务与工具</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">客户完成自身工作、企业提供维护、工具支持协同属于不同</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">层次；窗口正确不保证结果改善。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,774.0 92.0,871.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="796.0" font-size="21" fill="#286f64" font-weight="700">价值与负担转移</text>
+<text x="103.0" y="826.0" font-size="18" fill="#233734" font-weight="400">某角色少做工作可能把负担交给客户或同事；局部省时不能</text>
+<text x="103.0" y="851.0" font-size="18" fill="#233734" font-weight="400">自动算成整体价值或利润。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">人的不同关系</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,516.0 658.3333333333334,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#286f64" font-weight="700">使用、付款与决定</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#233734" font-weight="400">实际使用者、预算承担者与审批者可由不同人担当；一人的</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#233734" font-weight="400">认可只支持其能观察或决定的部分。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#233734" font-weight="700">执行者与授权范围</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#53635f" font-weight="400">核对实际工作的时间、信息和权限条件；受新流程影响不等</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#53635f" font-weight="400">于拥有采购或承诺服务的权力。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,788.0 657.3333333333334,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="796.0" font-size="21" fill="#233734" font-weight="700">有依据的客户分组</text>
+<text x="669.3333333333334" y="826.0" font-size="18" fill="#53635f" font-weight="400">按任务、资源与采购限制等解释差异；想象画像或单个客户</text>
+<text x="669.3333333333334" y="851.0" font-size="18" fill="#53635f" font-weight="400">要求不能代表整个市场。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">现实选择与采用代价</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,516.0 1224.6666666666667,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#286f64" font-weight="700">现有替代与保持原样</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#233734" font-weight="400">电话、表格、聊天群或暂时忍受都可能满足现有需要；新工</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#233734" font-weight="400">具也要与这些现实办法比较。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">切换成本</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">包括数据搬迁、培训、改习惯和旧请求衔接；购买价格不能</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">概括采用新方法的全部代价。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">基于任务的差异化</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">让候选处理同一代表任务，比较可信结果与负担；功能勾选</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">多不等于更值得采用。</text>
+<text x="64" y="915.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="915.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="940.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="973.0" font-size="21" fill="#233734" font-weight="700">使用、付款与决定</text>
+<rect x="750" y="940.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="973.0" font-size="21" fill="#233734" font-weight="700">业务与服务承诺</text>
+<polyline points="538,977.0 736,977.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,977.0 726.9955289764732,981.3496553411123 726.9955289764732,972.6503446588877" fill="#286f64"/>
+<text x="586.0" y="965.0" font-size="17" fill="#286f64" font-weight="400">界定认可范围</text>
+<text x="80" y="1023.0" font-size="18" fill="#53635f" font-weight="400">用户觉得方便不等于付款获批，也不代表排程人员允许自动承诺。</text>
+<rect x="64" y="1063.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1096.2" font-size="21" fill="#233734" font-weight="700">价值与负担转移</text>
+<rect x="750" y="1063.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1096.2" font-size="21" fill="#233734" font-weight="700">基于任务的差异化</text>
+<polyline points="538,1100.2 736,1100.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1100.2 726.9955289764732,1104.5496553411124 726.9955289764732,1095.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1088.2" font-size="17" fill="#286f64" font-weight="400">影响取舍</text>
+<text x="80" y="1146.2" font-size="18" fill="#53635f" font-weight="400">省去一方的操作若使另一方无法完成任务，不能只报局部收益。</text>
+<rect x="64" y="1186.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1219.4" font-size="21" fill="#233734" font-weight="700">切换成本</text>
+<rect x="750" y="1186.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1219.4" font-size="21" fill="#233734" font-weight="700">现有替代与保持原样</text>
+<polyline points="538,1223.4 736,1223.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1223.4 726.9955289764732,1227.7496553411124 726.9955289764732,1219.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1211.4" font-size="17" fill="#286f64" font-weight="400">影响是否离开</text>
+<text x="80" y="1269.4" font-size="18" fill="#53635f" font-weight="400">熟悉的办法即使费时，也可能因责任清楚而更容易被继续使用。</text>
+<polyline points="64,1327.6000000000001 1736,1327.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1357.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2169" width="1800" height="2169" role="img" aria-labelledby="title">
+<title id="title">别处的代码，怎样为当前程序工作？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2169" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A06  别处的代码，怎样为当前程序工作？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A06把A02的函数交接扩展到模块和库；入口保护支持A07导入测试，环境与进程细节由A09、A10展开。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">标准库、自写模块和第三方包是代码来源；import 建立可用名字，实际调用才把输入交给这项能力。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">代码来源、导入与调用协作</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 1537.125,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 262.875,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">能力来源与导入名字</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="358.75" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">标准库</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">代码来源</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">随Python安装提供的模块，如random、</text>
+<text x="103.0" y="652.0" font-size="18" fill="#53635f" font-weight="400">statistics和sys；本章这些模块无需另装。</text>
+<polyline points="73.0,567.0 73.0,718.0 91.0,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="696.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="726.0" font-size="21" fill="#233734" font-weight="700">项目模块</text>
+<text x="103.0" y="756.0" font-size="16" fill="#286f64" font-weight="400">代码组织与来源</text>
+<text x="103.0" y="778.0" font-size="18" fill="#53635f" font-weight="400">自己的.py文件可组织复用函数；普通脚本</text>
+<text x="103.0" y="803.0" font-size="18" fill="#53635f" font-weight="400">方式会在脚本目录等位置查找，导入名不</text>
+<text x="103.0" y="828.0" font-size="18" fill="#53635f" font-weight="400">带.py。</text>
+<polyline points="73.0,718.0 73.0,894.0 91.0,894.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="872.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="902.0" font-size="21" fill="#233734" font-weight="700">第三方包</text>
+<text x="103.0" y="932.0" font-size="16" fill="#286f64" font-weight="400">外部分发的代码</text>
+<text x="103.0" y="954.0" font-size="18" fill="#53635f" font-weight="400">由外部分发并安装到具体环境；安装名与</text>
+<text x="103.0" y="979.0" font-size="18" fill="#53635f" font-weight="400">导入名可能不同，import本身不会代替安</text>
+<text x="103.0" y="1004.0" font-size="18" fill="#53635f" font-weight="400">装。</text>
+<polyline points="73.0,894.0 73.0,1070.0 91.0,1070.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1048.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,1056.0 92.0,1200.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="1078.0" font-size="21" fill="#286f64" font-weight="700">导入可用名字（import / from）</text>
+<text x="103.0" y="1108.0" font-size="16" fill="#286f64" font-weight="400">导入语句</text>
+<text x="103.0" y="1130.0" font-size="18" fill="#233734" font-weight="400">前者建立模块名再取函数，后者建立指定</text>
+<text x="103.0" y="1155.0" font-size="18" fill="#233734" font-weight="400">名字；两种都需加载来源模块，避免星号</text>
+<text x="103.0" y="1180.0" font-size="18" fill="#233734" font-weight="400">模糊来源。</text>
+<polyline points="73.0,1070.0 73.0,1246.0 91.0,1246.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1224.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1254.0" font-size="21" fill="#233734" font-weight="700">找不到可导入模块（ModuleNotFoundError）</text>
+<text x="103.0" y="1284.0" font-size="18" fill="#53635f" font-weight="400">导入阶段找不到模块，还没运行后续调</text>
+<text x="103.0" y="1309.0" font-size="18" fill="#53635f" font-weight="400">用；先核对名字、位置、环境及同名文件</text>
+<text x="103.0" y="1334.0" font-size="18" fill="#53635f" font-weight="400">遮挡。</text>
+<polyline points="687.625,437.0 687.625,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="502.0" font-size="23" fill="#286f64" font-weight="700">现成计算的合同</text>
+<polyline points="497.75,525.0 497.75,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,525.0 497.75,567.0 515.75,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="545.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="575.0" font-size="21" fill="#233734" font-weight="700">随机选一项（random.choice）</text>
+<text x="527.75" y="605.0" font-size="18" fill="#53635f" font-weight="400">从非空序列返回一项而不删除；结果可连</text>
+<text x="527.75" y="630.0" font-size="18" fill="#53635f" font-weight="400">续重复，空序列会发生IndexError。</text>
+<polyline points="497.75,567.0 497.75,696.0 515.75,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="674.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="704.0" font-size="21" fill="#233734" font-weight="700">计算平均值（statistics.mean）</text>
+<text x="527.75" y="734.0" font-size="18" fill="#53635f" font-weight="400">由一组数得到确定的平均值；空数据发出</text>
+<text x="527.75" y="759.0" font-size="18" fill="#53635f" font-weight="400">StatisticsError，不能默认用零代替缺少数</text>
+<text x="527.75" y="784.0" font-size="18" fill="#53635f" font-weight="400">据。</text>
+<polyline points="497.75,696.0 497.75,850.0 515.75,850.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="828.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="858.0" font-size="21" fill="#233734" font-weight="700">发送请求并接收回应（HTTPX / Response）</text>
+<text x="527.75" y="888.0" font-size="16" fill="#286f64" font-weight="400">请求调用与回应对象</text>
+<text x="527.75" y="910.0" font-size="18" fill="#53635f" font-weight="400">get调用发出请求并返回回应对象；读取</text>
+<text x="527.75" y="935.0" font-size="18" fill="#53635f" font-weight="400">status_code或text是取属性，不是重新发</text>
+<text x="527.75" y="960.0" font-size="18" fill="#53635f" font-weight="400">请求。</text>
+<polyline points="497.75,850.0 497.75,1026.0 515.75,1026.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="1004.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="1034.0" font-size="21" fill="#233734" font-weight="700">导入与服务成功边界</text>
+<text x="527.75" y="1064.0" font-size="18" fill="#53635f" font-weight="400">可导入不代表服务在线；连接失败可能没</text>
+<text x="527.75" y="1089.0" font-size="18" fill="#53635f" font-weight="400">有Response，收到404回应也不代表内容</text>
+<text x="527.75" y="1114.0" font-size="18" fill="#53635f" font-weight="400">正确。</text>
+<polyline points="1112.375,437.0 1112.375,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">命令输入与结束</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">接收命令行输入（sys.argv）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">保存启动时参数的字符串列表，第0项标识</text>
+<text x="952.5" y="630.0" font-size="18" fill="#53635f" font-weight="400">脚本，后面才是数据；读取它不会等待新</text>
+<text x="952.5" y="655.0" font-size="18" fill="#53635f" font-weight="400">输入。</text>
+<polyline points="922.5,567.0 922.5,721.0 940.5,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="729.0" font-size="21" fill="#233734" font-weight="700">切片 [1:]</text>
+<text x="952.5" y="759.0" font-size="18" fill="#53635f" font-weight="400">从位置1取得末尾形成新列表，用于排除脚</text>
+<text x="952.5" y="784.0" font-size="18" fill="#53635f" font-weight="400">本项；不删除原列表内容，也不转换参数</text>
+<text x="952.5" y="809.0" font-size="18" fill="#53635f" font-weight="400">类型。</text>
+<polyline points="922.5,721.0 922.5,875.0 940.5,875.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="853.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="883.0" font-size="21" fill="#233734" font-weight="700">交出进程退出码（sys.exit）</text>
+<text x="952.5" y="913.0" font-size="18" fill="#53635f" font-weight="400">发出SystemExit，未捕获时结束本次命</text>
+<text x="952.5" y="938.0" font-size="18" fill="#53635f" font-weight="400">令；传说明文字会写错误输出并以非零状</text>
+<text x="952.5" y="963.0" font-size="18" fill="#53635f" font-weight="400">态退出。</text>
+<polyline points="1537.125,437.0 1537.125,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="502.0" font-size="23" fill="#286f64" font-weight="700">导入执行与程序入口</text>
+<polyline points="1347.25,525.0 1347.25,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,525.0 1347.25,567.0 1365.25,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="545.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,553.0 1366.25,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="575.0" font-size="21" fill="#286f64" font-weight="700">模块顶层代码</text>
+<text x="1377.25" y="605.0" font-size="16" fill="#286f64" font-weight="400">加载时执行的代码</text>
+<text x="1377.25" y="627.0" font-size="18" fill="#233734" font-weight="400">普通首次导入会执行顶层以建立名字；def</text>
+<text x="1377.25" y="652.0" font-size="18" fill="#233734" font-weight="400">只建立函数，顶层调用和input则会实际运</text>
+<text x="1377.25" y="677.0" font-size="18" fill="#233734" font-weight="400">行。</text>
+<polyline points="1347.25,567.0 1347.25,743.0 1365.25,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="721.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="751.0" font-size="21" fill="#233734" font-weight="700">导入缓存</text>
+<text x="1377.25" y="781.0" font-size="18" fill="#53635f" font-weight="400">同一进程普通重复导入通常复用已加载模</text>
+<text x="1377.25" y="806.0" font-size="18" fill="#53635f" font-weight="400">块；重新启动进程后并不是永久保留的执</text>
+<text x="1377.25" y="831.0" font-size="18" fill="#53635f" font-weight="400">行状态。</text>
+<polyline points="1347.25,743.0 1347.25,897.0 1365.25,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="875.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,883.0 1366.25,1027.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="905.0" font-size="21" fill="#286f64" font-weight="700">区分直接运行与导入（__name__）</text>
+<text x="1377.25" y="935.0" font-size="16" fill="#286f64" font-weight="400">模块身份与条件判断</text>
+<text x="1377.25" y="957.0" font-size="18" fill="#233734" font-weight="400">直接运行时__name__为__main__；条件只</text>
+<text x="1377.25" y="982.0" font-size="18" fill="#233734" font-weight="400">限制其中启动动作，其他顶层代码导入时</text>
+<text x="1377.25" y="1007.0" font-size="18" fill="#233734" font-weight="400">仍执行。</text>
+<text x="64" y="1398.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1398.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1423.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1456.0" font-size="21" fill="#233734" font-weight="700">导入可用名字（import / from）</text>
+<rect x="750" y="1423.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1456.0" font-size="21" fill="#233734" font-weight="700">模块顶层代码</text>
+<polyline points="538,1460.0 736,1460.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1460.0 726.9955289764732,1464.3496553411123 726.9955289764732,1455.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1448.0" font-size="17" fill="#286f64" font-weight="400">首次加载会执行</text>
+<text x="80" y="1506.0" font-size="18" fill="#53635f" font-weight="400">导入不是复制函数文本；函数体要到实际调用时才执行。</text>
+<rect x="64" y="1546.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1579.2" font-size="21" fill="#233734" font-weight="700">区分直接运行与导入（__name__）</text>
+<rect x="750" y="1546.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1579.2" font-size="21" fill="#233734" font-weight="700">模块顶层代码</text>
+<polyline points="538,1583.2 736,1583.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1583.2 726.9955289764732,1587.5496553411124 726.9955289764732,1578.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1571.2" font-size="17" fill="#286f64" font-weight="400">限制启动调用</text>
+<text x="80" y="1629.2" font-size="18" fill="#53635f" font-weight="400">保护范围只包括缩进内的启动动作，不能阻止整个模块加载。</text>
+<rect x="64" y="1669.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1702.4" font-size="21" fill="#233734" font-weight="700">接收命令行输入（sys.argv）</text>
+<rect x="750" y="1669.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1702.4" font-size="21" fill="#233734" font-weight="700">切片 [1:]</text>
+<polyline points="538,1706.4 736,1706.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1706.4 726.9955289764732,1710.7496553411124 726.9955289764732,1702.0503446588878" fill="#286f64"/>
+<text x="594.5" y="1694.4" font-size="17" fill="#286f64" font-weight="400">去掉脚本项</text>
+<text x="80" y="1752.4" font-size="18" fill="#53635f" font-weight="400">取得工单参数后仍要判断是否为空，再交给choice选择。</text>
+<rect x="64" y="1792.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1825.6000000000001" font-size="21" fill="#233734" font-weight="700">导入可用名字（import / from）</text>
+<rect x="750" y="1792.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1825.6000000000001" font-size="21" fill="#233734" font-weight="700">随机选一项（random.choice）</text>
+<polyline points="538,1829.6000000000001 736,1829.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1829.6000000000001 726.9955289764732,1833.9496553411125 726.9955289764732,1825.2503446588878" fill="#286f64"/>
+<text x="560.5" y="1817.6000000000001" font-size="17" fill="#286f64" font-weight="400">让调用所需名字可用</text>
+<text x="80" y="1875.6000000000001" font-size="18" fill="#53635f" font-weight="400">import random之后才能取random.choice；传入名单并调用时才选出结果。</text>
+<rect x="64" y="1915.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1948.8000000000002" font-size="21" fill="#233734" font-weight="700">导入可用名字（import / from）</text>
+<rect x="750" y="1915.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1948.8000000000002" font-size="21" fill="#233734" font-weight="700">发送请求并接收回应（HTTPX / Response）</text>
+<polyline points="538,1952.8000000000002 736,1952.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1952.8000000000002 726.9955289764732,1957.1496553411125 726.9955289764732,1948.4503446588878" fill="#286f64"/>
+<text x="577.5" y="1940.8000000000002" font-size="17" fill="#286f64" font-weight="400">不是同一个动作</text>
+<text x="80" y="1998.8000000000002" font-size="18" fill="#53635f" font-weight="400">导入在当前Python里加载库；httpx.get才向服务发请求，不能把import等同跨进程通信。</text>
+<text x="64" y="2051.0" font-size="19" fill="#53635f" font-weight="400">同章续图：安装环境与用法核对。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2113.6 1736,2113.6" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2143.6" font-size="17" fill="#53635f" font-weight="400">对照正文：A06  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

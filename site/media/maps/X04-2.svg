@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1367" width="1800" height="1367" role="img" aria-labelledby="title">
+<title id="title">运行身份、恢复与交接</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1367" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">X / 一套应用怎样连接起来</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">X04  运行身份、恢复与交接</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">将 F 册运行与恢复用于X应用；重建实例、恢复应用库和回滚版本各有对象，不改变合作方事实的所有权。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="622.0" y="343.0" width="556.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="662.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">程序、配置与两方持久状态的恢复边界</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">运行对象与网络位置</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">镜像、运行实例与配置（image / container）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">源码和依赖构建镜像，配置创建运行实例；环境、端口和挂载不因构建就自动固定进镜像。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">存储、挂载点与数据库（volume）</text>
+<text x="103.0" y="709.0" font-size="16" fill="#286f64" font-weight="400">存储对象、路径与文件</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">持久存储对象、容器内路径和数据库文件是不同对象；应用与合作方各有独立数据卷和寿命。</text>
+<polyline points="73.0,671.0 73.0,797.0 91.0,797.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="775.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="805.0" font-size="21" fill="#233734" font-weight="700">主机端口与服务名</text>
+<text x="103.0" y="835.0" font-size="18" fill="#53635f" font-weight="400">主机端口映射进API容器，API用Compose服务名找合作方；容器localhost只指自己。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">实验身份与业务基线</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">独立场景与 key</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">同意图复用原键，降级等独立场景用新键与新基线；更换请求ID不能清空两边持久状态。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">两方数据生命周期</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">普通、降级及版本回归分别登记数据对象；删除后重建同名volume不会找回原内容。</text>
+<text x="64" y="899.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="899.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="924.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="957.0" font-size="21" fill="#233734" font-weight="700">独立场景与 key</text>
+<rect x="750" y="924.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="957.0" font-size="21" fill="#233734" font-weight="700">两方数据生命周期</text>
+<polyline points="538,961.0 736,961.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,961.0 726.9955289764732,965.3496553411123 726.9955289764732,956.6503446588877" fill="#286f64"/>
+<text x="586.0" y="949.0" font-size="17" fill="#286f64" font-weight="400">依赖明确基线</text>
+<text x="80" y="1007.0" font-size="18" fill="#53635f" font-weight="400">已收束旧键会直接返回旧结果，无法验证新的故障场景；两边状态和对象寿命均须登记。</text>
+<rect x="64" y="1047.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1080.2" font-size="21" fill="#233734" font-weight="700">镜像、运行实例与配置（image / container）</text>
+<rect x="750" y="1047.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1080.2" font-size="21" fill="#233734" font-weight="700">镜像身份与配置指纹（image ID）（见主图）</text>
+<polyline points="538,1084.2 736,1084.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1084.2 726.9955289764732,1088.5496553411124 726.9955289764732,1079.8503446588877" fill="#286f64"/>
+<text x="569.0" y="1072.2" font-size="17" fill="#286f64" font-weight="400">落实为可核对身份</text>
+<text x="80" y="1130.2" font-size="18" fill="#53635f" font-weight="400">实例应来自指定最终镜像，并取得实际合并的配置；可变标签或声明文件名都不够。</text>
+<rect x="64" y="1170.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1203.4" font-size="21" fill="#233734" font-weight="700">存储、挂载点与数据库（volume）</text>
+<rect x="750" y="1170.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1203.4" font-size="21" fill="#233734" font-weight="700">两方数据生命周期</text>
+<polyline points="538,1207.4 736,1207.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1207.4 726.9955289764732,1211.7496553411124 726.9955289764732,1203.0503446588878" fill="#286f64"/>
+<text x="560.5" y="1195.4" font-size="17" fill="#286f64" font-weight="400">须按所有者分别登记</text>
+<text x="80" y="1253.4" font-size="18" fill="#53635f" font-weight="400">API 与合作方分别保存自己的数据库；删后重建同名卷是新对象，不是原数据恢复。</text>
+<polyline points="64,1311.6000000000001 1736,1311.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1341.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：X04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

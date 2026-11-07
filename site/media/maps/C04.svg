@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1449" width="1800" height="1449" role="img" aria-labelledby="title">
+<title id="title">事务与完整业务写入</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1449" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C04  事务与完整业务写入</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 C03 的单行与引用约束，把预约、时段和事件变成同一完成条件；D册再辨本地与远端提交。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">预约、时段占用和确认事件必须共同留下；单条错误被拒绝之后，还要明确撤回这一组未提交的改变。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">相关数据变化的提交、撤回与历史</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">写入对象与成功条件</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">新增、修改与删除事实（INSERT / UPDATE / DELETE）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">写入语句</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">分别新增、修改和移除行；UPDATE仍须带资格条件并检查影响行数，预览不能取代执行时判</text>
+<text x="103.0" y="652.0" font-size="18" fill="#53635f" font-weight="400">断。</text>
+<polyline points="73.0,567.0 73.0,718.0 91.0,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="696.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,704.0 92.0,776.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="726.0" font-size="21" fill="#286f64" font-weight="700">预约、占用与持久事件</text>
+<text x="103.0" y="756.0" font-size="18" fill="#233734" font-weight="400">预约存在、时段booked与确认事件三者共同构成成功；事件ID和request ID各有身份用途。</text>
+<polyline points="73.0,718.0 73.0,822.0 91.0,822.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="800.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="830.0" font-size="21" fill="#233734" font-weight="700">约束与业务动作</text>
+<text x="103.0" y="860.0" font-size="18" fill="#53635f" font-weight="400">约束拒绝坏值和引用，但不会自动猜测多张表必须共同变化；完整动作需应用界定。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">事务与连接控制</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">事务开始、提交与撤回（BEGIN / COMMIT / ROLLBACK）</text>
+<text x="952.5" y="605.0" font-size="16" fill="#286f64" font-weight="400">事务控制</text>
+<text x="952.5" y="627.0" font-size="18" fill="#233734" font-weight="400">圈定未提交改变，整组提交或撤回；当前连接可暂时读到变化，执行成功不同于提交成功。</text>
+<polyline points="922.5,567.0 922.5,693.0 940.5,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="671.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,679.0 941.5,751.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="701.0" font-size="21" fill="#286f64" font-weight="700">异常后的整组撤回</text>
+<text x="952.5" y="731.0" font-size="18" fill="#233734" font-weight="400">默认约束失败通常只拒绝当前语句；应用必须回滚此前写入，提交失败也应在异常路径内处理。</text>
+<text x="64" y="924.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="924.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="949.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="982.0" font-size="21" fill="#233734" font-weight="700">预约、占用与持久事件</text>
+<rect x="750" y="949.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="982.0" font-size="21" fill="#233734" font-weight="700">事务开始、提交与撤回（BEGIN / COMMIT / ROLLBACK）</text>
+<polyline points="538,986.0 736,986.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,986.0 726.9955289764732,990.3496553411123 726.9955289764732,981.6503446588877" fill="#286f64"/>
+<text x="569.0" y="974.0" font-size="17" fill="#286f64" font-weight="400">共同圈定事务边界</text>
+<text x="80" y="1032.0" font-size="18" fill="#53635f" font-weight="400">确认成功要求三处共同留下；应用先明确这组改变，事务才保护该边界。</text>
+<rect x="64" y="1072.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1105.2" font-size="21" fill="#233734" font-weight="700">异常后的整组撤回</text>
+<rect x="750" y="1072.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1105.2" font-size="21" fill="#233734" font-weight="700">预约、占用与持久事件</text>
+<polyline points="538,1109.2 736,1109.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1109.2 726.9955289764732,1113.5496553411124 726.9955289764732,1104.8503446588877" fill="#286f64"/>
+<text x="552.0" y="1097.2" font-size="17" fill="#286f64" font-weight="400">撤回未提交的三处改变</text>
+<text x="80" y="1155.2" font-size="18" fill="#53635f" font-weight="400">事件写坏后明确 ROLLBACK，使本次预约不存在、时段恢复可用且没有本次事件。</text>
+<rect x="64" y="1195.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1228.4" font-size="21" fill="#233734" font-weight="700">约束与业务动作</text>
+<rect x="750" y="1195.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1228.4" font-size="21" fill="#233734" font-weight="700">事务开始、提交与撤回（BEGIN / COMMIT / ROLLBACK）</text>
+<polyline points="538,1232.4 736,1232.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1232.4 726.9955289764732,1236.7496553411124 726.9955289764732,1228.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1220.4" font-size="17" fill="#286f64" font-weight="400">需要事务补足</text>
+<text x="80" y="1278.4" font-size="18" fill="#53635f" font-weight="400">合法单条SQL仍可留下半成品，事务保护应用明确划出的相关改变。</text>
+<text x="64" y="1330.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：批量输入与权威事实；历史、删除与状态规则；本例怎样选择连接控制方式。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1393.2 1736,1393.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1423.2" font-size="17" fill="#53635f" font-weight="400">对照正文：C04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

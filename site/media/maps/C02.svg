@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1705" width="1800" height="1705" role="img" aria-labelledby="title">
+<title id="title">关联、分组与行数</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1705" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C02  关联、分组与行数</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">扩展 C01 的单表筛选与聚合；查询关系接向 C03 的主键、外键及多对多结构保护。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先确定答案的一行代表谁，再选择筛人、关联或汇总；连接可能增加行，也可能让没有匹配的人消失。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="718.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">多表关系如何决定答案的一行</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">事实身份与关系</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">主键与外键</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">身份与引用</text>
+<text x="103.0" y="590.0" font-size="18" fill="#53635f" font-weight="400">主键识别本表一行，外键保存所引用身</text>
+<text x="103.0" y="615.0" font-size="18" fill="#53635f" font-weight="400">份；姓名可变且可重复，不能代替稳定编</text>
+<text x="103.0" y="640.0" font-size="18" fill="#53635f" font-weight="400">号。</text>
+<polyline points="73.0,530.0 73.0,706.0 91.0,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="684.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="714.0" font-size="21" fill="#233734" font-weight="700">一对多与多对多</text>
+<text x="103.0" y="744.0" font-size="18" fill="#53635f" font-weight="400">一位客户可有多次预约；技术员与技能的</text>
+<text x="103.0" y="769.0" font-size="18" fill="#53635f" font-weight="400">多对多由中间表每行保存一对关系。</text>
+<polyline points="73.0,706.0 73.0,835.0 91.0,835.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="813.0" width="358.75" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,821.0 92.0,940.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="843.0" font-size="21" fill="#286f64" font-weight="700">结果行的粒度</text>
+<text x="103.0" y="873.0" font-size="16" fill="#286f64" font-weight="400">答案含义</text>
+<text x="103.0" y="895.0" font-size="18" fill="#233734" font-weight="400">一行可代表人选、预约明细或统计组；同</text>
+<text x="103.0" y="920.0" font-size="18" fill="#233734" font-weight="400">一姓名出现多次未必是错误重复。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">筛人和关联列</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="538.0" font-size="21" fill="#233734" font-weight="700">子查询与 IN</text>
+<text x="527.75" y="568.0" font-size="18" fill="#53635f" font-weight="400">用内层产生的编号集合筛选外层成员；适</text>
+<text x="527.75" y="593.0" font-size="18" fill="#53635f" font-weight="400">合确认资格，不必把所有关系明细带进结</text>
+<text x="527.75" y="618.0" font-size="18" fill="#53635f" font-weight="400">果。</text>
+<polyline points="497.75,530.0 497.75,684.0 515.75,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="692.0" font-size="21" fill="#233734" font-weight="700">匹配关系连接（INNER JOIN / ON）</text>
+<text x="527.75" y="722.0" font-size="18" fill="#53635f" font-weight="400">按ON把匹配左右行组合并显示两边列；缺</text>
+<text x="527.75" y="747.0" font-size="18" fill="#53635f" font-weight="400">失或错误关系条件会形成不属于事实的组</text>
+<text x="527.75" y="772.0" font-size="18" fill="#53635f" font-weight="400">合。</text>
+<polyline points="497.75,684.0 497.75,838.0 515.75,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="816.0" width="358.75" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,824.0 516.75,921.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="846.0" font-size="21" fill="#286f64" font-weight="700">保留左侧记录的连接（LEFT JOIN）</text>
+<text x="527.75" y="876.0" font-size="18" fill="#233734" font-weight="400">保留无匹配的左行，右列补NULL；右表条</text>
+<text x="527.75" y="901.0" font-size="18" fill="#233734" font-weight="400">件放WHERE可能再次筛掉这些占位行。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">汇总与数量边界</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,516.0 941.5,638.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="538.0" font-size="21" fill="#286f64" font-weight="700">分组与分组筛选（GROUP BY / HAVING）</text>
+<text x="952.5" y="568.0" font-size="18" fill="#233734" font-weight="400">按身份将明细折成组，HAVING筛组；</text>
+<text x="952.5" y="593.0" font-size="18" fill="#233734" font-weight="400">WHERE筛输入行，同名对象不能仅按姓名</text>
+<text x="952.5" y="618.0" font-size="18" fill="#233734" font-weight="400">合并。</text>
+<polyline points="922.5,530.0 922.5,684.0 940.5,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="692.0" font-size="21" fill="#233734" font-weight="700">按非空标识计数（COUNT）</text>
+<text x="952.5" y="722.0" font-size="18" fill="#53635f" font-weight="400">数真实预约用右表非空主键；COUNT(*)会</text>
+<text x="952.5" y="747.0" font-size="18" fill="#53635f" font-weight="400">把左连接给空闲技术员保留的占位行也数</text>
+<text x="952.5" y="772.0" font-size="18" fill="#53635f" font-weight="400">进来。</text>
+<polyline points="922.5,684.0 922.5,838.0 940.5,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="816.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="846.0" font-size="21" fill="#233734" font-weight="700">连接放大与去重口径</text>
+<text x="952.5" y="876.0" font-size="18" fill="#53635f" font-weight="400">两个一对多分支可交叉放大数量；COUNT</text>
+<text x="952.5" y="901.0" font-size="18" fill="#53635f" font-weight="400"> DISTINCT按目标身份计数，不能修复错误</text>
+<text x="952.5" y="926.0" font-size="18" fill="#53635f" font-weight="400">ON。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">名单运算与验证</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#233734" font-weight="700">结果集合并（UNION）</text>
+<text x="1377.25" y="568.0" font-size="16" fill="#286f64" font-weight="400">结果集合操作</text>
+<text x="1377.25" y="590.0" font-size="18" fill="#53635f" font-weight="400">合并、求交或求差同形状答案；UNION去</text>
+<text x="1377.25" y="615.0" font-size="18" fill="#53635f" font-weight="400">重而UNION ALL保留重复，不是并排关联</text>
+<text x="1377.25" y="640.0" font-size="18" fill="#53635f" font-weight="400">列。</text>
+<polyline points="1347.25,530.0 1347.25,706.0 1365.25,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="684.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="714.0" font-size="21" fill="#233734" font-weight="700">固定小表核对</text>
+<text x="1377.25" y="744.0" font-size="18" fill="#53635f" font-weight="400">逐行核对人选、匹配、占位和分组结果；</text>
+<text x="1377.25" y="769.0" font-size="18" fill="#53635f" font-weight="400">SQLite内存实验还需为当前连接开启外键</text>
+<text x="1377.25" y="794.0" font-size="18" fill="#53635f" font-weight="400">检查。</text>
+<text x="64" y="990.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="990.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1015.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1048.0" font-size="21" fill="#233734" font-weight="700">匹配关系连接（INNER JOIN / ON）</text>
+<rect x="750" y="1015.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1048.0" font-size="21" fill="#233734" font-weight="700">结果行的粒度</text>
+<polyline points="538,1052.0 736,1052.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1052.0 726.9955289764732,1056.3496553411123 726.9955289764732,1047.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1040.0" font-size="17" fill="#286f64" font-weight="400">匹配组合决定</text>
+<text x="80" y="1098.0" font-size="18" fill="#53635f" font-weight="400">C1 与两条预约分别匹配，姓名出现两次仍是两条预约明细，不是新增了客户或预约。</text>
+<rect x="64" y="1138.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1171.2" font-size="21" fill="#233734" font-weight="700">主键与外键</text>
+<rect x="750" y="1138.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1171.2" font-size="21" fill="#233734" font-weight="700">匹配关系连接（INNER JOIN / ON）</text>
+<polyline points="538,1175.2 736,1175.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1175.2 726.9955289764732,1179.5496553411124 726.9955289764732,1170.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1163.2" font-size="17" fill="#286f64" font-weight="400">职责不同于</text>
+<text x="80" y="1221.2" font-size="18" fill="#53635f" font-weight="400">外键约束可保存的引用；JOIN形成本次答案，无外键声明也能查询但少了写入保护。</text>
+<rect x="64" y="1261.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1294.4" font-size="21" fill="#233734" font-weight="700">保留左侧记录的连接（LEFT JOIN）</text>
+<rect x="750" y="1261.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1294.4" font-size="21" fill="#233734" font-weight="700">按非空标识计数（COUNT）</text>
+<polyline points="538,1298.4 736,1298.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1298.4 726.9955289764732,1302.7496553411124 726.9955289764732,1294.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1286.4" font-size="17" fill="#286f64" font-weight="400">影响计数选择</text>
+<text x="80" y="1344.4" font-size="18" fill="#53635f" font-weight="400">没有预约的技术员仍有占位行，数预约编号才得到零而非一。</text>
+<rect x="64" y="1384.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1417.6000000000001" font-size="21" fill="#233734" font-weight="700">子查询与 IN</text>
+<rect x="750" y="1384.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1417.6000000000001" font-size="21" fill="#233734" font-weight="700">连接放大与去重口径</text>
+<polyline points="538,1421.6000000000001 736,1421.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1421.6000000000001 726.9955289764732,1425.9496553411125 726.9955289764732,1417.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1409.6000000000001" font-size="17" fill="#286f64" font-weight="400">可减少无关展开</text>
+<text x="80" y="1467.6000000000001" font-size="18" fill="#53635f" font-weight="400">只需判断技能资格时先筛人，可避免把每项技能与每条预约交叉。</text>
+<rect x="64" y="1507.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1540.8000000000002" font-size="21" fill="#233734" font-weight="700">结果行的粒度</text>
+<rect x="750" y="1507.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1540.8000000000002" font-size="21" fill="#233734" font-weight="700">分组与分组筛选（GROUP BY / HAVING）</text>
+<polyline points="538,1544.8000000000002 736,1544.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1544.8000000000002 726.9955289764732,1549.1496553411125 726.9955289764732,1540.4503446588878" fill="#286f64"/>
+<text x="586.0" y="1532.8000000000002" font-size="17" fill="#286f64" font-weight="400">决定是否汇总</text>
+<text x="80" y="1590.8000000000002" font-size="18" fill="#53635f" font-weight="400">需要每人一个预约数时才折组；去重名单不能代替数量统计。</text>
+<polyline points="64,1649.0000000000002 1736,1649.0000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1679.0000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：C02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

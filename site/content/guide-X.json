@@ -1,0 +1,37 @@
+{
+  "id": "guide-X",
+  "title": "一套应用怎样连接起来：导读与查用",
+  "html": "<p>“打印机离线”进入程序后，先是一段文字，后来成为一次 HTTP 请求、一张数据库工单和一项合作方派单。处理人员还可能为它请求一段政策说明。它们都与同一件事有关，却不是同一个对象：回复丢失了，工单仍可能存在；模型写了“可以关闭”，数据库也不该因此改变。</p>\n<p>这本书把前六册的工具放回一套完整的合成支持应用。我们先追一次提交，再调查失败、组织证据，最后看运行实例或程序版本变化后怎样继续服务。需要建立的是可以沿着具体对象找回的关系，完整函数名、字段拼写和命令参数可以就近查用。</p>\n<h2 id=\"guide-x-s1\">第一次只看这里</h2>\n<p>直接进入 X01。第一次只追一张工单：输入经过哪些责任边界，最终结果怎样留下可恢复证据。</p>\n<p>本册的详细关系图、章节路线和查用说明放在全书后部。遇到‘这一步和前后哪里相连’时再回看，不需要在第一轮先读完。</p>\n<h2 id=\"guide-x-s2\">关系收束｜从一个现象找到下一项有用证据</h2>\n<p>经过四章，系统没有变成一条“A 服务→B 服务→C 服务→D 服务→E 服务→F 服务”的流水线。Python 在多个地方组织控制，HTTP 连接进程，数据库保存事实，外部依赖按业务需要调用，AI 是独立的候选生成分支，运行环境则承载它们。</p>\n<p>同一张 T-42 给出三条可以长期找回的关系：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">请求关系：文字 → 本地值 → HTTP → API → 公开结果\n状态关系：核心事务 → 本地pending → 外部结果 → 第二事务 → 可读回状态\n恢复关系：程序身份 + 配置 + 持久对象 → 实例运行 → 业务验证 → 隔离恢复与再验证\n</code></pre></div>\n<p>这些关系在一个具体问题上相遇。例如看到 503，先用请求编号找本次处理，再查是否已经有本地 pending 和外部 receipt；确认交接位置后选择恢复动作，最后用同一意图的调用次数、效果和读回结果证明动作没有扩大错误。</p>\n<table>\n<thead>\n<tr>\n<th>当前最早不清楚的关系</th>\n<th>回到哪里继续</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>文字怎么变成值，函数下一步为何这样走</td>\n<td>A 册输入、分支、异常与函数；本书 X01 的客户端到 API</td>\n</tr>\n<tr>\n<td>没有请求、没有 response，或 API 拒绝了输入</td>\n<td>B 册请求/响应与 HTTPX；本书 X02 的连接与校验边界</td>\n</tr>\n<tr>\n<td>行、事件和计数为何必须一起变化</td>\n<td>C 册关系、事务与日志；本书 X01 的两笔事务</td>\n</tr>\n<tr>\n<td>超时以后能否再发，外部是否已经执行</td>\n<td>D 册预算、稳定意图与人工出口；本书 X02 的 pending 恢复</td>\n</tr>\n<tr>\n<td>草稿有引用却不能执行动作</td>\n<td>E 册依据、用途与授权；本书 X01 的独立政策请求</td>\n</tr>\n<tr>\n<td>程序重建后接上哪份数据，备份能证明什么</td>\n<td>F 册运行对象与恢复；本书 X04 的两个持久状态所有者</td>\n</tr>\n<tr>\n<td>绿色测试到底保护了哪项客户承诺</td>\n<td>本书 X03 的 response、行、效果与日志组合</td>\n</tr>\n</tbody>\n</table>\n<p>重要的不是把表里所有名称背下来，而是在面对一个实际输入、状态或失败时，能够指出它所属的对象、下一次交接和最有用的证据。遗忘命令细节可以查；若无法解释“这次恢复改变哪份状态、为什么可以这样做”，就应回到那一段关系重新追踪。</p>\n<h3 id=\"guide-x-s3\">查用来源</h3>\n<p>以下为持续更新的官方操作资料，复核日期为 2026-09-07；具体版本敏感写法在真正运行时再次核对。本书配套的字段、状态和固定场景由随书源码与测试定义，不由文档更新自动改变。</p>\n<ul>\n<li><a href=\"https://fastapi.tiangolo.com/tutorial/testing/\" target=\"_blank\" rel=\"noopener noreferrer\">FastAPI Testing</a>：TestClient 与接口测试入口。</li>\n<li><a href=\"https://www.python-httpx.org/advanced/timeouts/\" target=\"_blank\" rel=\"noopener noreferrer\">HTTPX Timeouts</a>：连接、读取、写入与连接池等待的区别。</li>\n<li><a href=\"https://www.sqlite.org/backup.html\" target=\"_blank\" rel=\"noopener noreferrer\">SQLite Online Backup API</a>：一致数据库备份与恢复输入。</li>\n<li><a href=\"https://docs.docker.com/engine/storage/volumes/\" target=\"_blank\" rel=\"noopener noreferrer\">Docker Volumes</a>：volume 与 container 生命周期，以及备份恢复操作。</li>\n</ul>\n<p>固定例子由本书与配套完整提供。真实客户的数据、真实供应商的约定、真实模型的效果和另一台机器的运行状态，仍需各自的证据与授权范围来回答。</p>\n<h2 id=\"guide-x-s4\">本册总览（需要时再回看）</h2>\n<p>这里保留整册地图、章节关系和查用入口；第一次阅读不需要先读完。</p>\n<h2 id=\"guide-x-s5\">本册知识结构总览</h2>\n<p>先分清四个相互配合的问题。它们是观察同一系统的方式，不是请求依次经过的四项服务。</p>\n<table>\n<thead>\n<tr>\n<th>遇到的问题</th>\n<th>本册沿什么关系回答</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>X01：这张工单究竟怎样产生？</td>\n<td>从文字追到请求、事务、外部结果和读回；分清谁产生结果、谁保存事实</td>\n</tr>\n<tr>\n<td>X02：为什么都显示失败，下一步却不同？</td>\n<td>比较本应发生与实际发生的交接，判断失败前已经留下什么</td>\n</tr>\n<tr>\n<td>X03：测试是绿的，为什么还不能说整套应用都对？</td>\n<td>让 response、数据行、调用计数和日志共同支持一项具体承诺</td>\n</tr>\n<tr>\n<td>X04：程序能启动以后，怎样证明可以交接和恢复？</td>\n<td>把程序身份、配置、持久数据、业务验收与恢复接在一起</td>\n</tr>\n</tbody>\n</table>\n<p>支持应用本身的关系如下。图中数据库在应用旁边，运行环境承载所有程序；它们都不是最后再处理一次请求的“下一站”。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">客户端 ── 创建／查询请求 ──→ 工单 API ── 事务与查询 ──→ 应用 SQLite\n   ↑                           │                         tickets.db\n   └───── 公开结果 ────────────┤\n                               ├── 派单请求 ──→ 模拟合作方\n                               │                   │\n                               │                   └── 自己的 receipt 数据\n                               │\n                               └── 另一次政策请求\n                                   → 读取工单与获准资料\n                                   → Fake Model 提出草稿\n                                   → 应用检查后交人核对\n\n运行环境为 API 和模拟合作方提供进程、配置、端口与持久目录。\n备份与恢复操作处理已经明确归属的数据，不替任何业务层作决定。\n</code></pre></div>\n<p>这张图有两种不同的“保存”。应用保存工单和处理事件；合作方保存自己的派单结果。二者经过请求协调，但不是一个数据库事务。模型分支又不同：它产生的草稿只交回调用者，本例没有把它写成工单的新事实。</p>\n<h3 id=\"guide-x-s6\">这里的 T-42 与前几册是什么关系？</h3>\n<p>固定设备叫 <code>Printer-7</code>，主题为“打印机离线”，外部优先级文字是 <code>&quot;3&quot;</code>。本项目只使用合成数据，并要求请求显式标记 <code>data_classification=&quot;synthetic&quot;</code>。标记是输入合同的一部分，不是程序能自动判定任意文字是否来自真实客户的证明。</p>\n<p>X 使用自己的独立数据库。只有从空数据库开始、编号计数为 42 时，第一张成功创建的工单才是 <code>T-42</code>。后续新意图会得到 T-43 等编号。B、C 即使也用过 T-42，也没有与这里共享数据；D、E 的 <code>LOCAL-0042</code> 则属于另一套本地案件命名，不能直接替换本项目的工单号。</p>\n<p>本配套的客户端是 Python 程序，没有附带网页界面。读者可以把公开结果交给网页显示，但本书的可运行验证只声称检查实际存在的程序、接口和数据。</p>\n",
+  "toc": [
+    {
+      "id": "guide-x-s1",
+      "text": "第一次只看这里",
+      "level": 2
+    },
+    {
+      "id": "guide-x-s2",
+      "text": "关系收束｜从一个现象找到下一项有用证据",
+      "level": 2
+    },
+    {
+      "id": "guide-x-s3",
+      "text": "查用来源",
+      "level": 3
+    },
+    {
+      "id": "guide-x-s4",
+      "text": "本册总览（需要时再回看）",
+      "level": 2
+    },
+    {
+      "id": "guide-x-s5",
+      "text": "本册知识结构总览",
+      "level": 2
+    },
+    {
+      "id": "guide-x-s6",
+      "text": "这里的 T-42 与前几册是什么关系？",
+      "level": 3
+    }
+  ]
+}

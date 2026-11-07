@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2150" width="1800" height="2150" role="img" aria-labelledby="title">
+<title id="title">程序结束后，数据怎样留下来？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2150" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A08  程序结束后，数据怎样留下来？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A08把A04的容器接到文件；A09核对读写路径，A13把原始记录校验、统计和保护旧报告组合起来。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">读取与解析得到新的内存值；打开模式和写入操作决定磁盘内容怎样改变，格式读懂也不等于业务有效。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">持久保存、格式解释与数据变换</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 1537.125,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 262.875,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">文件与内存交接</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">内存值与持久文件</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">两份不同的状态</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">变量只属于本次运行，文件留给下次读</text>
+<text x="103.0" y="652.0" font-size="18" fill="#233734" font-weight="400">取；更改内存值或显示在屏幕上都不自动</text>
+<text x="103.0" y="677.0" font-size="18" fill="#233734" font-weight="400">保存。</text>
+<polyline points="73.0,567.0 73.0,743.0 91.0,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="721.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="751.0" font-size="21" fill="#233734" font-weight="700">打开目标文件（open）</text>
+<text x="103.0" y="781.0" font-size="18" fill="#53635f" font-weight="400">按路径和模式取得文件对象；相对数据路</text>
+<text x="103.0" y="806.0" font-size="18" fill="#53635f" font-weight="400">径以工作目录为起点，不自动跟随脚本目</text>
+<text x="103.0" y="831.0" font-size="18" fill="#53635f" font-weight="400">录。</text>
+<polyline points="73.0,743.0 73.0,897.0 91.0,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="875.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="905.0" font-size="21" fill="#233734" font-weight="700">使用后关闭文件（with）</text>
+<text x="103.0" y="935.0" font-size="18" fill="#53635f" font-weight="400">管理文件使用及异常退出清理；关闭不是</text>
+<text x="103.0" y="960.0" font-size="18" fill="#53635f" font-weight="400">撤销已写内容，也不普遍保证断电后仍持</text>
+<text x="103.0" y="985.0" font-size="18" fill="#53635f" font-weight="400">久。</text>
+<polyline points="73.0,897.0 73.0,1051.0 91.0,1051.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1029.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1059.0" font-size="21" fill="#233734" font-weight="700">文字编码与换行（UTF-8）</text>
+<text x="103.0" y="1089.0" font-size="18" fill="#53635f" font-weight="400">编码连接文字与字节，\n明确分行；write</text>
+<text x="103.0" y="1114.0" font-size="18" fill="#53635f" font-weight="400">不自动补换行，print的end控制其末尾字</text>
+<text x="103.0" y="1139.0" font-size="18" fill="#53635f" font-weight="400">符。</text>
+<polyline points="73.0,1051.0 73.0,1205.0 91.0,1205.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1183.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1213.0" font-size="21" fill="#233734" font-weight="700">读取内容（read）</text>
+<text x="103.0" y="1243.0" font-size="18" fill="#53635f" font-weight="400">read取整段文字，遍历文件逐行取字符</text>
+<text x="103.0" y="1268.0" font-size="18" fill="#53635f" font-weight="400">串；rstrip(&#x27;\n&#x27;)去末尾换行，strip还会去其</text>
+<text x="103.0" y="1293.0" font-size="18" fill="#53635f" font-weight="400">他空白。</text>
+<polyline points="687.625,437.0 687.625,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="502.0" font-size="23" fill="#286f64" font-weight="700">写入模式与失败</text>
+<polyline points="497.75,525.0 497.75,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,525.0 497.75,567.0 515.75,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="545.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,553.0 516.75,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="575.0" font-size="21" fill="#286f64" font-weight="700">打开模式及写入效果（r / x / w / a）</text>
+<text x="527.75" y="605.0" font-size="16" fill="#286f64" font-weight="400">打开文件的模式参数</text>
+<text x="527.75" y="627.0" font-size="18" fill="#233734" font-weight="400">依次用于读、仅新建、替换、追加；x拒绝</text>
+<text x="527.75" y="652.0" font-size="18" fill="#233734" font-weight="400">已有目标，w成功打开就清空，a不自动补</text>
+<text x="527.75" y="677.0" font-size="18" fill="#233734" font-weight="400">分行。</text>
+<polyline points="497.75,567.0 497.75,743.0 515.75,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="721.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="751.0" font-size="21" fill="#233734" font-weight="700">读取失败分层</text>
+<text x="527.75" y="781.0" font-size="18" fill="#53635f" font-weight="400">路径、权限、文字解码、格式解析与业务</text>
+<text x="527.75" y="806.0" font-size="18" fill="#53635f" font-weight="400">拒绝分别定位；文件能打开不代表内容已</text>
+<text x="527.75" y="831.0" font-size="18" fill="#53635f" font-weight="400">经合格。</text>
+<polyline points="497.75,743.0 497.75,897.0 515.75,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="875.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="905.0" font-size="21" fill="#233734" font-weight="700">输出保护边界</text>
+<text x="527.75" y="935.0" font-size="18" fill="#53635f" font-weight="400">先验证内存数据再打开目标可减少破坏，</text>
+<text x="527.75" y="960.0" font-size="18" fill="#53635f" font-weight="400">但w后失败仍可能留半文件；临时替换由</text>
+<text x="527.75" y="985.0" font-size="18" fill="#53635f" font-weight="400">A13展开。</text>
+<polyline points="1112.375,437.0 1112.375,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">表格文件结构（CSV）</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">读写表格行（csv.reader / writer）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">按位置读写字段列表并处理引号逗号；</text>
+<text x="952.5" y="630.0" font-size="18" fill="#53635f" font-weight="400">reader也读取表头，writerow写一行，</text>
+<text x="952.5" y="655.0" font-size="18" fill="#53635f" font-weight="400">writerows写多行。</text>
+<polyline points="922.5,567.0 922.5,721.0 940.5,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="699.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="729.0" font-size="21" fill="#233734" font-weight="700">按字段读写表格（DictReader / DictWriter）</text>
+<text x="952.5" y="759.0" font-size="16" fill="#286f64" font-weight="400">CSV结构读写工具</text>
+<text x="952.5" y="781.0" font-size="18" fill="#53635f" font-weight="400">按字段名交接字典；默认读取首行为列</text>
+<text x="952.5" y="806.0" font-size="18" fill="#53635f" font-weight="400">名，写出用fieldnames规定次序，表头需</text>
+<text x="952.5" y="831.0" font-size="18" fill="#53635f" font-weight="400">显式写入。</text>
+<polyline points="922.5,721.0 922.5,897.0 940.5,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="875.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="905.0" font-size="21" fill="#233734" font-weight="700">表格结构校验（CSV）</text>
+<text x="952.5" y="935.0" font-size="18" fill="#53635f" font-weight="400">核对fieldnames、额外列的None键与缺列</text>
+<text x="952.5" y="960.0" font-size="18" fill="#53635f" font-weight="400">的None值；空字符串及业务状态还需另外</text>
+<text x="952.5" y="985.0" font-size="18" fill="#53635f" font-weight="400">检查。</text>
+<polyline points="922.5,897.0 922.5,1051.0 940.5,1051.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="1029.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="1059.0" font-size="21" fill="#233734" font-weight="700">newline=&#x27;&#x27;</text>
+<text x="952.5" y="1089.0" font-size="18" fill="#53635f" font-weight="400">让CSV模块按格式规则管理换行，读写沿</text>
+<text x="952.5" y="1114.0" font-size="18" fill="#53635f" font-weight="400">用；打开文字文件与解释字段是两层操</text>
+<text x="952.5" y="1139.0" font-size="18" fill="#53635f" font-weight="400">作。</text>
+<polyline points="1537.125,437.0 1537.125,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="502.0" font-size="23" fill="#286f64" font-weight="700">记录整理与JSON</text>
+<polyline points="1347.25,525.0 1347.25,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,525.0 1347.25,567.0 1365.25,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="575.0" font-size="21" fill="#233734" font-weight="700">保存并筛选记录（list）</text>
+<text x="1377.25" y="605.0" font-size="18" fill="#53635f" font-weight="400">把reader逐项结果收集到内存，按条件加</text>
+<text x="1377.25" y="630.0" font-size="18" fill="#53635f" font-weight="400">入新列表；适合小文件，不表示所有大文</text>
+<text x="1377.25" y="655.0" font-size="18" fill="#53635f" font-weight="400">件都应整批读入。</text>
+<polyline points="1347.25,567.0 1347.25,721.0 1365.25,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="729.0" font-size="21" fill="#233734" font-weight="700">按规则生成排序结果（sorted / key）</text>
+<text x="1377.25" y="759.0" font-size="18" fill="#53635f" font-weight="400">用回调返回的比较值产生新排序列表；传</text>
+<text x="1377.25" y="784.0" font-size="18" fill="#53635f" font-weight="400">函数本身而非提前调用，原列表和文件顺</text>
+<text x="1377.25" y="809.0" font-size="18" fill="#53635f" font-weight="400">序不变。</text>
+<polyline points="1347.25,721.0 1347.25,875.0 1365.25,875.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="853.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="883.0" font-size="21" fill="#233734" font-weight="700">临时提供排序规则（lambda）</text>
+<text x="1377.25" y="913.0" font-size="18" fill="#53635f" font-weight="400">创建接收参数并返回单个表达式的短函</text>
+<text x="1377.25" y="938.0" font-size="18" fill="#53635f" font-weight="400">数，可作排序依据；复杂判断不必强行缩</text>
+<text x="1377.25" y="963.0" font-size="18" fill="#53635f" font-weight="400">成一行。</text>
+<polyline points="1347.25,875.0 1347.25,1029.0 1365.25,1029.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="1007.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,1015.0 1366.25,1159.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="1037.0" font-size="21" fill="#286f64" font-weight="700">json.dump／load</text>
+<text x="1377.25" y="1067.0" font-size="16" fill="#286f64" font-weight="400">序列化与解析工具</text>
+<text x="1377.25" y="1089.0" font-size="18" fill="#233734" font-weight="400">把Python值写成JSON或从JSON重建值，</text>
+<text x="1377.25" y="1114.0" font-size="18" fill="#233734" font-weight="400">适合嵌套报告；读回不是仅得到整段文</text>
+<text x="1377.25" y="1139.0" font-size="18" fill="#233734" font-weight="400">字。</text>
+<polyline points="1347.25,1029.0 1347.25,1205.0 1365.25,1205.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="1183.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="1213.0" font-size="21" fill="#233734" font-weight="700">JSON形状与isinstance</text>
+<text x="1377.25" y="1243.0" font-size="16" fill="#286f64" font-weight="400">解析后结构检查</text>
+<text x="1377.25" y="1265.0" font-size="18" fill="#53635f" font-weight="400">合法JSON也可能不是要求的字典或列表；</text>
+<text x="1377.25" y="1290.0" font-size="18" fill="#53635f" font-weight="400">类型与字段检查后，仍须验证每条内容和</text>
+<text x="1377.25" y="1315.0" font-size="18" fill="#53635f" font-weight="400">统计关系。</text>
+<text x="64" y="1379.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1379.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1404.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1437.0" font-size="21" fill="#233734" font-weight="700">打开目标文件（open）</text>
+<rect x="750" y="1404.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1437.0" font-size="21" fill="#233734" font-weight="700">按字段读写表格（DictReader / DictWriter）</text>
+<polyline points="538,1441.0 736,1441.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1441.0 726.9955289764732,1445.3496553411123 726.9955289764732,1436.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1429.0" font-size="17" fill="#286f64" font-weight="400">交出文件供解析</text>
+<text x="80" y="1487.0" font-size="18" fill="#53635f" font-weight="400">open解决访问，CSV解释字段；split逗号并不理解字段内部合法逗号。</text>
+<rect x="64" y="1527.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1560.2" font-size="21" fill="#233734" font-weight="700">临时提供排序规则（lambda）</text>
+<rect x="750" y="1527.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1560.2" font-size="21" fill="#233734" font-weight="700">按规则生成排序结果（sorted / key）</text>
+<polyline points="538,1564.2 736,1564.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1564.2 726.9955289764732,1568.5496553411124 726.9955289764732,1559.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1552.2" font-size="17" fill="#286f64" font-weight="400">提供比较值</text>
+<text x="80" y="1610.2" font-size="18" fill="#53635f" font-weight="400">字符串编号按文字排序；若需数字次序必须明确改变取键规则。</text>
+<rect x="64" y="1650.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1683.4" font-size="21" fill="#233734" font-weight="700">json.dump／load</text>
+<rect x="750" y="1650.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1683.4" font-size="21" fill="#233734" font-weight="700">JSON形状与isinstance</text>
+<polyline points="538,1687.4 736,1687.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1687.4 726.9955289764732,1691.7496553411124 726.9955289764732,1683.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1675.4" font-size="17" fill="#286f64" font-weight="400">解析后仍需核对</text>
+<text x="80" y="1733.4" font-size="18" fill="#53635f" font-weight="400">JSON语法正确与报告业务正确是不同事实。</text>
+<rect x="64" y="1773.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1806.6000000000001" font-size="21" fill="#233734" font-weight="700">打开模式及写入效果（r / x / w / a）</text>
+<rect x="750" y="1773.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1806.6000000000001" font-size="21" fill="#233734" font-weight="700">输出保护边界</text>
+<polyline points="538,1810.6000000000001 736,1810.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1810.6000000000001 726.9955289764732,1814.9496553411125 726.9955289764732,1806.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1798.6000000000001" font-size="17" fill="#286f64" font-weight="400">决定旧目标风险</text>
+<text x="80" y="1856.6000000000001" font-size="18" fill="#53635f" font-weight="400">w清空发生在成功打开时，异常清理不会自动恢复旧报告。</text>
+<rect x="64" y="1896.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1929.8000000000002" font-size="21" fill="#233734" font-weight="700">json.dump／load</text>
+<rect x="750" y="1896.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1929.8000000000002" font-size="21" fill="#233734" font-weight="700">内存值与持久文件</text>
+<polyline points="538,1933.8000000000002 736,1933.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1933.8000000000002 726.9955289764732,1938.1496553411125 726.9955289764732,1929.4503446588878" fill="#286f64"/>
+<text x="560.5" y="1921.8000000000002" font-size="17" fill="#286f64" font-weight="400">连接内存与文件内容</text>
+<text x="80" y="1979.8000000000002" font-size="18" fill="#53635f" font-weight="400">dump把值写成文件内容；下次load重新得到值，并不是把上一进程的变量继续活着保存。</text>
+<text x="64" y="2032.0000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：图片格式与变换。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2094.6000000000004 1736,2094.6000000000004" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2124.6000000000004" font-size="17" fill="#53635f" font-weight="400">对照正文：A08  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1099" width="1800" height="1099" role="img" aria-labelledby="title">
+<title id="title">可靠性关系的组合验证</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1099" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D05  可靠性关系的组合验证</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">综合 D01–D04 的不同保护关系；通过相同意图的可重复实验核对协作，为E册更强的内容与权限约束铺底。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="622.0" y="343.0" width="556.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="662.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">调用、远端效果与本地状态的联合核对</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">配置、秘密与运行边界</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">配置与出站限制（Settings）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">配置目标、等待和次数；配套强制传输替身、禁代理继承与重定向，示例域名不是主要保护。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">秘密与不同消费者</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">秘密只在授权头处展开；外发请求、冻结输入、公开回应、普通日志和人工表各取所需信息。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">独立副本与里程碑</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">固定环境在副本运行，用结果字段核对具体性质；临时清理只指本轮文件，PASS不证明真实供应商。</text>
+<text x="64" y="877.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="877.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="902.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="935.0" font-size="21" fill="#233734" font-weight="700">秘密与不同消费者</text>
+<rect x="750" y="902.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="935.0" font-size="21" fill="#233734" font-weight="700">两库、虚拟时钟与替身（见主图）</text>
+<polyline points="538,939.0 736,939.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,939.0 726.9955289764732,943.3496553411123 726.9955289764732,934.6503446588877" fill="#286f64"/>
+<text x="569.0" y="927.0" font-size="17" fill="#286f64" font-weight="400">限制验证信息去向</text>
+<text x="80" y="985.0" font-size="18" fill="#53635f" font-weight="400">fake记录授权头是否存在即可；完整输入需要持久恢复，但无需复制到常规事件。</text>
+<polyline points="64,1043.2 1736,1043.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1073.2" font-size="17" fill="#53635f" font-weight="400">对照正文：D05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

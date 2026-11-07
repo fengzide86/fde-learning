@@ -1,0 +1,4 @@
+* text=auto eol=lf
+site/media/** -text
+site/content/** -text
+site/data/** -text

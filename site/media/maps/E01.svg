@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1629" width="1800" height="1629" role="img" aria-labelledby="title">
+<title id="title">生成与工单事实</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1629" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E01  生成与工单事实</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">承接程序、业务记录与外部依赖；为后续输出验证、检索和工具执行分清责任。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">应用提供事实，模型提出草稿；结构通过不等于内容已经真实。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="760.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">模型生成与事实的边界</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">信息的来源与地位</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">应用事实</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">记录与计算结果</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">由应用读取或计算的记录；用户报告仍只证明报告内容，不自动成为现场检测结论。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,679.0 92.0,773.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="701.0" font-size="21" fill="#286f64" font-weight="700">生成草稿</text>
+<text x="103.0" y="731.0" font-size="16" fill="#286f64" font-weight="400">待核对的候选</text>
+<text x="103.0" y="753.0" font-size="18" fill="#233734" font-weight="400">模型整理出的候选文字；措辞流畅或结构通过，都不能自行改写工单事实。</text>
+<polyline points="73.0,693.0 73.0,819.0 91.0,819.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="797.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="827.0" font-size="21" fill="#233734" font-weight="700">字段筛选</text>
+<text x="103.0" y="857.0" font-size="18" fill="#53635f" font-weight="400">调用前只选任务所需且获准的字段；提示模型保密不能收回已经发送的私人资料。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">应用接住结果</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">模型提供方与测试替身（Provider / Fake）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">Provider 提供调用入口；Fake 重放固定候选和故障，只验证应用处理，不测真实模型效果。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,657.0 941.5,729.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="679.0" font-size="21" fill="#286f64" font-weight="700">结构检查</text>
+<text x="952.5" y="709.0" font-size="18" fill="#233734" font-weight="400">解析 JSON 并核对字段类型后可接为草稿；无法仅凭这些检查证明自然语言忠于事实。</text>
+<polyline points="922.5,671.0 922.5,775.0 940.5,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="753.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="783.0" font-size="21" fill="#233734" font-weight="700">请求与生成标识</text>
+<text x="952.5" y="813.0" font-size="18" fill="#53635f" font-weight="400">分别关联一次应用处理和一份生成；一次处理可能有多份候选，二者不宜混为一号。</text>
+<polyline points="922.5,775.0 922.5,879.0 940.5,879.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="857.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="887.0" font-size="21" fill="#233734" font-weight="700">失败与人工出口</text>
+<text x="952.5" y="917.0" font-size="18" fill="#53635f" font-weight="400">超时或候选无效时公开失败并保留原记录；未取得回应不证明外部服务从未处理。</text>
+<text x="64" y="981.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="981.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1006.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1039.0" font-size="21" fill="#233734" font-weight="700">结构检查</text>
+<rect x="750" y="1006.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1039.0" font-size="21" fill="#233734" font-weight="700">生成草稿</text>
+<polyline points="538,1043.0 736,1043.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1043.0 726.9955289764732,1047.3496553411123 726.9955289764732,1038.6503446588877" fill="#286f64"/>
+<text x="594.5" y="1031.0" font-size="17" fill="#286f64" font-weight="400">仅允许接为</text>
+<text x="80" y="1089.0" font-size="18" fill="#53635f" font-weight="400">字段合法只支持当前结构结论，不能授予草稿事实地位。</text>
+<rect x="64" y="1129.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1162.2" font-size="21" fill="#233734" font-weight="700">生成草稿</text>
+<rect x="750" y="1129.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1162.2" font-size="21" fill="#233734" font-weight="700">应用事实</text>
+<polyline points="538,1166.2 736,1166.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1166.2 726.9955289764732,1170.5496553411124 726.9955289764732,1161.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1154.2" font-size="17" fill="#286f64" font-weight="400">必须对照</text>
+<text x="80" y="1212.2" font-size="18" fill="#53635f" font-weight="400">保留两种来源，才能发现摘要把用户报告提升为诊断或修复结论。</text>
+<rect x="64" y="1252.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1285.4" font-size="21" fill="#233734" font-weight="700">字段筛选</text>
+<rect x="750" y="1252.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1285.4" font-size="21" fill="#233734" font-weight="700">模型提供方与测试替身（Provider / Fake）</text>
+<polyline points="538,1289.4 736,1289.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1289.4 726.9955289764732,1293.7496553411124 726.9955289764732,1285.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1277.4" font-size="17" fill="#286f64" font-weight="400">提供获准输入</text>
+<text x="80" y="1335.4" font-size="18" fill="#53635f" font-weight="400">无论真实调用还是替身验证，应用都应先限定发送资料；Fake 不证明真实模型质量。</text>
+<rect x="64" y="1375.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1408.6000000000001" font-size="21" fill="#233734" font-weight="700">模型提供方与测试替身（Provider / Fake）</text>
+<rect x="750" y="1375.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1408.6000000000001" font-size="21" fill="#233734" font-weight="700">生成草稿</text>
+<polyline points="538,1412.6000000000001 736,1412.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1412.6000000000001 726.9955289764732,1416.9496553411125 726.9955289764732,1408.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1400.6000000000001" font-size="17" fill="#286f64" font-weight="400">返回待检查候选</text>
+<text x="80" y="1458.6000000000001" font-size="18" fill="#53635f" font-weight="400">模型返回或 Fake 预设的是候选文字；通过应用检查以后也不能自动升级成现场事实。</text>
+<text x="64" y="1510.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：生成所依赖的机制。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1573.4 1736,1573.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1603.4" font-size="17" fill="#53635f" font-weight="400">对照正文：E01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

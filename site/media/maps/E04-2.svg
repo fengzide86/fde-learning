@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1244" width="1800" height="1244" role="img" aria-labelledby="title">
+<title id="title">检索与回答依据</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1244" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E04  检索与回答依据</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">在 E03 实际输入中补上业务资料；连接 C 的过滤和 E02 的核对，不把引用当执行权限。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">让生成答案可追溯到原文</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">查找与表示</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">精确查询与语义检索</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">已知编号或业务字段优先确定性查找；表达不同而含义相近时，语义排序才可能有用。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">向量表示与相似度（embedding）</text>
+<text x="103.0" y="709.0" font-size="16" fill="#286f64" font-weight="400">数值表示与比较</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">把问题和片段变成兼容向量再比较；向量不是原文或引用，换配置可能要求重建索引。</text>
+<polyline points="73.0,671.0 73.0,797.0 91.0,797.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="775.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="805.0" font-size="21" fill="#233734" font-weight="700">筛选候选结果（top-k / threshold）</text>
+<text x="103.0" y="835.0" font-size="18" fill="#53635f" font-weight="400">限制返回数量并筛选相关性；最靠前不保证够用，过多片段也可能挤占上下文或引入冲突。</text>
+<text x="64" y="899.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="899.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="924.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="957.0" font-size="21" fill="#233734" font-weight="700">资料属性筛选（metadata）（见主图）</text>
+<rect x="750" y="924.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="957.0" font-size="21" fill="#233734" font-weight="700">向量表示与相似度（embedding）</text>
+<polyline points="538,961.0 736,961.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,961.0 726.9955289764732,965.3496553411123 726.9955289764732,956.6503446588877" fill="#286f64"/>
+<text x="586.0" y="949.0" font-size="17" fill="#286f64" font-weight="400">限制候选范围</text>
+<text x="80" y="1007.0" font-size="18" fill="#53635f" font-weight="400">相似度只在获准范围内比较，相关不等于有权读取。</text>
+<rect x="64" y="1047.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1080.2" font-size="21" fill="#233734" font-weight="700">精确查询与语义检索</text>
+<rect x="750" y="1047.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1080.2" font-size="21" fill="#233734" font-weight="700">资料检索后生成（RAG，见主图）</text>
+<polyline points="538,1084.2 736,1084.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1084.2 726.9955289764732,1088.5496553411124 726.9955289764732,1079.8503446588877" fill="#286f64"/>
+<text x="560.5" y="1072.2" font-size="17" fill="#286f64" font-weight="400">按任务选择查找方式</text>
+<text x="80" y="1130.2" font-size="18" fill="#53635f" font-weight="400">编号精确匹配与语义相近适合不同问题；并非凡是 RAG 都必须向量检索。</text>
+<polyline points="64,1188.4 1736,1188.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1218.4" font-size="17" fill="#53635f" font-weight="400">对照正文：E04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

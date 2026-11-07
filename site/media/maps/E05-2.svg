@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 995" width="1800" height="995" role="img" aria-labelledby="title">
+<title id="title">工具建议与执行权限</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="995" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E05  工具建议与执行权限</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">将 E02 的结构合同接到 D 的幂等写入；执行前重读事实，执行后以工具证据说明结果。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">把操作建议接到受权执行</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">重复请求与业务效果</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">幂等意图键</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">以稳定身份关联同一业务意图的重放；相同参数可复用收据，但每次仍须通过当前授权。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">调用数与效果数</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">区分工具被调用几次和实际新增几次；幂等重放可以两次调用只形成一次业务效果。</text>
+<text x="64" y="773.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="773.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="798.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="831.0" font-size="21" fill="#233734" font-weight="700">幂等意图键</text>
+<rect x="750" y="798.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="831.0" font-size="21" fill="#233734" font-weight="700">调用数与效果数</text>
+<polyline points="538,835.0 736,835.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,835.0 726.9955289764732,839.3496553411123 726.9955289764732,830.6503446588877" fill="#286f64"/>
+<text x="586.0" y="823.0" font-size="17" fill="#286f64" font-weight="400">约束重复效果</text>
+<text x="80" y="881.0" font-size="18" fill="#53635f" font-weight="400">相同意图重放可多次调用、一次效果，授权变化时仍须停止。</text>
+<polyline points="64,939.2 1736,939.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="969.2" font-size="17" fill="#53635f" font-weight="400">对照正文：E05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

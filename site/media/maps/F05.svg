@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1499" width="1800" height="1499" role="img" aria-labelledby="title">
+<title id="title">备份、恢复与精确回滚</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1499" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F05  备份、恢复与精确回滚</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">将 F04 的明确失败接到恢复决策；结合 C 的持久状态和事务边界，为 F06 交接准备可复查证据。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">备份留下可恢复的数据，隔离恢复检验它；换回旧程序与还原数据不是同一动作。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">重建可核对的程序配置数据组合</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">备份对象与一致时点</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">持久化与独立备份</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">volume 保留跨实例数据，却也承受误删和存储损坏；备份</text>
+<text x="103.0" y="630.0" font-size="18" fill="#53635f" font-weight="400">需另有目标，同机副本不等于异地容灾。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,682.0 92.0,779.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="704.0" font-size="21" fill="#286f64" font-weight="700">在线备份（SQLite online backup）</text>
+<text x="103.0" y="734.0" font-size="18" fill="#233734" font-weight="400">由数据库引擎取得一致视图，避免随手复制活跃 WAL 数据</text>
+<text x="103.0" y="759.0" font-size="18" fill="#233734" font-weight="400">库的缺口；备份业务时点仍需选择。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">备份创建与 verify</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">创建文件后须独立重检 hash、完整性、实际结构和业务字</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">段；文件非空不能证明可恢复。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">隔离恢复及其验证</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">新目标与拒绝覆盖</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#53635f" font-weight="400">先在独立目标写 .partial 并核验，再建立最终数据库；已有</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#53635f" font-weight="400">或被并发创建的目标须拒绝覆盖。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#233734" font-weight="700">隔离运行组合</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#53635f" font-weight="400">恢复应用用精确旧镜像、新卷和备用端口，容量设不可达；</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#53635f" font-weight="400">这与原正常网络配置不是同一基线。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,811.0 658.3333333333334,908.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#286f64" font-weight="700">旧事实读回与恢复后写入</text>
+<text x="669.3333333333334" y="863.0" font-size="18" fill="#233734" font-weight="400">核对关键旧工单，再按清单下一编号创建并读回降级工单；</text>
+<text x="669.3333333333334" y="888.0" font-size="18" fill="#233734" font-weight="400">同时确认原环境数据和编号未变。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">回到已知兼容组合</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,553.0 1224.6666666666667,672.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#286f64" font-weight="700">回退程序与还原数据（rollback / restore）</text>
+<text x="1235.6666666666667" y="605.0" font-size="16" fill="#286f64" font-weight="400">换回运行组合与还原数据</text>
+<text x="1235.6666666666667" y="627.0" font-size="18" fill="#233734" font-weight="400">回滚恢复程序配置数据的兼容组合，恢复从备份建立数据目</text>
+<text x="1235.6666666666667" y="652.0" font-size="18" fill="#233734" font-weight="400">标；二者可配合但不等义。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,718.0 1223.6666666666667,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="696.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="726.0" font-size="21" fill="#233734" font-weight="700">未迁移与已迁移的分支</text>
+<text x="1235.6666666666667" y="756.0" font-size="18" fill="#53635f" font-weight="400">只改程序期望时可复用原卷换回旧版；已迁移须查旧版兼容</text>
+<text x="1235.6666666666667" y="781.0" font-size="18" fill="#53635f" font-weight="400">性并处理备份之后的新增事实。</text>
+<polyline points="1205.6666666666667,718.0 1205.6666666666667,847.0 1223.6666666666667,847.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="825.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="855.0" font-size="21" fill="#233734" font-weight="700">旧基线与回滚后核对</text>
+<text x="1235.6666666666667" y="885.0" font-size="18" fill="#53635f" font-weight="400">使用事前登记的镜像和配置避免临时重建替代旧版；替换后</text>
+<text x="1235.6666666666667" y="910.0" font-size="18" fill="#53635f" font-weight="400">再核对运行身份及业务结果。</text>
+<text x="64" y="974.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="974.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="999.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1032.0" font-size="21" fill="#233734" font-weight="700">隔离运行组合</text>
+<rect x="750" y="999.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1032.0" font-size="21" fill="#233734" font-weight="700">旧事实读回与恢复后写入</text>
+<polyline points="538,1036.0 736,1036.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1036.0 726.9955289764732,1040.3496553411123 726.9955289764732,1031.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1024.0" font-size="17" fill="#286f64" font-weight="400">限定验证范围</text>
+<text x="80" y="1082.0" font-size="18" fill="#53635f" font-weight="400">恢复后的降级读写证明隔离配置可用，不冒充原容量正常路线也已逐项复原。</text>
+<rect x="64" y="1122.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1155.2" font-size="21" fill="#233734" font-weight="700">未迁移与已迁移的分支</text>
+<rect x="750" y="1122.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1155.2" font-size="21" fill="#233734" font-weight="700">回退程序与还原数据（rollback / restore）</text>
+<polyline points="538,1159.2 736,1159.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1159.2 726.9955289764732,1163.5496553411124 726.9955289764732,1154.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1147.2" font-size="17" fill="#286f64" font-weight="400">决定是否需要</text>
+<text x="80" y="1205.2" font-size="18" fill="#53635f" font-weight="400">已提交迁移不能靠旧事务 rollback 撤销，换镜像也不保证新数据仍可使用。</text>
+<rect x="64" y="1245.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1278.4" font-size="21" fill="#233734" font-weight="700">在线备份（SQLite online backup）</text>
+<rect x="750" y="1245.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1278.4" font-size="21" fill="#233734" font-weight="700">新目标与拒绝覆盖</text>
+<polyline points="538,1282.4 736,1282.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1282.4 726.9955289764732,1286.7496553411124 726.9955289764732,1278.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1270.4" font-size="17" fill="#286f64" font-weight="400">提供一致恢复来源</text>
+<text x="80" y="1328.4" font-size="18" fill="#53635f" font-weight="400">取得固定备份后在新目标恢复并核对，不用复制活动主文件冒充一致备份，也不覆盖原业务库。</text>
+<text x="64" y="1380.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：清单保存什么证据。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1443.2 1736,1443.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1473.2" font-size="17" fill="#53635f" font-weight="400">对照正文：F05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1745" width="1800" height="1745" role="img" aria-labelledby="title">
+<title id="title">工单、派单与政策分支</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1745" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">X / 一套应用怎样连接起来</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">X01  工单、派单与政策分支</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">综合 A–E 的输入、HTTP、事务、外部调用和受约束AI；这些能力共同服务业务，并非六项连续服务。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">创建先保存本地事实，再取得并保存外部结果；政策草稿属于另一次独立请求。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">完整应用中值、事实和候选的归属</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">输入表示与边界检查</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">客户端优先级转换</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">文字先转整数再查范围，转换或范围失败都不发HTTP；</text>
+<text x="103.0" y="630.0" font-size="18" fill="#53635f" font-weight="400">JSON中的数字与字符串含义不同。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">严格接口输入约定（API）</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">服务端独立检查字段、整数范围与合成标记，拒绝额外字</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">段；客户端检查不能代替入口保护。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">请求追踪号与创建幂等键（request ID / key）</text>
+<text x="103.0" y="863.0" font-size="16" fill="#286f64" font-weight="400">单次处理与业务意图</text>
+<text x="103.0" y="885.0" font-size="18" fill="#53635f" font-weight="400">请求标识关联一次处理，稳定创建键绑定业务意图；重传换</text>
+<text x="103.0" y="910.0" font-size="18" fill="#53635f" font-weight="400">请求标识，但保持键和内容一致。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">持久事实与事务</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,553.0 658.3333333333334,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#286f64" font-weight="700">工单核心事务</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#233734" font-weight="400">同一事务保存工单、创建键与摘要、创建事件及编号变化；</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#233734" font-weight="400">事件写失败时这些改变一起撤回。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,682.0 658.3333333333334,779.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#286f64" font-weight="700">派单确认事务</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#233734" font-weight="400">外部结果通过检查后，再共同保存派单状态、编号和确认事</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#233734" font-weight="400">件；拿到回复不会自动改本地行。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#233734" font-weight="700">两方独立提交</text>
+<text x="669.3333333333334" y="863.0" font-size="18" fill="#53635f" font-weight="400">第一笔本地事务结束后才调用合作方，第二笔再确认；本地</text>
+<text x="669.3333333333334" y="888.0" font-size="18" fill="#53635f" font-weight="400">事务不能跨网络撤销远端效果。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">对象状态与公开映射</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">工单与派单状态</text>
+<text x="1235.6666666666667" y="605.0" font-size="16" fill="#286f64" font-weight="400">两个对象各自的状态</text>
+<text x="1235.6666666666667" y="627.0" font-size="18" fill="#53635f" font-weight="400">工单open表示故障未解决，派单pending或已确认表示安排</text>
+<text x="1235.6666666666667" y="652.0" font-size="18" fill="#53635f" font-weight="400">进度；有人接单不等于维修完成。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,718.0 1223.6666666666667,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="696.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="726.0" font-size="21" fill="#233734" font-weight="700">本地创建键与派单键</text>
+<text x="1235.6666666666667" y="756.0" font-size="18" fill="#53635f" font-weight="400">工单创建意图与合作方派单意图使用不同键；外发仅带工单</text>
+<text x="1235.6666666666667" y="781.0" font-size="18" fill="#53635f" font-weight="400">和设备字段，关联头另行携带。</text>
+<polyline points="1205.6666666666667,718.0 1205.6666666666667,847.0 1223.6666666666667,847.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="825.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="855.0" font-size="21" fill="#233734" font-weight="700">公开结果与 GET 读回</text>
+<text x="1235.6666666666667" y="885.0" font-size="18" fill="#53635f" font-weight="400">公开确认值来自已存状态；数据库status映射为</text>
+<text x="1235.6666666666667" y="910.0" font-size="18" fill="#53635f" font-weight="400">ticket_status，GET只读本地不再派单。</text>
+<text x="64" y="974.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="974.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="999.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1032.0" font-size="21" fill="#233734" font-weight="700">客户端优先级转换</text>
+<rect x="750" y="999.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1032.0" font-size="21" fill="#233734" font-weight="700">严格接口输入约定（API）</text>
+<polyline points="538,1036.0 736,1036.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1036.0 726.9955289764732,1040.3496553411123 726.9955289764732,1031.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1024.0" font-size="17" fill="#286f64" font-weight="400">仍须独立校验</text>
+<text x="80" y="1082.0" font-size="18" fill="#53635f" font-weight="400">其他调用者可绕过客户端；字符串3能在客户端转换，但直接交API会违反严格整数合同。</text>
+<rect x="64" y="1122.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1155.2" font-size="21" fill="#233734" font-weight="700">工单核心事务</text>
+<rect x="750" y="1122.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1155.2" font-size="21" fill="#233734" font-weight="700">派单确认事务</text>
+<polyline points="538,1159.2 736,1159.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1159.2 726.9955289764732,1163.5496553411124 726.9955289764732,1154.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1147.2" font-size="17" fill="#286f64" font-weight="400">与后续事务分离</text>
+<text x="80" y="1205.2" font-size="18" fill="#53635f" font-weight="400">中间跨越外部调用；第一笔完成后工单已存在，第二笔失败不会抹去本地工单或远端派单。</text>
+<rect x="64" y="1245.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1278.4" font-size="21" fill="#233734" font-weight="700">工单与派单状态</text>
+<rect x="750" y="1245.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1278.4" font-size="21" fill="#233734" font-weight="700">公开结果与 GET 读回</text>
+<polyline points="538,1282.4 736,1282.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1282.4 726.9955289764732,1286.7496553411124 726.9955289764732,1278.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1270.4" font-size="17" fill="#286f64" font-weight="400">决定公开表达</text>
+<text x="80" y="1328.4" font-size="18" fill="#53635f" font-weight="400">HTTP201、工单open与派单已确认分别描述不同对象；确认布尔值应来自已提交状态。</text>
+<rect x="64" y="1368.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1401.6000000000001" font-size="21" fill="#233734" font-weight="700">严格接口输入约定（API）</text>
+<rect x="750" y="1368.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1401.6000000000001" font-size="21" fill="#233734" font-weight="700">工单核心事务</text>
+<polyline points="538,1405.6000000000001 736,1405.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1405.6000000000001 726.9955289764732,1409.9496553411125 726.9955289764732,1401.2503446588878" fill="#286f64"/>
+<text x="569.0" y="1393.6000000000001" font-size="17" fill="#286f64" font-weight="400">通过后才允许创建</text>
+<text x="80" y="1451.6000000000001" font-size="18" fill="#53635f" font-weight="400">输入检查只是必要条件；数据就绪也须成立，不能从校验成功推断已经保存。</text>
+<rect x="64" y="1491.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1524.8000000000002" font-size="21" fill="#233734" font-weight="700">派单确认事务</text>
+<rect x="750" y="1491.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1524.8000000000002" font-size="21" fill="#233734" font-weight="700">公开结果与 GET 读回</text>
+<polyline points="538,1528.8000000000002 736,1528.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1528.8000000000002 726.9955289764732,1533.1496553411125 726.9955289764732,1524.4503446588878" fill="#286f64"/>
+<text x="560.5" y="1516.8000000000002" font-size="17" fill="#286f64" font-weight="400">保存后支持公开确认</text>
+<text x="80" y="1574.8000000000002" font-size="18" fill="#53635f" font-weight="400">取得远端回复与保存本地确认分属两步；公开结果和后续读回均应以已提交状态为准。</text>
+<text x="64" y="1627.0000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：独立的政策候选分支；协作实验的观察范围。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1689.6000000000001 1736,1689.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1719.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：X01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

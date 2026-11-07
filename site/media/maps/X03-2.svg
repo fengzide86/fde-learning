@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1099" width="1800" height="1099" role="img" aria-labelledby="title">
+<title id="title">重放承诺与组合证据</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1099" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">X / 一套应用怎样连接起来</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">X03  重放承诺与组合证据</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">用 X01 的成功状态和X02的pending恢复比较不同预期；证据范围再由进程内扩展到真实主机与UAT。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">同一意图未重复创建的可检验承诺</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">测试范围与失效定位</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">小测试与组合实验</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">小测试分别保护转换、事务撤回、外部去重和工具拒绝；组合实验验证它们对同一承诺的协作。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">保留实现、替换不稳定边界</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">测试仍执行需要验证的代码，只固定无关外部条件；进程内通过不能外推真实网络和供应商。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">双进程主机集成</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">真实本机HTTP补socket、端口与重启证据，两库各持久化；仍未验证Compose网络或volume。</text>
+<text x="64" y="877.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="877.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="902.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="935.0" font-size="21" fill="#233734" font-weight="700">保留实现、替换不稳定边界</text>
+<rect x="750" y="902.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="935.0" font-size="21" fill="#233734" font-weight="700">双进程主机集成</text>
+<polyline points="538,939.0 736,939.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,939.0 726.9955289764732,943.3496553411123 726.9955289764732,934.6503446588877" fill="#286f64"/>
+<text x="552.0" y="927.0" font-size="17" fill="#286f64" font-weight="400">不能替代真实网络验证</text>
+<text x="80" y="985.0" font-size="18" fill="#53635f" font-weight="400">进程内测试保留应用逻辑，但 socket、进程退出和端口释放需要真实主机路线补证。</text>
+<polyline points="64,1043.2 1736,1043.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1073.2" font-size="17" fill="#53635f" font-weight="400">对照正文：X03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

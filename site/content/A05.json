@@ -1,0 +1,172 @@
+{
+  "id": "A05",
+  "title": "出错以后，程序怎样继续？",
+  "html": "<p>活动开始前，需要根据预计到场人数准备饮用水：每人两瓶。输入 <code>12</code> 很顺利；但输入 <code>cat</code> 时，程序会在转换处停下。仅有循环，并不能保证出错后还能继续询问。</p>\n<p>这一章要解决的不是“如何让错误信息消失”，而是<strong>某一步做不成以后，哪些工作不能再做，程序应该去哪里继续。</strong> 先看成功与失败在哪里分开，再让失败后的输入能够重试；最后把“取得整数”和“判断人数是否合规则”分给不同部分。</p>\n<h2 id=\"a05-s1\">代码有没有真正开始运行</h2>\n<p>这一段先建立成功路线，再区分两个失败阶段。当前只看一次输入，不处理重试。</p>\n<h3 id=\"a05-s2\">先让输入 <code>12</code> 完整走到结果</h3>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people_text = input(&quot;预计到场人数：&quot;)\npeople = int(people_text)\nbottles = people * 2\nprint(&quot;需要准备&quot;, bottles, &quot;瓶水&quot;)\n</code></pre></div>\n<p>输入：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">12\n</code></pre></div>\n<p>执行路线：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">input() 返回文字 &quot;12&quot;\n↓\npeople_text 保存 &quot;12&quot;\n↓\nint(&quot;12&quot;) 产生整数 12\n↓\npeople 保存 12\n↓\n12 * 2 产生 24\n↓\nbottles 保存 24\n↓\n屏幕显示：需要准备 24 瓶水\n</code></pre></div>\n<p>这里已经有一条完整的数据流：外部文字进入程序，转换成为整数，普通计算产生新值，<code>print()</code> 把结果交给人。</p>\n<h3 id=\"a05-s3\">少一个引号：普通程序还没有开始</h3>\n<p>把第一份程序换成只有这一行的独立文件：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">print(&quot;活动开始)\n</code></pre></div>\n<p>右边的结束引号缺失。Python 无法先理解这份源代码的结构，因此普通程序体没有开始执行，<code>print()</code> 也没有真正被调用。</p>\n<p>这个阶段的问题叫 <code>SyntaxError</code>：syntax 是代码必须遵守的结构规则。修复方法是回到源代码补上缺失结构。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">Python 读取源代码\n↓\n字符串没有结束\n↓\n源代码结构无法解析\n↓\n普通程序没有开始\n</code></pre></div>\n<p>运行中的 <code>try/except</code> 不能替尚未开始的程序修好这种语法错误。</p>\n<h3 id=\"a05-s4\">代码能开始，某项操作仍可能在运行中失败</h3>\n<p>恢复第一份正确代码，只把输入改成：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">cat\n</code></pre></div>\n<p>Python 能理解源代码，<code>input()</code> 也成功返回了文字。程序一直运行到：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people = int(people_text)\n</code></pre></div>\n<p>此时右边实际执行的是 <code>int(&quot;cat&quot;)</code>。失败发生在程序已经运行以后，所以它属于运行时失败，而不是 <code>SyntaxError</code>。</p>\n<p>最短区别是：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">SyntaxError：源代码还不能开始执行\n运行时失败：代码已经开始，某项具体操作做不成\n</code></pre></div>\n<p>下一段会放大 <code>int(&quot;cat&quot;)</code> 失败的瞬间：它不仅产生一条错误信息，还会阻止本次赋值和后续代码发生。</p>\n<h2 id=\"a05-s5\">文字不能变成整数时，赋值发生了什么</h2>\n<h3 id=\"a05-s6\">等号右边先产生结果，左边才接得到</h3>\n<p>成功路线中：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people = int(&quot;12&quot;)\n</code></pre></div>\n<p>会依次发生：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;12&quot;) 产生整数 12\n↓\npeople 接到 12\n</code></pre></div>\n<p>失败路线中：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people = int(&quot;cat&quot;)\n</code></pre></div>\n<p>会变成：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;cat&quot;) 无法产生整数\n↓\n等号右边没有结果可交付\n↓\npeople 的这次赋值没有完成\n↓\n当前普通路线被中断\n</code></pre></div>\n<p>这里不是 <code>people = 0</code>，也不是 <code>people = &quot;cat&quot;</code>，更不是 <code>people = None</code>。左边没有收到任何替代值。</p>\n<p>本例从新的运行开始，没有旧的 <code>people</code>。若某个名字之前已有值，失败的这次赋值也不会自动清除旧值；关键始终是“这次没有赋成”，不是“异常会删除变量”。</p>\n<p>这种在程序运行中发出的失败信号叫 exception（异常：某项运行中操作无法按预期完成时发出的失败信号）。这一次的具体类型是 <code>ValueError</code>：<code>int()</code> 可以接收字符串，但字符串内容不能表示整数。</p>\n<h3 id=\"a05-s7\">先为这一次 <code>ValueError</code> 安排清楚去向</h3>\n<p>现在已经能指出最早失败的操作，也知道失败时希望显示一条可理解的提示。先把转换和本次成功工作放进一个 <code>try</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people_text = input(&quot;预计到场人数：&quot;)\n\ntry:\n    people = int(people_text)\n    bottles = people * 2\n    print(&quot;需要准备&quot;, bottles, &quot;瓶水&quot;)\nexcept ValueError:\n    print(&quot;请输入整数，例如 12。&quot;)\n\nprint(&quot;本次登记处理结束。&quot;)\n</code></pre></div>\n<p>输入 <code>12</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">进入 try\n↓\nint(&quot;12&quot;) 成功，people 保存 12\n↓\nbottles 保存 24\n↓\n显示饮用水数量\n↓\n没有 ValueError，跳过 except\n↓\n显示：本次登记处理结束\n</code></pre></div>\n<p>输入 <code>cat</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">进入 try\n↓\nint(&quot;cat&quot;) 发出 ValueError\n↓\npeople 的赋值没有完成\n↓\ntry 中剩余计算与显示被跳过\n↓\n执行匹配的 except ValueError\n↓\n显示：请输入整数，例如 12\n↓\n继续执行整个结构下面的代码\n</code></pre></div>\n<p><code>try</code> 表示“实际尝试这些操作”，<code>except ValueError</code> 表示“如果其中发出这一种已知失败，就从这里继续”。它们不会把 <code>cat</code> 修成整数，也不会自动再次运行 <code>input()</code>。</p>\n<p>只写 <code>except:</code> 虽然能捕获更多失败，却可能把拼写错误或程序 bug 一起隐藏。当前只知道怎样解释和恢复 <code>int()</code> 的 <code>ValueError</code>，所以明确写出这一种类型。</p>\n<h3 id=\"a05-s8\">为什么输入 <code>-2</code> 不进入 <code>except</code></h3>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;-2&quot;)\n↓\n成功产生整数 -2\n↓\n没有 ValueError\n</code></pre></div>\n<p>但活动人数不能为负数。这是已经得到整数后的普通业务判断，应该交给 <code>if</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people = -2\n\nif people &lt; 0:\n    print(&quot;人数不能是负数。&quot;)\n</code></pre></div>\n<p><code>try/except</code> 与 <code>if</code> 的最近区别是：</p>\n<ul>\n<li><code>try/except</code> 处理一项真实操作在运行中做不成；</li>\n<li><code>if</code> 根据已经存在的普通值选择业务路线。</li>\n</ul>\n<p><strong>能转换不等于符合活动规则。异常处理不能取代业务判断。</strong></p>\n<p>输入 <code>cat</code> 后，<code>people</code> 是错误整数、<code>None</code>，还是本次赋值没有完成？程序接着去哪里？</p>\n<p>正确路线是：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;cat&quot;) 没有产生整数\n→ people 的本次赋值没有完成\n→ try 中剩余代码被跳过\n→ 执行 except ValueError\n→ 再执行 try/except 结构后面的代码\n</code></pre></div>\n<ul>\n<li>如果认为 <code>people</code> 得到错误值或 <code>None</code>：回看“等号右边先产生结果”。</li>\n<li>如果认为 <code>except</code> 会自动重新输入：回看“先为这一次 ValueError 安排去向”。当前代码只有一次 <code>input()</code>。</li>\n</ul>\n<p>当前版本还有一个设计问题：<code>try</code> 包住了转换、计算和显示。下一段会把它缩小到真正可能发出 <code>ValueError</code> 的转换，并处理缩小后暴露出的新路线。</p>\n<h2 id=\"a05-s9\">为什么缩小 <code>try</code> 后会暴露 <code>NameError</code></h2>\n<p><code>except ValueError</code> 的含义很具体。为了能准确知道它保护哪项工作，<code>try</code> 应尽量只圈住我们预期可能发出这种异常的操作。</p>\n<h3 id=\"a05-s10\">只圈住转换以后，成功代码不能随便放</h3>\n<p>先用一个全新的独立脚本观察失败，不沿用其他文件或交互环境中的旧名字：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">try:\n    value = int(&quot;cat&quot;)\nexcept ValueError:\n    print(&quot;转换失败。&quot;)\n\nprint(value)\n</code></pre></div>\n<p>逐行追踪：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">进入 try\n↓\nint(&quot;cat&quot;) 发出 ValueError\n↓\nvalue 的赋值没有完成\n↓\nexcept 显示：转换失败\n↓\n离开 try/except\n↓\nprint(value) 仍然运行\n↓\n当前脚本中从未建立 value\n↓\nPython 发出 NameError\n</code></pre></div>\n<p><code>NameError</code> 表示当前代码试图读取一个并不存在的名字。这里的原因不是 <code>try</code> 形成了特殊作用域；真正原因仍是右边转换先失败，赋值从未完成。</p>\n<p>给原来的 <code>try</code> 再增加一个 <code>except NameError</code>，也接不到块外 <code>print(value)</code> 发出的异常。程序真正需要的是：只有转换成功、<code>value</code> 确实存在时，才运行依赖它的成功代码。</p>\n<h3 id=\"a05-s11\"><code>else</code> 接住“尝试成功”的路线</h3>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">text = input(&quot;预计到场人数：&quot;)\n\ntry:\n    people = int(text)\nexcept ValueError:\n    print(&quot;请输入整数，例如 12。&quot;)\nelse:\n    bottles = people * 2\n    print(&quot;需要准备&quot;, bottles, &quot;瓶水&quot;)\n\nprint(&quot;本次登记处理结束。&quot;)\n</code></pre></div>\n<p>输入 <code>12</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;12&quot;) 成功\n→ people 保存 12\n→ 跳过 except\n→ 执行 else\n→ bottles 保存 24\n→ 显示结果\n→ 执行结构后面的 print\n</code></pre></div>\n<p>输入 <code>cat</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">int(&quot;cat&quot;) 发出 ValueError\n→ people 没有建立\n→ 执行 except\n→ 跳过 else\n→ 执行结构后面的 print\n</code></pre></div>\n<p>这里的 <code>else</code> 属于 <code>try/except</code> 结构：在 <code>try</code> 没有异常、正常执行到末尾时运行。它和 <code>if/else</code> 使用同一个英文词，但判断依据不同：</p>\n<ul>\n<li><code>if/else</code> 看一个普通条件是 <code>True</code> 还是 <code>False</code>；</li>\n<li><code>try/except/else</code> 看尝试的操作是否发出了异常。</li>\n</ul>\n<p>把依赖成功结果的工作放进 <code>else</code>，就能从控制路线本身保证 <code>people</code> 已经存在。<code>else</code> 中若另有操作失败，不会再被前面这个 <code>except</code> 接住；它只负责对应 <code>try</code> 内的失败。</p>\n<h3 id=\"a05-s12\">回到完整路线：现在有分叉，还没有重试</h3>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">input() 返回文字\n↓\ntry 中 int() 尝试转换\n├─ ValueError → except 显示提示 → 本次处理结束\n└─ 成功       → else 使用整数 → 本次处理结束\n</code></pre></div>\n<p><code>else</code> 解决了“成功代码何时安全运行”，却没有让输入再次发生。下一段要把这条单次路线放入循环。</p>\n<h2 id=\"a05-s13\">为什么处理一次不会自动重新询问</h2>\n<p><code>try/except</code> 只决定本次尝试失败后去哪里。要再次运行 <code>input()</code>，控制必须回到包含它的循环开头。</p>\n<h3 id=\"a05-s14\"><code>while</code> 才负责产生下一轮</h3>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">while True:\n    text = input(&quot;预计到场人数：&quot;)\n\n    try:\n        people = int(text)\n    except ValueError:\n        print(&quot;请输入整数，例如 12。&quot;)\n    else:\n        break\n\nprint(&quot;得到整数&quot;, people)\n</code></pre></div>\n<p>输入顺序为 <code>cat</code>、<code>12</code> 时：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">while 检查 True，进入第 1 轮\n→ input() 返回 &quot;cat&quot;\n→ int(&quot;cat&quot;) 发出 ValueError\n→ except 显示提示\n→ 到达循环体末尾\n→ while 再检查 True，进入第 2 轮\n→ input() 返回 &quot;12&quot;\n→ int(&quot;12&quot;) 产生 12\n→ else 执行 break\n→ 离开 while\n→ 显示：得到整数 12\n</code></pre></div>\n<p>重新询问不是 <code>except</code> 的隐藏功能。<strong>失败路线没有离开循环，到达循环体末尾后，<code>while</code> 才开始下一轮。</strong></p>\n<h3 id=\"a05-s15\"><code>pass</code> 可以安静处理，但不会制造重试</h3>\n<p>如果不想每次都显示错误提示，可以把上面循环中的失败分支替换成下面两行。它是替换片段，不是可单独运行的完整程序：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">except ValueError:\n    pass\n</code></pre></div>\n<p><code>pass</code> 的作用是“这里不执行额外动作”。之后控制自然到达循环体末尾，再由 <code>while</code> 开始下一轮。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">ValueError\n→ except\n→ pass 不做额外动作\n→ 循环体末尾\n→ while 决定下一轮\n</code></pre></div>\n<p>因此，<code>pass</code> 本身既不重试，也不结束循环。它只是允许这个代码块合法存在并继续走自然路线。在面向人的输入中，清楚提示通常比静默更友好；这里只把安静版本当作一种取舍。</p>\n<h3 id=\"a05-s16\"><code>break</code> 与 <code>return</code> 结束的范围不同</h3>\n<p>现在把“取得转换成功的整数”装进函数。第一版先用 <code>break</code> 离开循环，再用 <code>return</code> 把值交回调用者。这里先展示函数定义；定义本身不会询问，调用 <code>get_int()</code> 才会进入：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">def get_int():\n    while True:\n        try:\n            value = int(input(&quot;请输入整数：&quot;))\n        except ValueError:\n            print(&quot;请输入整数。&quot;)\n        else:\n            break\n\n    return value\n</code></pre></div>\n<p>成功时：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">break\n→ 只离开 while\n→ 继续执行函数中循环后的 return value\n→ return 结束 get_int\n→ 把整数交回调用位置\n</code></pre></div>\n<p>因为成功路线最终就是离开整个函数并交回整数，也可以直接写：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">def get_int():\n    while True:\n        try:\n            value = int(input(&quot;请输入整数：&quot;))\n        except ValueError:\n            print(&quot;请输入整数。&quot;)\n        else:\n            return value\n</code></pre></div>\n<p>**<code>return value</code> 结束当前函数，并把值交给调用它的代码。**它不只是“更强的 break”，因为它还携带结果并结束函数范围。</p>\n<p>四种去向可以这样找回：</p>\n<ul>\n<li>自然到循环体末尾：回到 <code>while</code> 条件；</li>\n<li><code>pass</code>：不做额外动作，再走自然路线；</li>\n<li><code>break</code>：离开当前循环，执行循环后的代码；</li>\n<li><code>return</code>：结束当前函数，把结果交给调用位置。</li>\n</ul>\n<p><code>cat</code> 进入 <code>except</code> 后，是什么让 <code>input()</code> 再次运行：<code>except</code>、<code>pass</code>，还是 <code>while</code>？下一执行位置依次在哪里？</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">except 只接住本轮 ValueError\n→ 提示或 pass 完成本分支\n→ 控制到达循环体末尾\n→ while 再检查条件\n→ 下一轮才重新执行 input()\n</code></pre></div>\n<ul>\n<li>如果选择 <code>except</code>：回看“while 才负责产生下一轮”。</li>\n<li>如果选择 <code>pass</code>：回看“pass 可以安静处理”。删掉 <code>pass</code> 而保留一条合法的提示语句，循环仍会重试。</li>\n</ul>\n<p>现在已有一个能交回转换成功的整数的函数。最后一段会让调用者提供自己的提示文字，并把转换规则与活动规则分给两个不同函数。</p>\n<h2 id=\"a05-s17\">输入函数怎样把转换成功的整数交给 <code>main</code></h2>\n<p>当前目标不只是让程序运行，而是让每个部分只承担一项清楚工作：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">get_int：取得能转换的整数\nmain：判断人数是否符合活动规则，并计算结果\n</code></pre></div>\n<h3 id=\"a05-s18\">调用者把提示文字作为参数交进去</h3>\n<p>下面这行将放在完整程序的 <code>main</code> 中；参数版 <code>get_int</code> 的定义紧接着给出。它不是要单独运行的一行：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">people = get_int(&quot;预计到场人数：&quot;)\n</code></pre></div>\n<p>这行执行时，右边的函数调用要先完成：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">main 传入文字 &quot;预计到场人数：&quot;\n↓\nget_int 的 prompt 参数接住这段文字\n↓\ninput(prompt) 把它显示给使用者\n↓\n函数取得转换成功的整数后 return\n↓\n回到原来的调用位置\n↓\npeople 才接到返回的整数\n</code></pre></div>\n<p><code>prompt</code> 只是参数名，表示显示给使用者的询问文字。它让同一个输入函数可以被不同调用者复用，而不把问题文字写死在函数内部。</p>\n<h3 id=\"a05-s19\">完整程序：转换规则和活动规则分开</h3>\n<p>这次活动只接受大于 0 的人数：整数 <code>0</code> 和负数都需要重新登记。先由输入函数取得整数，再由 <code>main</code> 检查这条规则。</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">def get_int(prompt):\n    while True:\n        try:\n            value = int(input(prompt))\n        except ValueError:\n            print(&quot;请输入整数，例如 12。&quot;)\n        else:\n            return value\n\n\ndef main():\n    while True:\n        people = get_int(&quot;预计到场人数：&quot;)\n\n        if people &gt; 0:\n            break\n\n        print(&quot;人数必须大于 0。&quot;)\n\n    bottles = people * 2\n    print(&quot;需要准备&quot;, bottles, &quot;瓶水&quot;)\n\n\nmain()\n</code></pre></div>\n<p>这里有两个循环，但它们没有重复承担同一责任：</p>\n<ul>\n<li><code>get_int</code> 内的循环处理“文字能否转换”；</li>\n<li><code>main</code> 内的循环处理“整数是否符合活动人数规则”。</li>\n</ul>\n<p>如果以后另一个任务允许 <code>0</code> 或负数，<code>get_int</code> 不需要改变；改变的是调用者自己的业务规则。</p>\n<h3 id=\"a05-s20\">从 <code>cat → -2 → 12</code> 追完整条路线</h3>\n<ol>\n<li>程序调用 <code>main()</code>。</li>\n<li><code>main</code> 调用 <code>get_int(&quot;预计到场人数：&quot;)</code>，并等待右边返回结果。</li>\n<li><code>prompt</code> 接到询问文字，<code>input(prompt)</code> 第一次返回 <code>&quot;cat&quot;</code>。</li>\n<li><code>int(&quot;cat&quot;)</code> 发出 <code>ValueError</code>；<code>value</code> 没有赋值。</li>\n<li><code>except</code> 显示“请输入整数”；到循环末尾后，<code>get_int</code> 的 <code>while</code> 开始下一轮。</li>\n<li>第二次输入 <code>&quot;-2&quot;</code>；<code>int(&quot;-2&quot;)</code> 成功产生整数 <code>-2</code>。</li>\n<li><code>else</code> 执行 <code>return -2</code>；<code>get_int</code> 结束，结果回到 <code>main</code> 中等待的调用位置。</li>\n<li><code>people = get_int(...)</code> 的右边完成，<code>people</code> 接到 <code>-2</code>。</li>\n<li><code>main</code> 检查 <code>people &gt; 0</code>，结果为 <code>False</code>；显示“人数必须大于 0”。</li>\n<li>到达 <code>main</code> 的循环体末尾，外层 <code>while</code> 开始下一轮，再次调用 <code>get_int</code>。</li>\n<li>第三次输入 <code>&quot;12&quot;</code>；转换成功，<code>get_int</code> <code>return 12</code>。</li>\n<li><code>main</code> 的 <code>people</code> 接到 <code>12</code>；<code>people &gt; 0</code> 为 <code>True</code>，<code>break</code> 离开业务循环。</li>\n<li><code>bottles = people * 2</code> 产生 <code>24</code>。</li>\n<li>屏幕显示“需要准备 24 瓶水”。</li>\n</ol>\n<p>这条路线有两个失败边界：<code>cat</code> 在输入转换边界失败；<code>-2</code> 没有转换失败，而是在活动业务规则处被拒绝。</p>\n<p>输入 <code>12</code> 后，<code>return</code> 回到哪一行？谁检查 <code>12 &gt; 0</code>？如果输入 <code>-2</code>，是哪一个循环产生下一次询问？</p>\n<ul>\n<li><code>return 12</code> 回到 <code>people = get_int(...)</code> 右边的调用位置；右边完成后，<code>people</code> 才得到 <code>12</code>。</li>\n<li><code>main</code> 中的 <code>if people &gt; 0</code> 检查活动业务规则，<code>get_int</code> 不负责这项判断。</li>\n<li>输入 <code>-2</code> 时，<code>get_int</code> 已经结束；是 <code>main</code> 的外层业务循环再次调用 <code>get_int</code>。</li>\n</ul>\n<p>如果答案不同，先按最早断点回看：</p>\n<ul>\n<li>不知道 <code>return</code> 交给哪里：回看“调用者把提示文字作为参数交进去”中的调用路线；</li>\n<li>认为 <code>get_int</code> 应该检查 <code>12 &gt; 0</code>：回看“完整程序：转换规则和活动规则分开”；</li>\n<li>认为输入 <code>-2</code> 后仍是 <code>get_int</code> 自己重问：回看<code>cat → -2 → 12</code> 完整路线的第 6～10 步。</li>\n</ul>\n<p>如果把业务检查也塞进 <code>get_int</code>，这个函数就不再只是“取得整数”，而会被某一个活动规则绑住。</p>\n<h3 id=\"a05-s21\">现在再给这些普通关系命名</h3>\n<p>先看已经发生的事实：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">外部文字由 get_int 接收和转换\n→ 转换失败在 get_int 内改道\n→ 转换成功的整数通过 return 交给 main\n→ main 检查业务规则并计算\n→ print 把结果交给人\n</code></pre></div>\n<p>现在这些词才有具体含义：</p>\n<ul>\n<li>每个部分“只负责什么”，叫职责；</li>\n<li>调用时传入 <code>prompt</code>、返回时交出整数，是两个部分的接口；</li>\n<li><code>people</code>、<code>bottles</code> 等当前值，是运行中的状态；</li>\n<li><code>ValueError</code> 在输入函数内处理，说明失败也有处理边界。</li>\n</ul>\n<p>这就是最初的系统认知：不是先背复杂架构词，而是能指出数据从哪里来、谁改变它、失败在哪里改道、可靠结果交给谁。</p>\n<h3 id=\"a05-s22\">有电脑时用运行核对这些路线</h3>\n<p>把“完整程序：转换规则和活动规则分开”中的代码保存到自己的独立练习目录，使用 UTF-8 纯文本，例如新建 <code>registration.py</code>，不要覆盖已有文件。从该目录运行：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">python .\\registration.py\n</code></pre></div>\n<p>分别核对：</p>\n<ol>\n<li>只输入 <code>12</code>：应显示需要 24 瓶水。</li>\n<li>输入 <code>cat</code>、再输入 <code>12</code>：应先提示整数格式，再显示 24 瓶水。</li>\n<li>输入 <code>cat</code>、<code>-2</code>、<code>12</code>：应分别经过转换失败、业务规则失败和成功路线。</li>\n<li>单独运行缺结束引号的文件：核对它是 <code>SyntaxError</code>，且普通程序未开始。</li>\n<li>单独运行读取未建立 <code>value</code> 的脚本：核对它在提示后出现 <code>NameError</code>。</li>\n</ol>\n<p>运行只是验证材料中追踪的路线。真正需要保留的是：看见错误时能指出最早做不成的操作、未发生的赋值和下一执行位置。</p>\n<h2 id=\"a05-s23\">哪些关系会继续用到？</h2>\n<p>这一章真正改变的是失败后的控制路线：<code>int()</code> 做不成时，本次赋值没有完成；匹配的 <code>except</code> 接住这次失败，<code>else</code> 使用成功结果，循环决定是否重试，<code>return</code> 把整数交回调用处。普通业务判断仍由拿到整数的 <code>main</code> 负责。</p>\n<p><code>try/except</code> 和循环、返回之间的常用组合，需要在运行、修改和排错中逐渐用顺，不必逐字背下整份程序。看到 <code>ValueError</code>，应能沿错误位置找到哪项操作没有得到值，而不是背整行报错。<code>get_int</code>、<code>prompt</code> 是这里选择的函数名和参数名；错误消息的具体英文会随 Python 版本变化，忘记细节可以查。</p>\n<p>以后若更换人数规则，修改调用者就够了；若更换输入提示，调用时传入另一段文字即可。这样，职责和交接已经落在具体代码上，不需要额外背一套架构定义。A06 会继续追问：标准库、第三方库和自己的另一个文件，怎样把现成能力带进当前程序？</p>\n<p>核心解释到这里已经完整。后面的官方练习是可选迁移；不读也不会缺少理解本章主线的前提。</p>\n<h2 id=\"a05-s24\">可选迁移一｜Fuel Gauge 还多了哪些关系</h2>\n<p>官方 Fuel Gauge 要求读取 <code>X/Y</code> 形式的油量分数，把合法结果取最近的整数百分比；不超过 1% 显示 <code>E</code>，不低于 99% 显示 <code>F</code>。<code>X</code> 应为非负整数，<code>Y</code> 应为正整数，而且 <code>X &lt;= Y</code>；不符合这些要求时需要重新询问。</p>\n<p>这一题把异常关系用到分数输入。下面先恢复额外需要的操作，再给测试方向；各片段不组成完整提交答案。</p>\n<h3 id=\"a05-s25\"><code>split()</code> 先产生多个字符串，再由变量接住</h3>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">parts = &quot;1/2&quot;.split(&quot;/&quot;)\nprint(parts)\n</code></pre></div>\n<p>结果是一个包含两段文字的列表：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">[&#x27;1&#x27;, &#x27;2&#x27;]\n</code></pre></div>\n<p>接着沿用刚才的 <code>parts</code>，执行下面的续接片段：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">x_text, y_text = parts\n</code></pre></div>\n<p>表示左边两个名字依次接住右边两项：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">parts 是 [&quot;1&quot;, &quot;2&quot;]\n→ x_text 接到 &quot;1&quot;\n→ y_text 接到 &quot;2&quot;\n</code></pre></div>\n<p>数量不匹配时，拆包本身也会发出 <code>ValueError</code>：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">&quot;1/2/3&quot;.split(&quot;/&quot;)\n→ [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]\n→ 三项无法交给两个名字\n→ ValueError\n</code></pre></div>\n<p>因此，Fuel 中的 <code>ValueError</code> 不一定只来自 <code>int()</code>。</p>\n<h3 id=\"a05-s26\">三条失败路线发生在不同操作</h3>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">输入 cat/4\n→ split 成 [&quot;cat&quot;, &quot;4&quot;]\n→ int(&quot;cat&quot;) 做不成\n→ ValueError\n</code></pre></div>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">输入 3/0\n→ 拆分和 int 都成功\n→ 真正计算 3 / 0 时做不成\n→ ZeroDivisionError\n</code></pre></div>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">输入 5/4\n→ 拆分、转换和除法都能完成\n→ 但 X &gt; Y 不符合题目规则\n→ 普通 if 路线，不是异常\n</code></pre></div>\n<p>当两种已知异常需要进入同一恢复路线时，可以分别写两个 <code>except</code>，也可以写：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">try:\n    numerator = int(&quot;3&quot;)\n    denominator = int(&quot;0&quot;)\n    ratio = numerator / denominator\nexcept (ValueError, ZeroDivisionError):\n    print(&quot;本次转换或除法没有完成&quot;)\n</code></pre></div>\n<p>这个隔离示例会走到 <code>ZeroDivisionError</code>；把 <code>&quot;3&quot;</code> 改成 <code>&quot;cat&quot;</code>，则会先走到 <code>ValueError</code>。括号里的意思是：任意一种类型出现，都进入同一个处理块。这里不需要展开学习 tuple；只要知道它压缩了两个相同去向。</p>\n<h3 id=\"a05-s27\"><code>continue</code> 只在本轮确实还有代码要跳过时出现</h3>\n<p>Fuel 的循环中，某轮输入如果已经确定无效，后面的百分比计算就不应继续。此时控制路线可以是：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">本轮解析失败或普通范围无效\n→ continue\n→ 跳过本轮剩余代码\n→ 回到 while 的下一轮\n→ 再次 input\n</code></pre></div>\n<p><code>continue</code> 不会离开循环；它结束当前这一轮。若无效分支之后本来就没有其他代码，自然到循环体末尾也能开始下一轮，因此不要为了“异常必须配 continue”而机械添加。</p>\n<p>先用两份确定能拆分、转换且分母非零的文字，单独观察“范围无效以后跳过计算”：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">for fraction in [&quot;5/4&quot;, &quot;3/4&quot;]:\n    x_text, y_text = fraction.split(&quot;/&quot;)\n    x = int(x_text)\n    y = int(y_text)\n\n    if x &gt; y:\n        print(&quot;超过整箱，跳过本轮计算&quot;)\n        continue\n\n    percent = round(x / y * 100)\n    print(percent)\n</code></pre></div>\n<p>第一轮显示超过整箱，然后 <code>continue</code> 跳过 <code>percent</code> 的计算和显示；<code>for</code> 取得下一份 <code>&quot;3/4&quot;</code>。第二轮得到 <code>3 / 4 = 0.75</code>，乘以100成为百分数75，<code>round(...)</code> 取最近的整数，最后显示 <code>75</code>。这是定位跳转的隔离片段，没有处理未知键盘输入、转换异常或 E/F 输出规则。</p>\n<p>建议在自己的实现中逐条验证：<code>3/4 → 75%</code>、<code>4/4 → F</code>、<code>0/4 → E</code>，以及 <code>4/0</code>、<code>three/four</code>、<code>1.5/3</code>、<code>-3/4</code>、<code>5/4</code> 都会重新询问。精确要求以<a href=\"https://cs50.harvard.edu/python/psets/3/fuel/\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Fuel Gauge 页面</a>为准。</p>\n<h2 id=\"a05-s28\">可选迁移二｜Taqueria 怎样处理字典、未知菜名与输入结束</h2>\n<p>官方 Felipe’s Taqueria 要求逐行接收菜名；每输入一个有效菜名，就显示到目前为止的总价。大小写不敏感，未知菜名被忽略，输入来源结束时停止。</p>\n<p>这一题连接字典、累计状态和 <code>EOFError</code>。下面恢复必要关系，但不把它们拼成可提交的完整答案。</p>\n<h3 id=\"a05-s29\">字典没有这个 key 时，Python 不会自动忽略</h3>\n<p>先用一个缩小菜单恢复查值：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">menu = {\n    &quot;Taco&quot;: 3.00,\n    &quot;Burrito&quot;: 7.50,\n}\n</code></pre></div>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">&quot;Taco&quot; in menu\n→ True\n\nmenu[&quot;Taco&quot;]\n→ 3.00\n</code></pre></div>\n<p>原始输入可以先规范成菜单使用的大小写：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">item = &quot;tAcO&quot;.title()\n</code></pre></div>\n<p>结果是 <code>&quot;Taco&quot;</code>。接着沿用上面的 <code>menu</code> 和 <code>item</code>，先检查成员关系，再决定是否查值：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">if item in menu:\n    price = menu[item]\n</code></pre></div>\n<p>未知菜名的完整路线是：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">输入 Burger\n→ title() 得到 &quot;Burger&quot;\n→ &quot;Burger&quot; in menu 为 False\n→ 不进入缩进代码\n→ 不执行 menu[item]\n→ 总价保持不变\n→ 循环自然进入下一轮\n</code></pre></div>\n<p>如果没有成员检查而直接执行 <code>menu[&quot;Burger&quot;]</code>，Python 会发出 <code>KeyError</code>。它绝不会自动忽略缺少的 key。官方题允许“避免或捕获 KeyError”；当前支架选择先用 <code>if item in menu</code>，因为未知菜名是可直接判断的正常业务路线。</p>\n<h3 id=\"a05-s30\">总价是跨轮保存并更新的状态</h3>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">total = 0.0\nprice = 3.00\ntotal = total + price\n</code></pre></div>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">本轮开始 total 是 0.0\n→ 查到 Taco 的 price 是 3.00\n→ 加法产生 3.00\n→ total 更新为 3.00\n→ 下一轮从 3.00 继续\n</code></pre></div>\n<p>再次输入 Taco 时，新一轮把 <code>3.00 + 3.00</code> 更新为 <code>6.00</code>。完整录入程序应把 <code>total = 0.0</code> 放在循环前，只初始化一次；每轮查到有效价格后才更新它。若每轮都设回零，就只剩这一单的金额。</p>\n<p>需要显示美元符号和两位小数时，可以在刚才得到 <code>total</code> 后接上：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">print(f&quot;Total: ${total:.2f}&quot;)\n</code></pre></div>\n<p>这里显示 <code>Total: $3.00</code>。<code>$</code> 是普通显示字符，花括号取出 <code>total</code>，<code>.2f</code> 把显示保留为两位小数；它没有替程序累计金额。异常处理也不负责替累计变量保存价格。</p>\n<h3 id=\"a05-s31\"><code>EOFError</code> 表示输入来源结束，不是文字格式错误</h3>\n<p><code>input()</code> 平时返回一行文字；当使用者明确结束输入来源时，它无法再返回下一行，于是发出 <code>EOFError</code>。</p>\n<p>最小控制形状可以用一个独立的“逐行显示”程序观察：</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">while True:\n    try:\n        raw = input(&quot;Item: &quot;)\n    except EOFError:\n        print()\n        break\n\n    print(&quot;收到&quot;, raw)\n</code></pre></div>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">还有一行输入\n→ input() 返回字符串\n→ print 显示“收到”以及这行文字\n→ 循环继续询问\n\n输入来源结束\n→ input() 发出 EOFError\n→ except 打印换行\n→ break 离开输入循环\n</code></pre></div>\n<p>这个独立程序只显示收到的文字。回到菜名任务时，再把显示后的工作换成规范化、成员判断和有效价格累计。这里的 <code>try</code> 只圈住真正可能发出 <code>EOFError</code> 的 <code>input()</code>。<code>EOFError</code> 不表示菜名拼错；未知菜名仍由字典成员判断处理。</p>\n<p>在 cs50.dev／Unix 环境中，官方说明使用 Ctrl-D 结束输入；在 Windows PowerShell 中，通常使用 Ctrl-Z 后按 Enter。实际按键属于环境差异，异常关系不变。</p>\n<p>当前官方菜单与精确输出格式以<a href=\"https://cs50.harvard.edu/python/psets/3/taqueria/\" target=\"_blank\" rel=\"noopener noreferrer\">Felipe’s Taqueria 页面</a>为准。测试时至少追踪有效菜名、大小写变化、未知菜名、重复菜名和 EOF 五条路线。</p>\n<h3 id=\"a05-s32\">其他官方练习怎样选择</h3>\n<ul>\n<li><a href=\"https://cs50.harvard.edu/python/psets/3/grocery/\" target=\"_blank\" rel=\"noopener noreferrer\">Grocery List</a> 主要巩固 <code>EOFError</code>、字典计数、按 key 排序和格式化输出；当这些关系还需要放进综合任务再练一次时再做。</li>\n<li><a href=\"https://cs50.harvard.edu/python/psets/3/outdated/\" target=\"_blank\" rel=\"noopener noreferrer\">Outdated</a> 同时协调两种日期输入、拆分、月份查找、范围检查、重试和规范输出；适合需要更强综合迁移时使用。</li>\n</ul>\n<p>如果目标包含课程官方完成状态，应按 <a href=\"https://cs50.harvard.edu/python/psets/3/\" target=\"_blank\" rel=\"noopener noreferrer\">Problem Set 3</a>完成四题，并遵守当前 <a href=\"https://cs50.harvard.edu/python/honesty/\" target=\"_blank\" rel=\"noopener noreferrer\">Academic Honesty</a>要求。这里的讲解与运行不能替代自己的提交。</p>\n<h2 id=\"a05-s33\">来源与进一步查阅</h2>\n<p>课程主线参照 <a href=\"https://cs50.harvard.edu/python/notes/3/\" target=\"_blank\" rel=\"noopener noreferrer\">CS50P Week 3 讲义</a>，运行语义可查 <a href=\"https://docs.python.org/3/tutorial/errors.html\" target=\"_blank\" rel=\"noopener noreferrer\">Python 错误与异常教程</a>。本文的活动主例和中文解释为自学场景编写；练习的完整规格以各自官方页面为准。</p>\n<p>所参考的 CS50P 材料采用 <a href=\"https://cs50.harvard.edu/python/license/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-NC-SA 4.0</a>；本文保留署名、非商业与相同方式共享条件，不表示 Harvard 或 CS50 背书。官方题目、菜单、提交方式和政策可能更新，实际提交前再核对。这里链接的是实时官方入口，不是固定版本快照。</p>\n",
+  "toc": [
+    {
+      "id": "a05-s1",
+      "text": "代码有没有真正开始运行",
+      "level": 2
+    },
+    {
+      "id": "a05-s2",
+      "text": "先让输入 `12` 完整走到结果",
+      "level": 3
+    },
+    {
+      "id": "a05-s3",
+      "text": "少一个引号：普通程序还没有开始",
+      "level": 3
+    },
+    {
+      "id": "a05-s4",
+      "text": "代码能开始，某项操作仍可能在运行中失败",
+      "level": 3
+    },
+    {
+      "id": "a05-s5",
+      "text": "文字不能变成整数时，赋值发生了什么",
+      "level": 2
+    },
+    {
+      "id": "a05-s6",
+      "text": "等号右边先产生结果，左边才接得到",
+      "level": 3
+    },
+    {
+      "id": "a05-s7",
+      "text": "先为这一次 `ValueError` 安排清楚去向",
+      "level": 3
+    },
+    {
+      "id": "a05-s8",
+      "text": "为什么输入 `-2` 不进入 `except`",
+      "level": 3
+    },
+    {
+      "id": "a05-s9",
+      "text": "为什么缩小 `try` 后会暴露 `NameError`",
+      "level": 2
+    },
+    {
+      "id": "a05-s10",
+      "text": "只圈住转换以后，成功代码不能随便放",
+      "level": 3
+    },
+    {
+      "id": "a05-s11",
+      "text": "`else` 接住“尝试成功”的路线",
+      "level": 3
+    },
+    {
+      "id": "a05-s12",
+      "text": "回到完整路线：现在有分叉，还没有重试",
+      "level": 3
+    },
+    {
+      "id": "a05-s13",
+      "text": "为什么处理一次不会自动重新询问",
+      "level": 2
+    },
+    {
+      "id": "a05-s14",
+      "text": "`while` 才负责产生下一轮",
+      "level": 3
+    },
+    {
+      "id": "a05-s15",
+      "text": "`pass` 可以安静处理，但不会制造重试",
+      "level": 3
+    },
+    {
+      "id": "a05-s16",
+      "text": "`break` 与 `return` 结束的范围不同",
+      "level": 3
+    },
+    {
+      "id": "a05-s17",
+      "text": "输入函数怎样把转换成功的整数交给 `main`",
+      "level": 2
+    },
+    {
+      "id": "a05-s18",
+      "text": "调用者把提示文字作为参数交进去",
+      "level": 3
+    },
+    {
+      "id": "a05-s19",
+      "text": "完整程序：转换规则和活动规则分开",
+      "level": 3
+    },
+    {
+      "id": "a05-s20",
+      "text": "从 `cat → -2 → 12` 追完整条路线",
+      "level": 3
+    },
+    {
+      "id": "a05-s21",
+      "text": "现在再给这些普通关系命名",
+      "level": 3
+    },
+    {
+      "id": "a05-s22",
+      "text": "有电脑时用运行核对这些路线",
+      "level": 3
+    },
+    {
+      "id": "a05-s23",
+      "text": "哪些关系会继续用到？",
+      "level": 2
+    },
+    {
+      "id": "a05-s24",
+      "text": "可选迁移一｜Fuel Gauge 还多了哪些关系",
+      "level": 2
+    },
+    {
+      "id": "a05-s25",
+      "text": "`split()` 先产生多个字符串，再由变量接住",
+      "level": 3
+    },
+    {
+      "id": "a05-s26",
+      "text": "三条失败路线发生在不同操作",
+      "level": 3
+    },
+    {
+      "id": "a05-s27",
+      "text": "`continue` 只在本轮确实还有代码要跳过时出现",
+      "level": 3
+    },
+    {
+      "id": "a05-s28",
+      "text": "可选迁移二｜Taqueria 怎样处理字典、未知菜名与输入结束",
+      "level": 2
+    },
+    {
+      "id": "a05-s29",
+      "text": "字典没有这个 key 时，Python 不会自动忽略",
+      "level": 3
+    },
+    {
+      "id": "a05-s30",
+      "text": "总价是跨轮保存并更新的状态",
+      "level": 3
+    },
+    {
+      "id": "a05-s31",
+      "text": "`EOFError` 表示输入来源结束，不是文字格式错误",
+      "level": 3
+    },
+    {
+      "id": "a05-s32",
+      "text": "其他官方练习怎样选择",
+      "level": 3
+    },
+    {
+      "id": "a05-s33",
+      "text": "来源与进一步查阅",
+      "level": 2
+    }
+  ]
+}

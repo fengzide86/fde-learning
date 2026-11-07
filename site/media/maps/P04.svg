@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1635" width="1800" height="1635" role="img" aria-labelledby="title">
+<title id="title">工作、状态与责任</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1635" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P04  工作、状态与责任</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">展开 P03 发现的交接关系；为时间分析、需求约定和技术状态设计提供业务含义。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">追踪同一件业务的状态与责任；消息已发送、对方已承接和业务已完成是不同事实。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">让同一件业务有人持续承接</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">工作描述的对象</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,635.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">业务实例</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">同一件业务</text>
+<text x="103.0" y="590.0" font-size="18" fill="#233734" font-weight="400">追踪从一次求助发生到明确收束的同一件事；再次询问进度</text>
+<text x="103.0" y="615.0" font-size="18" fill="#233734" font-weight="400">未必是另一件业务。</text>
+<polyline points="73.0,530.0 73.0,681.0 91.0,681.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="659.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="689.0" font-size="21" fill="#233734" font-weight="700">任务与动作</text>
+<text x="103.0" y="719.0" font-size="16" fill="#286f64" font-weight="400">做了什么</text>
+<text x="103.0" y="741.0" font-size="18" fill="#53635f" font-weight="400">任务是推动业务的一项工作，消息或按钮可能只是其中动</text>
+<text x="103.0" y="766.0" font-size="18" fill="#53635f" font-weight="400">作；局部动作结束不等于整件完成。</text>
+<polyline points="73.0,681.0 73.0,832.0 91.0,832.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="810.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,818.0 92.0,937.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="840.0" font-size="21" fill="#286f64" font-weight="700">状态</text>
+<text x="103.0" y="870.0" font-size="16" fill="#286f64" font-weight="400">目前可靠的结果</text>
+<text x="103.0" y="892.0" font-size="18" fill="#233734" font-weight="400">概括当前可靠结果和仍缺的下一步；只有影响行动或判断的</text>
+<text x="103.0" y="917.0" font-size="18" fill="#233734" font-weight="400">区别才值得另设状态。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">交接与决定的条件</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,516.0 658.3333333333334,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#286f64" font-weight="700">发送与承接</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#233734" font-weight="400">发出材料和接收方承担责任是不同证据；共享列表出现请求</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#233734" font-weight="400">不等于负责人已经接下。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#233734" font-weight="700">标识、责任人与更新时间</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#53635f" font-weight="400">把结果归回同一业务，指出下一步负责人并判断新旧；记录</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#53635f" font-weight="400">应能支持行动而非只填表。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,788.0 657.3333333333334,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="796.0" font-size="21" fill="#233734" font-weight="700">业务规则与当前权限</text>
+<text x="669.3333333333334" y="826.0" font-size="18" fill="#53635f" font-weight="400">规定谁能依据什么当前事实改变安排；知道可行时段或读懂</text>
+<text x="669.3333333333334" y="851.0" font-size="18" fill="#53635f" font-weight="400">信息不等于有权确认预约。</text>
+<polyline points="639.3333333333334,788.0 639.3333333333334,917.0 657.3333333333334,917.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="895.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="925.0" font-size="21" fill="#233734" font-weight="700">条件判断与等待</text>
+<text x="669.3333333333334" y="955.0" font-size="18" fill="#53635f" font-weight="400">已取得适用答复才能判断；回应未到是等待，不能把无批准</text>
+<text x="669.3333333333334" y="980.0" font-size="18" fill="#53635f" font-weight="400">当拒绝或把无拒绝当同意。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">正常路线之外的收束</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#233734" font-weight="700">逾时跟进</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#53635f" font-weight="400">约定检查点仍缺结果时由明确人员跟进或找获授权替补；时</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#53635f" font-weight="400">间到不自动证明对方意愿。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">取消与实际后果</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">取消影响后续工作但不抹去已出车或采购的事实；停止动</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">作、费用处理和取消请求应分别核实。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">完成与关闭依据</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">正常完成、取消、转交和停止应保留不同结果；没有观察到</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">解决就不能为清空列表填成功。</text>
+<text x="64" y="1044.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1044.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1069.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1102.0" font-size="21" fill="#233734" font-weight="700">任务与动作</text>
+<rect x="750" y="1069.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1102.0" font-size="21" fill="#233734" font-weight="700">状态</text>
+<polyline points="538,1106.0 736,1106.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1106.0 726.9955289764732,1110.3496553411123 726.9955289764732,1101.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1094.0" font-size="17" fill="#286f64" font-weight="400">产生不同结果</text>
+<text x="80" y="1152.0" font-size="18" fill="#53635f" font-weight="400">同一核查任务可能得到有时段或无时段，下一步责任因此不同。</text>
+<rect x="64" y="1192.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1225.2" font-size="21" fill="#233734" font-weight="700">发送与承接</text>
+<rect x="750" y="1192.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1225.2" font-size="21" fill="#233734" font-weight="700">标识、责任人与更新时间</text>
+<polyline points="538,1229.2 736,1229.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1229.2 726.9955289764732,1233.5496553411124 726.9955289764732,1224.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1217.2" font-size="17" fill="#286f64" font-weight="400">需要可追踪</text>
+<text x="80" y="1275.2" font-size="18" fill="#53635f" font-weight="400">交出材料后要能确认是谁接手，以及结果属于哪件业务和何时更新。</text>
+<rect x="64" y="1315.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1348.4" font-size="21" fill="#233734" font-weight="700">业务规则与当前权限</text>
+<rect x="750" y="1315.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1348.4" font-size="21" fill="#233734" font-weight="700">完成与关闭依据</text>
+<polyline points="538,1352.4 736,1352.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1352.4 726.9955289764732,1356.7496553411124 726.9955289764732,1348.0503446588878" fill="#286f64"/>
+<text x="620.0" y="1340.4" font-size="17" fill="#286f64" font-weight="400">约束</text>
+<text x="80" y="1398.4" font-size="18" fill="#53635f" font-weight="400">信息、客户接受和获授权确认不是同一事实；预约确认也不等于维修完成。</text>
+<rect x="64" y="1438.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1471.6000000000001" font-size="21" fill="#233734" font-weight="700">取消与实际后果</text>
+<rect x="750" y="1438.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1471.6000000000001" font-size="21" fill="#233734" font-weight="700">状态</text>
+<polyline points="538,1475.6000000000001 736,1475.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1475.6000000000001 726.9955289764732,1479.9496553411125 726.9955289764732,1471.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1463.6000000000001" font-size="17" fill="#286f64" font-weight="400">需继续交接于</text>
+<text x="80" y="1521.6000000000001" font-size="18" fill="#53635f" font-weight="400">界面改为已取消不能代替撤回行程或费用处理，遗留责任仍需有人承接。</text>
+<polyline points="64,1579.8000000000002 1736,1579.8000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1609.8000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：P04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

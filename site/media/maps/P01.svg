@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1383" width="1800" height="1383" role="img" aria-labelledby="title">
+<title id="title">问题、办法与效果</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1383" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P01  问题、办法与效果</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">默认在技术 A–F/X 之后进入本册；产品例子仍自包含，不要求记住旧代码。先区分结果、办法和证据，再展开角色与工作交接。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先分开希望改善的结果与候选办法，再用实际受阻位置判断办法改变了什么。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">从实际受阻选择改善办法</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">改变的目标与手段</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">希望改善的结果</text>
+<text x="103.0" y="568.0" font-size="18" fill="#233734" font-weight="400">描述人希望完成什么、需要知道什么；结果未必是一项按钮</text>
+<text x="103.0" y="593.0" font-size="18" fill="#233734" font-weight="400">或软件功能。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">候选办法</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">机器人、承接安排等都是改变工作的选择；谁提出或叫什么</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">名字，不能代替效果证据。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,774.0 92.0,871.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="796.0" font-size="21" fill="#286f64" font-weight="700">实际受阻位置</text>
+<text x="103.0" y="826.0" font-size="18" fill="#233734" font-weight="400">追踪具体任务在哪一环停住；首次回复慢与没有确定进展，</text>
+<text x="103.0" y="851.0" font-size="18" fill="#233734" font-weight="400">可能需要不同办法。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">现有记录能说明什么</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#233734" font-weight="700">事件记录与范围</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#53635f" font-weight="400">按实际时间记录回复、交接和下一步；出现可行时段不证明</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#53635f" font-weight="400">预约确认或维修完成。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#233734" font-weight="700">承接与更新缺口</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#53635f" font-weight="400">请求已经发出却缺少接单确认和持续更新；这是可查的解</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#53635f" font-weight="400">释，仍须验证是否构成主要限制。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">局部试行与调整</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,516.0 1224.6666666666667,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#286f64" font-weight="700">办法的作用位置</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#233734" font-weight="400">自动收悉改变回复，承接安排改变责任交接；二者可以配</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#233734" font-weight="400">合，但不能互相冒充。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">实际工作结果</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">观察是否更早接手、取得安排及减少信息缺失；上线、填表</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">或喜欢功能都不能代替这些结果。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">新证据改变选择</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">若阻碍是已有说明难找，改善查找入口可能更贴切；方案应</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">随已知限制调整。</text>
+<text x="64" y="915.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="915.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="940.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="973.0" font-size="21" fill="#233734" font-weight="700">实际受阻位置</text>
+<rect x="750" y="940.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="973.0" font-size="21" fill="#233734" font-weight="700">候选办法</text>
+<polyline points="538,977.0 736,977.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,977.0 726.9955289764732,981.3496553411123 726.9955289764732,972.6503446588877" fill="#286f64"/>
+<text x="603.0" y="965.0" font-size="17" fill="#286f64" font-weight="400">帮助选择</text>
+<text x="80" y="1023.0" font-size="18" fill="#53635f" font-weight="400">同样说太慢，受阻环节不同，合适的改变也可能不同。</text>
+<rect x="64" y="1063.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1096.2" font-size="21" fill="#233734" font-weight="700">办法的作用位置</text>
+<rect x="750" y="1063.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1096.2" font-size="21" fill="#233734" font-weight="700">实际工作结果</text>
+<polyline points="538,1100.2 736,1100.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1100.2 726.9955289764732,1104.5496553411124 726.9955289764732,1095.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1088.2" font-size="17" fill="#286f64" font-weight="400">需要检验于</text>
+<text x="80" y="1146.2" font-size="18" fill="#53635f" font-weight="400">回复更快是否带来接手更早，要补上实际工作变化的证据。</text>
+<rect x="64" y="1186.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1219.4" font-size="21" fill="#233734" font-weight="700">新证据改变选择</text>
+<rect x="750" y="1186.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1219.4" font-size="21" fill="#233734" font-weight="700">实际受阻位置</text>
+<polyline points="538,1223.4 736,1223.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1223.4 726.9955289764732,1227.7496553411124 726.9955289764732,1219.0503446588878" fill="#286f64"/>
+<text x="620.0" y="1211.4" font-size="17" fill="#286f64" font-weight="400">修正</text>
+<text x="80" y="1269.4" font-size="18" fill="#53635f" font-weight="400">单次记录支持局部调查，不能预先把所有客户的问题归为同一原因。</text>
+<polyline points="64,1327.6000000000001 1736,1327.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1357.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

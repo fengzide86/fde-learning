@@ -1,0 +1,92 @@
+{
+  "id": "guide-C",
+  "title": "数据与日志：导读与查用",
+  "html": "<p>一个程序能接收请求、运行函数并返回 JSON，事情还没有结束：程序重启以后，原来的预约还在吗？两张表分别记着客户与预约，怎样知道它们对应的是同一个人？确认预约需要改三处数据，如果第三步失败，前两步算不算成功？</p>\n<p>本册解决的是这些问题。数据库不是把 Python 字典换一个存放位置，而是让长期事实有共同结构，让读取有明确含义，让修改有完整边界。日志则留下“哪次操作得到了什么结果”的线索，帮助区分数据错误、访问失败和读取太慢。</p>\n<p>先用几条看得见的记录学习查询，再从查询需要反推表的设计；随后处理写入、应用访问和性能。例子是一套社区维修预约业务：客户提出工单，预约占用技术员的一个时段。每章给出本章所需的事实，不要求先拼成一套服务才能阅读。</p>\n<h2 id=\"guide-c-s1\">第一次只看这里</h2>\n<p>直接进入 C01。第一次只追一张表：哪些事实被保存、查询怎样选出结果、日志怎样帮助复查。</p>\n<p>本册的详细关系图、章节路线和查用说明放在全书后部。遇到‘这一步和前后哪里相连’时再回看，不需要在第一轮先读完。</p>\n<h2 id=\"guide-c-s2\">知识关系总览｜把答案、事实和运行证据放回同一张图</h2>\n<p>学到这里，SQL 已经不是一长串用途相近的命令。它们分别改变答案的形状、约束可保存的事实，或组织一组状态变化。先把位置分清，再看现场为什么选择其中一个。</p>\n<h3 id=\"guide-c-s3\">表的结构、查询的结果、Python 的值，不是三份同样的东西</h3>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">长期事实\n├─ schema：有哪些表、列、身份与关系\n├─ constraints：哪些值和引用不能存在\n└─ 已提交的记录：现在实际保存了什么\n          │\n          ├─ SELECT / JOIN / GROUP BY → 当前问题的结果表\n          │                              │\n          │                              └─ Python 列表、字典 → 应用响应\n          │\n          └─ INSERT / UPDATE / DELETE\n                         └─ transaction 提交或撤回一组改变\n\n一次应用操作旁边的证据\n├─ request_id、结果类别、行数、耗时 → 发生了什么\n└─ 正确结果、query plan、重复实测  → 查询的代价是否值得优化\n</code></pre></div>\n<p>表结构不是表内数据；建好了 <code>appointments</code> 不代表已经有预约。查询结果也不是新的持久表：它可以只含三条预约，也可以只有一行统计。Python 拿到普通字典后，修改字典不会自动写回数据库。</p>\n<p>这种区别会直接影响排错方向。查询结果少一行，先检查筛选与连接，不能据此断言存储丢了数据；响应里字段错了，可能是 Python 整理结果时改错，未必需要改表；写入程序打印成功，也必须有提交与读回证据，才能判断长期事实改变了。</p>\n<h3 id=\"guide-c-s4\">一张答案怎样形成：先问“一行代表什么”</h3>\n<table>\n<thead>\n<tr>\n<th>当前想回答什么</th>\n<th>选择依据</th>\n<th>容易混淆的近邻</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>哪些预约符合条件</td>\n<td><code>WHERE</code> 筛输入行，<code>ORDER BY</code> 与 <code>LIMIT</code> 定顺序及数量</td>\n<td>限量不会自动给出最早、最近；显示三行也不证明只有三条符合</td>\n</tr>\n<tr>\n<td>预约属于哪位客户</td>\n<td><code>JOIN ... ON ...</code> 沿对应关系把需要的列放在一起</td>\n<td>外键限制写入的引用，不替每条查询自动写连接条件</td>\n</tr>\n<tr>\n<td>有哪些合格技术员</td>\n<td>子查询提供编号，<code>IN</code> 判断成员</td>\n<td>不需要技能明细时，连接所有技能反而可能放大后面的预约数</td>\n</tr>\n<tr>\n<td>每位技术员有多少预约</td>\n<td><code>GROUP BY</code> 改成每组一行，再用聚合计算；<code>HAVING</code> 筛组</td>\n<td><code>DISTINCT</code> 去重不等于统计；<code>COUNT(*)</code> 会数左连接的占位行</td>\n</tr>\n<tr>\n<td>每条预约在本技术员的安排里排第几</td>\n<td>window 在分区内计算，保留每条预约明细</td>\n<td><code>GROUP BY</code> 会折叠明细，不能用已经折叠的两行代替三条预约</td>\n</tr>\n<tr>\n<td>两份合格名单的共同成员</td>\n<td><code>INTERSECT</code> 组合同形状结果</td>\n<td><code>JOIN</code> 是关联事实，不是所有“把两份东西放一起”的通用动作</td>\n</tr>\n</tbody>\n</table>\n<p>工具会组合使用，不是每个问题只能选择一个关键字。排班查询可以先筛技能，用 <code>LEFT JOIN</code> 保留零预约者，再分组计数。决定顺序的是答案需要的含义，不是命令名字听起来哪一个更高级。</p>\n<p>未知值会穿过这些步骤。来源可能是原表尚未确定的时长，也可能是左连接没有匹配时补出的空位置。看到 <code>NULL</code>，先恢复它在当前位置的含义，再决定是否筛入、计数或向应用说明未知；不要一律改成零。</p>\n<h3 id=\"guide-c-s5\">保存事实时，身份、约束与事务怎样接力？</h3>\n<p>客户 C1 是一个身份；邮箱是这个客户的当前联系信息。把邮箱只保存在客户表里，工单通过 C1 找到它，就减少了同一事实多处修改的矛盾。这个设计回答“事实由哪里保存”。</p>\n<p>外键要求被引用客户存在，唯一约束防止重复占用，检查约束拒绝负时长，非空约束拒绝必须有值却缺失的情况。它们回答“哪些状态不能保存”。默认值只补上确定的初始状态，不会让未知事实凭空变真。</p>\n<p>事务再向前一步：确认预约，不只是单独插入一条合法预约，还需要占用时段、留下事件。<strong>约束保护每项不变量，事务保护这组相关改变的完整边界。</strong> 因此第三步的错误语句被拒绝之后，应用仍然必须决定撤回前两步，不能捕获异常后照常提交。</p>\n<p>事务也不包办所有问题。它不会替应用判断登录者有没有确认权限，不会把一个外部供应商操作自动并入本地提交，也不能仅凭一次单连接实验证明所有并发安排都安全。这些边界不清楚时，“用了数据库”仍然可能作出不可靠承诺。</p>\n<h3 id=\"guide-c-s6\">查询、CTE 和 view：名字应当活多久？</h3>\n<p>一份只使用一次的查询，可以直接表达条件。查询内部需要给中间结果一个名字，例如“今天未取消的预约”，<code>WITH</code> 定义的 CTE 帮助分段阅读；它随这一条查询结束，不成为长期数据库接口。</p>\n<p>看板和通知程序长期需要相同列名及取消规则时，view 才有稳定复用的理由。普通 view 保存查询定义，不是把数据复制成不会变化的快照；底表变动后，读取仍依赖定义能否正确解释当前结构。底表变更时同时调整 view，并在提交前验证公开列与结果，才能保护消费者。</p>\n<p>至于谁能查看这些行，不由这个名字决定。SQLAlchemy 提供执行入口，参数绑定让输入留在数据位置，应用授权限定当前身份能看谁，数据库或文件权限限制进程可访问什么。它们守的是不同边界。一个参数化查询可以非常安全地执行一项未经授权的读取，所以“没有 SQL 注入”并不等于“没有越权”。</p>\n<h3 id=\"guide-c-s7\">业务编号、request ID 与日志，分别回答哪一个“哪次”？</h3>\n<p><code>T-42</code> 指明同一个工单，预约编号指明一条预约。客服先后两次读取同一工单，业务编号不变，却是两次处理；request ID 把其中某一次的入口、数据库操作与回应关联起来。</p>\n<p>C04 的持久事件作为业务动作的一部分，与预约、时段同事务提交。C05 的运行日志则解释一次调用成功、失败以及用时。日志写了成功不替代数据库提交，数据库保存了事件也不自动提供所有运行耗时。</p>\n<p>成功但结果为空，与查询失败还不知道有几行，也要分开。前者可以记零行，后者应该记未知并保留错误类别。日志需要的是足够定位的证据，不是客户姓名、完整 SQL 和全部输入；扩大记录内容还会带来泄露风险。</p>\n<p>这些标识并不天然要求同一种字符串格式。C04 的 R-42 是局部事务实验的关联值，C05 的应用入口采用 UUID，并由 C06 的假设读取事件沿用。这是程序各自的输入约定；复用函数时必须服从函数的真实要求，不能仅凭字段都叫 <code>request_id</code> 就直接混用。</p>\n<h3 id=\"guide-c-s8\">感觉慢，为什么不是立即加索引？</h3>\n<p>某个读取交回了 20 行，可能查错了客户，也可能漏掉日期并列时的排序。先核对“应当是哪些完整行及什么顺序”，才有稳定比较对象。</p>\n<p>如果答案正确，再用同类操作日志确认值得调查的等待，用可重复数据记录基线；计划说明访问路线，实测说明这次环境中的代价。索引减少了一部分查找，也可能仍需排序。<code>SEARCH</code> 不是保证更快的成绩，<code>SCAN</code> 也不是必须消灭的错误。</p>\n<p>C06 的单列索引只服务那个独立四列表中的客户条件。换回 C03、C04 的 <code>appointments → tickets → customers</code> 结构，需要对实际 JOIN 重新解释、测量；不能因为问题也叫“按客户查预约”，就把同一条索引命令原封不动移过去。</p>\n<p>如果真正出现单列索引解决不了的稳定多列读取瓶颈，再进入高级索引的按需补充；如果出现可复现的两连接竞争，回到具体不变量补并发保护；如果项目决定换服务器数据库，再验证对应连接、账号、方言与事务。每条扩展都有返回当前读取或写入的任务，不必先学完全部数据库专题才能使用本册知识。</p>\n<h2 id=\"guide-c-s9\">用一份完整实验把这些关系接起来</h2>\n<p>章内的小表让每一步能独立看清，配套的“社区维修数据实验室”则把查询、关系、约束、事务、应用读取和计划验证放到同一个可运行程序里。</p>\n<p>先打开资料包根目录的可见入口 <code>01_配套代码_A-E</code>，进入 <code>examples → c_data_logs → repair-data</code>，把整个 <code>repair-data</code> 文件夹复制到自己选择的独立实验目录。这个入口与底层目录 <code>01_配套练习</code> 指向同一份配套文件。所有建立环境、改文件和运行都在这个副本中进行，不在资料包原目录里留下数据库、缓存或安装目录。</p>\n<p>这份配套的结构不是 C04 数据库的直接迁移：预约直接保存客户、技术员和时段编号；标识使用 CUST-/TECH-/SLOT-/APT- 前缀，预约状态包括 open、confirmed、completed、cancelled。C03、C04 中的预约状态仍只有 confirmed、cancelled，查询路径仍经工单和时段。打开配套的 <code>schema.sql</code> 与 <code>seed.sql</code>，以其中的真实表和已知行为依据，不把两套 SQL 混着运行。</p>\n<table>\n<thead>\n<tr>\n<th>文件</th>\n<th>阅读它时解决什么问题</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>schema.sql、seed.sql</td>\n<td>数据结构是什么，实验从哪些已知记录开始</td>\n</tr>\n<tr>\n<td>database.py</td>\n<td>在哪里新建实验文件，每个连接怎样开启规则</td>\n</tr>\n<tr>\n<td>queries.py</td>\n<td>查询交回哪些行，输入怎样绑定，计划怎样记录</td>\n</tr>\n<tr>\n<td>operations.py</td>\n<td>多步写入、批量导入与取消怎样保护完整状态</td>\n</tr>\n<tr>\n<td>test_*.py、milestone_check.py</td>\n<td>哪条证据对应成功、失败或恢复，整条路线怎样一起运行</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"guide-c-s10\">运行之前，先知道会改变什么</h3>\n<p>在实验副本中打开 PowerShell，确认当前目录能看到 <code>requirements.txt</code> 和 <code>milestone_check.py</code>。本册独立程序统一使用 Python 3.12 或更新版本，可先用 <code>python --version</code> 核对入口。配套自身允许的版本范围以其 README 为准；不应把它的较低最低版本用于含 <code>autocommit</code> 参数的 C03–C05 新程序。</p>\n<p>然后建立局部环境、安装配套锁定依赖，再执行：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">python -m venv .venv\nif ($LASTEXITCODE -ne 0) { throw &#x27;建立环境失败&#x27; }\n&amp; .\\.venv\\Scripts\\python.exe -m pip install -r .\\requirements.txt\nif ($LASTEXITCODE -ne 0) { throw &#x27;安装依赖失败&#x27; }\n&amp; .\\.venv\\Scripts\\python.exe -m pip check\nif ($LASTEXITCODE -ne 0) { throw &#x27;依赖不一致&#x27; }\n&amp; .\\.venv\\Scripts\\python.exe -m pytest -q\nif ($LASTEXITCODE -ne 0) { throw &#x27;测试失败，先阅读对应失败详情&#x27; }\n&amp; .\\.venv\\Scripts\\python.exe .\\milestone_check.py\nif ($LASTEXITCODE -ne 0) { throw &#x27;里程碑运行失败&#x27; }\n</code></pre></div>\n<p><code>.venv</code> 与测试缓存保存在实验副本；配套的测试数据库在系统临时目录排他新建，不接受已有业务数据库作为练习目标。pytest 测试结束时会关闭连接，但测试目录可能按 pytest 的保留策略暂存；里程碑程序使用自己的临时目录，结束时自动清理。不要为了“省建库”把它改接到真实数据。</p>\n<p>测试命令成功退出后，里程碑应输出含 <code>status: PASS</code> 的 JSON。再看里面分别记录了什么，而不只看末尾单词：已提交的预约标识，故意写坏事件后的完整回滚，脏导入行的位置，绑定查询的结果，以及建索引前后相同的答案。成功后预约、时段和事件的三处读回，由 <code>test_writing.py</code> 中的 <code>test_multistep_booking_commits_appointment_slot_and_event</code> 验证，不是每项完整状态都会展开在里程碑 JSON 里。</p>\n<p>配套日志与 C05 的独立程序也不是同一个接口：前者使用 <code>duration_ms/error_category</code>，成功写为 <code>outcome=ok</code>，request ID 接收符合字符与长度要求的字符串；C05 使用 <code>elapsed_ms/error_type</code>，成功写为 <code>success</code>，函数接收 UUID 对象。两者对行数的含义一致：成功空结果是 <code>row_count=0</code>，成功非空结果记录实际行数，未能取得答案是 <code>row_count=null</code>。先看 <code>outcome</code>，再解释行数；不能把查询失败说成“查明没有记录”。其他字段相近，也不代表可以不读接口就合并统计。</p>\n<p>配套的性能数字记录多次读取的合计，C06 独立程序记录单次样本的中位数；两者不是相同计时口径，不能把数字直接相除当成效果对比。各自应在相同程序、相同条件下比较前后。</p>\n<h3 id=\"guide-c-s11\">怎样知道不是只把测试运行了一遍？</h3>\n<p>选择一个已经有明确证据的现象，例如“事件写入失败后，为什么时段仍然可用”。在代码里找到开始事务的位置、触发错误的位置和回滚后读回的位置；解释这些位置分别保证了什么，再改变一项合成输入，预测哪些状态应改变或不变。</p>\n<p>若预测与结果不符，沿最早分叉处修正认识：是查询筛错行、连接改变行数、约束没开启、误把未提交当已提交，还是拿错了数据库文件？有现成的失败路线可用，不需要额外造一整套题。能沿证据解释并修改，比记住每个 SQL 拼写更接近实际使用能力。</p>\n<p>官方练习可以作为更换数据后的迁移机会：需要练单表筛选就从 Querying 的题目里选择一项；需要验证表间关系就转到 Relating；写入和视图则在相应主题后选用。先看题目提供的 schema、目标及预期输出，不假设题库与维修实验相同。本书的完整代码属于原创实验，不是官方作业提交答案。相关题目入口在 <a href=\"https://cs50.harvard.edu/sql/weeks/\" target=\"_blank\" rel=\"noopener noreferrer\">CS50 SQL 各周材料</a>。</p>\n<h2 id=\"guide-c-s12\">下一册接走的是什么？</h2>\n<p>C 册现在交出了一层能保存事实、按条件回答问题、保护多步修改并留下运行线索的数据库能力。</p>\n<p>如果确认预约还要通知外部供应商，会出现新的不确定性：请求超时，究竟是对方没有收到，还是已经处理但回应丢了？本地 <code>ROLLBACK</code> 不能把对方的操作自动撤回。D 册从这个边界继续，解释如何分类失败、限定等待与重试，并依靠持久记录判断同一业务动作接下来能安全做什么。</p>\n<p>这里值得带走的不是某张表的全部列名，而是几种可以复用的判断：事实由谁保存，结果一行代表什么，成功要同时留下哪些状态，失败后凭哪项证据继续。它们就是把数据库放进完整应用时实际使用的结构认识。</p>\n<h2 id=\"guide-c-s13\">来源与查用入口</h2>\n<p>本书的维修记录、程序与解释为自包含示例。课程主线参考 Harvard CS50 SQL 的 Querying、Relating、Designing、Writing、Viewing；事务属于官方 Optimizing 中的相关材料，在本书随多步写入使用。应用连接与运行日志按 Python、SQLAlchemy 的接口单独展开。</p>\n<p>需要核对完整语法时，可查以下官方入口；阅读正文不依赖逐个打开它们：</p>\n<ul>\n<li><a href=\"https://cs50.harvard.edu/sql/weeks/\" target=\"_blank\" rel=\"noopener noreferrer\">CS50 SQL 课程材料</a>：讲次、练习要求与课程背景。</li>\n<li>SQLite 的 <a href=\"https://www.sqlite.org/lang_select.html\" target=\"_blank\" rel=\"noopener noreferrer\">SELECT</a>、<a href=\"https://www.sqlite.org/lang_expr.html\" target=\"_blank\" rel=\"noopener noreferrer\">表达式</a>与<a href=\"https://www.sqlite.org/lang_aggfunc.html\" target=\"_blank\" rel=\"noopener noreferrer\">聚合函数</a>：查询结果、条件、空值与统计的语义。</li>\n<li>SQLite 的<a href=\"https://www.sqlite.org/datatype3.html\" target=\"_blank\" rel=\"noopener noreferrer\">数据类型</a>、<a href=\"https://www.sqlite.org/foreignkeys.html\" target=\"_blank\" rel=\"noopener noreferrer\">外键</a>与<a href=\"https://www.sqlite.org/lang_transaction.html\" target=\"_blank\" rel=\"noopener noreferrer\">事务</a>：普通表的存储行为、连接设置与提交边界。</li>\n<li>SQLite 的 <a href=\"https://www.sqlite.org/lang_createview.html\" target=\"_blank\" rel=\"noopener noreferrer\">view</a>、<a href=\"https://www.sqlite.org/lang_with.html\" target=\"_blank\" rel=\"noopener noreferrer\">WITH</a>、<a href=\"https://www.sqlite.org/windowfunctions.html\" target=\"_blank\" rel=\"noopener noreferrer\">window</a>与<a href=\"https://www.sqlite.org/eqp.html\" target=\"_blank\" rel=\"noopener noreferrer\">查询计划</a>：命名查询、保留明细的计算及访问路线。</li>\n<li><a href=\"https://docs.python.org/3/library/sqlite3.html\" target=\"_blank\" rel=\"noopener noreferrer\">Python sqlite3</a>与 <a href=\"https://docs.sqlalchemy.org/en/20/tutorial/dbapi_transactions.html\" target=\"_blank\" rel=\"noopener noreferrer\">SQLAlchemy 2.0 连接和事务</a>：程序入口、绑定值及事务控制。</li>\n</ul>\n<p>这些链接是持续更新的官方页面，不是固定版本快照。实际运行依赖文件给出的版本和本章明确写出的 Python 条件；升级、迁移或更换数据库时，应在独立实验中重新核对成功、失败与恢复，不能只因接口名字相同就认为行为未变。</p>\n<h2 id=\"guide-c-s14\">本册总览（需要时再回看）</h2>\n<p>这里保留整册地图、章节关系和查用入口；第一次阅读不需要先读完。</p>\n<h2 id=\"guide-c-s15\">本册知识结构总览</h2>\n<p>这不是六组互不相干的 SQL 命令，而是围绕同一批长期事实的几种责任：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">应用收到一个业务问题或修改请求\n│\n├─ 需要回答问题\n│  ├─ 从单表选行、选列、排序、汇总          C01\n│  ├─ 沿标识组合不同表的事实                C02\n│  └─ 由绑定查询或稳定 view 交回应用         C05\n│\n├─ 需要改变事实\n│  ├─ 表结构和约束界定什么数据可以存在       C03\n│  └─ 写入放进 transaction，同成或同败       C04\n│\n└─ 需要判断运行情况\n   ├─ 日志关联操作、结果和耗时              C05\n   └─ 结果先正确，再用 plan 和实测判断索引   C06\n</code></pre></div>\n<p>其中有几条会反复相遇的关系。</p>\n<table>\n<thead>\n<tr>\n<th>需要分清什么</th>\n<th>它们怎样配合</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>存储的事实与查询的答案</td>\n<td>表保存记录；同一批记录能回答不同问题，结果的一行不一定仍代表一条原记录</td>\n</tr>\n<tr>\n<td>表间关系与查询连接</td>\n<td>主键、外键描述记录怎样对应；<code>JOIN</code> 根据条件组合当前查询需要的行</td>\n</tr>\n<tr>\n<td>约束与事务</td>\n<td>约束拒绝不合法状态；事务把一组修改作为整体提交或撤回，彼此不能替代</td>\n</tr>\n<tr>\n<td>绑定值与查看权限</td>\n<td>绑定让输入保持为数据；应用仍要决定当前调用者能否查看这个客户的资料</td>\n</tr>\n<tr>\n<td>业务数据与日志</td>\n<td>数据库保存当前事实；日志解释一次操作的经过，不能靠写了“成功”来补出未提交的数据</td>\n</tr>\n<tr>\n<td>正确性与性能</td>\n<td>先确定结果应是什么，再判断取得这个结果的代价；更快的错误答案仍然错误</td>\n</tr>\n</tbody>\n</table>\n<p>这些区别现在不必全记住。先认出本册围绕“答案、长期事实、修改边界、运行证据”展开；遇到具体问题，再回到对应位置。需要整理工具选择时，再回到本册后部的“知识关系总览”，用已经看过的结果重新梳理。</p>\n<h3 id=\"guide-c-s16\">从 Python 和 HTTP 接过来的是什么？</h3>\n<p>Python 函数可以取得参数、处理并返回值。HTTP 让两个程序能交换请求与响应。本册往这条路线中补上持久数据：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">HTTP 请求里的输入\n→ 应用判断输入与权限\n→ 带着明确条件读取或修改数据库\n→ Python 得到结果，形成响应\n</code></pre></div>\n<p>这里的数据库是受应用调用的一层，不替应用决定全部业务规则，也不直接等同于 HTTP 服务。</p>\n<p>例如 B 册示例把工单存在运行中程序的内存字典里，重启便会重新初始化。这里使用 SQLite：它是数据库引擎，能在本机文件中管理表和已提交的数据，不需要另外启动数据库服务器；SQL 是向引擎表达读取、结构与修改要求的语言。后面的 Python <code>sqlite3</code> 与 SQLAlchemy，是程序调用数据库的入口，不是另外两种数据格式。</p>\n<p>早期纸面实验会使用内存 SQLite 数据库，关闭就消失，便于安全重做；需要验证持久化时才使用独立临时文件。<strong>能读写内存示例，不等于已经证明数据在重启后仍存在。</strong> 本册会把这两种证据分开。</p>\n<h3 id=\"guide-c-s17\">怎样读这些示例？</h3>\n<p>每章先读问题与已知记录，沿结果看“为什么恰好留下这些行”。整段建表或运行程序放在需要实际验证的位置，它们不是必须先默写的入门门槛。</p>\n<p>常用的筛选、连接和参数化读取，值得在后续运行中逐渐用顺；能解释列名却不能判断查询会返回谁，还没有理解这条查询。完整迁移脚本、连接配置或查询计划的格式可以查用，关键是清楚它保护什么、执行后该查看什么证据。</p>\n<p>C01、C02 使用小型读取模型；C03、C04 共用一套完整业务结构；C05、C06各自采用说明当前问题所需的独立实验。相同表名不保证列也相同。每次切换都会明说，不应把不同章节 SQL 直接拼进同一个数据库。最后的配套程序提供另一套完整、可重复运行的练习库，并说明如何对应这些关系。</p>\n",
+  "toc": [
+    {
+      "id": "guide-c-s1",
+      "text": "第一次只看这里",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s2",
+      "text": "知识关系总览｜把答案、事实和运行证据放回同一张图",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s3",
+      "text": "表的结构、查询的结果、Python 的值，不是三份同样的东西",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s4",
+      "text": "一张答案怎样形成：先问“一行代表什么”",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s5",
+      "text": "保存事实时，身份、约束与事务怎样接力？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s6",
+      "text": "查询、CTE 和 view：名字应当活多久？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s7",
+      "text": "业务编号、request ID 与日志，分别回答哪一个“哪次”？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s8",
+      "text": "感觉慢，为什么不是立即加索引？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s9",
+      "text": "用一份完整实验把这些关系接起来",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s10",
+      "text": "运行之前，先知道会改变什么",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s11",
+      "text": "怎样知道不是只把测试运行了一遍？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s12",
+      "text": "下一册接走的是什么？",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s13",
+      "text": "来源与查用入口",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s14",
+      "text": "本册总览（需要时再回看）",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s15",
+      "text": "本册知识结构总览",
+      "level": 2
+    },
+    {
+      "id": "guide-c-s16",
+      "text": "从 Python 和 HTTP 接过来的是什么？",
+      "level": 3
+    },
+    {
+      "id": "guide-c-s17",
+      "text": "怎样读这些示例？",
+      "level": 3
+    }
+  ]
+}

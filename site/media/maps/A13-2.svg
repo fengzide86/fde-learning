@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1644" width="1800" height="1644" role="img" aria-labelledby="title">
+<title id="title">把输入整理成一份可靠报告</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1644" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A13  把输入整理成一份可靠报告</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A13汇合A02–A12的值、控制、文件、测试和交付关系；当前仍是本地程序，B册再增加跨进程HTTP。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">工单数据的解析、校验与报告交付</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">找回本章的数据与语法关系</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">路径对象与合同（Path）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">路径对象提供后缀、打开和定位操作，创建对象不说明文件存在；解析路径比较只识别部分同文</text>
+<text x="103.0" y="630.0" font-size="18" fill="#53635f" font-weight="400">件别名。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">缺省值选择（get / None）</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">缺owner与null可同视未提供，空文字可转unassigned；非文字如0或空列表仍先拒绝。</text>
+<polyline points="73.0,696.0 73.0,800.0 91.0,800.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="778.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="808.0" font-size="21" fill="#233734" font-weight="700">条件判断与默认值（or）</text>
+<text x="103.0" y="838.0" font-size="16" fill="#286f64" font-weight="400">条件取真值与运算取值</text>
+<text x="103.0" y="860.0" font-size="18" fill="#53635f" font-weight="400">空列表或空文字在条件中为假，or可返回原操作数；owner默认表达式得到文字而非bool。</text>
+<polyline points="73.0,800.0 73.0,926.0 91.0,926.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="904.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="934.0" font-size="21" fill="#233734" font-weight="700">容器用途对照（list / tuple / dict / set）</text>
+<text x="103.0" y="964.0" font-size="16" fill="#286f64" font-weight="400">容器类型的用途对照</text>
+<text x="103.0" y="986.0" font-size="18" fill="#53635f" font-weight="400">列表保存有序记录，元组承载位置组合，字典连接键值，集合判断成员；空集合须写set()。</text>
+<polyline points="73.0,926.0 73.0,1052.0 91.0,1052.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1030.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1060.0" font-size="21" fill="#233734" font-weight="700">排序依据（sort / key）</text>
+<text x="103.0" y="1090.0" font-size="16" fill="#286f64" font-weight="400">原地排序及比较依据</text>
+<text x="103.0" y="1112.0" font-size="18" fill="#53635f" font-weight="400">原地按(priority,id)依次比较，返回None；同优先级ID按文字排序，sorted才另建列表。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">失败处理与测试怎样对应</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">清理失败与原异常（suppress / raise）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">失败后尽力删明确临时文件，只压住清理的OSError，再重新抛原异常；不是宣告成功或重试。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">测试隔离工具（tmp_path / capsys / monkeypatch）</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">分别隔离临时文件、捕获输出、临时替换调用；替换入口写函数的测试不证明真实临时清理。</text>
+<polyline points="922.5,671.0 922.5,775.0 940.5,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="753.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="783.0" font-size="21" fill="#233734" font-weight="700">真实写出失败测试</text>
+<text x="952.5" y="813.0" font-size="18" fill="#53635f" font-weight="400">调用真实write_report，仅替换内部dump制造失败，再检查旧报告和临时文件；证据限于实际断</text>
+<text x="952.5" y="838.0" font-size="18" fill="#53635f" font-weight="400">言。</text>
+<text x="64" y="1176.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1176.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1201.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1234.0" font-size="21" fill="#233734" font-weight="700">真实写出失败测试</text>
+<rect x="750" y="1201.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1234.0" font-size="21" fill="#233734" font-weight="700">写出报告的临时替换（write_report，见主图）</text>
+<polyline points="538,1238.0 736,1238.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1238.0 726.9955289764732,1242.3496553411123 726.9955289764732,1233.6503446588877" fill="#286f64"/>
+<text x="569.0" y="1226.0" font-size="17" fill="#286f64" font-weight="400">核对失败后的文件</text>
+<text x="80" y="1284.0" font-size="18" fill="#53635f" font-weight="400">只替换整个write_report可检查入口翻译失败，却没有实际走过内部清理。</text>
+<rect x="64" y="1324.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1357.2" font-size="21" fill="#233734" font-weight="700">条件判断与默认值（or）</text>
+<rect x="750" y="1324.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1357.2" font-size="21" fill="#233734" font-weight="700">缺省值选择（get / None）</text>
+<polyline points="538,1361.2 736,1361.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1361.2 726.9955289764732,1365.5496553411124 726.9955289764732,1356.8503446588877" fill="#286f64"/>
+<text x="552.0" y="1349.2" font-size="17" fill="#286f64" font-weight="400">支持空文字的默认选择</text>
+<text x="80" y="1407.2" font-size="18" fill="#53635f" font-weight="400">空文字or &quot;unassigned&quot;得到后者；这发生在原始类型已检查之后，不用or掩盖错误类型。</text>
+<rect x="64" y="1447.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1480.4" font-size="21" fill="#233734" font-weight="700">排序依据（sort / key）</text>
+<rect x="750" y="1447.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1480.4" font-size="21" fill="#233734" font-weight="700">容器用途对照（list / tuple / dict / set）</text>
+<polyline points="538,1484.4 736,1484.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1484.4 726.9955289764732,1488.7496553411124 726.9955289764732,1480.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1472.4" font-size="17" fill="#286f64" font-weight="400">选用位置组合比较</text>
+<text x="80" y="1530.4" font-size="18" fill="#53635f" font-weight="400">列表保存工单，key函数返回(priority,id)元组；先比priority，相同才比文字ID。</text>
+<polyline points="64,1588.6000000000001 1736,1588.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1618.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：A13  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

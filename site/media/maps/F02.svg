@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1650" width="1800" height="1650" role="img" aria-labelledby="title">
+<title id="title">构建输入与运行模板</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1650" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F02  构建输入与运行模板</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">在 F01 的镜像与实例关系上解释构建；为 F03 配置以及 F05 精确版本恢复留下可辨认对象。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">构建时产生镜像，运行时按镜像默认与本次配置创建实例；改哪一层就更新哪一层。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="705.6201171875" y="386.0" font-size="28" fill="#286f64" font-weight="700">构建说明如何定义可识别产物（Dockerfile）</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">构建输入的范围</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">构建输入范围（build context）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">构建末尾路径指定 builder 可读取的文件范围；换 Dockerfile </text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">不会自动改变这份输入范围。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">构建排除规则（.dockerignore）</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">从构建输入排除环境、缓存、秘密和运行数据；减少无关输</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">入，不能抹除已经进入镜像层的秘密。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">构建秘密</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">真实构建秘密应使用专门 secret mount；普通 ARG、ENV 或</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">先复制后删除不能替代秘密管理。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">构建时的文件与执行</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">构建基础与文件位置（FROM / COPY / WORKDIR）</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#53635f" font-weight="400">选基础文件系统、从 context 加入文件并设镜像工作目录；</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#53635f" font-weight="400">不会切换主机终端目录。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,682.0 658.3333333333334,801.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#286f64" font-weight="700">构建阶段执行（RUN）</text>
+<text x="669.3333333333334" y="734.0" font-size="16" fill="#286f64" font-weight="400">构建时执行</text>
+<text x="669.3333333333334" y="756.0" font-size="18" fill="#233734" font-weight="400">在构建环境执行用户目录建立或依赖安装；放入长期服务会</text>
+<text x="669.3333333333334" y="781.0" font-size="18" fill="#233734" font-weight="400">让构建等待命令结束。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">镜像中的运行约定</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">构建参数与运行默认值（ARG / ENV）</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">ARG 提供构建参数，ENV 可写入镜像默认设置；本次运行仍</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">可按覆盖规则注入合适配置。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">运行身份与目录权限（USER）</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">默认进程身份须能访问运行所需目录；镜像里目录可写不证</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">明后来挂入的存储也可写。</text>
+<polyline points="1205.6666666666667,696.0 1205.6666666666667,825.0 1223.6666666666667,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="803.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,811.0 1224.6666666666667,930.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="833.0" font-size="21" fill="#286f64" font-weight="700">默认启动命令（CMD / exec form）</text>
+<text x="1235.6666666666667" y="863.0" font-size="16" fill="#286f64" font-weight="400">默认启动命令</text>
+<text x="1235.6666666666667" y="885.0" font-size="18" fill="#233734" font-weight="400">CMD 给出启动实例的默认命令，数组逐项表示程序与参</text>
+<text x="1235.6666666666667" y="910.0" font-size="18" fill="#233734" font-weight="400">数；它不同于构建阶段执行的 RUN。</text>
+<polyline points="1205.6666666666667,825.0 1205.6666666666667,976.0 1223.6666666666667,976.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="954.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="984.0" font-size="21" fill="#233734" font-weight="700">声明预期端口（EXPOSE）</text>
+<text x="1235.6666666666667" y="1014.0" font-size="16" fill="#286f64" font-weight="400">镜像端口元数据</text>
+<text x="1235.6666666666667" y="1036.0" font-size="18" fill="#53635f" font-weight="400">记录镜像预计使用的端口元数据；不启动监听，也不会自行</text>
+<text x="1235.6666666666667" y="1061.0" font-size="18" fill="#53635f" font-weight="400">把主机端口发布给容器。</text>
+<text x="64" y="1125.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1125.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1150.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1183.0" font-size="21" fill="#233734" font-weight="700">构建输入范围（build context）</text>
+<rect x="750" y="1150.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1183.0" font-size="21" fill="#233734" font-weight="700">构建基础与文件位置（FROM / COPY / WORKDIR）</text>
+<polyline points="538,1187.0 736,1187.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1187.0 726.9955289764732,1191.3496553411123 726.9955289764732,1182.6503446588877" fill="#286f64"/>
+<text x="577.30078125" y="1175.0" font-size="17" fill="#286f64" font-weight="400">限定 COPY 来源</text>
+<text x="80" y="1233.0" font-size="18" fill="#53635f" font-weight="400">COPY 可取哪些项目文件由 context 决定；它不负责选择基础镜像，也不决定镜像工作目录。</text>
+<rect x="64" y="1273.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1306.2" font-size="21" fill="#233734" font-weight="700">构建阶段执行（RUN）</text>
+<rect x="750" y="1273.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1306.2" font-size="21" fill="#233734" font-weight="700">默认启动命令（CMD / exec form）</text>
+<polyline points="538,1310.2 736,1310.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1310.2 726.9955289764732,1314.5496553411124 726.9955289764732,1305.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1298.2" font-size="17" fill="#286f64" font-weight="400">阶段不同于</text>
+<text x="80" y="1356.2" font-size="18" fill="#53635f" font-weight="400">安装通常发生在构建，服务入口在运行时执行；交换位置会改变生命周期。</text>
+<rect x="64" y="1396.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1429.4" font-size="21" fill="#233734" font-weight="700">构建排除规则（.dockerignore）</text>
+<rect x="750" y="1396.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1429.4" font-size="21" fill="#233734" font-weight="700">构建输入范围（build context）</text>
+<polyline points="538,1433.4 736,1433.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1433.4 726.9955289764732,1437.7496553411124 726.9955289764732,1429.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1421.4" font-size="17" fill="#286f64" font-weight="400">从源头筛除文件</text>
+<text x="80" y="1479.4" font-size="18" fill="#53635f" font-weight="400">秘密应在输入筛选时排除；复制进某层后再删除，不能让旧层从未拥有它。</text>
+<text x="64" y="1531.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：构建复用、产物身份与更新。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1594.2 1736,1594.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1624.2" font-size="17" fill="#53635f" font-weight="400">对照正文：F02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1285" width="1800" height="1285" role="img" aria-labelledby="title">
+<title id="title">应用读库与可追踪结果</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1285" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C05  应用读库与可追踪结果</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">将 C01–C04 的结果与结构交给 Python 应用；C06沿相同读取合同测量与优化，不能用提速掩盖错行。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">读取合同、参数边界与运行观察</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">变更与消费者兼容</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">公开列名的窄迁移</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">新增并回填display_name后仍以customer_name公开；保留旧列不代表以后两列自动同步。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">事务核对与恢复</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">把新增列、回填、重建view和样本比较放同一事务；结构变更回滚依赖正确驱动事务模式。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">报告需求改变时怎样选结果形状</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">分段查询定义（CTE）</text>
+<text x="952.5" y="605.0" font-size="16" fill="#286f64" font-weight="400">语句内的结果命名</text>
+<text x="952.5" y="627.0" font-size="18" fill="#53635f" font-weight="400">为当前语句的中间结果命名，名字不跨语句保存；可配合聚合或窗口，不保证自动加速。</text>
+<polyline points="922.5,567.0 922.5,693.0 940.5,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="671.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="701.0" font-size="21" fill="#233734" font-weight="700">分组与窗口计算（GROUP BY / window）</text>
+<text x="952.5" y="731.0" font-size="16" fill="#286f64" font-weight="400">结果粒度选择</text>
+<text x="952.5" y="753.0" font-size="18" fill="#53635f" font-weight="400">分组折成每组一行，窗口给保留的明细增加计算；窗口内编号顺序不能代替最终显示顺序。</text>
+<text x="64" y="817.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="817.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="842.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="875.0" font-size="21" fill="#233734" font-weight="700">公开列名的窄迁移</text>
+<rect x="750" y="842.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="875.0" font-size="21" fill="#233734" font-weight="700">事务核对与恢复</text>
+<polyline points="538,879.0 736,879.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,879.0 726.9955289764732,883.3496553411123 726.9955289764732,874.6503446588877" fill="#286f64"/>
+<text x="594.5" y="867.0" font-size="17" fill="#286f64" font-weight="400">提交前验证</text>
+<text x="80" y="925.0" font-size="18" fill="#53635f" font-weight="400">新底表列出现不足以说明成功，公开列、过滤规则与已知结果必须仍符合合同。</text>
+<rect x="64" y="965.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="998.2" font-size="21" fill="#233734" font-weight="700">分段查询定义（CTE）</text>
+<rect x="750" y="965.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="998.2" font-size="21" fill="#233734" font-weight="700">分组与窗口计算（GROUP BY / window）</text>
+<polyline points="538,1002.2 736,1002.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1002.2 726.9955289764732,1006.5496553411124 726.9955289764732,997.8503446588877" fill="#286f64"/>
+<text x="569.0" y="990.2" font-size="17" fill="#286f64" font-weight="400">可与不同计算组合</text>
+<text x="80" y="1048.2" font-size="18" fill="#53635f" font-weight="400">CTE 决定名字只活在当前语句；分组或窗口决定一行代表组还是仍代表明细。</text>
+<rect x="64" y="1088.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1121.4" font-size="21" fill="#233734" font-weight="700">可复用读取定义（view）（见主图）</text>
+<rect x="750" y="1088.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1121.4" font-size="21" fill="#233734" font-weight="700">分段查询定义（CTE）</text>
+<polyline points="538,1125.4 736,1125.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1125.4 726.9955289764732,1129.7496553411124 726.9955289764732,1121.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1113.4" font-size="17" fill="#286f64" font-weight="400">名字寿命不同于</text>
+<text x="80" y="1171.4" font-size="18" fill="#53635f" font-weight="400">view 保存查询定义供后续读取，CTE 只在当前语句内命名；二者都不是自动加速的保证。</text>
+<polyline points="64,1229.6000000000001 1736,1229.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1259.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：C05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

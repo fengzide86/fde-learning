@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2724" width="1800" height="2724" role="img" aria-labelledby="title">
+<title id="title">怎样确认运行条件没有找错？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2724" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A09  怎样确认运行条件没有找错？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A09把A01路径和A06包安装落实到运行证据；A10观察具体进程，A12用记录的条件重建环境。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先核对跑哪份文件、从哪里出发、用哪个 Python；再核对这个 Python 的依赖，以及代码最终选用了哪份配置。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">运行身份、依赖与配置来源</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">这次运行的身份</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">运行条件与Python环境</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">总范围与其中一部分</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">运行条件还包含代码、工作目录和配置；本章的Python环境</text>
+<text x="103.0" y="652.0" font-size="18" fill="#53635f" font-weight="400">指解释器及可用依赖，不把三种位置都叫虚拟环境。</text>
+<polyline points="73.0,567.0 73.0,718.0 91.0,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="696.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,704.0 92.0,823.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="726.0" font-size="21" fill="#286f64" font-weight="700">脚本位置与绝对路径（__file__ / Path.resolve）</text>
+<text x="103.0" y="756.0" font-size="16" fill="#286f64" font-weight="400">SCRIPT：跑哪份文件</text>
+<text x="103.0" y="778.0" font-size="18" fill="#233734" font-weight="400">取得当前脚本位置并形成完整路径，用来对照编辑器文件；</text>
+<text x="103.0" y="803.0" font-size="18" fill="#233734" font-weight="400">不等于询问当前工作目录。</text>
+<polyline points="73.0,718.0 73.0,869.0 91.0,869.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="847.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,855.0 92.0,974.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="877.0" font-size="21" fill="#286f64" font-weight="700">当前工作目录（Path.cwd）</text>
+<text x="103.0" y="907.0" font-size="16" fill="#286f64" font-weight="400">CWD：相对路径的起点</text>
+<text x="103.0" y="929.0" font-size="18" fill="#233734" font-weight="400">报告当前进程工作目录，解释相对数据路径从哪里找；运行</text>
+<text x="103.0" y="954.0" font-size="18" fill="#233734" font-weight="400">另一目录脚本不会自动切换它。</text>
+<polyline points="73.0,869.0 73.0,1020.0 91.0,1020.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="998.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,1006.0 92.0,1125.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="1028.0" font-size="21" fill="#286f64" font-weight="700">实际执行解释器（sys.executable）</text>
+<text x="103.0" y="1058.0" font-size="16" fill="#286f64" font-weight="400">PYTHON：谁执行代码</text>
+<text x="103.0" y="1080.0" font-size="18" fill="#233734" font-weight="400">让已经运行的Python报告自身入口路径；比窗口标题、最新</text>
+<text x="103.0" y="1105.0" font-size="18" fill="#233734" font-weight="400">安装或环境目录名字更直接。</text>
+<polyline points="73.0,1020.0 73.0,1171.0 91.0,1171.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1149.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1179.0" font-size="21" fill="#233734" font-weight="700">命令解析与来源（Get-Command）</text>
+<text x="103.0" y="1209.0" font-size="18" fill="#53635f" font-weight="400">查看同名别名、函数和外部入口等候选；PATH只是外部程序</text>
+<text x="103.0" y="1234.0" font-size="18" fill="#53635f" font-weight="400">查找的一部分，不等于实际进程证据。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">依赖环境与编辑器</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">隔离解释器与依赖位置（venv）</text>
+<text x="669.3333333333334" y="605.0" font-size="16" fill="#286f64" font-weight="400">Python环境隔离</text>
+<text x="669.3333333333334" y="627.0" font-size="18" fill="#53635f" font-weight="400">不同环境拥有各自入口与包位置；用选定Python运行pip，才</text>
+<text x="669.3333333333334" y="652.0" font-size="18" fill="#53635f" font-weight="400">能明确安装与运行是否同属一环境。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,718.0 657.3333333333334,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="696.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="726.0" font-size="21" fill="#233734" font-weight="700">模块实际来源（__file__）</text>
+<text x="669.3333333333334" y="756.0" font-size="18" fill="#53635f" font-weight="400">显示真正导入的模块文件，帮助发现环境差异或项目同名文</text>
+<text x="669.3333333333334" y="781.0" font-size="18" fill="#53635f" font-weight="400">件遮挡；目录名称本身不足以证明。</text>
+<polyline points="639.3333333333334,718.0 639.3333333333334,847.0 657.3333333333334,847.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="825.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="855.0" font-size="21" fill="#233734" font-weight="700">编辑器解释器与终端</text>
+<text x="669.3333333333334" y="885.0" font-size="18" fill="#53635f" font-weight="400">编辑器、调试配置和已打开终端可能采用不同Python；分别</text>
+<text x="669.3333333333334" y="910.0" font-size="18" fill="#53635f" font-weight="400">运行身份探针确认，不只看状态栏。</text>
+<polyline points="639.3333333333334,847.0 639.3333333333334,976.0 657.3333333333334,976.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="954.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="984.0" font-size="21" fill="#233734" font-weight="700">找不到可导入模块（ModuleNotFoundError）</text>
+<text x="669.3333333333334" y="1014.0" font-size="18" fill="#53635f" font-weight="400">导入阶段没有找到模块，尚未发出HTTP请求；按项目应选环</text>
+<text x="669.3333333333334" y="1039.0" font-size="18" fill="#53635f" font-weight="400">境修正入口或依赖，避免同时乱改。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">配置选取与验证</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,553.0 1224.6666666666667,672.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#286f64" font-weight="700">配置项与实际配置值</text>
+<text x="1235.6666666666667" y="605.0" font-size="16" fill="#286f64" font-weight="400">程序使用的设置</text>
+<text x="1235.6666666666667" y="627.0" font-size="18" fill="#233734" font-weight="400">mode是配置项，safe或training是设置值；程序真正读取、</text>
+<text x="1235.6666666666667" y="652.0" font-size="18" fill="#233734" font-weight="400">选取并使用后，才参与本次行为。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,718.0 1223.6666666666667,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="696.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="726.0" font-size="21" fill="#233734" font-weight="700">环境变量</text>
+<text x="1235.6666666666667" y="756.0" font-size="16" fill="#286f64" font-weight="400">进程中的名字和值</text>
+<text x="1235.6666666666667" y="778.0" font-size="18" fill="#53635f" font-weight="400">当前进程可按名字读取的环境值，如FDE_LAB_MODE；它可</text>
+<text x="1235.6666666666667" y="803.0" font-size="18" fill="#53635f" font-weight="400">提供配置，但不等于全部运行环境。</text>
+<polyline points="1205.6666666666667,718.0 1205.6666666666667,869.0 1223.6666666666667,869.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="847.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="877.0" font-size="21" fill="#233734" font-weight="700">配置文件与代码默认值</text>
+<text x="1235.6666666666667" y="907.0" font-size="16" fill="#286f64" font-weight="400">另外两种配置来源</text>
+<text x="1235.6666666666667" y="929.0" font-size="18" fill="#53635f" font-weight="400">config.json保存外部设置，safe也可写作代码默认；本例仅未</text>
+<text x="1235.6666666666667" y="954.0" font-size="18" fill="#53635f" font-weight="400">提供文件时才采用默认。</text>
+<polyline points="1205.6666666666667,869.0 1205.6666666666667,1020.0 1223.6666666666667,1020.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="998.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1028.0" font-size="21" fill="#233734" font-weight="700">脚本旁配置路径</text>
+<text x="1235.6666666666667" y="1058.0" font-size="18" fill="#53635f" font-weight="400">resolve().with_name()明确让配置随脚本定位；名叫config的</text>
+<text x="1235.6666666666667" y="1083.0" font-size="18" fill="#53635f" font-weight="400">文件不会仅凭名字自动生效。</text>
+<polyline points="1205.6666666666667,1020.0 1205.6666666666667,1149.0 1223.6666666666667,1149.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1127.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1157.0" font-size="21" fill="#233734" font-weight="700">读取环境变量（os.environ）</text>
+<text x="1235.6666666666667" y="1187.0" font-size="16" fill="#286f64" font-weight="400">Python访问环境值的接口</text>
+<text x="1235.6666666666667" y="1209.0" font-size="18" fill="#53635f" font-weight="400">访问本进程当前环境值，可在进程内修改；父进程后来或其</text>
+<text x="1235.6666666666667" y="1234.0" font-size="18" fill="#53635f" font-weight="400">他终端的修改不会自动同步。</text>
+<polyline points="1205.6666666666667,1149.0 1205.6666666666667,1300.0 1223.6666666666667,1300.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1278.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,1286.0 1224.6666666666667,1405.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="1308.0" font-size="21" fill="#286f64" font-weight="700">配置优先级与来源</text>
+<text x="1235.6666666666667" y="1338.0" font-size="16" fill="#286f64" font-weight="400">本应用代码的选择规则</text>
+<text x="1235.6666666666667" y="1360.0" font-size="18" fill="#233734" font-weight="400">本例按环境变量、文件、默认值选取并报告来源；这个顺序</text>
+<text x="1235.6666666666667" y="1385.0" font-size="18" fill="#233734" font-weight="400">由代码约定，不是Python通用规则。</text>
+<polyline points="1205.6666666666667,1300.0 1205.6666666666667,1451.0 1223.6666666666667,1451.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1429.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1459.0" font-size="21" fill="#233734" font-weight="700">未提供与无效配置</text>
+<text x="1235.6666666666667" y="1489.0" font-size="18" fill="#53635f" font-weight="400">只有约定的缺失情况用默认值；已提供但为空、类型不对、</text>
+<text x="1235.6666666666667" y="1514.0" font-size="18" fill="#53635f" font-weight="400">损坏或无权限时明确暴露失败。</text>
+<polyline points="1205.6666666666667,1451.0 1205.6666666666667,1580.0 1223.6666666666667,1580.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1558.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1588.0" font-size="21" fill="#233734" font-weight="700">编辑器设置作用域</text>
+<text x="1235.6666666666667" y="1618.0" font-size="18" fill="#53635f" font-weight="400">用户与工作区等设置影响编辑器功能；只有启动配置或代码</text>
+<text x="1235.6666666666667" y="1643.0" font-size="18" fill="#53635f" font-weight="400">明确连接，才变成应用配置。</text>
+<text x="64" y="1707.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1707.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1732.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1765.0" font-size="21" fill="#233734" font-weight="700">实际执行解释器（sys.executable）</text>
+<rect x="750" y="1732.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1765.0" font-size="21" fill="#233734" font-weight="700">隔离解释器与依赖位置（venv）</text>
+<polyline points="538,1769.0 736,1769.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1769.0 726.9955289764732,1773.3496553411123 726.9955289764732,1764.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1757.0" font-size="17" fill="#286f64" font-weight="400">核对安装与运行</text>
+<text x="80" y="1815.0" font-size="18" fill="#53635f" font-weight="400">A安装成功不等于B可导入；先核对是哪一个Python。</text>
+<rect x="64" y="1855.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1888.2" font-size="21" fill="#233734" font-weight="700">编辑器解释器与终端</text>
+<rect x="750" y="1855.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1888.2" font-size="21" fill="#233734" font-weight="700">实际执行解释器（sys.executable）</text>
+<polyline points="538,1892.2 736,1892.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1892.2 726.9955289764732,1896.5496553411124 726.9955289764732,1887.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1880.2" font-size="17" fill="#286f64" font-weight="400">分别运行取证</text>
+<text x="80" y="1938.2" font-size="18" fill="#53635f" font-weight="400">已有终端不保证随编辑器选择自动变更。</text>
+<rect x="64" y="1978.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2011.4" font-size="21" fill="#233734" font-weight="700">配置优先级与来源</text>
+<rect x="750" y="1978.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2011.4" font-size="21" fill="#233734" font-weight="700">未提供与无效配置</text>
+<polyline points="538,2015.4 736,2015.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2015.4 726.9955289764732,2019.7496553411124 726.9955289764732,2011.0503446588878" fill="#286f64"/>
+<text x="569.0" y="2003.4" font-size="17" fill="#286f64" font-weight="400">决定缺失后的路线</text>
+<text x="80" y="2061.4" font-size="18" fill="#53635f" font-weight="400">默认只接住声明允许的缺失，不能吞掉已提供的坏配置。</text>
+<rect x="64" y="2101.6" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2134.6" font-size="21" fill="#233734" font-weight="700">环境变量</text>
+<rect x="750" y="2101.6" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2134.6" font-size="21" fill="#233734" font-weight="700">配置优先级与来源</text>
+<polyline points="538,2138.6 736,2138.6" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2138.6 726.9955289764732,2142.9496553411122 726.9955289764732,2134.2503446588876" fill="#286f64"/>
+<text x="569.0" y="2126.6" font-size="17" fill="#286f64" font-weight="400">作为候选来源交给</text>
+<text x="80" y="2184.6" font-size="18" fill="#53635f" font-weight="400">FDE_LAB_MODE=safe且文件写training时，本例先选safe；文件没有被改写。</text>
+<rect x="64" y="2224.7999999999997" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2257.7999999999997" font-size="21" fill="#233734" font-weight="700">配置文件与代码默认值</text>
+<rect x="750" y="2224.7999999999997" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2257.7999999999997" font-size="21" fill="#233734" font-weight="700">配置优先级与来源</text>
+<polyline points="538,2261.7999999999997 736,2261.7999999999997" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2261.7999999999997 726.9955289764732,2266.149655341112 726.9955289764732,2257.4503446588874" fill="#286f64"/>
+<text x="560.5" y="2249.7999999999997" font-size="17" fill="#286f64" font-weight="400">按缺失条件继续选择</text>
+<text x="80" y="2307.7999999999997" font-size="18" fill="#53635f" font-weight="400">无环境变量才读文件；文件不存在才用safe，坏文件不能冒充未提供。</text>
+<rect x="64" y="2347.9999999999995" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2380.9999999999995" font-size="21" fill="#233734" font-weight="700">配置优先级与来源</text>
+<rect x="750" y="2347.9999999999995" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2380.9999999999995" font-size="21" fill="#233734" font-weight="700">配置项与实际配置值</text>
+<polyline points="538,2384.9999999999995 736,2384.9999999999995" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2384.9999999999995 726.9955289764732,2389.349655341112 726.9955289764732,2380.650344658887" fill="#286f64"/>
+<text x="569.0" y="2372.9999999999995" font-size="17" fill="#286f64" font-weight="400">选取并验证后得到</text>
+<text x="80" y="2430.9999999999995" font-size="18" fill="#53635f" font-weight="400">来源存在不等于值有效；被跳过的来源也没有因此被验证。</text>
+<rect x="64" y="2471.1999999999994" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2504.1999999999994" font-size="21" fill="#233734" font-weight="700">读取环境变量（os.environ）</text>
+<rect x="750" y="2471.1999999999994" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2504.1999999999994" font-size="21" fill="#233734" font-weight="700">环境变量</text>
+<polyline points="538,2508.1999999999994 736,2508.1999999999994" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2508.1999999999994 726.9955289764732,2512.5496553411117 726.9955289764732,2503.850344658887" fill="#286f64"/>
+<text x="560.5" y="2496.1999999999994" font-size="17" fill="#286f64" font-weight="400">读取或修改本进程值</text>
+<text x="80" y="2554.1999999999994" font-size="18" fill="#53635f" font-weight="400">这不是自动同步其他终端的通道；A10再区分父子进程各自的副本。</text>
+<text x="64" y="2606.399999999999" font-size="19" fill="#53635f" font-weight="400">同章续图：定位代码与辅助判断。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2668.999999999999 1736,2668.999999999999" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2698.999999999999" font-size="17" fill="#53635f" font-weight="400">对照正文：A09  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

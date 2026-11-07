@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1345" width="1800" height="1345" role="img" aria-labelledby="title">
+<title id="title">验收、运行手册与交接</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1345" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F06  验收、运行手册与交接</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">汇合 F01–05 的对象、配置、探针与恢复；向 X 的跨层验收提供可执行且不夸大范围的交接方式。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">让另一位操作者复现并判断结果</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">不同实验路线的状态</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">正常与降级 UAT</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">同一原库先创建正常工单，再创建人工状态工单；二者编号、预期状态和请求前缀不同。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">隔离恢复与回滚基线</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">新恢复库和原库各自拥有编号序列；隔离降级写入不消耗原库编号，回滚后再在原库验收。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">非幂等 UAT 与失败定位</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">UAT 会写入且可能创建后才报错；本例无创建幂等，原样重跑会新增，应先查已发生的步骤与编号。</text>
+<text x="64" y="877.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="877.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="902.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="935.0" font-size="21" fill="#233734" font-weight="700">干净基线与自增序列（见主图）</text>
+<rect x="750" y="902.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="935.0" font-size="21" fill="#233734" font-weight="700">正常与降级 UAT</text>
+<polyline points="538,939.0 736,939.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,939.0 726.9955289764732,943.3496553411123 726.9955289764732,934.6503446588877" fill="#286f64"/>
+<text x="586.0" y="927.0" font-size="17" fill="#286f64" font-weight="400">决定首次预期</text>
+<text x="80" y="985.0" font-size="18" fill="#53635f" font-weight="400">首次期望 T-42 必须有真实空库和序列基线，后续阶段不可任意调序重跑。</text>
+<rect x="64" y="1025.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1058.2" font-size="21" fill="#233734" font-weight="700">非幂等 UAT 与失败定位</text>
+<rect x="750" y="1025.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1058.2" font-size="21" fill="#233734" font-weight="700">失败出口与证据保留（见主图）</text>
+<polyline points="538,1062.2 736,1062.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1062.2 726.9955289764732,1066.5496553411124 726.9955289764732,1057.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1050.2" font-size="17" fill="#286f64" font-weight="400">要求停止核查</text>
+<text x="80" y="1108.2" font-size="18" fill="#53635f" font-weight="400">创建后字段比对或读取失败可能已留下新工单，直接重跑不等于继续上一条。</text>
+<rect x="64" y="1148.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1181.4" font-size="21" fill="#233734" font-weight="700">隔离恢复与回滚基线</text>
+<rect x="750" y="1148.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1181.4" font-size="21" fill="#233734" font-weight="700">不同层次的验证（见主图）</text>
+<polyline points="538,1185.4 736,1185.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1185.4 726.9955289764732,1189.7496553411124 726.9955289764732,1181.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1173.4" font-size="17" fill="#286f64" font-weight="400">共同限定证据</text>
+<text x="80" y="1231.4" font-size="18" fill="#53635f" font-weight="400">正常、降级、隔离与回滚通过到哪里应分别保存，不能用一条绿色结果代表其余路线。</text>
+<polyline points="64,1289.6000000000001 1736,1289.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1319.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：F06  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

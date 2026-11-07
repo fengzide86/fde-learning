@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1442" width="1800" height="1442" role="img" aria-labelledby="title">
+<title id="title">事务与完整业务写入</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1442" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C04  事务与完整业务写入</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 C03 的单行与引用约束，把预约、时段和事件变成同一完成条件；D册再辨本地与远端提交。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">相关数据变化的提交、撤回与历史</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">批量输入与权威事实</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">待校验暂存表（staging）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">保留原始文字供定位和修正；接住坏行不等于正式接受，</text>
+<text x="103.0" y="630.0" font-size="18" fill="#53635f" font-weight="400">CSV重复时长不能覆盖权威时段。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">整批校验与原子接收</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">解析日期分钟并核对客户、工单、时段后整批写入；任一行</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">或写入失败均不留下部分业务结果。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">历史、删除与状态规则</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">保留取消而非删除（soft deletion）</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#53635f" font-weight="400">保留预约改为cancelled并写事件；查询须主动过滤，本例历</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#53635f" font-weight="400">史唯一约束使取消不等于重新放号。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#233734" font-weight="700">关联删除策略（RESTRICT / CASCADE）</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#53635f" font-weight="400">前者拒绝删除被引用对象，后者连带删除子行；是否使用取</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#53635f" font-weight="400">决于业务历史和已明确删除范围。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#233734" font-weight="700">自动记录前后状态（trigger）</text>
+<text x="669.3333333333334" y="863.0" font-size="16" fill="#286f64" font-weight="400">数据库触发规则</text>
+<text x="669.3333333333334" y="885.0" font-size="18" fill="#53635f" font-weight="400">可用OLD、NEW拒绝取消后直接恢复等跨入口规则；触发器</text>
+<text x="669.3333333333334" y="910.0" font-size="18" fill="#53635f" font-weight="400">的ABORT不替代外层整组回滚。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">本例怎样选择连接控制方式</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">数据库事务模式（sqlite3）</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">本例启用自动提交后由SQL显式控制事务；连接对象提交与</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">回滚方法此时不起作用，不能混写。</text>
+<text x="64" y="974.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="974.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="999.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1032.0" font-size="21" fill="#233734" font-weight="700">待校验暂存表（staging）</text>
+<rect x="750" y="999.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1032.0" font-size="21" fill="#233734" font-weight="700">整批校验与原子接收</text>
+<polyline points="538,1036.0 736,1036.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1036.0 726.9955289764732,1040.3496553411123 726.9955289764732,1031.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1024.0" font-size="17" fill="#286f64" font-weight="400">为校验保留原文</text>
+<text x="80" y="1082.0" font-size="18" fill="#53635f" font-weight="400">暂存阶段可定位thirty等坏值；事前校验通过后仍须正式约束与整批事务。</text>
+<rect x="64" y="1122.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1155.2" font-size="21" fill="#233734" font-weight="700">保留取消而非删除（soft deletion）</text>
+<rect x="750" y="1122.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1155.2" font-size="21" fill="#233734" font-weight="700">关联删除策略（RESTRICT / CASCADE）</text>
+<polyline points="538,1159.2 736,1159.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1159.2 726.9955289764732,1163.5496553411124 726.9955289764732,1154.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1147.2" font-size="17" fill="#286f64" font-weight="400">仍受引用保护</text>
+<text x="80" y="1205.2" font-size="18" fill="#53635f" font-weight="400">取消不表示历史从未发生，不能为删除客户方便就级联清掉工单与预约。</text>
+<rect x="64" y="1245.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1278.4" font-size="21" fill="#233734" font-weight="700">自动记录前后状态（trigger）</text>
+<rect x="750" y="1245.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1278.4" font-size="21" fill="#233734" font-weight="700">异常后的整组撤回（见主图）</text>
+<polyline points="538,1282.4 736,1282.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1282.4 726.9955289764732,1286.7496553411124 726.9955289764732,1278.0503446588878" fill="#286f64"/>
+<text x="603.0" y="1270.4" font-size="17" fill="#286f64" font-weight="400">失败仍需</text>
+<text x="80" y="1328.4" font-size="18" fill="#53635f" font-weight="400">触发器自动拒绝一次语句，不自动撤回业务动作中此前的其他写入。</text>
+<polyline points="64,1386.6000000000001 1736,1386.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1416.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：C04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1705" width="1800" height="1705" role="img" aria-labelledby="title">
+<title id="title">就绪、健康与故障线索</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1705" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F04  就绪、健康与故障线索</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 F03 的地址与数据位置；将兼容检查、依赖降级和日志接到 F05 的恢复选择。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">进程活着不等于可以接单；核心数据条件决定就绪，可选能力失败按承诺降级。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">按服务承诺解释运行状态</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">核心数据能否接单</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">结构版本与实际核对（schema）</text>
+<text x="103.0" y="568.0" font-size="18" fill="#53635f" font-weight="400">比较程序期望、数据版本及实际表结构；</text>
+<text x="103.0" y="593.0" font-size="18" fill="#53635f" font-weight="400">仅改 metadata 不能证明真实列和自增约</text>
+<text x="103.0" y="618.0" font-size="18" fill="#53635f" font-weight="400">定兼容。</text>
+<polyline points="73.0,530.0 73.0,684.0 91.0,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="692.0" font-size="21" fill="#233734" font-weight="700">短写入探针与 rollback</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">短事务向专用探针表写入后回滚，检验当</text>
+<text x="103.0" y="747.0" font-size="18" fill="#53635f" font-weight="400">前写入条件；不留下业务记录，也不消耗</text>
+<text x="103.0" y="772.0" font-size="18" fill="#53635f" font-weight="400">工单编号。</text>
+<polyline points="73.0,684.0 73.0,838.0 91.0,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="816.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,824.0 92.0,946.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="846.0" font-size="21" fill="#286f64" font-weight="700">创建前 readiness 门</text>
+<text x="103.0" y="876.0" font-size="18" fill="#233734" font-weight="400">本例先检查核心条件再读正文和调用容</text>
+<text x="103.0" y="901.0" font-size="18" fill="#233734" font-weight="400">量；不兼容时返回 503 并停止后续业务写</text>
+<text x="103.0" y="926.0" font-size="18" fill="#233734" font-weight="400">入。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">最低服务与可选能力</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,516.0 516.75,638.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="538.0" font-size="21" fill="#286f64" font-weight="700">最低服务承诺</text>
+<text x="527.75" y="568.0" font-size="18" fill="#233734" font-weight="400">本例承诺工单持久保存，容量未知交人</text>
+<text x="527.75" y="593.0" font-size="18" fill="#233734" font-weight="400">工；业务约定决定哪些依赖必须影响整体</text>
+<text x="527.75" y="618.0" font-size="18" fill="#233734" font-weight="400">就绪。</text>
+<polyline points="497.75,530.0 497.75,684.0 515.75,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="692.0" font-size="21" fill="#233734" font-weight="700">容量降级与 manual_review</text>
+<text x="527.75" y="722.0" font-size="18" fill="#53635f" font-weight="400">容量超时、不可达或坏内容时仍可保存工</text>
+<text x="527.75" y="747.0" font-size="18" fill="#53635f" font-weight="400">单并返回 201；该状态不等于容量已确认</text>
+<text x="527.75" y="772.0" font-size="18" fill="#53635f" font-weight="400">或真人已接手。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">不同健康信号的含义</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,516.0 941.5,638.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="538.0" font-size="21" fill="#286f64" font-weight="700">运行、存活与可用（running / live / ready）</text>
+<text x="952.5" y="568.0" font-size="18" fill="#233734" font-weight="400">分别观察主进程存在、存活探针响应和指</text>
+<text x="952.5" y="593.0" font-size="18" fill="#233734" font-weight="400">定接单条件；任何一项都不能代替业务创</text>
+<text x="952.5" y="618.0" font-size="18" fill="#233734" font-weight="400">建读回。</text>
+<polyline points="922.5,530.0 922.5,684.0 940.5,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="692.0" font-size="21" fill="#233734" font-weight="700">容器健康状态（Docker health）</text>
+<text x="952.5" y="722.0" font-size="18" fill="#53635f" font-weight="400">探针退出码和次数规则形成 starting、</text>
+<text x="952.5" y="747.0" font-size="18" fill="#53635f" font-weight="400">healthy、unhealthy；含义取决于实际探</text>
+<text x="952.5" y="772.0" font-size="18" fill="#53635f" font-weight="400">针。</text>
+<polyline points="922.5,684.0 922.5,838.0 940.5,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="816.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="846.0" font-size="21" fill="#233734" font-weight="700">探针位置与时间差</text>
+<text x="952.5" y="876.0" font-size="18" fill="#53635f" font-weight="400">容器内探针不经过主机发布端口，状态更</text>
+<text x="952.5" y="901.0" font-size="18" fill="#53635f" font-weight="400">新也有等待；健康失败不自动证明重启或</text>
+<text x="952.5" y="926.0" font-size="18" fill="#53635f" font-weight="400">业务撤销。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">故障关联与资料边界</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#233734" font-weight="700">请求追踪号与原因编码（request ID）</text>
+<text x="1377.25" y="568.0" font-size="18" fill="#53635f" font-weight="400">用每次请求的标识连接入口、结果和失败</text>
+<text x="1377.25" y="593.0" font-size="18" fill="#53635f" font-weight="400">位置；创建与读取分别有身份，日志不等</text>
+<text x="1377.25" y="618.0" font-size="18" fill="#53635f" font-weight="400">于已创建事实。</text>
+<polyline points="1347.25,530.0 1347.25,684.0 1365.25,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="692.0" font-size="21" fill="#233734" font-weight="700">最少日志与实际读回</text>
+<text x="1377.25" y="722.0" font-size="18" fill="#53635f" font-weight="400">记录规范化路径和必要字段，避免正文、</text>
+<text x="1377.25" y="747.0" font-size="18" fill="#53635f" font-weight="400">秘密或任意 URL 泄漏；日志缺失不证明操</text>
+<text x="1377.25" y="772.0" font-size="18" fill="#53635f" font-weight="400">作未发生。</text>
+<text x="64" y="990.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="990.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1015.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1048.0" font-size="21" fill="#233734" font-weight="700">最低服务承诺</text>
+<rect x="750" y="1015.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1048.0" font-size="21" fill="#233734" font-weight="700">容量降级与 manual_review</text>
+<polyline points="538,1052.0 736,1052.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1052.0 726.9955289764732,1056.3496553411123 726.9955289764732,1047.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1040.0" font-size="17" fill="#286f64" font-weight="400">决定是否允许</text>
+<text x="80" y="1098.0" font-size="18" fill="#53635f" font-weight="400">是否可降级来自业务承诺，不能一律要求所有依赖进入 readiness。</text>
+<rect x="64" y="1138.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1171.2" font-size="21" fill="#233734" font-weight="700">结构版本与实际核对（schema）</text>
+<rect x="750" y="1138.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1171.2" font-size="21" fill="#233734" font-weight="700">创建前 readiness 门</text>
+<polyline points="538,1175.2 736,1175.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1175.2 726.9955289764732,1179.5496553411124 726.9955289764732,1170.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1163.2" font-size="17" fill="#286f64" font-weight="400">共同构成条件</text>
+<text x="80" y="1221.2" font-size="18" fill="#53635f" font-weight="400">核心不兼容应在业务写入前停止，重启不会自行修复版本关系。</text>
+<rect x="64" y="1261.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1294.4" font-size="21" fill="#233734" font-weight="700">容器健康状态（Docker health）</text>
+<rect x="750" y="1261.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1294.4" font-size="21" fill="#233734" font-weight="700">运行、存活与可用（running / live / ready）</text>
+<polyline points="538,1298.4 736,1298.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1298.4 726.9955289764732,1302.7496553411124 726.9955289764732,1294.0503446588878" fill="#286f64"/>
+<text x="594.5" y="1286.4" font-size="17" fill="#286f64" font-weight="400">含义取决于</text>
+<text x="80" y="1344.4" font-size="18" fill="#53635f" font-weight="400">健康命令测 live 或 ready，会让相同 healthy 标签表达不同范围。</text>
+<rect x="64" y="1384.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1417.6000000000001" font-size="21" fill="#233734" font-weight="700">请求追踪号与原因编码（request ID）</text>
+<rect x="750" y="1384.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1417.6000000000001" font-size="21" fill="#233734" font-weight="700">结构版本与实际核对（schema）</text>
+<polyline points="538,1421.6000000000001 736,1421.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1421.6000000000001 726.9955289764732,1425.9496553411125 726.9955289764732,1417.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1409.6000000000001" font-size="17" fill="#286f64" font-weight="400">指引下一项核查</text>
+<text x="80" y="1467.6000000000001" font-size="18" fill="#53635f" font-weight="400">已有 schema_mismatch 时优先比较镜像期望和数据实际结构，而非无目标重建。</text>
+<rect x="64" y="1507.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1540.8000000000002" font-size="21" fill="#233734" font-weight="700">短写入探针与 rollback</text>
+<rect x="750" y="1507.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1540.8000000000002" font-size="21" fill="#233734" font-weight="700">创建前 readiness 门</text>
+<polyline points="538,1544.8000000000002 736,1544.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1544.8000000000002 726.9955289764732,1549.1496553411125 726.9955289764732,1540.4503446588878" fill="#286f64"/>
+<text x="569.0" y="1532.8000000000002" font-size="17" fill="#286f64" font-weight="400">补充写入能力证据</text>
+<text x="80" y="1590.8000000000002" font-size="18" fill="#53635f" font-weight="400">必要结构匹配并不自动证明可写；探针在短事务中撤回，不创建业务工单。</text>
+<polyline points="64,1649.0000000000002 1736,1649.0000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1679.0000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：F04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

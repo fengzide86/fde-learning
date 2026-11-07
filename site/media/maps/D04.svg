@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1644" width="1800" height="1644" role="img" aria-labelledby="title">
+<title id="title">未确认结果与人工接管</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1644" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D04  未确认结果与人工接管</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 D03 已保存的完整意图；本地状态只能表达已知事实，D05将自动确认与人工出口放在同一矩阵验证。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">本地未能确认，不代表对方没有执行；公开成功或转人工，都必须有各自真实保存的证据。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="636.0" y="343.0" width="528.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="676.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">自动处理停止后的状态、承诺与接手</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">本地知识与公开状态</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,672.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">待确认与人工接管（pending / manual_review）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">本地知识状态</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">前者仅说明意图存在且未定，后者说明自动路线已停并保存</text>
+<text x="103.0" y="652.0" font-size="18" fill="#233734" font-weight="400">接管入口；都不证明远端未执行。</text>
+<polyline points="73.0,567.0 73.0,718.0 91.0,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="696.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="726.0" font-size="21" fill="#233734" font-weight="700">一致的公开字段</text>
+<text x="103.0" y="756.0" font-size="18" fill="#53635f" font-weight="400">状态、确认布尔值、合作方编号和原因码共同表达一件事；</text>
+<text x="103.0" y="781.0" font-size="18" fill="#53635f" font-weight="400">编号null不证明远端没有案件。</text>
+<polyline points="73.0,718.0 73.0,847.0 91.0,847.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="825.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="855.0" font-size="21" fill="#233734" font-weight="700">失败原因编码（reason_code）</text>
+<text x="103.0" y="885.0" font-size="16" fill="#286f64" font-weight="400">原因分类</text>
+<text x="103.0" y="907.0" font-size="18" fill="#53635f" font-weight="400">将超时、认证、合同变化和迟到等证据归为稳定类别；相同</text>
+<text x="103.0" y="932.0" font-size="18" fill="#53635f" font-weight="400">人工状态可以对应不同恢复路径。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">确认与接收的证据</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">受检合作方结果</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#53635f" font-weight="400">当前意图用原键和输入取得合法编号与状态；只检查合同实</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#53635f" font-weight="400">际提供字段，不编造回显验证。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,682.0 658.3333333333334,779.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#286f64" font-weight="700">本地确认提交</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#233734" font-weight="400">保存合作方编号和确认状态并成功提交后才报告成功；日志</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#233734" font-weight="400">成功或内存已有编号不能代替提交。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,811.0 658.3333333333334,908.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#286f64" font-weight="700">暂时接受与接管事务（202 Accepted）</text>
+<text x="669.3333333333334" y="863.0" font-size="18" fill="#233734" font-weight="400">本例202承诺本地已保存未确认工作；状态与人工工作项同</text>
+<text x="669.3333333333334" y="888.0" font-size="18" fill="#233734" font-weight="400">事务，不承诺后台必然成功。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">人工行动与信息边界</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">按 intent 选择工作项</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">同案件可能有多个意图，接手须定位原工作项并具有权限；</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">只找最新意图会错配旧待办。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">核对后继续</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">先查原键已有结果，再按证据关联或决定重放；无法判断时</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">保持未确认，不能换新键盲发。</text>
+<text x="64" y="996.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="996.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1021.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1054.0" font-size="21" fill="#233734" font-weight="700">受检合作方结果</text>
+<rect x="750" y="1021.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1054.0" font-size="21" fill="#233734" font-weight="700">本地确认提交</text>
+<polyline points="538,1058.0 736,1058.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1058.0 726.9955289764732,1062.3496553411123 726.9955289764732,1053.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1046.0" font-size="17" fill="#286f64" font-weight="400">还须持久确认</text>
+<text x="80" y="1104.0" font-size="18" fill="#53635f" font-weight="400">两边独立提交；本地写入失败不能改称供应商不可用，也不能虚构已保存的人工队列。</text>
+<rect x="64" y="1144.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1177.2" font-size="21" fill="#233734" font-weight="700">失败原因编码（reason_code）</text>
+<rect x="750" y="1144.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1177.2" font-size="21" fill="#233734" font-weight="700">核对后继续</text>
+<polyline points="538,1181.2 736,1181.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1181.2 726.9955289764732,1185.5496553411124 726.9955289764732,1176.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1169.2" font-size="17" fill="#286f64" font-weight="400">指引下一动作</text>
+<text x="80" y="1227.2" font-size="18" fill="#53635f" font-weight="400">超时应核对旧结果，认证失败应处理配置权限，坏字段应核对合同，不能统一再次创建。</text>
+<rect x="64" y="1267.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1300.4" font-size="21" fill="#233734" font-weight="700">暂时接受与接管事务（202 Accepted）</text>
+<rect x="750" y="1267.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1300.4" font-size="21" fill="#233734" font-weight="700">按 intent 选择工作项</text>
+<polyline points="538,1304.4 736,1304.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1304.4 726.9955289764732,1308.7496553411124 726.9955289764732,1300.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1292.4" font-size="17" fill="#286f64" font-weight="400">须落到明确工作项</text>
+<text x="80" y="1350.4" font-size="18" fill="#53635f" font-weight="400">状态和待办共同保存仍不等于真实角色已接单，正式系统另需鉴权、分派与完成回写。</text>
+<rect x="64" y="1390.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1423.6000000000001" font-size="21" fill="#233734" font-weight="700">待确认与人工接管（pending / manual_review）</text>
+<rect x="750" y="1390.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1423.6000000000001" font-size="21" fill="#233734" font-weight="700">本地确认提交</text>
+<polyline points="538,1427.6000000000001 736,1427.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1427.6000000000001 726.9955289764732,1431.9496553411125 726.9955289764732,1423.2503446588878" fill="#286f64"/>
+<text x="560.5" y="1415.6000000000001" font-size="17" fill="#286f64" font-weight="400">确认需新增可靠证据</text>
+<text x="80" y="1473.6000000000001" font-size="18" fill="#53635f" font-weight="400">只有当前意图取得可用合作方结果且本地提交成功，才可进入 partner_confirmed。</text>
+<text x="64" y="1525.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：用途约束的替代出口；不同接收者拿到多少信息。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1588.4 1736,1588.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1618.4" font-size="17" fill="#53635f" font-weight="400">对照正文：D04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

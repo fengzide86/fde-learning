@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2070" width="1800" height="2070" role="img" aria-labelledby="title">
+<title id="title">输入怎样变成可继续使用的结果？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2070" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A02  输入怎样变成可继续使用的结果？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A02建立取值、转换和返回关系；A03判断已经得到的值，A05处理转换没有成功的路线。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先认清手里的值，再追它怎样变成新结果；return 把值交给代码，print 把内容显示给人。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">值的种类、变换与函数交接</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="220.4,400.0 1579.6000000000001,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="220.4,400.0 220.4,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">值与求值</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,660.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">变量接住结果（赋值 =）</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">名字与赋值语句</text>
+<text x="103.0" y="590.0" font-size="18" fill="#233734" font-weight="400">变量名对应值；赋值先求右侧</text>
+<text x="103.0" y="615.0" font-size="18" fill="#233734" font-weight="400">再绑定左侧。让名字对应新</text>
+<text x="103.0" y="640.0" font-size="18" fill="#233734" font-weight="400">值，不等于改掉原对象。</text>
+<polyline points="73.0,530.0 73.0,706.0 91.0,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="684.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="714.0" font-size="21" fill="#233734" font-weight="700">表达式</text>
+<text x="103.0" y="744.0" font-size="16" fill="#286f64" font-weight="400">求值的语法形式</text>
+<text x="103.0" y="766.0" font-size="18" fill="#53635f" font-weight="400">能够求得值的代码，如转换、</text>
+<text x="103.0" y="791.0" font-size="18" fill="#53635f" font-weight="400">乘法和函数调用；先取得结</text>
+<text x="103.0" y="816.0" font-size="18" fill="#53635f" font-weight="400">果，后续语句才能使用。</text>
+<polyline points="73.0,706.0 73.0,882.0 91.0,882.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="860.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="890.0" font-size="21" fill="#233734" font-weight="700">文字与数字类型（str / int / float）</text>
+<text x="103.0" y="920.0" font-size="16" fill="#286f64" font-weight="400">数据类型</text>
+<text x="103.0" y="942.0" font-size="18" fill="#53635f" font-weight="400">分别表示文字、整数和浮点</text>
+<text x="103.0" y="967.0" font-size="18" fill="#53635f" font-weight="400">数；显示字形相似不说明类型</text>
+<text x="103.0" y="992.0" font-size="18" fill="#53635f" font-weight="400">相同，浮点数常是近似值。</text>
+<polyline points="73.0,882.0 73.0,1058.0 91.0,1058.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1036.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1066.0" font-size="21" fill="#233734" font-weight="700">表示没有值（None）</text>
+<text x="103.0" y="1096.0" font-size="16" fill="#286f64" font-weight="400">特殊值，不是类型名</text>
+<text x="103.0" y="1118.0" font-size="18" fill="#53635f" font-weight="400">表示空缺的特殊值，不是零或</text>
+<text x="103.0" y="1143.0" font-size="18" fill="#53635f" font-weight="400">字符串；函数走到末尾未显式</text>
+<text x="103.0" y="1168.0" font-size="18" fill="#53635f" font-weight="400">返回其他值时交回它。</text>
+<polyline points="560.2,400.0 560.2,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="403.8" y="431.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="417.8" y="465.0" font-size="23" fill="#286f64" font-weight="700">输入与类型转换</text>
+<polyline points="412.8,488.0 412.8,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="412.8,488.0 412.8,530.0 430.8,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="508.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="431.8,516.0 431.8,660.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="442.8" y="538.0" font-size="21" fill="#286f64" font-weight="700">取得输入文字（input）</text>
+<text x="442.8" y="568.0" font-size="16" fill="#286f64" font-weight="400">内置函数调用</text>
+<text x="442.8" y="590.0" font-size="18" fill="#233734" font-weight="400">显示提示并等待一行输入，交</text>
+<text x="442.8" y="615.0" font-size="18" fill="#233734" font-weight="400">回字符串；输入数字字形也不</text>
+<text x="442.8" y="640.0" font-size="18" fill="#233734" font-weight="400">会自动产生数值。</text>
+<polyline points="412.8,530.0 412.8,706.0 430.8,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="684.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="714.0" font-size="21" fill="#233734" font-weight="700">转换类型（int / float / str）</text>
+<text x="442.8" y="744.0" font-size="16" fill="#286f64" font-weight="400">调用类型进行转换</text>
+<text x="442.8" y="766.0" font-size="18" fill="#53635f" font-weight="400">按需要取得对应类型的值，不</text>
+<text x="442.8" y="791.0" font-size="18" fill="#53635f" font-weight="400">自动改掉原变量；转换成功不</text>
+<text x="442.8" y="816.0" font-size="18" fill="#53635f" font-weight="400">保证符合业务规则。</text>
+<polyline points="412.8,706.0 412.8,882.0 430.8,882.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="860.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="890.0" font-size="21" fill="#233734" font-weight="700">类型决定运算</text>
+<text x="442.8" y="920.0" font-size="18" fill="#53635f" font-weight="400">数字可做算术，字符串乘整数</text>
+<text x="442.8" y="945.0" font-size="18" fill="#53635f" font-weight="400">是重复、相加是拼接；不能把</text>
+<text x="442.8" y="970.0" font-size="18" fill="#53635f" font-weight="400">字符串与整数直接相加。</text>
+<polyline points="412.8,882.0 412.8,1036.0 430.8,1036.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="1014.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="1044.0" font-size="21" fill="#233734" font-weight="700">类型不匹配错误（TypeError）</text>
+<text x="442.8" y="1074.0" font-size="18" fill="#53635f" font-weight="400">操作遇到不相配的类型时失</text>
+<text x="442.8" y="1099.0" font-size="18" fill="#53635f" font-weight="400">败，如字符串加整数；右侧未</text>
+<text x="442.8" y="1124.0" font-size="18" fill="#53635f" font-weight="400">完成时本次赋值也未完成。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="743.6" y="431.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="757.6" y="465.0" font-size="23" fill="#286f64" font-weight="700">文字处理与显示</text>
+<polyline points="752.6,488.0 752.6,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="752.6,488.0 752.6,530.0 770.6,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="508.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="538.0" font-size="21" fill="#233734" font-weight="700">清理文字两端空白（strip）</text>
+<text x="782.6" y="568.0" font-size="16" fill="#286f64" font-weight="400">字符串方法调用</text>
+<text x="782.6" y="590.0" font-size="18" fill="#53635f" font-weight="400">通过点号调用字符串的操作，</text>
+<text x="782.6" y="615.0" font-size="18" fill="#53635f" font-weight="400">返回去掉两端空白的结果；原</text>
+<text x="782.6" y="640.0" font-size="18" fill="#53635f" font-weight="400">字符串不变，中间不删。</text>
+<polyline points="752.6,530.0 752.6,706.0 770.6,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="684.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="771.6,692.0 771.6,836.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="782.6" y="714.0" font-size="21" fill="#286f64" font-weight="700">显示给人（print）</text>
+<text x="782.6" y="744.0" font-size="16" fill="#286f64" font-weight="400">输出函数调用</text>
+<text x="782.6" y="766.0" font-size="18" fill="#233734" font-weight="400">把内容显示给人，自身返回</text>
+<text x="782.6" y="791.0" font-size="18" fill="#233734" font-weight="400">None；屏幕上的文字不会自动</text>
+<text x="782.6" y="816.0" font-size="18" fill="#233734" font-weight="400">成为调用者接到的结果。</text>
+<polyline points="752.6,706.0 752.6,882.0 770.6,882.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="860.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="890.0" font-size="21" fill="#233734" font-weight="700">把值放进说明文字（f-string）</text>
+<text x="782.6" y="920.0" font-size="16" fill="#286f64" font-weight="400">字符串格式化写法</text>
+<text x="782.6" y="942.0" font-size="18" fill="#53635f" font-weight="400">把表达式结果嵌入新的显示文</text>
+<text x="782.6" y="967.0" font-size="18" fill="#53635f" font-weight="400">字；不改变原数值，.2f只规定</text>
+<text x="782.6" y="992.0" font-size="18" fill="#53635f" font-weight="400">生成文字的显示格式。</text>
+<polyline points="752.6,882.0 752.6,1058.0 770.6,1058.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="1036.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="1066.0" font-size="21" fill="#233734" font-weight="700">按规则取整（round）</text>
+<text x="782.6" y="1096.0" font-size="18" fill="#53635f" font-weight="400">产生舍入后的数值以便继续计</text>
+<text x="782.6" y="1121.0" font-size="18" fill="#53635f" font-weight="400">算；与生成固定小数位的字符</text>
+<text x="782.6" y="1146.0" font-size="18" fill="#53635f" font-weight="400">串用途不同。</text>
+<polyline points="1239.8000000000002,400.0 1239.8000000000002,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1083.4" y="431.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1097.4" y="465.0" font-size="23" fill="#286f64" font-weight="700">函数定义与调用</text>
+<polyline points="1092.4,488.0 1092.4,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1092.4,488.0 1092.4,530.0 1110.4,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="508.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1122.4" y="538.0" font-size="21" fill="#233734" font-weight="700">定义一项可调用工作（def）</text>
+<text x="1122.4" y="568.0" font-size="18" fill="#53635f" font-weight="400">建立有名字的一段工作；定义</text>
+<text x="1122.4" y="593.0" font-size="18" fill="#53635f" font-weight="400">时不执行函数体，缩进界定内</text>
+<text x="1122.4" y="618.0" font-size="18" fill="#53635f" font-weight="400">容，调用发生时才进入。</text>
+<polyline points="1092.4,530.0 1092.4,684.0 1110.4,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="662.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1122.4" y="692.0" font-size="21" fill="#233734" font-weight="700">形参与实参</text>
+<text x="1122.4" y="722.0" font-size="18" fill="#53635f" font-weight="400">形参是定义中的接值名字，实</text>
+<text x="1122.4" y="747.0" font-size="18" fill="#53635f" font-weight="400">参是调用时传入的值；本章按</text>
+<text x="1122.4" y="772.0" font-size="18" fill="#53635f" font-weight="400">位置完成对应。</text>
+<polyline points="1092.4,684.0 1092.4,838.0 1110.4,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="816.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1111.4,824.0 1111.4,968.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1122.4" y="846.0" font-size="21" fill="#286f64" font-weight="700">交回结果（return）</text>
+<text x="1122.4" y="876.0" font-size="16" fill="#286f64" font-weight="400">函数返回语句</text>
+<text x="1122.4" y="898.0" font-size="18" fill="#233734" font-weight="400">结束当前函数调用并把值交回</text>
+<text x="1122.4" y="923.0" font-size="18" fill="#233734" font-weight="400">调用位置；调用在赋值右侧</text>
+<text x="1122.4" y="948.0" font-size="18" fill="#233734" font-weight="400">时，随后才由左侧接住。</text>
+<polyline points="1092.4,838.0 1092.4,1014.0 1110.4,1014.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="992.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1122.4" y="1022.0" font-size="21" fill="#233734" font-weight="700">局部名字与作用域</text>
+<text x="1122.4" y="1052.0" font-size="18" fill="#53635f" font-weight="400">函数内部的局部赋值不自动改</text>
+<text x="1122.4" y="1077.0" font-size="18" fill="#53635f" font-weight="400">掉外部同名变量；各次调用拥</text>
+<text x="1122.4" y="1102.0" font-size="18" fill="#53635f" font-weight="400">有自己的局部名字。</text>
+<polyline points="1579.6000000000001,400.0 1579.6000000000001,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1423.2" y="431.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1437.2" y="465.0" font-size="23" fill="#286f64" font-weight="700">组织一项工作</text>
+<polyline points="1432.2,488.0 1432.2,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1432.2,488.0 1432.2,530.0 1450.2,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1450.2" y="508.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1462.2" y="538.0" font-size="21" fill="#233734" font-weight="700">输入、计算、显示分工</text>
+<text x="1462.2" y="568.0" font-size="18" fill="#53635f" font-weight="400">计算函数接收并返回数值，让</text>
+<text x="1462.2" y="593.0" font-size="18" fill="#53635f" font-weight="400">调用者选择输入来源和显示方</text>
+<text x="1462.2" y="618.0" font-size="18" fill="#53635f" font-weight="400">式，从而支持分别修改。</text>
+<polyline points="1432.2,530.0 1432.2,684.0 1450.2,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1450.2" y="662.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1462.2" y="692.0" font-size="21" fill="#233734" font-weight="700">伪代码与注释</text>
+<text x="1462.2" y="722.0" font-size="18" fill="#53635f" font-weight="400">伪代码用普通动作安排工作，</text>
+<text x="1462.2" y="747.0" font-size="18" fill="#53635f" font-weight="400">注释解释代码意图；两者都不</text>
+<text x="1462.2" y="772.0" font-size="18" fill="#53635f" font-weight="400">能替代真正执行的语句。</text>
+<text x="64" y="1232.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1232.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1257.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1290.0" font-size="21" fill="#233734" font-weight="700">取得输入文字（input）</text>
+<rect x="750" y="1257.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1290.0" font-size="21" fill="#233734" font-weight="700">转换类型（int / float / str）</text>
+<polyline points="538,1294.0 736,1294.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1294.0 726.9955289764732,1298.3496553411123 726.9955289764732,1289.6503446588877" fill="#286f64"/>
+<text x="594.5" y="1282.0" font-size="17" fill="#286f64" font-weight="400">将文字交给</text>
+<text x="80" y="1340.0" font-size="18" fill="#53635f" font-weight="400">转换必须显式发生；数字样子的字符串仍按文字规则使用。</text>
+<rect x="64" y="1380.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1413.2" font-size="21" fill="#233734" font-weight="700">交回结果（return）</text>
+<rect x="750" y="1380.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1413.2" font-size="21" fill="#233734" font-weight="700">变量接住结果（赋值 =）</text>
+<polyline points="538,1417.2 736,1417.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1417.2 726.9955289764732,1421.5496553411124 726.9955289764732,1412.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1405.2" font-size="17" fill="#286f64" font-weight="400">交回右侧结果</text>
+<text x="80" y="1463.2" font-size="18" fill="#53635f" font-weight="400">返回的是值，不会把函数的局部名字自动带到调用者。</text>
+<rect x="64" y="1503.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1536.4" font-size="21" fill="#233734" font-weight="700">局部名字与作用域</text>
+<rect x="750" y="1503.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1536.4" font-size="21" fill="#233734" font-weight="700">形参与实参</text>
+<polyline points="538,1540.4 736,1540.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1540.4 726.9955289764732,1544.7496553411124 726.9955289764732,1536.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1528.4" font-size="17" fill="#286f64" font-weight="400">限定接值位置</text>
+<text x="80" y="1586.4" font-size="18" fill="#53635f" font-weight="400">调用者的实参值交到本次调用的形参；同名并不意味着同一个赋值位置。</text>
+<rect x="64" y="1626.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1659.6000000000001" font-size="21" fill="#233734" font-weight="700">把值放进说明文字（f-string）</text>
+<rect x="750" y="1626.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1659.6000000000001" font-size="21" fill="#233734" font-weight="700">显示给人（print）</text>
+<polyline points="538,1663.6000000000001 736,1663.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1663.6000000000001 726.9955289764732,1667.9496553411125 726.9955289764732,1659.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1651.6000000000001" font-size="17" fill="#286f64" font-weight="400">生成文字交给</text>
+<text x="80" y="1709.6000000000001" font-size="18" fill="#53635f" font-weight="400">格式化与显示是两个动作；round返回数值，格式化不修改原数值。</text>
+<rect x="64" y="1749.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1782.8000000000002" font-size="21" fill="#233734" font-weight="700">显示给人（print）</text>
+<rect x="750" y="1749.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1782.8000000000002" font-size="21" fill="#233734" font-weight="700">交回结果（return）</text>
+<polyline points="538,1786.8000000000002 736,1786.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1786.8000000000002 726.9955289764732,1791.1496553411125 726.9955289764732,1782.4503446588878" fill="#286f64"/>
+<text x="560.5" y="1774.8000000000002" font-size="17" fill="#286f64" font-weight="400">不能代替交回业务值</text>
+<text x="80" y="1832.8000000000002" font-size="18" fill="#53635f" font-weight="400">函数内显示24但未返回瓶数，调用者得到None；return 24才把24交给调用者。</text>
+<rect x="64" y="1873.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1906.0000000000002" font-size="21" fill="#233734" font-weight="700">文字与数字类型（str / int / float）</text>
+<rect x="750" y="1873.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1906.0000000000002" font-size="21" fill="#233734" font-weight="700">类型决定运算</text>
+<polyline points="538,1910.0000000000002 736,1910.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1910.0000000000002 726.9955289764732,1914.3496553411126 726.9955289764732,1905.650344658888" fill="#286f64"/>
+<text x="560.5" y="1898.0000000000002" font-size="17" fill="#286f64" font-weight="400">决定适用的操作规则</text>
+<text x="80" y="1956.0000000000002" font-size="18" fill="#53635f" font-weight="400">&quot;12&quot; * 2得到&quot;1212&quot;，12 * 2得到24；字形相似不等于同一种值。</text>
+<polyline points="64,2014.2000000000003 1736,2014.2000000000003" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2044.2000000000003" font-size="17" fill="#53635f" font-weight="400">对照正文：A02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1017" width="1800" height="1017" role="img" aria-labelledby="title">
+<title id="title">重试决策与总预算</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1017" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D02  重试决策与总预算</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">利用 D01 的失败类别决定是否值得再试；本章只读查询的重复安全，不直接推广到D03的创建副作用。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">有限再次尝试的理由、时间与次数</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">怎样核对预算决策</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">时间与发送替身（fake clock / sender）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">控制路线替身</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">虚拟时钟推进数值，发送替身消费预定结果；可验证停止位置及后续结果未被消费。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">尝试记录与随机扰动（attempt / jitter）</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">事件记录次数、耗时和类别；需要时加随机抖动分散重试，但仍须支付同一时间预算。</text>
+<text x="64" y="795.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="795.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="820.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="853.0" font-size="21" fill="#233734" font-weight="700">时间与发送替身（fake clock / sender）</text>
+<rect x="750" y="820.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="853.0" font-size="21" fill="#233734" font-weight="700">阶段 timeout 与硬取消（见主图）</text>
+<polyline points="538,857.0 736,857.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,857.0 726.9955289764732,861.3496553411123 726.9955289764732,852.6503446588877" fill="#286f64"/>
+<text x="577.5" y="845.0" font-size="17" fill="#286f64" font-weight="400">只验证控制决策</text>
+<text x="80" y="903.0" font-size="18" fill="#53635f" font-weight="400">虚拟结果晚于期限可测试分类，不证明真实同步请求已在截止点被硬取消。</text>
+<polyline points="64,961.2 1736,961.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="991.2" font-size="17" fill="#53635f" font-weight="400">对照正文：D02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

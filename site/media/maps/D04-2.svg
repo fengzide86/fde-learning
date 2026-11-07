@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1244" width="1800" height="1244" role="img" aria-labelledby="title">
+<title id="title">未确认结果与人工接管</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1244" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D04  未确认结果与人工接管</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 D03 已保存的完整意图；本地状态只能表达已知事实，D05将自动确认与人工出口放在同一矩阵验证。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="636.0" y="343.0" width="528.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="676.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">自动处理停止后的状态、承诺与接手</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">用途约束的替代出口</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">受限 fallback</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">受用途限制的替代结果</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">业务允许时可显示带来源、时间及非实时说明的旧容量；参考值不能确认本次创建已成功。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">明确失败与人工出口</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">缺证据的高影响动作应停止，可同时提供联系入口；参考展示、停止和人工接管能组合使用。</text>
+<polyline points="73.0,693.0 73.0,797.0 91.0,797.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="775.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="805.0" font-size="21" fill="#233734" font-weight="700">外部效果与本地未知</text>
+<text x="103.0" y="835.0" font-size="18" fill="#53635f" font-weight="400">字段改名或迟到时远端效果可为一，本地仍人工待查；没有可用编号不同于没有产生效果。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">不同接收者拿到多少信息</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">最少信息与白名单日志</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">队列保存引用、原因和时间，完整输入在受控意图库；普通事件不复制凭据、客户全文或原异</text>
+<text x="952.5" y="630.0" font-size="18" fill="#53635f" font-weight="400">常。</text>
+<text x="64" y="899.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="899.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="924.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="957.0" font-size="21" fill="#233734" font-weight="700">待确认与人工接管（pending / manual_review）（见主图）</text>
+<rect x="750" y="924.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="957.0" font-size="21" fill="#233734" font-weight="700">外部效果与本地未知</text>
+<polyline points="538,961.0 736,961.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,961.0 726.9955289764732,965.3496553411123 726.9955289764732,956.6503446588877" fill="#286f64"/>
+<text x="603.0" y="949.0" font-size="17" fill="#286f64" font-weight="400">不能反推</text>
+<text x="80" y="1007.0" font-size="18" fill="#53635f" font-weight="400">字段已变或回复迟到时，远端可以已产生一次效果；本地仍须保持未确认。</text>
+<rect x="64" y="1047.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1080.2" font-size="21" fill="#233734" font-weight="700">受限 fallback</text>
+<rect x="750" y="1047.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1080.2" font-size="21" fill="#233734" font-weight="700">受检合作方结果（见主图）</text>
+<polyline points="538,1084.2 736,1084.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1084.2 726.9955289764732,1088.5496553411124 726.9955289764732,1079.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1072.2" font-size="17" fill="#286f64" font-weight="400">不能替代</text>
+<text x="80" y="1130.2" font-size="18" fill="#53635f" font-weight="400">旧容量回答参考繁忙度，无法提供本次派单编号或证明其创建完成。</text>
+<polyline points="64,1188.4 1736,1188.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1218.4" font-size="17" fill="#53635f" font-weight="400">对照正文：D04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

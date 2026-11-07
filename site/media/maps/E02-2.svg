@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1203" width="1800" height="1203" role="img" aria-labelledby="title">
+<title id="title">可检查的输出合同</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1203" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E02  可检查的输出合同</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 E01 的草稿边界落实为字段、来源和用途检查，并接到 E06 的固定案例比较。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">用途驱动的模型输出验证</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">迭代与证据边界</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">简短理由与来源字段</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">帮助处理人员定位应核对的依据；模型给出解释或自检评分，不会增加缺失的外部事实。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">示例引导输出（few-shot）</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">用少量完整且有差异的输入输出表达边界；示例仍不能替代程序必须执行的检查。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">任务说明版本与比较（Prompt）</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">固定输入并保存原始输出，比较结构、来源和失败路线；Fake 只能验证检查代码。</text>
+<polyline points="73.0,775.0 73.0,879.0 91.0,879.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="857.0" width="1633.0" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,865.0 92.0,937.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="887.0" font-size="21" fill="#286f64" font-weight="700">确定性映射</text>
+<text x="103.0" y="917.0" font-size="18" fill="#233734" font-weight="400">已有稳定业务代码时可直接查表分类；自然语言变化带来实际收益时才考虑模型。</text>
+<text x="64" y="981.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="981.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1006.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1039.0" font-size="21" fill="#233734" font-weight="700">示例引导输出（few-shot）</text>
+<rect x="750" y="1006.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1039.0" font-size="21" fill="#233734" font-weight="700">任务说明版本与比较（Prompt）</text>
+<polyline points="538,1043.0 736,1043.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1043.0 726.9955289764732,1047.3496553411123 726.9955289764732,1038.6503446588877" fill="#286f64"/>
+<text x="594.5" y="1031.0" font-size="17" fill="#286f64" font-weight="400">需要检验于</text>
+<text x="80" y="1089.0" font-size="18" fill="#53635f" font-weight="400">示例是否改善真实输出要同案例比较，不能从预设 Fake 回应推断。</text>
+<polyline points="64,1147.2 1736,1147.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1177.2" font-size="17" fill="#53635f" font-weight="400">对照正文：E02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

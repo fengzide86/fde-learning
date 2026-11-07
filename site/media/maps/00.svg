@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1920" width="1800" height="1920" role="img" aria-labelledby="title">
+<title id="title">先找到知识的位置，再看它们怎样配合</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1920" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">全套资料的关系总览</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">00  先找到知识的位置，再看它们怎样配合</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">默认学习顺序是 00 → A → B → C → D → E → F → X → 产品 P。图中按责任归类；产品判断与技术能力双向约束，不是请求依次经过的服务站点。</text>
+<text x="64" y="193.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="193.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="622.0" y="221.0" width="556.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="662.0" y="264.0" font-size="28" fill="#286f64" font-weight="700">理解问题，选择办法，落实并验证改进</text>
+<polyline points="900.0,286.0 900.0,315.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,315.0 1537.125,315.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,315.0 262.875,346.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="346.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="380.0" font-size="23" fill="#286f64" font-weight="700">怎样实现和保存</text>
+<polyline points="73.0,403.0 73.0,438.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,403.0 73.0,445.0 91.0,445.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="423.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="453.0" font-size="21" fill="#233734" font-weight="700">A：程序与工具</text>
+<text x="103.0" y="483.0" font-size="18" fill="#53635f" font-weight="400">值、控制、函数、测试、文件、运行条件</text>
+<text x="103.0" y="508.0" font-size="18" fill="#53635f" font-weight="400">与版本，组成可靠程序的基础。</text>
+<polyline points="73.0,445.0 73.0,574.0 91.0,574.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="552.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="582.0" font-size="21" fill="#233734" font-weight="700">B：HTTP 与 API</text>
+<text x="103.0" y="612.0" font-size="18" fill="#53635f" font-weight="400">进程之间按请求、响应和数据合同合作；</text>
+<text x="103.0" y="637.0" font-size="18" fill="#53635f" font-weight="400">状态码不能代替全部内容检查。</text>
+<polyline points="73.0,574.0 73.0,703.0 91.0,703.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="681.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="711.0" font-size="21" fill="#233734" font-weight="700">C：数据与日志</text>
+<text x="103.0" y="741.0" font-size="18" fill="#53635f" font-weight="400">用查询、约束和事务维护事实，用日志追</text>
+<text x="103.0" y="766.0" font-size="18" fill="#53635f" font-weight="400">查一次处理；两者职责不同。</text>
+<polyline points="687.625,315.0 687.625,346.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="346.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="380.0" font-size="23" fill="#286f64" font-weight="700">不可靠时怎样约束</text>
+<polyline points="497.75,403.0 497.75,438.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,403.0 497.75,445.0 515.75,445.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="423.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="453.0" font-size="21" fill="#233734" font-weight="700">D：外部依赖</text>
+<text x="527.75" y="483.0" font-size="18" fill="#53635f" font-weight="400">按失败层级、时间预算、幂等和状态处理</text>
+<text x="527.75" y="508.0" font-size="18" fill="#53635f" font-weight="400">不确定性，必要时转人工。</text>
+<polyline points="497.75,445.0 497.75,574.0 515.75,574.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="552.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="582.0" font-size="21" fill="#233734" font-weight="700">E：AI 应用</text>
+<text x="527.75" y="612.0" font-size="18" fill="#53635f" font-weight="400">模型提出候选；程序核对结构、事实、用</text>
+<text x="527.75" y="637.0" font-size="18" fill="#53635f" font-weight="400">途和权限，不让文字直接变成执行权。</text>
+<polyline points="1112.375,315.0 1112.375,346.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="346.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="380.0" font-size="23" fill="#286f64" font-weight="700">怎样交付和验明</text>
+<polyline points="922.5,403.0 922.5,438.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,403.0 922.5,445.0 940.5,445.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="423.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="453.0" font-size="21" fill="#233734" font-weight="700">F：运行与恢复</text>
+<text x="952.5" y="483.0" font-size="18" fill="#53635f" font-weight="400">区分镜像、容器、配置和持久数据；用日</text>
+<text x="952.5" y="508.0" font-size="18" fill="#53635f" font-weight="400">志、健康检查、备份恢复和验收交接。</text>
+<polyline points="922.5,445.0 922.5,574.0 940.5,574.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="552.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="582.0" font-size="21" fill="#233734" font-weight="700">X：跨层应用</text>
+<text x="952.5" y="612.0" font-size="18" fill="#53635f" font-weight="400">用同一工单连接 A–F，检查一次请求、外</text>
+<text x="952.5" y="637.0" font-size="18" fill="#53635f" font-weight="400">部效果、人工接管与恢复是否一致。</text>
+<polyline points="1537.125,315.0 1537.125,346.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="346.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="380.0" font-size="23" fill="#286f64" font-weight="700">技术之后：为什么做、是否值得</text>
+<polyline points="1347.25,403.0 1347.25,438.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,403.0 1347.25,445.0 1365.25,445.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="423.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="453.0" font-size="21" fill="#233734" font-weight="700">P：问题与证据</text>
+<text x="1377.25" y="483.0" font-size="18" fill="#53635f" font-weight="400">谁在什么场景遇到困难？区分事实、意见</text>
+<text x="1377.25" y="508.0" font-size="18" fill="#53635f" font-weight="400">与假设，不把一句要求当成已验证需求。</text>
+<polyline points="1347.25,445.0 1347.25,574.0 1365.25,574.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="552.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="582.0" font-size="21" fill="#233734" font-weight="700">P：流程与责任</text>
+<text x="1377.25" y="612.0" font-size="18" fill="#53635f" font-weight="400">追踪角色、状态、规则、等待与交接，把</text>
+<text x="1377.25" y="637.0" font-size="18" fill="#53635f" font-weight="400">现状说清后再考虑改变。</text>
+<polyline points="1347.25,574.0 1347.25,703.0 1365.25,703.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="681.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="711.0" font-size="21" fill="#233734" font-weight="700">P：选择与价值</text>
+<text x="1377.25" y="741.0" font-size="18" fill="#53635f" font-weight="400">比较保持现状、改流程、购买、开发或用 </text>
+<text x="1377.25" y="766.0" font-size="18" fill="#53635f" font-weight="400">AI；投入不自动等于收益。</text>
+<polyline points="1347.25,703.0 1347.25,832.0 1365.25,832.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="810.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="840.0" font-size="21" fill="#233734" font-weight="700">P：采用与结果</text>
+<text x="1377.25" y="870.0" font-size="18" fill="#53635f" font-weight="400">通过试用、基线和结果指标判断改善；上</text>
+<text x="1377.25" y="895.0" font-size="18" fill="#53635f" font-weight="400">线成功不等于业务成功。</text>
+<text x="64" y="959.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="959.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="984.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1017.0" font-size="21" fill="#233734" font-weight="700">A：程序与工具</text>
+<rect x="750" y="984.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1017.0" font-size="21" fill="#233734" font-weight="700">B：HTTP 与 API</text>
+<polyline points="538,1021.0 736,1021.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1021.0 726.9955289764732,1025.3496553411123 726.9955289764732,1016.6503446588877" fill="#286f64"/>
+<text x="560.5" y="1009.0" font-size="17" fill="#286f64" font-weight="400">把值交给跨进程交换</text>
+<text x="80" y="1067.0" font-size="18" fill="#53635f" font-weight="400">函数在进程内传值；HTTP 将输入表示为请求、把结果表示为响应，两边不共享同一个 Python 变量。</text>
+<rect x="64" y="1107.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1140.2" font-size="21" fill="#233734" font-weight="700">B：HTTP 与 API</text>
+<rect x="750" y="1107.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1140.2" font-size="21" fill="#233734" font-weight="700">C：数据与日志</text>
+<polyline points="538,1144.2 736,1144.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1144.2 726.9955289764732,1148.5496553411124 726.9955289764732,1139.8503446588877" fill="#286f64"/>
+<text x="552.0" y="1132.2" font-size="17" fill="#286f64" font-weight="400">由应用读取或保存事实</text>
+<text x="80" y="1190.2" font-size="18" fill="#53635f" font-weight="400">收到成功回应不自动表示数据持久化；应用须明确写入与提交，数据库也不是每次请求都必经的下一站。</text>
+<rect x="64" y="1230.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1263.4" font-size="21" fill="#233734" font-weight="700">D：外部依赖</text>
+<rect x="750" y="1230.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1263.4" font-size="21" fill="#233734" font-weight="700">C：数据与日志</text>
+<polyline points="538,1267.4 736,1267.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1267.4 726.9955289764732,1271.7496553411124 726.9955289764732,1263.0503446588878" fill="#286f64"/>
+<text x="543.5" y="1255.4" font-size="17" fill="#286f64" font-weight="400">保存稳定意图与已知状态</text>
+<text x="80" y="1313.4" font-size="18" fill="#53635f" font-weight="400">远端可能已经执行而本地尚未确认；持久记录支持安全恢复，但本地 rollback 不能撤销远端事实。</text>
+<rect x="64" y="1353.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1386.6000000000001" font-size="21" fill="#233734" font-weight="700">F：运行与恢复</text>
+<rect x="750" y="1353.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1386.6000000000001" font-size="21" fill="#233734" font-weight="700">X：跨层应用</text>
+<polyline points="538,1390.6000000000001 736,1390.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1390.6000000000001 726.9955289764732,1394.9496553411125 726.9955289764732,1386.2503446588878" fill="#286f64"/>
+<text x="560.5" y="1378.6000000000001" font-size="17" fill="#286f64" font-weight="400">承载并验证运行条件</text>
+<text x="80" y="1436.6000000000001" font-size="18" fill="#53635f" font-weight="400">程序、配置、端口与存储使应用运行；运行正常仍需独立核对这张工单的结果与恢复边界。</text>
+<rect x="64" y="1476.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1509.8000000000002" font-size="21" fill="#233734" font-weight="700">P：流程与责任</text>
+<rect x="750" y="1476.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1509.8000000000002" font-size="21" fill="#233734" font-weight="700">B：HTTP 与 API</text>
+<polyline points="538,1513.8000000000002 736,1513.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1513.8000000000002 726.9955289764732,1518.1496553411125 726.9955289764732,1509.4503446588878" fill="#286f64"/>
+<text x="603.0" y="1501.8000000000002" font-size="17" fill="#286f64" font-weight="400">提出约束</text>
+<text x="80" y="1559.8000000000002" font-size="18" fill="#53635f" font-weight="400">谁能做什么、输入必须满足什么，影响接口合同；接口限制也可能要求改业务方案。</text>
+<rect x="64" y="1600.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1633.0000000000002" font-size="21" fill="#233734" font-weight="700">E：AI 应用</text>
+<rect x="750" y="1600.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1633.0000000000002" font-size="21" fill="#233734" font-weight="700">D：外部依赖</text>
+<polyline points="538,1637.0000000000002 736,1637.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1637.0000000000002 726.9955289764732,1641.3496553411126 726.9955289764732,1632.650344658888" fill="#286f64"/>
+<text x="577.5" y="1625.0000000000002" font-size="17" fill="#286f64" font-weight="400">借用可靠性方法</text>
+<text x="80" y="1683.0000000000002" font-size="18" fill="#53635f" font-weight="400">模型调用同样会超时、失败或结果不可用；收到文字不等于事实正确或工具执行成功。</text>
+<rect x="64" y="1723.2000000000003" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1756.2000000000003" font-size="21" fill="#233734" font-weight="700">X：跨层应用</text>
+<rect x="750" y="1723.2000000000003" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1756.2000000000003" font-size="21" fill="#233734" font-weight="700">P：采用与结果</text>
+<polyline points="538,1760.2000000000003 736,1760.2000000000003" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1760.2000000000003 726.9955289764732,1764.5496553411126 726.9955289764732,1755.850344658888" fill="#286f64"/>
+<text x="586.0" y="1748.2000000000003" font-size="17" fill="#286f64" font-weight="400">提供实施证据</text>
+<text x="80" y="1806.2000000000003" font-size="18" fill="#53635f" font-weight="400">技术运行和恢复证据支持业务判断，但不能替代真实使用、采用和业务改善的证据。</text>
+<polyline points="64,1864.4000000000003 1736,1864.4000000000003" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1894.4000000000003" font-size="17" fill="#53635f" font-weight="400">章节号负责查找；归组帮助记忆；机制与证据要沿具体联系理解。</text>
+</svg>

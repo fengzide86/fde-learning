@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1383" width="1800" height="1383" role="img" aria-labelledby="title">
+<title id="title">页面理解与错误恢复</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1383" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P09  页面理解与错误恢复</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 P08 的业务约定转成阅读、选择和反馈；原型为 P10 提供可观察对象，但不替代真实运行。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">界面围绕人的下一步判断组织信息；反馈必须区分收到输入与业务已经成立。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="760.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">让界面帮助人正确行动</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">信息服务什么决定</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">任务与信息层级</text>
+<text x="103.0" y="568.0" font-size="18" fill="#233734" font-weight="400">按人当前要判断什么安排结果、动作和历史；层级不由固定</text>
+<text x="103.0" y="593.0" font-size="18" fill="#233734" font-weight="400">卡片数量或内部字段顺序决定。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">状态的事实表达</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">用已发生的具体事实解释内部术语；处理中或已派单不能掩</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">盖尚未确认的安排。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="796.0" font-size="21" fill="#233734" font-weight="700">角色需要与最少展示</text>
+<text x="103.0" y="826.0" font-size="18" fill="#53635f" font-weight="400">展示足够完成任务的信息，同时限制无关私人资料；页面之</text>
+<text x="103.0" y="851.0" font-size="18" fill="#53635f" font-weight="400">外仍须执行对象访问权限。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">动作后的反馈与恢复</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,516.0 658.3333333333334,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#286f64" font-weight="700">输入收到与业务完成</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#233734" font-weight="400">确认已收到用户选择并说明仍待谁核查；按钮动作结束不等</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#233734" font-weight="400">于预约等业务已经成立。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,645.0 658.3333333333334,742.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#286f64" font-weight="700">按失败性质恢复</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#233734" font-weight="400">输入错误可修改，保存未知需查状态，占用要协调，越权应</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#233734" font-weight="400">找有权人；不能统一要求重试。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,788.0 657.3333333333334,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="796.0" font-size="21" fill="#233734" font-weight="700">保留输入与具体提示</text>
+<text x="669.3333333333334" y="826.0" font-size="18" fill="#53635f" font-weight="400">尽量保存有效内容并把错误说明放在相关字段旁；安全重试</text>
+<text x="669.3333333333334" y="851.0" font-size="18" fill="#53635f" font-weight="400">必须有实际机制支持。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">使用条件与原型边界</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#233734" font-weight="700">可访问的任务路线</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#53635f" font-weight="400">文字独立表达状态，适配放大、窄屏、键盘与屏幕阅读；颜</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#53635f" font-weight="400">色和鼠标不能成为唯一通路。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">原型的适当程度</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">用足以暴露当前未知的纸面或可点击界面；接近正式产品并</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">不自动提供更有用的证据。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">真实界面验证</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">纸面可查文字和顺序，实际键盘、焦点和读屏需在真实界面</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">验证；草图不证明标准合格。</text>
+<text x="64" y="915.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="915.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="940.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="973.0" font-size="21" fill="#233734" font-weight="700">任务与信息层级</text>
+<rect x="750" y="940.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="973.0" font-size="21" fill="#233734" font-weight="700">输入收到与业务完成</text>
+<polyline points="538,977.0 736,977.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,977.0 726.9955289764732,981.3496553411123 726.9955289764732,972.6503446588877" fill="#286f64"/>
+<text x="603.0" y="965.0" font-size="17" fill="#286f64" font-weight="400">帮助理解</text>
+<text x="80" y="1023.0" font-size="18" fill="#53635f" font-weight="400">重要业务区别必须在注意力容易到达的位置，不能靠不显眼的小字纠正大成功标记。</text>
+<rect x="64" y="1063.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1096.2" font-size="21" fill="#233734" font-weight="700">按失败性质恢复</text>
+<rect x="750" y="1063.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1096.2" font-size="21" fill="#233734" font-weight="700">保留输入与具体提示</text>
+<polyline points="538,1100.2 736,1100.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1100.2 726.9955289764732,1104.5496553411124 726.9955289764732,1095.8503446588877" fill="#286f64"/>
+<text x="620.0" y="1088.2" font-size="17" fill="#286f64" font-weight="400">指导</text>
+<text x="80" y="1146.2" font-size="18" fill="#53635f" font-weight="400">保存结果未知与字段不合适需要不同下一步，文案须对应系统实际能力。</text>
+<rect x="64" y="1186.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1219.4" font-size="21" fill="#233734" font-weight="700">原型的适当程度</text>
+<rect x="750" y="1186.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1219.4" font-size="21" fill="#233734" font-weight="700">真实界面验证</text>
+<polyline points="538,1223.4 736,1223.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1223.4 726.9955289764732,1227.7496553411124 726.9955289764732,1219.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1211.4" font-size="17" fill="#286f64" font-weight="400">决定验证边界</text>
+<text x="80" y="1269.4" font-size="18" fill="#53635f" font-weight="400">文字误解可先用纸面发现；设备布局与键盘路线需要接近真实使用条件。</text>
+<polyline points="64,1327.6000000000001 1736,1327.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1357.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P09  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

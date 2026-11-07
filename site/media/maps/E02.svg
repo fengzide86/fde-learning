@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1654" width="1800" height="1654" role="img" aria-labelledby="title">
+<title id="title">可检查的输出合同</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1654" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E02  可检查的输出合同</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 E01 的草稿边界落实为字段、来源和用途检查，并接到 E06 的固定案例比较。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先约定允许用途，再逐层检查输出；最终采用或转人工由应用规则决定。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">用途驱动的模型输出验证</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">任务与输入约定</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,625.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">允许用途</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">先确定谁使用结果、允许影响什么；内部分类草稿不等于退款、关单或预约授权。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">任务说明与输入约定（Prompt）</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">交代指令、背景、本次资料和输出合同；这些是完整性问题，不是必背的四段句式。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">资料与指令分离</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">用户原文是待处理资料；序列化与分隔有助理解，但不能让其中指令取得后端权限。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">分层检查</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">解析结构化结果（JSON）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">确认文字符合 JSON 语法并转成值；合法整数或缺字段对象仍可能不符合入口要求。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">核对输出形状（schema）</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">检查完整字段、枚举、类型与嵌套元素；本例严格区分布尔值和整数并拒绝额外字段。</text>
+<polyline points="922.5,671.0 922.5,775.0 940.5,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="753.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,761.0 941.5,833.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="783.0" font-size="21" fill="#286f64" font-weight="700">来源核对</text>
+<text x="952.5" y="813.0" font-size="18" fill="#233734" font-weight="400">将抽取字段和值与获准输入逐项比较，核对必要字段和引用；不自动证明自由说明正确。</text>
+<polyline points="922.5,775.0 922.5,879.0 940.5,879.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="857.0" width="783.5" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,865.0 941.5,962.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="887.0" font-size="21" fill="#286f64" font-weight="700">应用决策规则</text>
+<text x="952.5" y="917.0" font-size="18" fill="#233734" font-weight="400">结构和来源通过后，先处理高风险，再处理普通未知类别，最后看模型人工建议；高风险叠加 </text>
+<text x="952.5" y="942.0" font-size="18" fill="#233734" font-weight="400">unknown 仍应实际转人工。</text>
+<text x="64" y="1006.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1006.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1031.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1064.0" font-size="21" fill="#233734" font-weight="700">允许用途</text>
+<rect x="750" y="1031.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1064.0" font-size="21" fill="#233734" font-weight="700">应用决策规则</text>
+<polyline points="538,1068.0 736,1068.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1068.0 726.9955289764732,1072.3496553411123 726.9955289764732,1063.6503446588877" fill="#286f64"/>
+<text x="620.0" y="1056.0" font-size="17" fill="#286f64" font-weight="400">决定</text>
+<text x="80" y="1114.0" font-size="18" fill="#53635f" font-weight="400">先明确后果和风险，才能确定何时必须停止或交人。</text>
+<rect x="64" y="1154.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1187.2" font-size="21" fill="#233734" font-weight="700">核对输出形状（schema）</text>
+<rect x="750" y="1154.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1187.2" font-size="21" fill="#233734" font-weight="700">来源核对</text>
+<polyline points="538,1191.2 736,1191.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1191.2 726.9955289764732,1195.5496553411124 726.9955289764732,1186.8503446588877" fill="#286f64"/>
+<text x="594.5" y="1179.2" font-size="17" fill="#286f64" font-weight="400">不足以替代</text>
+<text x="80" y="1237.2" font-size="18" fill="#53635f" font-weight="400">格式正确的编号和字段值仍可能属于另一张工单或凭空编造。</text>
+<rect x="64" y="1277.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1310.4" font-size="21" fill="#233734" font-weight="700">解析结构化结果（JSON）</text>
+<rect x="750" y="1277.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1310.4" font-size="21" fill="#233734" font-weight="700">核对输出形状（schema）</text>
+<polyline points="538,1314.4 736,1314.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1314.4 726.9955289764732,1318.7496553411124 726.9955289764732,1310.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1302.4" font-size="17" fill="#286f64" font-weight="400">之后仍须检查</text>
+<text x="80" y="1360.4" font-size="18" fill="#53635f" font-weight="400">能解析仅说明语法成立，不能替代完整字段、类型和枚举检查。</text>
+<rect x="64" y="1400.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1433.6000000000001" font-size="21" fill="#233734" font-weight="700">来源核对</text>
+<rect x="750" y="1400.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1433.6000000000001" font-size="21" fill="#233734" font-weight="700">应用决策规则</text>
+<polyline points="538,1437.6000000000001 736,1437.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1437.6000000000001 726.9955289764732,1441.9496553411125 726.9955289764732,1433.2503446588878" fill="#286f64"/>
+<text x="594.5" y="1425.6000000000001" font-size="17" fill="#286f64" font-weight="400">通过后进入</text>
+<text x="80" y="1483.6000000000001" font-size="18" fill="#53635f" font-weight="400">来源或结构失败先拒绝；随后按真实风险和未知程度处理，不能只服从模型建议。</text>
+<text x="64" y="1535.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：迭代与证据边界。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1598.4 1736,1598.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1628.4" font-size="17" fill="#53635f" font-weight="400">对照正文：E02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1395" width="1800" height="1395" role="img" aria-labelledby="title">
+<title id="title">工单、派单与政策分支</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1395" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">X / 一套应用怎样连接起来</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">X01  工单、派单与政策分支</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">综合 A–E 的输入、HTTP、事务、外部调用和受约束AI；这些能力共同服务业务，并非六项连续服务。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">完整应用中值、事实和候选的归属</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">独立的政策候选分支</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,625.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">政策请求与获准资料</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">另一次请求读取工单与适用资料；用户报告、政策要求和现实已完成检查是三种不同事实。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">草稿检查与拒答</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">检查结构、来源及窄政策条件；无资料时零模型调用，坏引用交人工，接受也只表示可核对草</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">稿。</text>
+<polyline points="73.0,671.0 73.0,800.0 91.0,800.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="778.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="808.0" font-size="21" fill="#233734" font-weight="700">工具建议与权限</text>
+<text x="103.0" y="838.0" font-size="18" fill="#53635f" font-weight="400">模型建议关闭工单仍须独立授权；本例仅可读取，越权时工具零调用、零效果，工单保持</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">open。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">协作实验的观察范围</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">追踪证据与真实数据库（trace / SQLite）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">进程内进入真实API并提交临时数据库，外部传输由替身接住；未证明真实监听端口已连接。</text>
+<text x="64" y="927.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="927.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="952.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="985.0" font-size="21" fill="#233734" font-weight="700">草稿检查与拒答</text>
+<rect x="750" y="952.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="985.0" font-size="21" fill="#233734" font-weight="700">工具建议与权限</text>
+<polyline points="538,989.0 736,989.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,989.0 726.9955289764732,993.3496553411123 726.9955289764732,984.6503446588877" fill="#286f64"/>
+<text x="577.5" y="977.0" font-size="17" fill="#286f64" font-weight="400">不授予动作权限</text>
+<text x="80" y="1035.0" font-size="18" fill="#53635f" font-weight="400">有来源的候选仍不是执行批准；政策请求本身不改写工单事实。</text>
+<rect x="64" y="1075.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1108.2" font-size="21" fill="#233734" font-weight="700">政策请求与获准资料</text>
+<rect x="750" y="1075.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1108.2" font-size="21" fill="#233734" font-weight="700">草稿检查与拒答</text>
+<polyline points="538,1112.2 736,1112.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1112.2 726.9955289764732,1116.5496553411124 726.9955289764732,1107.8503446588877" fill="#286f64"/>
+<text x="560.5" y="1100.2" font-size="17" fill="#286f64" font-weight="400">提供候选的核对依据</text>
+<text x="80" y="1158.2" font-size="18" fill="#53635f" font-weight="400">另一次请求取回适用资料；没有依据时不调用模型，找到资料后仍须检查主张与来源。</text>
+<rect x="64" y="1198.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1231.4" font-size="21" fill="#233734" font-weight="700">追踪证据与真实数据库（trace / SQLite）</text>
+<rect x="750" y="1198.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1231.4" font-size="21" fill="#233734" font-weight="700">工单核心事务（见主图）</text>
+<polyline points="538,1235.4 736,1235.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1235.4 726.9955289764732,1239.7496553411124 726.9955289764732,1231.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1223.4" font-size="17" fill="#286f64" font-weight="400">实际核对本地提交</text>
+<text x="80" y="1281.4" font-size="18" fill="#53635f" font-weight="400">进程内 trace 执行真实 API 与临时 SQLite；外部传输替身不证明网络监听成立。</text>
+<polyline points="64,1339.6000000000001 1736,1339.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1369.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：X01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

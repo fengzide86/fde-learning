@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1727" width="1800" height="1727" role="img" aria-labelledby="title">
+<title id="title">单表查询与结果含义</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1727" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C01  单表查询与结果含义</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">从 B 册的程序内记录转向表中的事实；先理解单表答案，C02再处理多表组合与行数变化。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先说清想要哪些行、哪些列、什么顺序；筛选、限量和统计各改变答案的一部分，不会改写原表事实。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">从已知事实确定查询结果的形状</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">表与读取结果</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">表、行、列</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">事实的组织</text>
+<text x="103.0" y="590.0" font-size="18" fill="#53635f" font-weight="400">本例一行是一条预约，列保存同类字段；</text>
+<text x="103.0" y="615.0" font-size="18" fill="#53635f" font-weight="400">表中事实与本次查询结果不是同一份东</text>
+<text x="103.0" y="640.0" font-size="18" fill="#53635f" font-weight="400">西。</text>
+<polyline points="73.0,530.0 73.0,706.0 91.0,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="684.0" width="358.75" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,692.0 92.0,789.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="714.0" font-size="21" fill="#286f64" font-weight="700">查询输入与取出列（SELECT / FROM）</text>
+<text x="103.0" y="744.0" font-size="18" fill="#233734" font-weight="400">FROM选择输入表，SELECT决定公开结果</text>
+<text x="103.0" y="769.0" font-size="18" fill="#233734" font-weight="400">列；投影和筛选不会删除原表其他事实。</text>
+<polyline points="73.0,706.0 73.0,835.0 91.0,835.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="813.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="843.0" font-size="21" fill="#233734" font-weight="700">去重结果（DISTINCT）</text>
+<text x="103.0" y="873.0" font-size="18" fill="#53635f" font-weight="400">对结果整行去重，多列时按组合判断；列</text>
+<text x="103.0" y="898.0" font-size="18" fill="#53635f" font-weight="400">出不同值不同于统计每类数量。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">条件与未知值</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,516.0 516.75,638.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="538.0" font-size="21" fill="#286f64" font-weight="700">筛选条件组合（WHERE）</text>
+<text x="527.75" y="568.0" font-size="18" fill="#233734" font-weight="400">只保留条件为真的行；AND要求同时满</text>
+<text x="527.75" y="593.0" font-size="18" fill="#233734" font-weight="400">足，OR允许其一，括号明确业务条件分</text>
+<text x="527.75" y="618.0" font-size="18" fill="#233734" font-weight="400">组。</text>
+<polyline points="497.75,530.0 497.75,684.0 515.75,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="662.0" width="358.75" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="692.0" font-size="21" fill="#233734" font-weight="700">未知值判断（NULL）</text>
+<text x="527.75" y="722.0" font-size="16" fill="#286f64" font-weight="400">未知值规则</text>
+<text x="527.75" y="744.0" font-size="18" fill="#53635f" font-weight="400">NULL表示未知，普通相等或不等比较不会</text>
+<text x="527.75" y="769.0" font-size="18" fill="#53635f" font-weight="400">得真；用IS NULL明确是否纳入未知行。</text>
+<polyline points="497.75,684.0 497.75,835.0 515.75,835.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="813.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="843.0" font-size="21" fill="#233734" font-weight="700">范围与文字模式</text>
+<text x="527.75" y="873.0" font-size="18" fill="#53635f" font-weight="400">日期常用含起点不含终点区间；BETWEEN</text>
+<text x="527.75" y="898.0" font-size="18" fill="#53635f" font-weight="400">含双端点，LIKE的%和_是模式符号而非正</text>
+<text x="527.75" y="923.0" font-size="18" fill="#53635f" font-weight="400">则。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">顺序与限量</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,516.0 941.5,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="538.0" font-size="21" fill="#286f64" font-weight="700">结果排序（ORDER BY）</text>
+<text x="952.5" y="568.0" font-size="18" fill="#233734" font-weight="400">显式确定升降序，并用唯一编号打破并</text>
+<text x="952.5" y="593.0" font-size="18" fill="#233734" font-weight="400">列；偶然插入顺序不是结果顺序承诺。</text>
+<polyline points="922.5,530.0 922.5,659.0 940.5,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="637.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="667.0" font-size="21" fill="#233734" font-weight="700">限制条数（LIMIT）</text>
+<text x="952.5" y="697.0" font-size="18" fill="#53635f" font-weight="400">限制最多返回行数；不负责定义最早或最</text>
+<text x="952.5" y="722.0" font-size="18" fill="#53635f" font-weight="400">近，满足筛选条件的行也可能因限量未显</text>
+<text x="952.5" y="747.0" font-size="18" fill="#53635f" font-weight="400">示。</text>
+<polyline points="922.5,659.0 922.5,813.0 940.5,813.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="791.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="821.0" font-size="21" fill="#233734" font-weight="700">时间表示合同</text>
+<text x="952.5" y="851.0" font-size="18" fill="#53635f" font-weight="400">统一等宽格式、同一时区语义及有效日期</text>
+<text x="952.5" y="876.0" font-size="18" fill="#53635f" font-weight="400">时才可按文字排序；任意日期写法不具此</text>
+<text x="952.5" y="901.0" font-size="18" fill="#53635f" font-weight="400">保证。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">统计口径与核对</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#233734" font-weight="700">按口径计数（COUNT）</text>
+<text x="1377.25" y="568.0" font-size="18" fill="#53635f" font-weight="400">COUNT(*)数行，COUNT列数非空；</text>
+<text x="1377.25" y="593.0" font-size="18" fill="#53635f" font-weight="400">SUM、AVG等忽略NULL，不能把未知时长</text>
+<text x="1377.25" y="618.0" font-size="18" fill="#53635f" font-weight="400">算作零。</text>
+<polyline points="1347.25,530.0 1347.25,684.0 1365.25,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="662.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="692.0" font-size="21" fill="#233734" font-weight="700">聚合结果的一行</text>
+<text x="1377.25" y="722.0" font-size="16" fill="#286f64" font-weight="400">结果粒度</text>
+<text x="1377.25" y="744.0" font-size="18" fill="#53635f" font-weight="400">无分组聚合的一行代表整组；空输入时</text>
+<text x="1377.25" y="769.0" font-size="18" fill="#53635f" font-weight="400">COUNT为零，其他所列聚合为NULL，并</text>
+<text x="1377.25" y="794.0" font-size="18" fill="#53635f" font-weight="400">非无结果行。</text>
+<polyline points="1347.25,684.0 1347.25,860.0 1365.25,860.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="838.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="868.0" font-size="21" fill="#233734" font-weight="700">已知样本与内存实验</text>
+<text x="1377.25" y="898.0" font-size="18" fill="#53635f" font-weight="400">先预测具体行、顺序和统计口径，再用</text>
+<text x="1377.25" y="923.0" font-size="18" fill="#53635f" font-weight="400">SQLite内存库核对；不报错不足以证明答</text>
+<text x="1377.25" y="948.0" font-size="18" fill="#53635f" font-weight="400">案正确。</text>
+<text x="64" y="1012.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1012.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1037.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1070.0" font-size="21" fill="#233734" font-weight="700">筛选条件组合（WHERE）</text>
+<rect x="750" y="1037.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1070.0" font-size="21" fill="#233734" font-weight="700">结果排序（ORDER BY）</text>
+<polyline points="538,1074.0 736,1074.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1074.0 726.9955289764732,1078.3496553411123 726.9955289764732,1069.6503446588877" fill="#286f64"/>
+<text x="552.0" y="1062.0" font-size="17" fill="#286f64" font-weight="400">筛出的行再按问题排序</text>
+<text x="80" y="1120.0" font-size="18" fill="#53635f" font-weight="400">103 符合本例筛选，却排在第四，最后因 LIMIT 3 未显示；这不证明原记录不存在。</text>
+<rect x="64" y="1160.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1193.2" font-size="21" fill="#233734" font-weight="700">结果排序（ORDER BY）</text>
+<rect x="750" y="1160.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1193.2" font-size="21" fill="#233734" font-weight="700">限制条数（LIMIT）</text>
+<polyline points="538,1197.2 736,1197.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1197.2 726.9955289764732,1201.5496553411124 726.9955289764732,1192.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1185.2" font-size="17" fill="#286f64" font-weight="400">定义截取顺序</text>
+<text x="80" y="1243.2" font-size="18" fill="#53635f" font-weight="400">只有先明确时间和并列顺序，最多三行才有最早三条的含义。</text>
+<rect x="64" y="1283.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1316.4" font-size="21" fill="#233734" font-weight="700">未知值判断（NULL）</text>
+<rect x="750" y="1283.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1316.4" font-size="21" fill="#233734" font-weight="700">按口径计数（COUNT）</text>
+<polyline points="538,1320.4 736,1320.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1320.4 726.9955289764732,1324.7496553411124 726.9955289764732,1316.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1308.4" font-size="17" fill="#286f64" font-weight="400">改变筛选与统计</text>
+<text x="80" y="1366.4" font-size="18" fill="#53635f" font-weight="400">未知值既不自动满足不等比较，也不参与普通数值聚合；两处均须保留未知含义。</text>
+<rect x="64" y="1406.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1439.6000000000001" font-size="21" fill="#233734" font-weight="700">按口径计数（COUNT）</text>
+<rect x="750" y="1406.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1439.6000000000001" font-size="21" fill="#233734" font-weight="700">聚合结果的一行</text>
+<polyline points="538,1443.6000000000001 736,1443.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1443.6000000000001 726.9955289764732,1447.9496553411125 726.9955289764732,1439.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1431.6000000000001" font-size="17" fill="#286f64" font-weight="400">改变行的含义</text>
+<text x="80" y="1489.6000000000001" font-size="18" fill="#53635f" font-weight="400">整组统计不能任意加入某个客户名，冒充它能代表整组所有客户。</text>
+<rect x="64" y="1529.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1562.8000000000002" font-size="21" fill="#233734" font-weight="700">时间表示合同</text>
+<rect x="750" y="1529.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1562.8000000000002" font-size="21" fill="#233734" font-weight="700">结果排序（ORDER BY）</text>
+<polyline points="538,1566.8000000000002 736,1566.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1566.8000000000002 726.9955289764732,1571.1496553411125 726.9955289764732,1562.4503446588878" fill="#286f64"/>
+<text x="569.0" y="1554.8000000000002" font-size="17" fill="#286f64" font-weight="400">支持文字时间排序</text>
+<text x="80" y="1612.8000000000002" font-size="18" fill="#53635f" font-weight="400">示例日期统一格式才有此对应；换格式、偏移量或无效日期需重新处理。</text>
+<polyline points="64,1671.0000000000002 1736,1671.0000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1701.0000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：C01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

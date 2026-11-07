@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1777" width="1800" height="1777" role="img" aria-labelledby="title">
+<title id="title">重试决策与总预算</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1777" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D02  重试决策与总预算</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">利用 D01 的失败类别决定是否值得再试；本章只读查询的重复安全，不直接推广到D03的创建副作用。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">再次发送须同时有恢复理由、重复安全和剩余额度；每次等待、间隔与尝试次数都受同一策略约束。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">有限再次尝试的理由、时间与次数</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">时间控制的不同范围</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">总预算与 deadline</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">整项工作的时间约束</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">从开始时刻确定停止点，每次发送前重算余额；总预算包含所有尝试和间隔等待。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">单次 allowed</text>
+<text x="103.0" y="731.0" font-size="16" fill="#286f64" font-weight="400">本次分配的等待上限</text>
+<text x="103.0" y="753.0" font-size="18" fill="#53635f" font-weight="400">取单次上限与剩余预算的较小值；每次HTTP阶段等待限制不等于整项工作硬秒表。</text>
+<polyline points="73.0,693.0 73.0,819.0 91.0,819.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="797.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="827.0" font-size="21" fill="#233734" font-weight="700">逐次等待与次数上限（backoff）</text>
+<text x="103.0" y="857.0" font-size="18" fill="#53635f" font-weight="400">再次发送前的暂停也消耗预算；最多两次包含首次，仍有时间但次数耗尽也须停止。</text>
+<polyline points="73.0,819.0 73.0,923.0 91.0,923.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="901.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="931.0" font-size="21" fill="#233734" font-weight="700">单调时钟与迟到结果</text>
+<text x="103.0" y="961.0" font-size="18" fill="#53635f" font-weight="400">用经过时间避免校时干扰；收到结果后再查期限，停止接纳不等于取消远端效果。</text>
+<polyline points="73.0,923.0 73.0,1027.0 91.0,1027.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1005.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1035.0" font-size="21" fill="#233734" font-weight="700">阶段 timeout 与硬取消</text>
+<text x="103.0" y="1065.0" font-size="18" fill="#53635f" font-weight="400">连接、读、写和取池各有限制；同步调用未返回时，循环外的期限判断不能强制打断。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">是否再次尝试</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,625.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">重试的三个条件</text>
+<text x="952.5" y="605.0" font-size="18" fill="#233734" font-weight="400">失败可能暂时、操作可安全重复、时间和次数足够须同时成立；能再试不等于必然再发。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">接口自己的恢复合同</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">本章容量读取只重试超时；401、状态和内容错误立即停，不能套用其他接口的重试表。</text>
+<polyline points="922.5,671.0 922.5,775.0 940.5,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="753.0" width="783.5" height="88" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,761.0 941.5,833.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="783.0" font-size="21" fill="#286f64" font-weight="700">单一重试负责人</text>
+<text x="952.5" y="813.0" font-size="18" fill="#233734" font-weight="400">只让一层决定再次发送，底层每次只发一次；多层各做两次会把外部调用放大到四次。</text>
+<text x="64" y="1129.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1129.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1154.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1187.0" font-size="21" fill="#233734" font-weight="700">总预算与 deadline</text>
+<rect x="750" y="1154.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1187.0" font-size="21" fill="#233734" font-weight="700">单次 allowed</text>
+<polyline points="538,1191.0 736,1191.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1191.0 726.9955289764732,1195.3496553411123 726.9955289764732,1186.6503446588877" fill="#286f64"/>
+<text x="603.0" y="1179.0" font-size="17" fill="#286f64" font-weight="400">约束分配</text>
+<text x="80" y="1237.0" font-size="18" fill="#53635f" font-weight="400">下一次最多能等待多久取决于剩余余额，不能每轮重新赠送完整总预算。</text>
+<rect x="64" y="1277.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1310.2" font-size="21" fill="#233734" font-weight="700">逐次等待与次数上限（backoff）</text>
+<rect x="750" y="1277.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1310.2" font-size="21" fill="#233734" font-weight="700">重试的三个条件</text>
+<polyline points="538,1314.2 736,1314.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1314.2 726.9955289764732,1318.5496553411124 726.9955289764732,1309.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1302.2" font-size="17" fill="#286f64" font-weight="400">共同限制</text>
+<text x="80" y="1360.2" font-size="18" fill="#53635f" font-weight="400">不足以支付间隔时不应先等；余额尚在但次数用完，也不继续发送。</text>
+<rect x="64" y="1400.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1433.4" font-size="21" fill="#233734" font-weight="700">接口自己的恢复合同</text>
+<rect x="750" y="1400.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1433.4" font-size="21" fill="#233734" font-weight="700">重试的三个条件</text>
+<polyline points="538,1437.4 736,1437.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1437.4 726.9955289764732,1441.7496553411124 726.9955289764732,1433.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1425.4" font-size="17" fill="#286f64" font-weight="400">提供安全依据</text>
+<text x="80" y="1483.4" font-size="18" fill="#53635f" font-weight="400">GET还需要实现符合读取语义；500是否可重试必须有当前接口合同依据。</text>
+<rect x="64" y="1523.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1556.6000000000001" font-size="21" fill="#233734" font-weight="700">单次 allowed</text>
+<rect x="750" y="1523.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1556.6000000000001" font-size="21" fill="#233734" font-weight="700">阶段 timeout 与硬取消</text>
+<polyline points="538,1560.6000000000001 736,1560.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1560.6000000000001 726.9955289764732,1564.9496553411125 726.9955289764732,1556.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1548.6000000000001" font-size="17" fill="#286f64" font-weight="400">不能单独保证</text>
+<text x="80" y="1606.6000000000001" font-size="18" fill="#53635f" font-weight="400">阶段等待上限不等于同步调用的端到端硬停止；发前与返回后的 deadline 检查各有作用。</text>
+<text x="64" y="1658.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：怎样核对预算决策。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1721.4 1736,1721.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1751.4" font-size="17" fill="#53635f" font-weight="400">对照正文：D02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

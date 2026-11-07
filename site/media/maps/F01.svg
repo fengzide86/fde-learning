@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1948" width="1800" height="1948" role="img" aria-labelledby="title">
+<title id="title">镜像、实例与进程</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1948" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F01  镜像、实例与进程</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">承接 A 的文件、进程和命令入口；分清 Docker 对象后，才能解释后续构建、配置与数据保留。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">镜像用于创建容器；容器内的进程运行程序，Docker 后台管理容器的生命周期。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">程序模板怎样形成一次运行</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">交付与运行对象</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,635.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">镜像模板（image）</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">运行模板</text>
+<text x="103.0" y="590.0" font-size="18" fill="#233734" font-weight="400">保存运行文件、运行时、库与默认命令的模板；镜像本身没</text>
+<text x="103.0" y="615.0" font-size="18" fill="#233734" font-weight="400">有正在等待请求的服务进程。</text>
+<polyline points="73.0,530.0 73.0,681.0 91.0,681.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="659.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,667.0 92.0,786.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="689.0" font-size="21" fill="#286f64" font-weight="700">运行实例（container）</text>
+<text x="103.0" y="719.0" font-size="16" fill="#286f64" font-weight="400">有独立身份的实例</text>
+<text x="103.0" y="741.0" font-size="18" fill="#233734" font-weight="400">从镜像创建的有独立身份的实例，可取得本次环境、端口和</text>
+<text x="103.0" y="766.0" font-size="18" fill="#233734" font-weight="400">挂载；多个实例可来自同一镜像。</text>
+<polyline points="73.0,681.0 73.0,832.0 91.0,832.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="810.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,818.0 92.0,915.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="840.0" font-size="21" fill="#286f64" font-weight="700">主进程与隔离环境</text>
+<text x="103.0" y="870.0" font-size="18" fill="#233734" font-weight="400">主进程执行容器入口并决定实例是否继续运行；Linux 容器</text>
+<text x="103.0" y="895.0" font-size="18" fill="#233734" font-weight="400">不是复制整台 Windows，仍使用主机资源。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">管理命令由谁完成</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#233734" font-weight="700">命令行客户端（Docker CLI）</text>
+<text x="669.3333333333334" y="568.0" font-size="16" fill="#286f64" font-weight="400">管理客户端</text>
+<text x="669.3333333333334" y="590.0" font-size="18" fill="#53635f" font-weight="400">终端调用的客户端程序，把管理请求发给当前 daemon；找</text>
+<text x="669.3333333333334" y="615.0" font-size="18" fill="#53635f" font-weight="400">到命令不证明后台可连接。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,681.0 657.3333333333334,681.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="659.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="689.0" font-size="21" fill="#233734" font-weight="700">后台服务（Docker daemon）</text>
+<text x="669.3333333333334" y="719.0" font-size="16" fill="#286f64" font-weight="400">后台管理服务</text>
+<text x="669.3333333333334" y="741.0" font-size="18" fill="#53635f" font-weight="400">接收客户端管理请求，管理镜像、容器、网络和存储；后台</text>
+<text x="669.3333333333334" y="766.0" font-size="18" fill="#53635f" font-weight="400">可连不等于应用业务正确。</text>
+<polyline points="639.3333333333334,681.0 639.3333333333334,832.0 657.3333333333334,832.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="810.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="840.0" font-size="21" fill="#233734" font-weight="700">桌面运行环境（Docker Desktop）</text>
+<text x="669.3333333333334" y="870.0" font-size="16" fill="#286f64" font-weight="400">桌面产品</text>
+<text x="669.3333333333334" y="892.0" font-size="18" fill="#53635f" font-weight="400">桌面产品，为本机提供和管理所需的 Docker 运行环境；不</text>
+<text x="669.3333333333334" y="917.0" font-size="18" fill="#53635f" font-weight="400">是某个应用容器或它的主进程。</text>
+<polyline points="639.3333333333334,832.0 639.3333333333334,983.0 657.3333333333334,983.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="961.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="991.0" font-size="21" fill="#233734" font-weight="700">命令端与后台服务证据（Client / Server）</text>
+<text x="669.3333333333334" y="1021.0" font-size="18" fill="#53635f" font-weight="400">docker version 分别说明客户端和已连接后台；只有 Client </text>
+<text x="669.3333333333334" y="1046.0" font-size="18" fill="#53635f" font-weight="400">时应先定位连接边界。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">实例生命周期与观察</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#233734" font-weight="700">创建运行与实例身份（run）</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#53635f" font-weight="400">run 创建并启动实例，后台运行可在终端返回后持续；不同</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#53635f" font-weight="400">容器 ID 不因镜像相同而合并。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">运行、退出与诊断</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">ps、inspect、logs 分别查存在状态、入口身份与程序输出；</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">退出码零可只是短命令正常结束。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">停止、删除与可写层（stop / rm）</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">停止保留实例，删除移除实例及其可写层；未指向的容器、</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">镜像和主机源码不会一起消失。</text>
+<polyline points="1205.6666666666667,788.0 1205.6666666666667,917.0 1223.6666666666667,917.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="895.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="925.0" font-size="21" fill="#233734" font-weight="700">持久数据的独立生命周期</text>
+<text x="1235.6666666666667" y="955.0" font-size="18" fill="#53635f" font-weight="400">镜像能再造实例但不会自动带回旧实例后来写的数据；需按</text>
+<text x="1235.6666666666667" y="980.0" font-size="18" fill="#53635f" font-weight="400">任务选择独立存储。</text>
+<text x="64" y="1110.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1110.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1135.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1168.0" font-size="21" fill="#233734" font-weight="700">镜像模板（image）</text>
+<rect x="750" y="1135.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1168.0" font-size="21" fill="#233734" font-weight="700">运行实例（container）</text>
+<polyline points="538,1172.0 736,1172.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1172.0 726.9955289764732,1176.3496553411123 726.9955289764732,1167.6503446588877" fill="#286f64"/>
+<text x="603.0" y="1160.0" font-size="17" fill="#286f64" font-weight="400">创建多个</text>
+<text x="80" y="1218.0" font-size="18" fill="#53635f" font-weight="400">相同模板不表示共用同一进程、日志或实例临时文件。</text>
+<rect x="64" y="1258.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1291.2" font-size="21" fill="#233734" font-weight="700">命令行客户端（Docker CLI）</text>
+<rect x="750" y="1258.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1291.2" font-size="21" fill="#233734" font-weight="700">后台服务（Docker daemon）</text>
+<polyline points="538,1295.2 736,1295.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1295.2 726.9955289764732,1299.5496553411124 726.9955289764732,1290.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1283.2" font-size="17" fill="#286f64" font-weight="400">发送管理请求</text>
+<text x="80" y="1341.2" font-size="18" fill="#53635f" font-weight="400">命令解析、后台连接与应用运行是不同边界，需要各自证据。</text>
+<rect x="64" y="1381.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1414.4" font-size="21" fill="#233734" font-weight="700">主进程与隔离环境</text>
+<rect x="750" y="1381.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1414.4" font-size="21" fill="#233734" font-weight="700">运行、退出与诊断</text>
+<polyline points="538,1418.4 736,1418.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1418.4 726.9955289764732,1422.7496553411124 726.9955289764732,1414.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1406.4" font-size="17" fill="#286f64" font-weight="400">决定持续状态</text>
+<text x="80" y="1464.4" font-size="18" fill="#53635f" font-weight="400">只打印版本的入口成功退出，也就停止实例，不能靠反复重启变成长驻 API。</text>
+<rect x="64" y="1504.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1537.6000000000001" font-size="21" fill="#233734" font-weight="700">停止、删除与可写层（stop / rm）</text>
+<rect x="750" y="1504.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1537.6000000000001" font-size="21" fill="#233734" font-weight="700">持久数据的独立生命周期</text>
+<polyline points="538,1541.6000000000001 736,1541.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1541.6000000000001 726.9955289764732,1545.9496553411125 726.9955289764732,1537.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1529.6000000000001" font-size="17" fill="#286f64" font-weight="400">影响保留条件</text>
+<text x="80" y="1587.6000000000001" font-size="18" fill="#53635f" font-weight="400">删除实例的可写层会丢失该层数据，业务持久化不能只依赖镜像重建。</text>
+<rect x="64" y="1627.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1660.8000000000002" font-size="21" fill="#233734" font-weight="700">桌面运行环境（Docker Desktop）</text>
+<rect x="750" y="1627.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1660.8000000000002" font-size="21" fill="#233734" font-weight="700">后台服务（Docker daemon）</text>
+<polyline points="538,1664.8000000000002 736,1664.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1664.8000000000002 726.9955289764732,1669.1496553411125 726.9955289764732,1660.4503446588878" fill="#286f64"/>
+<text x="560.5" y="1652.8000000000002" font-size="17" fill="#286f64" font-weight="400">提供并管理本机环境</text>
+<text x="80" y="1710.8000000000002" font-size="18" fill="#53635f" font-weight="400">Desktop 包含相关运行与管理组件；CLI 的直接请求对象仍是所连接的 daemon。</text>
+<rect x="64" y="1751.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1784.0000000000002" font-size="21" fill="#233734" font-weight="700">运行实例（container）</text>
+<rect x="750" y="1751.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1784.0000000000002" font-size="21" fill="#233734" font-weight="700">主进程与隔离环境</text>
+<polyline points="538,1788.0000000000002 736,1788.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1788.0000000000002 726.9955289764732,1792.3496553411126 726.9955289764732,1783.650344658888" fill="#286f64"/>
+<text x="594.5" y="1776.0000000000002" font-size="17" fill="#286f64" font-weight="400">启动后承载</text>
+<text x="80" y="1834.0000000000002" font-size="18" fill="#53635f" font-weight="400">主进程结束会使实例停止运行，但停止的容器对象仍可存在。</text>
+<polyline points="64,1892.2000000000003 1736,1892.2000000000003" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1922.2000000000003" font-size="17" fill="#53635f" font-weight="400">对照正文：F01  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

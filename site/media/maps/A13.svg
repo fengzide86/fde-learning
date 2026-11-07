@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2147" width="1800" height="2147" role="img" aria-labelledby="title">
+<title id="title">把输入整理成一份可靠报告</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2147" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A13  把输入整理成一份可靠报告</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A13汇合A02–A12的值、控制、文件、测试和交付关系；当前仍是本地程序，B册再增加跨进程HTTP。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">读得出文件、接收得了记录、写得完报告是三道不同关口；沿每次参数与返回值找出谁负责哪一道。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">工单数据的解析、校验与报告交付</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="220.4,437.0 1579.6000000000001,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="220.4,437.0 220.4,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">原始输入与格式</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="273.8" height="185" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,722.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">读取输入（load_rows）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">输入格式边界</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">按扩展名调用CSV或JSON解析</text>
+<text x="103.0" y="652.0" font-size="18" fill="#233734" font-weight="400">器，返回原始记录列表；不在</text>
+<text x="103.0" y="677.0" font-size="18" fill="#233734" font-weight="400">此判断urgent等字段是否合业</text>
+<text x="103.0" y="702.0" font-size="18" fill="#233734" font-weight="400">务规则。</text>
+<polyline points="73.0,567.0 73.0,768.0 91.0,768.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="746.0" width="273.8" height="188" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="776.0" font-size="21" fill="#233734" font-weight="700">CSV与JSON原始值</text>
+<text x="103.0" y="806.0" font-size="18" fill="#53635f" font-weight="400">CSV字段通常为文字，JSON可</text>
+<text x="103.0" y="831.0" font-size="18" fill="#53635f" font-weight="400">保留数字类型；解析后仍查记</text>
+<text x="103.0" y="856.0" font-size="18" fill="#53635f" font-weight="400">录形状。当前配套未全面拒绝</text>
+<text x="103.0" y="881.0" font-size="18" fill="#53635f" font-weight="400">重复表头和多余列，不能把业</text>
+<text x="103.0" y="906.0" font-size="18" fill="#53635f" font-weight="400">务校验当成完整CSV结构保护。</text>
+<polyline points="73.0,768.0 73.0,972.0 91.0,972.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="950.0" width="273.8" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="980.0" font-size="21" fill="#233734" font-weight="700">逐条编号（enumerate）</text>
+<text x="103.0" y="1010.0" font-size="16" fill="#286f64" font-weight="400">逐条处理的编号工具</text>
+<text x="103.0" y="1032.0" font-size="18" fill="#53635f" font-weight="400">同时交出顺序编号和记录，</text>
+<text x="103.0" y="1057.0" font-size="18" fill="#53635f" font-weight="400">start=1便于定位问题；记录号</text>
+<text x="103.0" y="1082.0" font-size="18" fill="#53635f" font-weight="400">不是跨多行JSON的物理行号。</text>
+<polyline points="560.2,437.0 560.2,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="403.8" y="468.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="417.8" y="502.0" font-size="23" fill="#286f64" font-weight="700">单条验证与规范结果</text>
+<polyline points="412.8,525.0 412.8,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="412.8,525.0 412.8,567.0 430.8,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="545.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="575.0" font-size="21" fill="#233734" font-weight="700">必需字段与原始类型</text>
+<text x="442.8" y="605.0" font-size="18" fill="#53635f" font-weight="400">先查键是否存在，再查文字及</text>
+<text x="442.8" y="630.0" font-size="18" fill="#53635f" font-weight="400">优先级类型；bool虽属int子</text>
+<text x="442.8" y="655.0" font-size="18" fill="#53635f" font-weight="400">类，也需拒绝其冒充优先级。</text>
+<polyline points="412.8,567.0 412.8,721.0 430.8,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="699.0" width="273.8" height="163" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="729.0" font-size="21" fill="#233734" font-weight="700">清理后的规范值（cleaned）</text>
+<text x="442.8" y="759.0" font-size="18" fill="#53635f" font-weight="400">清理允许值的两端空白，状态</text>
+<text x="442.8" y="784.0" font-size="18" fill="#53635f" font-weight="400">转小写；辅助清理不等于最终</text>
+<text x="442.8" y="809.0" font-size="18" fill="#53635f" font-weight="400">验证，不能洗掉原始类型错</text>
+<text x="442.8" y="834.0" font-size="18" fill="#53635f" font-weight="400">误。</text>
+<polyline points="412.8,721.0 412.8,900.0 430.8,900.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="878.0" width="273.8" height="163" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="442.8" y="908.0" font-size="21" fill="#233734" font-weight="700">转换与范围校验</text>
+<text x="442.8" y="938.0" font-size="18" fill="#53635f" font-weight="400">urgent使int发ValueError，9则</text>
+<text x="442.8" y="963.0" font-size="18" fill="#53635f" font-weight="400">成功转换后超范围；两条路线</text>
+<text x="442.8" y="988.0" font-size="18" fill="#53635f" font-weight="400">分别记录原因，不混作一类失</text>
+<text x="442.8" y="1013.0" font-size="18" fill="#53635f" font-weight="400">败。</text>
+<polyline points="412.8,900.0 412.8,1079.0 430.8,1079.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="430.8" y="1057.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="431.8,1065.0 431.8,1209.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="442.8" y="1087.0" font-size="21" fill="#286f64" font-weight="700">检查记录（validate_row）</text>
+<text x="442.8" y="1117.0" font-size="16" fill="#286f64" font-weight="400">单条验证的返回约定</text>
+<text x="442.8" y="1139.0" font-size="18" fill="#233734" font-weight="400">返回(ticket,None)或(None,issue)</text>
+<text x="442.8" y="1164.0" font-size="18" fill="#233734" font-weight="400">供拆包；有效记录新建字典，</text>
+<text x="442.8" y="1189.0" font-size="18" fill="#233734" font-weight="400">坏记录可含多个错误原因。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="743.6" y="468.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="757.6" y="502.0" font-size="23" fill="#286f64" font-weight="700">跨记录状态与汇总</text>
+<polyline points="752.6,525.0 752.6,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="752.6,525.0 752.6,567.0 770.6,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="545.0" width="273.8" height="163" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="575.0" font-size="21" fill="#233734" font-weight="700">保存已接受编号（seen_ids）</text>
+<text x="782.6" y="605.0" font-size="18" fill="#53635f" font-weight="400">集合只记录已接受编号，再判</text>
+<text x="782.6" y="630.0" font-size="18" fill="#53635f" font-weight="400">断并拒绝重复；先出现的坏记</text>
+<text x="782.6" y="655.0" font-size="18" fill="#53635f" font-weight="400">录不占号，集合本身不自动去</text>
+<text x="782.6" y="680.0" font-size="18" fill="#53635f" font-weight="400">重工单。</text>
+<polyline points="752.6,567.0 752.6,746.0 770.6,746.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="724.0" width="273.8" height="163" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="754.0" font-size="21" fill="#233734" font-weight="700">记录问题（issues）</text>
+<text x="782.6" y="784.0" font-size="18" fill="#53635f" font-weight="400">拒绝时先记录issue再跳过本轮</text>
+<text x="782.6" y="809.0" font-size="18" fill="#53635f" font-weight="400">接收动作；避免读取None工单</text>
+<text x="782.6" y="834.0" font-size="18" fill="#53635f" font-weight="400">或将已拒绝记录加入</text>
+<text x="782.6" y="859.0" font-size="18" fill="#53635f" font-weight="400">accepted。</text>
+<polyline points="752.6,746.0 752.6,925.0 770.6,925.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="903.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="782.6" y="933.0" font-size="21" fill="#233734" font-weight="700">分类计数与数量守恒</text>
+<text x="782.6" y="963.0" font-size="18" fill="#53635f" font-weight="400">只统计accepted的状态及优先</text>
+<text x="782.6" y="988.0" font-size="18" fill="#53635f" font-weight="400">级；每条输入至多一条issue，</text>
+<text x="782.6" y="1013.0" font-size="18" fill="#53635f" font-weight="400">接受数加拒绝数等于输入数。</text>
+<polyline points="752.6,925.0 752.6,1079.0 770.6,1079.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="770.6" y="1057.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="771.6,1065.0 771.6,1209.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="782.6" y="1087.0" font-size="21" fill="#286f64" font-weight="700">报告内存结构（report）</text>
+<text x="782.6" y="1117.0" font-size="16" fill="#286f64" font-weight="400">交给写出层的内存结果</text>
+<text x="782.6" y="1139.0" font-size="18" fill="#233734" font-weight="400">summary保留统计，tickets保留</text>
+<text x="782.6" y="1164.0" font-size="18" fill="#233734" font-weight="400">有效结果，issues保留拒绝原</text>
+<text x="782.6" y="1189.0" font-size="18" fill="#233734" font-weight="400">因，source记录输入文件名。</text>
+<polyline points="1239.8000000000002,437.0 1239.8000000000002,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1083.4" y="468.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1097.4" y="502.0" font-size="23" fill="#286f64" font-weight="700">文件写出与旧目标保护</text>
+<polyline points="1092.4,525.0 1092.4,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1092.4,525.0 1092.4,567.0 1110.4,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="545.0" width="273.8" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1111.4,553.0 1111.4,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1122.4" y="575.0" font-size="21" fill="#286f64" font-weight="700">写出报告（write_report）</text>
+<text x="1122.4" y="605.0" font-size="16" fill="#286f64" font-weight="400">实际改变磁盘的边界</text>
+<text x="1122.4" y="627.0" font-size="18" fill="#233734" font-weight="400">先在同目录写临时JSON并关</text>
+<text x="1122.4" y="652.0" font-size="18" fill="#233734" font-weight="400">闭，再replace正式目标；输出</text>
+<text x="1122.4" y="677.0" font-size="18" fill="#233734" font-weight="400">须为.json，顺序保护旧报告。</text>
+<polyline points="1092.4,567.0 1092.4,743.0 1110.4,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1110.4" y="721.0" width="273.8" height="163" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1122.4" y="751.0" font-size="21" fill="#233734" font-weight="700">写入保证范围</text>
+<text x="1122.4" y="781.0" font-size="18" fill="#53635f" font-weight="400">单输出仅一个写进程；清理也</text>
+<text x="1122.4" y="806.0" font-size="18" fill="#53635f" font-weight="400">可能失败留临时文件，不承诺</text>
+<text x="1122.4" y="831.0" font-size="18" fill="#53635f" font-weight="400">断电、强杀和并发写入的恢</text>
+<text x="1122.4" y="856.0" font-size="18" fill="#53635f" font-weight="400">复。</text>
+<polyline points="1579.6000000000001,437.0 1579.6000000000001,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1423.2" y="468.0" width="312.8" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1437.2" y="502.0" font-size="23" fill="#286f64" font-weight="700">命令入口与验证层次</text>
+<polyline points="1432.2,525.0 1432.2,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1432.2,525.0 1432.2,567.0 1450.2,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1450.2" y="545.0" width="273.8" height="185" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1462.2" y="575.0" font-size="21" fill="#233734" font-weight="700">组织完整运行（run）</text>
+<text x="1462.2" y="605.0" font-size="16" fill="#286f64" font-weight="400">调用顺序与失败翻译</text>
+<text x="1462.2" y="627.0" font-size="18" fill="#53635f" font-weight="400">分别处理载入整理和写出失</text>
+<text x="1462.2" y="652.0" font-size="18" fill="#53635f" font-weight="400">败；同一FileNotFoundError在</text>
+<text x="1462.2" y="677.0" font-size="18" fill="#53635f" font-weight="400">输入侧是3，写出侧归文件失败</text>
+<text x="1462.2" y="702.0" font-size="18" fill="#53635f" font-weight="400">4。</text>
+<polyline points="1432.2,567.0 1432.2,768.0 1450.2,768.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1450.2" y="746.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1462.2" y="776.0" font-size="21" fill="#233734" font-weight="700">输出、退出码与入口保护</text>
+<text x="1462.2" y="806.0" font-size="18" fill="#53635f" font-weight="400">写出后才报告成功；run返回0</text>
+<text x="1462.2" y="831.0" font-size="18" fill="#53635f" font-weight="400">至4，经sys.exit交给命令行，导</text>
+<text x="1462.2" y="856.0" font-size="18" fill="#53635f" font-weight="400">入测试时不自动执行入口。</text>
+<polyline points="1432.2,768.0 1432.2,922.0 1450.2,922.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1450.2" y="900.0" width="273.8" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1462.2" y="930.0" font-size="21" fill="#233734" font-weight="700">业务测试与格式等价</text>
+<text x="1462.2" y="960.0" font-size="18" fill="#53635f" font-weight="400">直接测验证函数的明确字段，</text>
+<text x="1462.2" y="985.0" font-size="18" fill="#53635f" font-weight="400">比较整理后CSV与JSON工单；</text>
+<text x="1462.2" y="1010.0" font-size="18" fill="#53635f" font-weight="400">不要求原始rows类型相同。</text>
+<text x="64" y="1253.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1253.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1278.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1311.0" font-size="21" fill="#233734" font-weight="700">读取输入（load_rows）</text>
+<rect x="750" y="1278.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1311.0" font-size="21" fill="#233734" font-weight="700">检查记录（validate_row）</text>
+<polyline points="538,1315.0 736,1315.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1315.0 726.9955289764732,1319.3496553411123 726.9955289764732,1310.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1303.0" font-size="17" fill="#286f64" font-weight="400">把原始记录交给</text>
+<text x="80" y="1361.0" font-size="18" fill="#53635f" font-weight="400">可解析的字段仍可能违反规则，单条拒绝可以留下原因并继续下一条。</text>
+<rect x="64" y="1401.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1434.2" font-size="21" fill="#233734" font-weight="700">检查记录（validate_row）</text>
+<rect x="750" y="1401.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1434.2" font-size="21" fill="#233734" font-weight="700">保存已接受编号（seen_ids）</text>
+<polyline points="538,1438.2 736,1438.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1438.2 726.9955289764732,1442.5496553411124 726.9955289764732,1433.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1426.2" font-size="17" fill="#286f64" font-weight="400">有效才参与查重</text>
+<text x="80" y="1484.2" font-size="18" fill="#53635f" font-weight="400">拒绝记录先continue，因此不占用编号，也不进入业务分类计数。</text>
+<rect x="64" y="1524.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1557.4" font-size="21" fill="#233734" font-weight="700">报告内存结构（report）</text>
+<rect x="750" y="1524.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1557.4" font-size="21" fill="#233734" font-weight="700">写出报告（write_report）</text>
+<polyline points="538,1561.4 736,1561.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1561.4 726.9955289764732,1565.7496553411124 726.9955289764732,1557.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1549.4" font-size="17" fill="#286f64" font-weight="400">作为完整内存输入</text>
+<text x="80" y="1607.4" font-size="18" fill="#53635f" font-weight="400">完整字典不等于磁盘报告；临时文件关闭后替换才改变正式目标。</text>
+<rect x="64" y="1647.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1680.6000000000001" font-size="21" fill="#233734" font-weight="700">CSV与JSON原始值</text>
+<rect x="750" y="1647.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1680.6000000000001" font-size="21" fill="#233734" font-weight="700">转换与范围校验</text>
+<polyline points="538,1684.6000000000001 736,1684.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1684.6000000000001 726.9955289764732,1688.9496553411125 726.9955289764732,1680.2503446588878" fill="#286f64"/>
+<text x="560.5" y="1672.6000000000001" font-size="17" fill="#286f64" font-weight="400">先验证再形成同类值</text>
+<text x="80" y="1730.6000000000001" font-size="18" fill="#53635f" font-weight="400">CSV的&quot;1&quot;与JSON的1可最终成为整数1；&quot;urgent&quot;转换失败，9则转换成功后被范围拒绝。</text>
+<rect x="64" y="1770.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1803.8000000000002" font-size="21" fill="#233734" font-weight="700">记录问题（issues）</text>
+<rect x="750" y="1770.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1803.8000000000002" font-size="21" fill="#233734" font-weight="700">保存已接受编号（seen_ids）</text>
+<polyline points="538,1807.8000000000002 736,1807.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1807.8000000000002 726.9955289764732,1812.1496553411125 726.9955289764732,1803.4503446588878" fill="#286f64"/>
+<text x="569.0" y="1795.8000000000002" font-size="17" fill="#286f64" font-weight="400">拒绝后不进入接收</text>
+<text x="80" y="1853.8000000000002" font-size="18" fill="#53635f" font-weight="400">先来的坏T-300不占号；后来的有效T-300可接收。集合只记成员，判断与continue才执行拒绝。</text>
+<rect x="64" y="1894.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1927.0000000000002" font-size="21" fill="#233734" font-weight="700">写出报告（write_report）</text>
+<rect x="750" y="1894.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1927.0000000000002" font-size="21" fill="#233734" font-weight="700">输出、退出码与入口保护</text>
+<polyline points="538,1931.0000000000002 736,1931.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1931.0000000000002 726.9955289764732,1935.3496553411126 726.9955289764732,1926.650344658888" fill="#286f64"/>
+<text x="552.0" y="1919.0000000000002" font-size="17" fill="#286f64" font-weight="400">成功后才交出完成结果</text>
+<text x="80" y="1977.0000000000002" font-size="18" fill="#53635f" font-weight="400">写出完整报告后，run按是否有拒绝记录返回0或2，再由sys.exit交给外部命令。</text>
+<text x="64" y="2029.2000000000003" font-size="19" fill="#53635f" font-weight="400">同章续图：找回本章的数据与语法关系；失败处理与测试怎样对应。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2091.8 1736,2091.8" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2121.8" font-size="17" fill="#53635f" font-weight="400">对照正文：A13  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

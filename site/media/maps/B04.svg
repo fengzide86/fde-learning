@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1795" width="1800" height="1795" role="img" aria-labelledby="title">
+<title id="title">跨服务交接与定位</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1795" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">B / HTTP 与 API</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">B04  跨服务交接与定位</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 B02 的接收端与 B03 的调用端放进同一服务；不同交换的状态、结果和日志必须分别解释。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">本地服务接收一份请求，又发出另一份请求；两份回应各有来源，用同一次处理的标识把证据联系起来。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="698.0732421875" y="386.0" font-size="28" fill="#286f64" font-weight="700">两段HTTP交换的责任与关联证据</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">交互与值的边界</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">本地与供应商两段交换</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">本地API对用户是server，对供应商是client；两份response各</text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">有接收者和内容合同。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">本地输入与目标检查</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">先校验body并查工单存在性；输入422或目标404时不调用供</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">应商，摘要文字来自当前body。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">外部回应转换与公开输出（adapter）</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">适配层交回受检摘要字符串，入口函数再组合公开字典；内</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">部返回值不同于跨进程HTTP回应。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">处理身份与日志</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,553.0 658.3333333333334,672.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#286f64" font-weight="700">请求关联标识（request ID）</text>
+<text x="669.3333333333334" y="605.0" font-size="16" fill="#286f64" font-weight="400">处理关联标识</text>
+<text x="669.3333333333334" y="627.0" font-size="18" fill="#233734" font-weight="400">关联一次处理在多处的记录；下一请求另用ID，不是工单主</text>
+<text x="669.3333333333334" y="652.0" font-size="18" fill="#233734" font-weight="400">键或防止重复效果的幂等键。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,718.0 657.3333333333334,718.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="696.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="726.0" font-size="21" fill="#233734" font-weight="700">请求头交接（Header）</text>
+<text x="669.3333333333334" y="756.0" font-size="16" fill="#286f64" font-weight="400">标识传递渠道</text>
+<text x="669.3333333333334" y="778.0" font-size="18" fill="#53635f" font-weight="400">关联标识从请求头进入参数，再传下游及响应头；endpoint</text>
+<text x="669.3333333333334" y="803.0" font-size="18" fill="#53635f" font-weight="400">前的校验失败需独立错误处理覆盖。</text>
+<polyline points="639.3333333333334,718.0 639.3333333333334,869.0 657.3333333333334,869.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="847.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,855.0 658.3333333333334,974.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="877.0" font-size="21" fill="#286f64" font-weight="700">阶段事件</text>
+<text x="669.3333333333334" y="907.0" font-size="16" fill="#286f64" font-weight="400">运行证据</text>
+<text x="669.3333333333334" y="929.0" font-size="18" fill="#233734" font-weight="400">记录开始、成功或失败及两侧状态；started不证明远端已</text>
+<text x="669.3333333333334" y="954.0" font-size="18" fill="#233734" font-weight="400">收，adapter成功不证明最终响应成功。</text>
+<polyline points="639.3333333333334,869.0 639.3333333333334,1020.0 657.3333333333334,1020.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="998.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="1028.0" font-size="21" fill="#233734" font-weight="700">网络证据范围（Network）</text>
+<text x="669.3333333333334" y="1058.0" font-size="18" fill="#53635f" font-weight="400">浏览器只能直接观察自己与本地API的交换；内部供应商调</text>
+<text x="669.3333333333334" y="1083.0" font-size="18" fill="#53635f" font-weight="400">用需同ID日志补足。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">失败来源与公开映射</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">供应商状态失败</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">已取得非成功response，本例供应商500映射本地502；两个</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">数字属于不同交换。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">超时与连接失败</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">本例超时映射504、其他传输失败映射503；本地仍可回答，</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">远端执行效果不能由超时确定。</text>
+<polyline points="1205.6666666666667,696.0 1205.6666666666667,825.0 1223.6666666666667,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="833.0" font-size="21" fill="#233734" font-weight="700">供应商内容失败</text>
+<text x="1235.6666666666667" y="863.0" font-size="18" fill="#53635f" font-weight="400">成功状态后媒体类型或内容不合约，本地也可返回502；用</text>
+<text x="1235.6666666666667" y="888.0" font-size="18" fill="#53635f" font-weight="400">detail与日志区别于坏状态。</text>
+<text x="64" y="1147.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1147.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1172.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1205.0" font-size="21" fill="#233734" font-weight="700">本地与供应商两段交换</text>
+<rect x="750" y="1172.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1205.0" font-size="21" fill="#233734" font-weight="700">外部回应转换与公开输出（adapter）</text>
+<polyline points="538,1209.0 736,1209.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1209.0 726.9955289764732,1213.3496553411123 726.9955289764732,1204.6503446588877" fill="#286f64"/>
+<text x="569.0" y="1197.0" font-size="17" fill="#286f64" font-weight="400">通过内部返回交接</text>
+<text x="80" y="1255.0" font-size="18" fill="#53635f" font-weight="400">供应商 response 先被 adapter 检查成摘要字符串，再由本地函数组织另一份公开 response。</text>
+<rect x="64" y="1295.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1328.2" font-size="21" fill="#233734" font-weight="700">请求关联标识（request ID）</text>
+<rect x="750" y="1295.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1328.2" font-size="21" fill="#233734" font-weight="700">阶段事件</text>
+<polyline points="538,1332.2 736,1332.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1332.2 726.9955289764732,1336.5496553411124 726.9955289764732,1327.8503446588877" fill="#286f64"/>
+<text x="620.0" y="1320.2" font-size="17" fill="#286f64" font-weight="400">贯穿</text>
+<text x="80" y="1378.2" font-size="18" fill="#53635f" font-weight="400">交错日志按一次处理关联；业务工单编号不能区分针对同一记录的多次请求。</text>
+<rect x="64" y="1418.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1451.4" font-size="21" fill="#233734" font-weight="700">网络证据范围（Network）</text>
+<rect x="750" y="1418.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1451.4" font-size="21" fill="#233734" font-weight="700">本地与供应商两段交换</text>
+<polyline points="538,1455.4 736,1455.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1455.4 726.9955289764732,1459.7496553411124 726.9955289764732,1451.0503446588878" fill="#286f64"/>
+<text x="594.5" y="1443.4" font-size="17" fill="#286f64" font-weight="400">需日志补足</text>
+<text x="80" y="1501.4" font-size="18" fill="#53635f" font-weight="400">浏览器看到本地502或504，不能推断供应商也返回过同一码。</text>
+<rect x="64" y="1541.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1574.6000000000001" font-size="21" fill="#233734" font-weight="700">供应商状态失败</text>
+<rect x="750" y="1541.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1574.6000000000001" font-size="21" fill="#233734" font-weight="700">供应商内容失败</text>
+<polyline points="538,1578.6000000000001 736,1578.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1578.6000000000001 726.9955289764732,1582.9496553411125 726.9955289764732,1574.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1566.6000000000001" font-size="17" fill="#286f64" font-weight="400">可能共用本地码</text>
+<text x="80" y="1624.6000000000001" font-size="18" fill="#53635f" font-weight="400">二者在本例都映射502，但最早失败位置不同，必须保留错误原因。</text>
+<text x="64" y="1676.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：怎样验证各段交接。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1739.4 1736,1739.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1769.4" font-size="17" fill="#53635f" font-weight="400">对照正文：B04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

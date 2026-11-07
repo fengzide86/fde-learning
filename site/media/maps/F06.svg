@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1606" width="1800" height="1606" role="img" aria-labelledby="title">
+<title id="title">验收、运行手册与交接</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1606" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F06  验收、运行手册与交接</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">汇合 F01–05 的对象、配置、探针与恢复；向 X 的跨层验收提供可执行且不夸大范围的交接方式。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">验收沿真实任务核对结果；操作手册把程序、配置、数据和实验顺序交给下一位操作者。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">让另一位操作者复现并判断结果</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">验收证明什么</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">业务验收任务（UAT）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">从客户可见任务核对保存、读回、容量正常与人工降级；函</text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">数返回成功不代替整条业务结果。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="704.0" font-size="21" fill="#233734" font-weight="700">合成数据标记与权限范围</text>
+<text x="103.0" y="734.0" font-size="18" fill="#53635f" font-weight="400">synthetic 标记是入口要求，不自动辨别内容是否真实；本例</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">没有登录，不能声称已验收认证。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">四次请求与字段一致</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">live、ready、创建、读回各有 request ID，用前缀归组；应</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">核对全部关键字段而非只比工单号。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">可执行手册与前置条件</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,553.0 658.3333333333334,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#286f64" font-weight="700">运行手册的操作约定（runbook）</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#233734" font-weight="400">明确目录、项目、对象、命令、成功条件和失败去向；下一</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#233734" font-weight="400">位操作者不应依赖作者口头补充。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#233734" font-weight="700">退出码与有界等待</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#53635f" font-weight="400">检查原生命令退出码并按剩余预算轮询状态；预算约束后续</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#53635f" font-weight="400">尝试，不保证精确强杀所有底层阻塞。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#233734" font-weight="700">干净基线与自增序列</text>
+<text x="669.3333333333334" y="863.0" font-size="18" fill="#53635f" font-weight="400">首次 UAT 同时要求无工单与下一编号正确；count 为零不证</text>
+<text x="669.3333333333334" y="888.0" font-size="18" fill="#53635f" font-weight="400">明从未创建，失败时不能清空未知卷。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">交接、停止与证据范围</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,553.0 1224.6666666666667,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#286f64" font-weight="700">程序配置数据交接清单</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#233734" font-weight="400">保留精确程序、配置原文件及 hash、实际卷、备份和各路线</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#233734" font-weight="400">结果；hash 本身不能还原缺失配置。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">不同层次的验证</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">单元、本机双进程、容器与独立操作者分别增加不同证据；</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">自动通过不能单独证明整套交付可用。</text>
+<polyline points="1205.6666666666667,696.0 1205.6666666666667,825.0 1223.6666666666667,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="833.0" font-size="21" fill="#233734" font-weight="700">失败出口与证据保留</text>
+<text x="1235.6666666666667" y="863.0" font-size="18" fill="#53635f" font-weight="400">备份不符、身份错或读回异常时停止相应后续动作，保存原</text>
+<text x="1235.6666666666667" y="888.0" font-size="18" fill="#53635f" font-weight="400">因和差异，不能因 ready 成功宣告恢复。</text>
+<polyline points="1205.6666666666667,825.0 1205.6666666666667,954.0 1223.6666666666667,954.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="932.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="962.0" font-size="21" fill="#233734" font-weight="700">停止、关闭与清理边界（stop / down）</text>
+<text x="1235.6666666666667" y="992.0" font-size="18" fill="#53635f" font-weight="400">stop 保留实例，普通 down 清理项目实例网络而保留本例卷</text>
+<text x="1235.6666666666667" y="1017.0" font-size="18" fill="#53635f" font-weight="400">和备份；删除卷须核对精确可丢弃对象。</text>
+<text x="64" y="1081.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1081.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1106.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1139.0" font-size="21" fill="#233734" font-weight="700">程序配置数据交接清单</text>
+<rect x="750" y="1106.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1139.0" font-size="21" fill="#233734" font-weight="700">运行手册的操作约定（runbook）</text>
+<polyline points="538,1143.0 736,1143.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1143.0 726.9955289764732,1147.3496553411123 726.9955289764732,1138.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1131.0" font-size="17" fill="#286f64" font-weight="400">让操作可复现</text>
+<text x="80" y="1189.0" font-size="18" fill="#53635f" font-weight="400">只说回到版本号不够，还需知道镜像、配置、挂载和数据分别是哪份。</text>
+<rect x="64" y="1229.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1262.2" font-size="21" fill="#233734" font-weight="700">业务验收任务（UAT）</text>
+<rect x="750" y="1229.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1262.2" font-size="21" fill="#233734" font-weight="700">四次请求与字段一致</text>
+<polyline points="538,1266.2 736,1266.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1266.2 726.9955289764732,1270.5496553411124 726.9955289764732,1261.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1254.2" font-size="17" fill="#286f64" font-weight="400">贯穿独立请求</text>
+<text x="80" y="1312.2" font-size="18" fill="#53635f" font-weight="400">live、ready、创建、读回各有请求标识；公开字段一致才支持这条具体业务路线。</text>
+<rect x="64" y="1352.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1385.4" font-size="21" fill="#233734" font-weight="700">业务验收任务（UAT）</text>
+<rect x="750" y="1352.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1385.4" font-size="21" fill="#233734" font-weight="700">运行手册的操作约定（runbook）</text>
+<polyline points="538,1389.4 736,1389.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1389.4 726.9955289764732,1393.7496553411124 726.9955289764732,1385.0503446588878" fill="#286f64"/>
+<text x="560.5" y="1377.4" font-size="17" fill="#286f64" font-weight="400">写成可重复操作约定</text>
+<text x="80" y="1435.4" font-size="18" fill="#53635f" font-weight="400">记录前置条件、输入、预期和失败出口；手册存在仍不证明另一位操作者已经完成。</text>
+<text x="64" y="1487.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：不同实验路线的状态。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1550.2 1736,1550.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1580.2" font-size="17" fill="#53635f" font-weight="400">对照正文：F06  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

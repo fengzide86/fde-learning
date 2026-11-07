@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1505" width="1800" height="1505" role="img" aria-labelledby="title">
+<title id="title">投入、现金与收益</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1505" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P07  投入、现金与收益</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接 P05 的人工投入和 P06 的方案选择；将经济假设交给后续采用与结果记录检验。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">释放时间不等于增加现金；采用、时间用途和全期间投入共同决定方案是否值得。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">把省时假设接到可承担投入</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">不同收益的含义</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="185" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,685.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">释放工时与工时价值</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">资源与估算</text>
+<text x="103.0" y="590.0" font-size="18" fill="#233734" font-weight="400">适用量、采用率和净省时共同决定释放时</text>
+<text x="103.0" y="615.0" font-size="18" fill="#233734" font-weight="400">间；E-600 是600件均采用且每件净省3分</text>
+<text x="103.0" y="640.0" font-size="18" fill="#233734" font-weight="400">钟的独立假设算例，不是试用实测。折算</text>
+<text x="103.0" y="665.0" font-size="18" fill="#233734" font-weight="400">工时价值也不是现金。</text>
+<polyline points="73.0,530.0 73.0,731.0 91.0,731.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="709.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="739.0" font-size="21" fill="#233734" font-weight="700">时间的实际用途</text>
+<text x="103.0" y="769.0" font-size="18" fill="#53635f" font-weight="400">释放时间可用于积压、质量、加班或新增</text>
+<text x="103.0" y="794.0" font-size="18" fill="#53635f" font-weight="400">业务；零散分钟是否能重新安排还要核</text>
+<text x="103.0" y="819.0" font-size="18" fill="#53635f" font-weight="400">实。</text>
+<polyline points="73.0,731.0 73.0,885.0 91.0,885.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="863.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="893.0" font-size="21" fill="#233734" font-weight="700">客户价值与重复计算</text>
+<text x="103.0" y="923.0" font-size="18" fill="#53635f" font-weight="400">体验和风险改善不必立刻变现；同一份工</text>
+<text x="103.0" y="948.0" font-size="18" fill="#53635f" font-weight="400">时不能同时全部算作工资减少与新增产</text>
+<text x="103.0" y="973.0" font-size="18" fill="#53635f" font-weight="400">能。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">财务量的边界</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="538.0" font-size="21" fill="#233734" font-weight="700">收入、费用与利润</text>
+<text x="527.75" y="568.0" font-size="18" fill="#53635f" font-weight="400">在给定确认条件和期间内比较经营结果；</text>
+<text x="527.75" y="593.0" font-size="18" fill="#53635f" font-weight="400">合同额、已收款与收入不能无条件互换。</text>
+<polyline points="497.75,530.0 497.75,659.0 515.75,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="637.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="667.0" font-size="21" fill="#233734" font-weight="700">现金收付与应收款</text>
+<text x="527.75" y="697.0" font-size="16" fill="#286f64" font-weight="400">现金流动与待收权利</text>
+<text x="527.75" y="719.0" font-size="18" fill="#53635f" font-weight="400">现金描述实际可收付资源，应收仍待客户</text>
+<text x="527.75" y="744.0" font-size="18" fill="#53635f" font-weight="400">支付；有利润不证明现在付得起新增款</text>
+<text x="527.75" y="769.0" font-size="18" fill="#53635f" font-weight="400">项。</text>
+<polyline points="497.75,659.0 497.75,835.0 515.75,835.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="813.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="843.0" font-size="21" fill="#233734" font-weight="700">报表观察角度</text>
+<text x="527.75" y="873.0" font-size="18" fill="#53635f" font-weight="400">利润表看期间经营，现金流量表看收付，</text>
+<text x="527.75" y="898.0" font-size="18" fill="#53635f" font-weight="400">资产负债表看时点资源义务；这里不展开</text>
+<text x="527.75" y="923.0" font-size="18" fill="#53635f" font-weight="400">完整记账。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">投入是否承担得起</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="538.0" font-size="21" fill="#233734" font-weight="700">全期间资源投入</text>
+<text x="952.5" y="568.0" font-size="18" fill="#53635f" font-weight="400">同期间比较建设、订阅、数据整理、维护</text>
+<text x="952.5" y="593.0" font-size="18" fill="#53635f" font-weight="400">和退出；一次费、月费和占用工时须分别</text>
+<text x="952.5" y="618.0" font-size="18" fill="#53635f" font-weight="400">说明。</text>
+<polyline points="922.5,530.0 922.5,684.0 940.5,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="662.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,670.0 941.5,792.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="692.0" font-size="21" fill="#286f64" font-weight="700">现金与工时约束</text>
+<text x="952.5" y="722.0" font-size="18" fill="#233734" font-weight="400">方案须同时符合实际预算和持续维护能</text>
+<text x="952.5" y="747.0" font-size="18" fill="#233734" font-weight="400">力；估计的工时价值不能抵消无法支付的</text>
+<text x="952.5" y="772.0" font-size="18" fill="#233734" font-weight="400">现金限制。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">决定依据与不确定性</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#233734" font-weight="700">沉没投入与退出成本</text>
+<text x="1377.25" y="568.0" font-size="18" fill="#53635f" font-weight="400">不可收回的既有投入不能独自证明应继</text>
+<text x="1377.25" y="593.0" font-size="18" fill="#53635f" font-weight="400">续；停止仍可能产生迁移、违约或支持代</text>
+<text x="1377.25" y="618.0" font-size="18" fill="#53635f" font-weight="400">价。</text>
+<polyline points="1347.25,530.0 1347.25,684.0 1365.25,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="662.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,670.0 1366.25,792.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="692.0" font-size="21" fill="#286f64" font-weight="700">敏感性分析与试用核实</text>
+<text x="1377.25" y="722.0" font-size="18" fill="#233734" font-weight="400">改变采用率、净省时等关键假设观察结论</text>
+<text x="1377.25" y="747.0" font-size="18" fill="#233734" font-weight="400">范围，再用实际运行检验工作量与收益前</text>
+<text x="1377.25" y="772.0" font-size="18" fill="#233734" font-weight="400">提。</text>
+<text x="64" y="1037.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1037.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1062.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1095.0" font-size="21" fill="#233734" font-weight="700">释放工时与工时价值</text>
+<rect x="750" y="1062.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1095.0" font-size="21" fill="#233734" font-weight="700">时间的实际用途</text>
+<polyline points="538,1099.0 736,1099.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1099.0 726.9955289764732,1103.3496553411123 726.9955289764732,1094.6503446588877" fill="#286f64"/>
+<text x="594.5" y="1087.0" font-size="17" fill="#286f64" font-weight="400">须解释去向</text>
+<text x="80" y="1145.0" font-size="18" fill="#53635f" font-weight="400">只有说明时间怎样被使用，才能连接到实际收益而非只完成乘法。</text>
+<rect x="64" y="1185.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1218.2" font-size="21" fill="#233734" font-weight="700">现金收付与应收款</text>
+<rect x="750" y="1185.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1218.2" font-size="21" fill="#233734" font-weight="700">现金与工时约束</text>
+<polyline points="538,1222.2 736,1222.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1222.2 726.9955289764732,1226.5496553411124 726.9955289764732,1217.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1210.2" font-size="17" fill="#286f64" font-weight="400">约束支付能力</text>
+<text x="80" y="1268.2" font-size="18" fill="#53635f" font-weight="400">应收未收回就不能直接用于付款，期间利润也不等于可用现金。</text>
+<rect x="64" y="1308.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1341.4" font-size="21" fill="#233734" font-weight="700">敏感性分析与试用核实</text>
+<rect x="750" y="1308.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1341.4" font-size="21" fill="#233734" font-weight="700">释放工时与工时价值</text>
+<polyline points="538,1345.4 736,1345.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1345.4 726.9955289764732,1349.7496553411124 726.9955289764732,1341.0503446588878" fill="#286f64"/>
+<text x="603.0" y="1333.4" font-size="17" fill="#286f64" font-weight="400">检查前提</text>
+<text x="80" y="1391.4" font-size="18" fill="#53635f" font-weight="400">适用范围、采用率或返工变化，都可能削弱原来漂亮的省时估计。</text>
+<polyline points="64,1449.6000000000001 1736,1449.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1479.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P07  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

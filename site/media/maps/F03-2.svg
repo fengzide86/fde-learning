@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1414" width="1800" height="1414" role="img" aria-labelledby="title">
+<title id="title">配置、网络与持久数据</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1414" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">F / 交付、观察与恢复</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">F03  配置、网络与持久数据</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">以 F02 镜像启动服务；连接 B 的 HTTP 地址与 C 的数据文件，为 F04 探针和 F05 恢复界定位置。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="718.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">一次运行如何接上请求和数据</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">文件写在哪里</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="110" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,647.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">数据库路径与挂载点（DATABASE_PATH）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">文件路径与存储映射</text>
+<text x="103.0" y="627.0" font-size="18" fill="#233734" font-weight="400">路径告诉 SQLite 打开哪处文件，挂载决定那处属于哪份存储；两者共同决定数据实际落点。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">容器可写层</text>
+<text x="103.0" y="731.0" font-size="16" fill="#286f64" font-weight="400">实例自有文件层</text>
+<text x="103.0" y="753.0" font-size="18" fill="#53635f" font-weight="400">适合可丢弃临时文件；同实例停止再启动通常保留，删除重建后不自动带回旧业务写入。</text>
+<polyline points="73.0,693.0 73.0,819.0 91.0,819.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="797.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="827.0" font-size="21" fill="#233734" font-weight="700">命名存储（named volume）</text>
+<text x="103.0" y="857.0" font-size="16" fill="#286f64" font-weight="400">独立存储对象</text>
+<text x="103.0" y="879.0" font-size="18" fill="#53635f" font-weight="400">由 Docker 管理且生命周期独立于容器的存储；重建挂回同一卷可保留数据，但不等于备份。</text>
+<polyline points="73.0,819.0 73.0,945.0 91.0,945.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="923.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="953.0" font-size="21" fill="#233734" font-weight="700">主机目录挂载（bind mount）</text>
+<text x="103.0" y="983.0" font-size="16" fill="#286f64" font-weight="400">主机路径映射</text>
+<text x="103.0" y="1005.0" font-size="18" fill="#53635f" font-weight="400">把明确主机目录映到容器路径，便于取得备份等文件；两端路径写法与访问权限须分别核对。</text>
+<text x="64" y="1069.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1069.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1094.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1127.0" font-size="21" fill="#233734" font-weight="700">数据库路径与挂载点（DATABASE_PATH）</text>
+<rect x="750" y="1094.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1127.0" font-size="21" fill="#233734" font-weight="700">命名存储（named volume）</text>
+<polyline points="538,1131.0 736,1131.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1131.0 726.9955289764732,1135.3496553411123 726.9955289764732,1126.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1119.0" font-size="17" fill="#286f64" font-weight="400">确定写入位置</text>
+<text x="80" y="1177.0" font-size="18" fill="#53635f" font-weight="400">只有数据库路径落在挂载目录中，相关写入才进入那份独立存储。</text>
+<rect x="64" y="1217.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1250.2" font-size="21" fill="#233734" font-weight="700">替换后的旧记录读回（见主图）</text>
+<rect x="750" y="1217.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1250.2" font-size="21" fill="#233734" font-weight="700">命名存储（named volume）</text>
+<polyline points="538,1254.2 736,1254.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1254.2 726.9955289764732,1258.5496553411124 726.9955289764732,1249.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1242.2" font-size="17" fill="#286f64" font-weight="400">检验持久关系</text>
+<text x="80" y="1300.2" font-size="18" fill="#53635f" font-weight="400">同时核对挂载身份与原记录，避免新空库也能创建工单带来的假象。</text>
+<polyline points="64,1358.4 1736,1358.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1388.4" font-size="17" fill="#53635f" font-weight="400">对照正文：F03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

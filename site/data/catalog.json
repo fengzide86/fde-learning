@@ -1,0 +1,4176 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "id": "00",
+      "title": "从这里开始",
+      "summary": "看清这套资料解决什么问题，找到适合自己的起点。",
+      "pdf": "media/books/00.pdf",
+      "chapters": [
+        "00"
+      ]
+    },
+    {
+      "id": "A",
+      "title": "程序与工具",
+      "summary": "让程序运行，追踪输入与结果，用测试和版本记录定位变化。",
+      "pdf": "media/books/A.pdf",
+      "chapters": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13"
+      ],
+      "guide": "content/guide-A.json",
+      "memory": "media/memory/A.md",
+      "memoryContent": "content/memory-A.json"
+    },
+    {
+      "id": "B",
+      "title": "HTTP 与 API",
+      "summary": "看清程序怎样交换消息，以及失败停在哪一层。",
+      "pdf": "media/books/B.pdf",
+      "chapters": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B05"
+      ],
+      "guide": "content/guide-B.json",
+      "memory": "media/memory/B.md",
+      "memoryContent": "content/memory-B.json"
+    },
+    {
+      "id": "C",
+      "title": "数据与日志",
+      "summary": "查询和保存事实，让修改保持一致，并找到可核对的证据。",
+      "pdf": "media/books/C.pdf",
+      "chapters": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "guide": "content/guide-C.json",
+      "memory": "media/memory/C.md",
+      "memoryContent": "content/memory-C.json"
+    },
+    {
+      "id": "D",
+      "title": "外部依赖可靠性",
+      "summary": "面对超时、重试和未知结果，选择可靠的下一步。",
+      "pdf": "media/books/D.pdf",
+      "chapters": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05"
+      ],
+      "guide": "content/guide-D.json",
+      "memory": "media/memory/D.md",
+      "memoryContent": "content/memory-D.json"
+    },
+    {
+      "id": "E",
+      "title": "受约束的 AI 应用",
+      "summary": "让生成内容接受资料、结构、权限与评测的检查。",
+      "pdf": "media/books/E.pdf",
+      "chapters": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "guide": "content/guide-E.json",
+      "memory": "media/memory/E.md",
+      "memoryContent": "content/memory-E.json"
+    },
+    {
+      "id": "F",
+      "title": "交付、观察与恢复",
+      "summary": "理解运行实例、配置和数据，验证交付与恢复是否成立。",
+      "pdf": "media/books/F.pdf",
+      "chapters": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06"
+      ],
+      "guide": "content/guide-F.json",
+      "memory": "media/memory/F.md",
+      "memoryContent": "content/memory-F.json"
+    },
+    {
+      "id": "X",
+      "title": "一套应用怎样连接起来",
+      "summary": "沿一个完整应用追踪输入、状态、外部交接和恢复证据。",
+      "pdf": "media/books/X.pdf",
+      "chapters": [
+        "X01",
+        "X02",
+        "X03",
+        "X04"
+      ],
+      "guide": "content/guide-X.json",
+      "memory": "media/memory/X.md",
+      "memoryContent": "content/memory-X.json"
+    },
+    {
+      "id": "P",
+      "title": "产品与业务",
+      "summary": "从业务事实出发选择方案，再判断改变是否真正有用。",
+      "pdf": "media/books/P.pdf",
+      "chapters": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13"
+      ],
+      "guide": "content/guide-P.json"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "00",
+      "book": "00",
+      "title": "从这里开始",
+      "pdf": "media/books/00.pdf",
+      "pdfPage": 1,
+      "content": "content/00.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "知识关系图",
+          "url": "media/maps/00.pdf"
+        }
+      ],
+      "videos": [
+        "00-01"
+      ],
+      "maps": [
+        {
+          "label": "先找到知识的位置，再看它们怎样配合",
+          "url": "media/maps/00.svg",
+          "pdf": "media/maps/00.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "book": "A",
+      "title": "这条命令会运行哪个文件？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 3,
+      "content": "content/A01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A01.pdf"
+        }
+      ],
+      "videos": [
+        "A01-01"
+      ],
+      "maps": [
+        {
+          "label": "这条命令会运行哪个文件？",
+          "url": "media/maps/A01.svg",
+          "pdf": "media/maps/A01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "book": "A",
+      "title": "输入怎样变成可继续使用的结果？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 9,
+      "content": "content/A02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A02.pdf"
+        }
+      ],
+      "videos": [
+        "A02-02"
+      ],
+      "maps": [
+        {
+          "label": "输入怎样变成可继续使用的结果？",
+          "url": "media/maps/A02.svg",
+          "pdf": "media/maps/A02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "book": "A",
+      "title": "程序为什么走这一条路？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 19,
+      "content": "content/A03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A03.pdf"
+        }
+      ],
+      "videos": [
+        "A03-01"
+      ],
+      "maps": [
+        {
+          "label": "程序为什么走这一条路？",
+          "url": "media/maps/A03.svg",
+          "pdf": "media/maps/A03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "book": "A",
+      "title": "下一次从哪里来，又在哪里停？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 30,
+      "content": "content/A04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A04.pdf"
+        }
+      ],
+      "videos": [
+        "A04-01"
+      ],
+      "maps": [
+        {
+          "label": "下一次从哪里来，又在哪里停？",
+          "url": "media/maps/A04.svg",
+          "pdf": "media/maps/A04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "book": "A",
+      "title": "出错以后，程序怎样继续？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 42,
+      "content": "content/A05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A05.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "出错以后，程序怎样继续？",
+          "url": "media/maps/A05.svg",
+          "pdf": "media/maps/A05.pdf"
+        },
+        {
+          "label": "出错以后，程序怎样继续？",
+          "url": "media/maps/A05-2.svg",
+          "pdf": "media/maps/A05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "book": "A",
+      "title": "别处的代码，怎样为当前程序工作？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 63,
+      "content": "content/A06.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A06.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A06.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "别处的代码，怎样为当前程序工作？",
+          "url": "media/maps/A06.svg",
+          "pdf": "media/maps/A06.pdf"
+        },
+        {
+          "label": "别处的代码，怎样为当前程序工作？",
+          "url": "media/maps/A06-2.svg",
+          "pdf": "media/maps/A06.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "book": "A",
+      "title": "怎样知道这次修改真的修好了？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 75,
+      "content": "content/A07.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A07.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A07.pdf"
+        }
+      ],
+      "videos": [
+        "A07-01"
+      ],
+      "maps": [
+        {
+          "label": "怎样知道这次修改真的修好了？",
+          "url": "media/maps/A07.svg",
+          "pdf": "media/maps/A07.pdf"
+        },
+        {
+          "label": "怎样知道这次修改真的修好了？",
+          "url": "media/maps/A07-2.svg",
+          "pdf": "media/maps/A07.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "book": "A",
+      "title": "程序结束后，数据怎样留下来？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 85,
+      "content": "content/A08.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A08.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A08.pdf"
+        }
+      ],
+      "videos": [
+        "A08-01"
+      ],
+      "maps": [
+        {
+          "label": "程序结束后，数据怎样留下来？",
+          "url": "media/maps/A08.svg",
+          "pdf": "media/maps/A08.pdf"
+        },
+        {
+          "label": "程序结束后，数据怎样留下来？",
+          "url": "media/maps/A08-2.svg",
+          "pdf": "media/maps/A08.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "book": "A",
+      "title": "怎样确认运行条件没有找错？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 98,
+      "content": "content/A09.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A09.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A09.pdf"
+        }
+      ],
+      "videos": [
+        "A09-01"
+      ],
+      "maps": [
+        {
+          "label": "怎样确认运行条件没有找错？",
+          "url": "media/maps/A09.svg",
+          "pdf": "media/maps/A09.pdf"
+        },
+        {
+          "label": "怎样确认运行条件没有找错？",
+          "url": "media/maps/A09-2.svg",
+          "pdf": "media/maps/A09.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "book": "A",
+      "title": "程序运行后，怎样观察和停止？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 107,
+      "content": "content/A10.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A10.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A10.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "程序运行后，怎样观察和停止？",
+          "url": "media/maps/A10.svg",
+          "pdf": "media/maps/A10.pdf"
+        },
+        {
+          "label": "程序运行后，怎样观察和停止？",
+          "url": "media/maps/A10-2.svg",
+          "pdf": "media/maps/A10.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "book": "A",
+      "title": "怎样保存和找回一份确定的代码？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 121,
+      "content": "content/A11.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A11.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A11.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "怎样保存和找回一份确定的代码？",
+          "url": "media/maps/A11.svg",
+          "pdf": "media/maps/A11.pdf"
+        },
+        {
+          "label": "怎样保存和找回一份确定的代码？",
+          "url": "media/maps/A11-2.svg",
+          "pdf": "media/maps/A11.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "book": "A",
+      "title": "离开当前环境还能重新运行吗？",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 132,
+      "content": "content/A12.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A12.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A12.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "离开当前环境还能重新运行吗？",
+          "url": "media/maps/A12.svg",
+          "pdf": "media/maps/A12.pdf"
+        }
+      ]
+    },
+    {
+      "id": "A13",
+      "book": "A",
+      "title": "把输入整理成一份可靠报告",
+      "pdf": "media/books/A.pdf",
+      "pdfPage": 145,
+      "content": "content/A13.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/A13.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/A13.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "把输入整理成一份可靠报告",
+          "url": "media/maps/A13.svg",
+          "pdf": "media/maps/A13.pdf"
+        },
+        {
+          "label": "把输入整理成一份可靠报告",
+          "url": "media/maps/A13-2.svg",
+          "pdf": "media/maps/A13.pdf"
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "book": "B",
+      "title": "两个程序怎样交换一条工单？",
+      "pdf": "media/books/B.pdf",
+      "pdfPage": 3,
+      "content": "content/B01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/B01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/B01.pdf"
+        }
+      ],
+      "videos": [
+        "B01-01"
+      ],
+      "maps": [
+        {
+          "label": "HTTP 消息与接口约定",
+          "url": "media/maps/B01.svg",
+          "pdf": "media/maps/B01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "book": "B",
+      "title": "请求怎样进入 Python 函数？",
+      "pdf": "media/books/B.pdf",
+      "pdfPage": 13,
+      "content": "content/B02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/B02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/B02.pdf"
+        }
+      ],
+      "videos": [
+        "B02-01"
+      ],
+      "maps": [
+        {
+          "label": "请求与 Python 函数",
+          "url": "media/maps/B02.svg",
+          "pdf": "media/maps/B02.pdf"
+        },
+        {
+          "label": "请求与 Python 函数",
+          "url": "media/maps/B02-2.svg",
+          "pdf": "media/maps/B02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "book": "B",
+      "title": "怎样只把可用回应交给后续代码",
+      "pdf": "media/books/B.pdf",
+      "pdfPage": 26,
+      "content": "content/B03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/B03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/B03.pdf"
+        }
+      ],
+      "videos": [
+        "B03-01"
+      ],
+      "maps": [
+        {
+          "label": "客户端与可用回应",
+          "url": "media/maps/B03.svg",
+          "pdf": "media/maps/B03.pdf"
+        },
+        {
+          "label": "客户端与可用回应",
+          "url": "media/maps/B03-2.svg",
+          "pdf": "media/maps/B03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "book": "B",
+      "title": "两次 HTTP 交换怎样找到失败位置",
+      "pdf": "media/books/B.pdf",
+      "pdfPage": 40,
+      "content": "content/B04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/B04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/B04.pdf"
+        }
+      ],
+      "videos": [
+        "B04-01",
+        "B04-04"
+      ],
+      "maps": [
+        {
+          "label": "跨服务交接与定位",
+          "url": "media/maps/B04.svg",
+          "pdf": "media/maps/B04.pdf"
+        },
+        {
+          "label": "跨服务交接与定位",
+          "url": "media/maps/B04-2.svg",
+          "pdf": "media/maps/B04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "book": "B",
+      "title": "创建之后，怎样读回同一条记录？",
+      "pdf": "media/books/B.pdf",
+      "pdfPage": 56,
+      "content": "content/B05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/B05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/B05.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "创建读回与实验验证",
+          "url": "media/maps/B05.svg",
+          "pdf": "media/maps/B05.pdf"
+        },
+        {
+          "label": "创建读回与实验验证",
+          "url": "media/maps/B05-2.svg",
+          "pdf": "media/maps/B05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "book": "C",
+      "title": "查询为什么得到这些行，而不是另外几行？",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 3,
+      "content": "content/C01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C01.pdf"
+        }
+      ],
+      "videos": [
+        "C01-03"
+      ],
+      "maps": [
+        {
+          "label": "单表查询与结果含义",
+          "url": "media/maps/C01.svg",
+          "pdf": "media/maps/C01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "book": "C",
+      "title": "多张表怎样组成一个答案，又为什么多了或少了行？",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 12,
+      "content": "content/C02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C02.pdf"
+        }
+      ],
+      "videos": [
+        "C02-02"
+      ],
+      "maps": [
+        {
+          "label": "关联、分组与行数",
+          "url": "media/maps/C02.svg",
+          "pdf": "media/maps/C02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "book": "C",
+      "title": "怎样让坏数据进不来",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 21,
+      "content": "content/C03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C03.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "数据结构与约束",
+          "url": "media/maps/C03.svg",
+          "pdf": "media/maps/C03.pdf"
+        },
+        {
+          "label": "数据结构与约束",
+          "url": "media/maps/C03-2.svg",
+          "pdf": "media/maps/C03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "book": "C",
+      "title": "几步修改怎样一起成功或撤回",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 31,
+      "content": "content/C04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C04.pdf"
+        }
+      ],
+      "videos": [
+        "C04-01"
+      ],
+      "maps": [
+        {
+          "label": "事务与完整业务写入",
+          "url": "media/maps/C04.svg",
+          "pdf": "media/maps/C04.pdf"
+        },
+        {
+          "label": "事务与完整业务写入",
+          "url": "media/maps/C04-2.svg",
+          "pdf": "media/maps/C04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "book": "C",
+      "title": "应用怎样安全读到预约，并留下能追踪的线索",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 43,
+      "content": "content/C05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C05.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "应用读库与可追踪结果",
+          "url": "media/maps/C05.svg",
+          "pdf": "media/maps/C05.pdf"
+        },
+        {
+          "label": "应用读库与可追踪结果",
+          "url": "media/maps/C05-2.svg",
+          "pdf": "media/maps/C05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "book": "C",
+      "title": "结果对了以后，怎样判断慢在哪里",
+      "pdf": "media/books/C.pdf",
+      "pdfPage": 60,
+      "content": "content/C06.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/C06.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/C06.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "查询计划与性能判断",
+          "url": "media/maps/C06.svg",
+          "pdf": "media/maps/C06.pdf"
+        },
+        {
+          "label": "查询计划与性能判断",
+          "url": "media/maps/C06-2.svg",
+          "pdf": "media/maps/C06.pdf"
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "book": "D",
+      "title": "先查清失败发生在哪里",
+      "pdf": "media/books/D.pdf",
+      "pdfPage": 3,
+      "content": "content/D01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/D01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/D01.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "依赖失败的责任位置",
+          "url": "media/maps/D01.svg",
+          "pdf": "media/maps/D01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "book": "D",
+      "title": "每次再试，都要花同一份预算",
+      "pdf": "media/books/D.pdf",
+      "pdfPage": 9,
+      "content": "content/D02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/D02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/D02.pdf"
+        }
+      ],
+      "videos": [
+        "D02-01"
+      ],
+      "maps": [
+        {
+          "label": "重试决策与总预算",
+          "url": "media/maps/D02.svg",
+          "pdf": "media/maps/D02.pdf"
+        },
+        {
+          "label": "重试决策与总预算",
+          "url": "media/maps/D02-2.svg",
+          "pdf": "media/maps/D02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "book": "D",
+      "title": "回复丢了，怎样仍只做一遍",
+      "pdf": "media/books/D.pdf",
+      "pdfPage": 14,
+      "content": "content/D03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/D03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/D03.pdf"
+        }
+      ],
+      "videos": [
+        "D03-01"
+      ],
+      "maps": [
+        {
+          "label": "幂等意图与受控恢复",
+          "url": "media/maps/D03.svg",
+          "pdf": "media/maps/D03.pdf"
+        },
+        {
+          "label": "幂等意图与受控恢复",
+          "url": "media/maps/D03-2.svg",
+          "pdf": "media/maps/D03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "book": "D",
+      "title": "不能确认时，怎样把事情接住",
+      "pdf": "media/books/D.pdf",
+      "pdfPage": 23,
+      "content": "content/D04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/D04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/D04.pdf"
+        }
+      ],
+      "videos": [
+        "D04-01"
+      ],
+      "maps": [
+        {
+          "label": "未确认结果与人工接管",
+          "url": "media/maps/D04.svg",
+          "pdf": "media/maps/D04.pdf"
+        },
+        {
+          "label": "未确认结果与人工接管",
+          "url": "media/maps/D04-2.svg",
+          "pdf": "media/maps/D04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "book": "D",
+      "title": "把调用、效果与本地状态放在一起验证",
+      "pdf": "media/books/D.pdf",
+      "pdfPage": 27,
+      "content": "content/D05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/D05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/D05.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "可靠性关系的组合验证",
+          "url": "media/maps/D05.svg",
+          "pdf": "media/maps/D05.pdf"
+        },
+        {
+          "label": "可靠性关系的组合验证",
+          "url": "media/maps/D05-2.svg",
+          "pdf": "media/maps/D05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "book": "E",
+      "title": "生成文字为什么还不是工单事实？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 3,
+      "content": "content/E01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E01.pdf"
+        }
+      ],
+      "videos": [
+        "E01-01"
+      ],
+      "maps": [
+        {
+          "label": "生成与工单事实",
+          "url": "media/maps/E01.svg",
+          "pdf": "media/maps/E01.pdf"
+        },
+        {
+          "label": "生成与工单事实",
+          "url": "media/maps/E01-2.svg",
+          "pdf": "media/maps/E01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "book": "E",
+      "title": "怎样把模型输出接成可检查的草稿？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 9,
+      "content": "content/E02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E02.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "可检查的输出合同",
+          "url": "media/maps/E02.svg",
+          "pdf": "media/maps/E02.pdf"
+        },
+        {
+          "label": "可检查的输出合同",
+          "url": "media/maps/E02-2.svg",
+          "pdf": "media/maps/E02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "book": "E",
+      "title": "两轮对话怎样保留事实，而不保留错误承诺？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 18,
+      "content": "content/E03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E03.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "对话状态与真实反馈",
+          "url": "media/maps/E03.svg",
+          "pdf": "media/maps/E03.pdf"
+        },
+        {
+          "label": "对话状态与真实反馈",
+          "url": "media/maps/E03-2.svg",
+          "pdf": "media/maps/E03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "book": "E",
+      "title": "回答怎样找得到依据？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 28,
+      "content": "content/E04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E04.pdf"
+        }
+      ],
+      "videos": [
+        "E04-01"
+      ],
+      "maps": [
+        {
+          "label": "检索与回答依据",
+          "url": "media/maps/E04.svg",
+          "pdf": "media/maps/E04.pdf"
+        },
+        {
+          "label": "检索与回答依据",
+          "url": "media/maps/E04-2.svg",
+          "pdf": "media/maps/E04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "book": "E",
+      "title": "模型建议预约以后，谁能真正执行？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 35,
+      "content": "content/E05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E05.pdf"
+        }
+      ],
+      "videos": [
+        "E05-01"
+      ],
+      "maps": [
+        {
+          "label": "工具建议与执行权限",
+          "url": "media/maps/E05.svg",
+          "pdf": "media/maps/E05.pdf"
+        },
+        {
+          "label": "工具建议与执行权限",
+          "url": "media/maps/E05-2.svg",
+          "pdf": "media/maps/E05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "book": "E",
+      "title": "改了一版，怎样知道还能用？",
+      "pdf": "media/books/E.pdf",
+      "pdfPage": 43,
+      "content": "content/E06.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/E06.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/E06.pdf"
+        }
+      ],
+      "videos": [
+        "E06-01"
+      ],
+      "maps": [
+        {
+          "label": "版本评测与采用判断",
+          "url": "media/maps/E06.svg",
+          "pdf": "media/maps/E06.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "book": "F",
+      "title": "一份程序怎样成为一次运行",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 3,
+      "content": "content/F01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F01.pdf"
+        }
+      ],
+      "videos": [
+        "F01-01"
+      ],
+      "maps": [
+        {
+          "label": "镜像、实例与进程",
+          "url": "media/maps/F01.svg",
+          "pdf": "media/maps/F01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "book": "F",
+      "title": "Dockerfile 怎样把文件变成运行模板",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 8,
+      "content": "content/F02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F02.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "构建输入与运行模板",
+          "url": "media/maps/F02.svg",
+          "pdf": "media/maps/F02.pdf"
+        },
+        {
+          "label": "构建输入与运行模板",
+          "url": "media/maps/F02-2.svg",
+          "pdf": "media/maps/F02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "book": "F",
+      "title": "请求怎样进入，数据怎样留下",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 12,
+      "content": "content/F03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F03.pdf"
+        }
+      ],
+      "videos": [
+        "F03-02"
+      ],
+      "maps": [
+        {
+          "label": "配置、网络与持久数据",
+          "url": "media/maps/F03.svg",
+          "pdf": "media/maps/F03.pdf"
+        },
+        {
+          "label": "配置、网络与持久数据",
+          "url": "media/maps/F03-2.svg",
+          "pdf": "media/maps/F03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "book": "F",
+      "title": "进程活着，为什么还不能接单",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 18,
+      "content": "content/F04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F04.pdf"
+        }
+      ],
+      "videos": [
+        "F04-01"
+      ],
+      "maps": [
+        {
+          "label": "就绪、健康与故障线索",
+          "url": "media/maps/F04.svg",
+          "pdf": "media/maps/F04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "book": "F",
+      "title": "怎样证明备份能恢复，并回到已知版本",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 23,
+      "content": "content/F05.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F05.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F05.pdf"
+        }
+      ],
+      "videos": [
+        "F05-01"
+      ],
+      "maps": [
+        {
+          "label": "备份、恢复与精确回滚",
+          "url": "media/maps/F05.svg",
+          "pdf": "media/maps/F05.pdf"
+        },
+        {
+          "label": "备份、恢复与精确回滚",
+          "url": "media/maps/F05-2.svg",
+          "pdf": "media/maps/F05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "book": "F",
+      "title": "怎样让另一位操作者完成验收与交接",
+      "pdf": "media/books/F.pdf",
+      "pdfPage": 29,
+      "content": "content/F06.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/F06.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/F06.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "验收、运行手册与交接",
+          "url": "media/maps/F06.svg",
+          "pdf": "media/maps/F06.pdf"
+        },
+        {
+          "label": "验收、运行手册与交接",
+          "url": "media/maps/F06-2.svg",
+          "pdf": "media/maps/F06.pdf"
+        }
+      ]
+    },
+    {
+      "id": "X01",
+      "book": "X",
+      "title": "一张工单怎样从文字变成可以读回的事实？",
+      "pdf": "media/books/X.pdf",
+      "pdfPage": 3,
+      "content": "content/X01.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/X01.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/X01.pdf"
+        }
+      ],
+      "videos": [
+        "X01-01",
+        "X01-02"
+      ],
+      "maps": [
+        {
+          "label": "工单、派单与政策分支",
+          "url": "media/maps/X01.svg",
+          "pdf": "media/maps/X01.pdf"
+        },
+        {
+          "label": "工单、派单与政策分支",
+          "url": "media/maps/X01-2.svg",
+          "pdf": "media/maps/X01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "X02",
+      "book": "X",
+      "title": "同样返回 503，为什么处理方式不同？",
+      "pdf": "media/books/X.pdf",
+      "pdfPage": 10,
+      "content": "content/X02.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/X02.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/X02.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "相同失败码与不同事实",
+          "url": "media/maps/X02.svg",
+          "pdf": "media/maps/X02.pdf"
+        },
+        {
+          "label": "相同失败码与不同事实",
+          "url": "media/maps/X02-2.svg",
+          "pdf": "media/maps/X02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "X03",
+      "book": "X",
+      "title": "怎样证明重放没有多建一张工单？",
+      "pdf": "media/books/X.pdf",
+      "pdfPage": 14,
+      "content": "content/X03.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/X03.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/X03.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "重放承诺与组合证据",
+          "url": "media/maps/X03.svg",
+          "pdf": "media/maps/X03.pdf"
+        },
+        {
+          "label": "重放承诺与组合证据",
+          "url": "media/maps/X03-2.svg",
+          "pdf": "media/maps/X03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "X04",
+      "book": "X",
+      "title": "换掉运行实例以后，怎样确认还能服务和恢复？",
+      "pdf": "media/books/X.pdf",
+      "pdfPage": 19,
+      "content": "content/X04.json",
+      "aids": [
+        {
+          "kind": "memory",
+          "label": "章节记忆",
+          "url": "media/memory/X04.pdf"
+        },
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/X04.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "运行身份、恢复与交接",
+          "url": "media/maps/X04.svg",
+          "pdf": "media/maps/X04.pdf"
+        },
+        {
+          "label": "运行身份、恢复与交接",
+          "url": "media/maps/X04-2.svg",
+          "pdf": "media/maps/X04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P01",
+      "book": "P",
+      "title": "客户说“太慢”，为什么不先做一个机器人？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 5,
+      "content": "content/P01.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P01.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "问题、办法与效果",
+          "url": "media/maps/P01.svg",
+          "pdf": "media/maps/P01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "book": "P",
+      "title": "同一个改变，为什么有人想要、有人不愿买单？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 8,
+      "content": "content/P02.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P02.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "角色、价值与替代",
+          "url": "media/maps/P02.svg",
+          "pdf": "media/maps/P02.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "book": "P",
+      "title": "别人说的话，怎样变成可信的判断依据？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 11,
+      "content": "content/P03.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P03.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "调查与证据范围",
+          "url": "media/maps/P03.svg",
+          "pdf": "media/maps/P03.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "book": "P",
+      "title": "一件求助怎样经过多人，最后才算办完？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 14,
+      "content": "content/P04.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P04.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "工作、状态与责任",
+          "url": "media/maps/P04.svg",
+          "pdf": "media/maps/P04.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "book": "P",
+      "title": "回复只花几分钟，为什么事情拖了几个小时？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 19,
+      "content": "content/P05.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P05.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "等待、工时与原因",
+          "url": "media/maps/P05.svg",
+          "pdf": "media/maps/P05.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "book": "P",
+      "title": "该改流程、买工具，还是自己开发？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 24,
+      "content": "content/P06.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P06.pdf"
+        }
+      ],
+      "videos": [
+        "P06-01"
+      ],
+      "maps": [
+        {
+          "label": "方案匹配与有界选择",
+          "url": "media/maps/P06.svg",
+          "pdf": "media/maps/P06.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "book": "P",
+      "title": "看起来省了人力，为什么还不能说值得投入？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 27,
+      "content": "content/P07.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P07.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "投入、现金与收益",
+          "url": "media/maps/P07.svg",
+          "pdf": "media/maps/P07.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "book": "P",
+      "title": "决定要做以后，怎样让别人做的是同一件事？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 31,
+      "content": "content/P08.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P08.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "行为约定与验收",
+          "url": "media/maps/P08.svg",
+          "pdf": "media/maps/P08.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "book": "P",
+      "title": "一张页面草图，怎样帮助别人真正完成任务？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 35,
+      "content": "content/P09.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P09.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "页面理解与错误恢复",
+          "url": "media/maps/P09.svg",
+          "pdf": "media/maps/P09.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "book": "P",
+      "title": "没有全部开发完，怎样知道值得继续？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 39,
+      "content": "content/P10.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P10.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "未知、验证与下一步",
+          "url": "media/maps/P10.svg",
+          "pdf": "media/maps/P10.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "book": "P",
+      "title": "系统能用了，为什么工作还是没有改变？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 43,
+      "content": "content/P11.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P11.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "采用、接手与暂停",
+          "url": "media/maps/P11.svg",
+          "pdf": "media/maps/P11.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "book": "P",
+      "title": "指标变好了，怎样判断业务真的变好了？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 47,
+      "content": "content/P12.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P12.pdf"
+        }
+      ],
+      "videos": [
+        "P12-01"
+      ],
+      "maps": [
+        {
+          "label": "指标、归因与业务价值",
+          "url": "media/maps/P12.svg",
+          "pdf": "media/maps/P12.pdf"
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "book": "P",
+      "title": "业务判断怎样和技术系统接成一件事？",
+      "pdf": "media/books/P.pdf",
+      "pdfPage": 51,
+      "content": "content/P13.json",
+      "aids": [
+        {
+          "kind": "map",
+          "label": "关系图",
+          "url": "media/maps/P13.pdf"
+        }
+      ],
+      "videos": [],
+      "maps": [
+        {
+          "label": "业务与技术的双向联系",
+          "url": "media/maps/P13.svg",
+          "pdf": "media/maps/P13.pdf"
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "00-01",
+      "chapter": "00",
+      "title": "算出来了，为什么关掉后又找不到？",
+      "knowledge": "结果保存",
+      "url": "media/videos/00-01.mp4",
+      "poster": "media/posters/00-01.jpg",
+      "duration": 42,
+      "subtitle": "media/subtitles/00-01.vtt",
+      "subtitleDownload": "media/subtitles/00-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.4,
+          "title": "刚才的答案去哪了"
+        },
+        {
+          "start": 5.4,
+          "end": 17.1,
+          "title": "输入计算与显示"
+        },
+        {
+          "start": 17.1,
+          "end": 21.1,
+          "title": "仅显示没有留下文件"
+        },
+        {
+          "start": 21.1,
+          "end": 31.9,
+          "title": "换成先保存再结束"
+        },
+        {
+          "start": 31.9,
+          "end": 38,
+          "title": "新运行读回"
+        },
+        {
+          "start": 38,
+          "end": 42,
+          "title": "三个不同的职责"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A01-01",
+      "chapter": "A01",
+      "title": "看着2＋3，为什么运行出来的是9？",
+      "knowledge": "运行文件",
+      "url": "media/videos/A01-01.mp4",
+      "poster": "media/posters/A01-01.jpg",
+      "duration": 55,
+      "subtitle": "media/subtitles/A01-01.vtt",
+      "subtitleDownload": "media/subtitles/A01-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 3.5,
+          "title": "看着2加3，却显示9"
+        },
+        {
+          "start": 3.5,
+          "end": 17.5,
+          "title": "数据与代码，代码到一次运行"
+        },
+        {
+          "start": 17.5,
+          "end": 24.6,
+          "title": "两份同名文件"
+        },
+        {
+          "start": 24.6,
+          "end": 38.5,
+          "title": "相对脚本目标选中右边"
+        },
+        {
+          "start": 38.5,
+          "end": 46.6,
+          "title": "改用左文件完整路径"
+        },
+        {
+          "start": 46.6,
+          "end": 55,
+          "title": "运行结束，先核对实际目标"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A02-02",
+      "chapter": "A02",
+      "title": "函数里显示了8，外面为什么拿不到8？",
+      "knowledge": "返回与显示",
+      "url": "media/videos/A02-02.mp4",
+      "poster": "media/posters/A02-02.jpg",
+      "duration": 66,
+      "subtitle": "media/subtitles/A02-02.vtt",
+      "subtitleDownload": "media/subtitles/A02-02.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 10.9,
+          "title": "准备一项翻倍工作"
+        },
+        {
+          "start": 10.9,
+          "end": 23.5,
+          "title": "调用、计算和返回"
+        },
+        {
+          "start": 23.5,
+          "end": 30.2,
+          "title": "继续加1并显示9"
+        },
+        {
+          "start": 30.2,
+          "end": 37.2,
+          "title": "只换一行，屏幕显示8"
+        },
+        {
+          "start": 37.2,
+          "end": 48.2,
+          "title": "走到末尾，默认返回None"
+        },
+        {
+          "start": 48.2,
+          "end": 56,
+          "title": "失败在加1，外层显示未执行"
+        },
+        {
+          "start": 56,
+          "end": 66,
+          "title": "两种结果交接的区别"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A03-01",
+      "chapter": "A03",
+      "title": "前面已经判成负数，最后为什么变成了正数？",
+      "knowledge": "条件分支",
+      "url": "media/videos/A03-01.mp4",
+      "poster": "media/posters/A03-01.jpg",
+      "duration": 81,
+      "subtitle": "media/subtitles/A03-01.vtt",
+      "subtitleDownload": "media/subtitles/A03-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.2,
+          "title": "规则很简单：负数、零、正数，只选一个结果。"
+        },
+        {
+          "start": 5.2,
+          "end": 10.0,
+          "title": "第一步已经选中负数，最后却显示正数。"
+        },
+        {
+          "start": 10.0,
+          "end": 15.5,
+          "title": "先看第一个 if：-2 小于 0，写入“负数”。"
+        },
+        {
+          "start": 15.5,
+          "end": 21.0,
+          "title": "下面另有一个 if，程序还会继续检查它。"
+        },
+        {
+          "start": 21.0,
+          "end": 26.8,
+          "title": "-2 不等于 0，于是进入第二个 if 的 else。"
+        },
+        {
+          "start": 26.8,
+          "end": 31.6,
+          "title": "这次赋值覆盖了前面的结果，得到“正数”。"
+        },
+        {
+          "start": 31.6,
+          "end": 37.4,
+          "title": "要在三类中只选一类，把第二个 if 改成 elif。"
+        },
+        {
+          "start": 37.4,
+          "end": 42.8,
+          "title": "-2 已选中第一段，后面的两段不会再执行。"
+        },
+        {
+          "start": 42.8,
+          "end": 56.8,
+          "title": "再用 0 和 3，分别走到“零”和“正数”。"
+        },
+        {
+          "start": 56.8,
+          "end": 66.0,
+          "title": "如果把分类放进函数，也可以确定结果后立即 return。"
+        },
+        {
+          "start": 66.0,
+          "end": 76.0,
+          "title": "多个 if 并非总是错，要看是否需要分别执行。"
+        },
+        {
+          "start": 76.0,
+          "end": 81.0,
+          "title": "这次错误来自继续执行并覆盖结果，不是第一次判断失效。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A04-01",
+      "chapter": "A04",
+      "title": "下一次数据从哪里来，循环又为什么停下？",
+      "knowledge": "循环",
+      "url": "media/videos/A04-01.mp4",
+      "poster": "media/posters/A04-01.jpg",
+      "duration": 83,
+      "subtitle": "media/subtitles/A04-01.vtt",
+      "subtitleDownload": "media/subtitles/A04-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.1,
+          "title": "依次输入 red、blue、stop，最后只留下两个词。"
+        },
+        {
+          "start": 5.1,
+          "end": 9.9,
+          "title": "用一份空列表保存收集结果，名字叫 words。"
+        },
+        {
+          "start": 9.9,
+          "end": 15.7,
+          "title": "while 每轮重新读输入，检查后再决定下一步。"
+        },
+        {
+          "start": 15.7,
+          "end": 20.5,
+          "title": "red 不是停止词，就追加到列表末尾。"
+        },
+        {
+          "start": 20.5,
+          "end": 25.6,
+          "title": "回到输入处，blue 是新输入，也被追加。"
+        },
+        {
+          "start": 25.6,
+          "end": 31.3,
+          "title": "这轮读到 stop，break 立即离开循环。"
+        },
+        {
+          "start": 31.3,
+          "end": 36.0,
+          "title": "stop 没被收集，因为追加发生在停止检查之后。"
+        },
+        {
+          "start": 36.0,
+          "end": 52.0,
+          "title": "已经有列表时，for 可以依次取出其中的项目。"
+        },
+        {
+          "start": 52.0,
+          "end": 57.4,
+          "title": "取出使用不会自动删除项目；没有下一项才结束。"
+        },
+        {
+          "start": 57.4,
+          "end": 72.5,
+          "title": "只想重复三次，也可以让 range(3) 提供 0、1、2。"
+        },
+        {
+          "start": 72.5,
+          "end": 78.0,
+          "title": "range 提供值；真正执行重复工作的是循环体。"
+        },
+        {
+          "start": 78.0,
+          "end": 83.0,
+          "title": "先问下一项从哪里来，再问什么条件让循环停下。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A08-01",
+      "chapter": "A08",
+      "title": "重复保存一次，为什么文件从两行变成四行？",
+      "knowledge": "文件写入",
+      "url": "media/videos/A08-01.mp4",
+      "poster": "media/posters/A08-01.jpg",
+      "duration": 75.5,
+      "subtitle": "media/subtitles/A08-01.vtt",
+      "subtitleDownload": "media/subtitles/A08-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.1,
+          "title": "同样保存两行词，第二次文件里却变成四行。"
+        },
+        {
+          "start": 5.1,
+          "end": 10.7,
+          "title": "先看写入方式：a 表示追加到已有内容后面。"
+        },
+        {
+          "start": 10.7,
+          "end": 25.0,
+          "title": "第一次文件还不存在，追加写出 red 和 blue。"
+        },
+        {
+          "start": 25.0,
+          "end": 32.0,
+          "title": "第二次仍用追加，就在这两行后面再写两行。"
+        },
+        {
+          "start": 32.0,
+          "end": 37.4,
+          "title": "如果目标是保留每次记录，这正是追加的作用。"
+        },
+        {
+          "start": 37.4,
+          "end": 43.2,
+          "title": "如果目标只是当前清单，就要重新写出当前两行。"
+        },
+        {
+          "start": 43.2,
+          "end": 49.1,
+          "title": "w 成功打开时就截断旧内容，不是写完才替换。"
+        },
+        {
+          "start": 49.1,
+          "end": 59.0,
+          "title": "再写入两行并关闭，新一次读取仍是这两行。"
+        },
+        {
+          "start": 59.0,
+          "end": 64.8,
+          "title": "with 会在离开使用范围时关闭文件，不自动撤销写入。"
+        },
+        {
+          "start": 64.8,
+          "end": 70.0,
+          "title": "只改内存里的列表，不写入，磁盘内容不会自己更新。"
+        },
+        {
+          "start": 70.0,
+          "end": 75.5,
+          "title": "先确定要累积历史还是替换清单，再选写入方式。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A07-01",
+      "chapter": "A07",
+      "title": "正方形测对了，为什么长方形仍然算错？",
+      "knowledge": "测试",
+      "url": "media/videos/A07-01.mp4",
+      "poster": "media/posters/A07-01.jpg",
+      "duration": 78.7,
+      "subtitle": "media/subtitles/A07-01.vtt",
+      "subtitleDownload": "media/subtitles/A07-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.2,
+          "title": "正方形算对了，为什么长方形仍然不对？"
+        },
+        {
+          "start": 5.2,
+          "end": 11.0,
+          "title": "预期结果来自四条边，不能抄程序当前的输出。"
+        },
+        {
+          "start": 11.0,
+          "end": 16.5,
+          "title": "这个函数误把第二个高，又写成了宽。"
+        },
+        {
+          "start": 16.5,
+          "end": 22.0,
+          "title": "输入 3、3 时，两种长度一样，错误刚好藏住了。"
+        },
+        {
+          "start": 22.0,
+          "end": 28.1,
+          "title": "输入 3、5，实际还是 12，规则要求的却是 16。"
+        },
+        {
+          "start": 28.1,
+          "end": 37.0,
+          "title": "assert 检查实际值是否等于预期；它不会替你修代码。"
+        },
+        {
+          "start": 37.0,
+          "end": 49.0,
+          "title": "pytest 负责找到这些测试、执行，并汇报结果。"
+        },
+        {
+          "start": 49.0,
+          "end": 56.0,
+          "title": "先确认传入的宽高没错，再把公式中的高接回来。"
+        },
+        {
+          "start": 56.0,
+          "end": 61.7,
+          "title": "再跑两条测试，12 和 16 都应符合规则。"
+        },
+        {
+          "start": 61.7,
+          "end": 73.0,
+          "title": "如果只补一句 return 16，长方形会过，正方形却坏了。"
+        },
+        {
+          "start": 73.0,
+          "end": 78.7,
+          "title": "测试证明的是这些输入和断言，边界仍要按需求补。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "A09-01",
+      "chapter": "A09",
+      "title": "明明装过这个包，为什么当前程序仍然找不到？",
+      "knowledge": "运行环境",
+      "url": "media/videos/A09-01.mp4",
+      "poster": "media/posters/A09-01.jpg",
+      "duration": 72.1,
+      "subtitle": "media/subtitles/A09-01.vtt",
+      "subtitleDownload": "media/subtitles/A09-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "同一份程序换个 Python，刚才的包就找不到了。"
+        },
+        {
+          "start": 5.5,
+          "end": 11.4,
+          "title": "包是准备借用的代码；运行它的是本次启动的解释器。"
+        },
+        {
+          "start": 11.4,
+          "end": 27.0,
+          "title": "先分别认出脚本、当前目录、解释器、实际导入的包。"
+        },
+        {
+          "start": 27.0,
+          "end": 33.0,
+          "title": "环境一已有 HTTPX，环境二没有。"
+        },
+        {
+          "start": 33.0,
+          "end": 41.0,
+          "title": "用环境一的 Python 运行，能导入并找到包的文件。"
+        },
+        {
+          "start": 41.0,
+          "end": 49.0,
+          "title": "命令改用环境二，脚本没变，导入却失败。"
+        },
+        {
+          "start": 49.0,
+          "end": 54.8,
+          "title": "所以“装过”还要接着问：装给哪一个解释器？"
+        },
+        {
+          "start": 54.8,
+          "end": 60.8,
+          "title": "编辑器选的环境，也不自动等于另一个终端正在用的环境。"
+        },
+        {
+          "start": 60.8,
+          "end": 66.6,
+          "title": "先查当前运行身份，再决定是否为它补依赖。"
+        },
+        {
+          "start": 66.6,
+          "end": 72.1,
+          "title": "这支只验证导入，没有发送任何 HTTP 请求。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "B01-01",
+      "chapter": "B01",
+      "title": "本地的一段文字，怎样交给另一个程序计算？",
+      "knowledge": "请求响应",
+      "url": "media/videos/B01-01.mp4",
+      "poster": "media/posters/B01-01.jpg",
+      "duration": 76.4,
+      "subtitle": "media/subtitles/B01-01.vtt",
+      "subtitleDownload": "media/subtitles/B01-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "title": "这里有文字 cat，另一个程序负责计算它的长度。"
+        },
+        {
+          "start": 5.0,
+          "end": 10.7,
+          "title": "服务不能直接读取调用方的变量，要先收到消息。"
+        },
+        {
+          "start": 10.7,
+          "end": 16.4,
+          "title": "本例用非空英文词，按字符数返回长度和分类。"
+        },
+        {
+          "start": 16.4,
+          "end": 21.9,
+          "title": "地址告诉消息去哪：counter.example 是服务位置。"
+        },
+        {
+          "start": 21.9,
+          "end": 27.3,
+          "title": "路径 /length 选入口，POST 表示本次请求的动作。"
+        },
+        {
+          "start": 27.3,
+          "end": 33.1,
+          "title": "正文用JSON表示这次输入，里面放文字cat。"
+        },
+        {
+          "start": 33.1,
+          "end": 38.9,
+          "title": "内容类型声明正文采用JSON格式；它不是程序名。"
+        },
+        {
+          "start": 38.9,
+          "end": 44.3,
+          "title": "这份请求发出以后，服务才能读到自己的输入值。"
+        },
+        {
+          "start": 44.3,
+          "end": 49.3,
+          "title": "服务数出 3 个字符，按约定分到 short。"
+        },
+        {
+          "start": 49.3,
+          "end": 54.9,
+          "title": "服务形成一份回应：状态 200，正文带回这两个结果。"
+        },
+        {
+          "start": 54.9,
+          "end": 60.5,
+          "title": "调用方收到后，解析并检查，才继续使用数值 3。"
+        },
+        {
+          "start": 60.5,
+          "end": 65.9,
+          "title": "交换、内容格式和接口约定，各自承担不同职责。"
+        },
+        {
+          "start": 65.9,
+          "end": 71.7,
+          "title": "这里的 200 只是一道条件，内容仍要符合约定。"
+        },
+        {
+          "start": 71.7,
+          "end": 76.4,
+          "title": "结果3回到调用方，这一次往返才完整。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "B02-01",
+      "chapter": "B02",
+      "title": "请求没写Python函数名，服务怎么知道调用谁？",
+      "knowledge": "路由校验",
+      "url": "media/videos/B02-01.mp4",
+      "poster": "media/posters/B02-01.jpg",
+      "duration": 96.5,
+      "subtitle": "media/subtitles/B02-01.vtt",
+      "subtitleDownload": "media/subtitles/B02-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.2,
+          "title": "请求只写了地址和输入，没写函数名，谁来接？"
+        },
+        {
+          "start": 5.2,
+          "end": 11.0,
+          "title": "服务登记的是请求动作和路径，一起决定入口。"
+        },
+        {
+          "start": 11.0,
+          "end": 16.8,
+          "title": "Uvicorn 接收连接，再把请求交给 FastAPI 应用。"
+        },
+        {
+          "start": 16.8,
+          "end": 22.6,
+          "title": "FastAPI 按登记选中函数，并先整理、检查输入。"
+        },
+        {
+          "start": 22.6,
+          "end": 28.4,
+          "title": "路径里的 3 成为 number；问号后的 1 成为 extra。"
+        },
+        {
+          "start": 28.4,
+          "end": 44.0,
+          "title": "正文的 factor 是倍数，本例要求严格的正整数。"
+        },
+        {
+          "start": 44.0,
+          "end": 49.5,
+          "title": "三份输入都准备好，函数才计算 3 × 2 + 1。"
+        },
+        {
+          "start": 49.5,
+          "end": 57.0,
+          "title": "return 交回结果，框架再把它变成 JSON 回应。"
+        },
+        {
+          "start": 57.0,
+          "end": 71.0,
+          "title": "把倍数写成文字或布尔值，会在进入函数前被拒绝。"
+        },
+        {
+          "start": 71.0,
+          "end": 85.0,
+          "title": "文档页也是按这些声明生成，展示可填写的入口和字段。"
+        },
+        {
+          "start": 85.0,
+          "end": 90.8,
+          "title": "文档能显示，不代表这条请求已经实际成功。"
+        },
+        {
+          "start": 90.8,
+          "end": 96.5,
+          "title": "请求找到的是登记入口；函数名只是应用内部的名字。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "B04-01",
+      "chapter": "B04",
+      "title": "图已经好了，网页怎么还在等？",
+      "knowledge": "两段请求",
+      "url": "media/videos/B04-01.mp4",
+      "poster": "media/posters/B04-01.jpg",
+      "duration": 45,
+      "subtitle": "media/subtitles/B04-01.vtt",
+      "subtitleDownload": "media/subtitles/B04-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 4.2,
+          "title": "完成了，网页却还在等"
+        },
+        {
+          "start": 4.2,
+          "end": 9.2,
+          "title": "回到那次点击"
+        },
+        {
+          "start": 9.2,
+          "end": 14.1,
+          "title": "网页请求网站"
+        },
+        {
+          "start": 14.1,
+          "end": 19.3,
+          "title": "网站新发请求②"
+        },
+        {
+          "start": 19.3,
+          "end": 25.3,
+          "title": "图片服务处理与构图回位"
+        },
+        {
+          "start": 25.3,
+          "end": 30.2,
+          "title": "结果先回网站"
+        },
+        {
+          "start": 30.2,
+          "end": 36.6,
+          "title": "网站回应，网页显示"
+        },
+        {
+          "start": 36.6,
+          "end": 45,
+          "title": "配对收束"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "B04-04",
+      "chapter": "B04",
+      "title": "一个功能，什么时候值得交给另一个程序？",
+      "knowledge": "服务拆分",
+      "url": "media/videos/B04-04.mp4",
+      "poster": "media/posters/B04-04.jpg",
+      "duration": 96.8,
+      "subtitle": "media/subtitles/B04-04.vtt",
+      "subtitleDownload": "media/subtitles/B04-04.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.4,
+          "title": "同样给图片去背景，一定要拆成两个程序吗？"
+        },
+        {
+          "start": 5.4,
+          "end": 11.2,
+          "title": "先给条件：现成的本地库已经满足这家网站的效果要求。"
+        },
+        {
+          "start": 11.2,
+          "end": 16.9,
+          "title": "如果只有这一个使用方，程序内部调用就可能足够。"
+        },
+        {
+          "start": 16.9,
+          "end": 29.0,
+          "title": "把它独立出去，会新增地址、消息约定和运行维护。"
+        },
+        {
+          "start": 29.0,
+          "end": 42.0,
+          "title": "网络还会带来等待、发送失败和结果检查。"
+        },
+        {
+          "start": 42.0,
+          "end": 57.0,
+          "title": "换个条件：多个应用确实需要同一项处理能力。"
+        },
+        {
+          "start": 57.0,
+          "end": 62.7,
+          "title": "或者这项工作需要独立安排资源，分开可能更有价值。"
+        },
+        {
+          "start": 62.7,
+          "end": 70.0,
+          "title": "但这些收益仍要和传输、维护、可靠性成本一起比较。"
+        },
+        {
+          "start": 70.0,
+          "end": 91.0,
+          "title": "本地函数调用和跨进程请求，不能画成同一种动作。"
+        },
+        {
+          "start": 91.0,
+          "end": 96.8,
+          "title": "先看需求和约束，再决定拆分；不是程序越多越好。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "B03-01",
+      "chapter": "B03",
+      "title": "收到了200，为什么还不能把数据交给下一步？",
+      "knowledge": "响应校验",
+      "url": "media/videos/B03-01.mp4",
+      "poster": "media/posters/B03-01.jpg",
+      "duration": 87.5,
+      "subtitle": "media/subtitles/B03-01.vtt",
+      "subtitleDownload": "media/subtitles/B03-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.2,
+          "title": "收到 200，还不能直接把正文当作长度使用。"
+        },
+        {
+          "start": 5.2,
+          "end": 14.5,
+          "title": "本例要求状态200、JSON对象和非负整数长度。"
+        },
+        {
+          "start": 14.5,
+          "end": 20.1,
+          "title": "Response 装着状态、头和正文，不是已经选好的业务结果。"
+        },
+        {
+          "start": 20.1,
+          "end": 25.7,
+          "title": "先看状态：500 即使附带 JSON 错误说明，也不能当结果。"
+        },
+        {
+          "start": 25.7,
+          "end": 31.3,
+          "title": "没有取得完整回应时，要先查连接或等待失败。"
+        },
+        {
+          "start": 31.3,
+          "end": 37.1,
+          "title": "状态通过，再看正文是否声明使用JSON格式。"
+        },
+        {
+          "start": 37.1,
+          "end": 42.9,
+          "title": "声明是 JSON，也可能装着无法解析的坏文字。"
+        },
+        {
+          "start": 42.9,
+          "end": 48.6,
+          "title": "解析成功也可能得到列表 [3]，不是约定的对象。"
+        },
+        {
+          "start": 48.6,
+          "end": 60.4,
+          "title": "对象里的 \"3\" 是文字；true 也不是本合同的整数。"
+        },
+        {
+          "start": 60.4,
+          "end": 66.0,
+          "title": "整数还要满足范围；负数同样不能交给下一步。"
+        },
+        {
+          "start": 66.0,
+          "end": 71.4,
+          "title": "只有这些检查都通过，才交回数值 3。"
+        },
+        {
+          "start": 71.4,
+          "end": 77.3,
+          "title": "读已有回应的文字或解析JSON，不会自动再发请求。"
+        },
+        {
+          "start": 77.3,
+          "end": 87.5,
+          "title": "查最早不符合约定的位置，就不会把坏内容传得更远。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "C01-03",
+      "chapter": "C01",
+      "title": "已经能存文件，为什么还需要数据库和表？",
+      "knowledge": "数据表",
+      "url": "media/videos/C01-03.mp4",
+      "poster": "media/posters/C01-03.jpg",
+      "duration": 65,
+      "subtitle": "media/subtitles/C01-03.vtt",
+      "subtitleDownload": "media/subtitles/C01-03.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "title": "小店把订单100写进文件：买商品10，两支笔"
+        },
+        {
+          "start": 5.0,
+          "end": 10.0,
+          "title": "只保存这件小事，文件已经可以完成。"
+        },
+        {
+          "start": 10.0,
+          "end": 16.0,
+          "title": "现在要按编号找订单，还要只改一处商品名称。"
+        },
+        {
+          "start": 16.0,
+          "end": 22.0,
+          "title": "把商品放一张表，把订单明细放另一张表。"
+        },
+        {
+          "start": 22.0,
+          "end": 27.0,
+          "title": "一行是一条记录，一列表示同一种信息。"
+        },
+        {
+          "start": 27.0,
+          "end": 32.0,
+          "title": "明细里的商品10，指向商品表中的10。"
+        },
+        {
+          "start": 32.0,
+          "end": 37.0,
+          "title": "把商品名改成“水性笔”，明细仍保存商品10。"
+        },
+        {
+          "start": 37.0,
+          "end": 48.5,
+          "title": "数据库还能执行写好的规则，例如数量必须为正整"
+        },
+        {
+          "start": 48.5,
+          "end": 54.0,
+          "title": "程序决定谁能下单；数据库守住已声明的数据规则"
+        },
+        {
+          "start": 54.0,
+          "end": 60.0,
+          "title": "数据库也能在程序内部工作，SQLite仍可把"
+        },
+        {
+          "start": 60.0,
+          "end": 65.0,
+          "title": "选择它，是为了组织、查找和约束这些关系。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "C02-02",
+      "chapter": "C02",
+      "title": "两笔销售为什么被数成四笔",
+      "knowledge": "关联计数",
+      "url": "media/videos/C02-02.mp4",
+      "poster": "media/posters/C02-02.jpg",
+      "duration": 61.5,
+      "subtitle": "media/subtitles/C02-02.vtt",
+      "subtitleDownload": "media/subtitles/C02-02.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "东店卖了两笔：20元和30元。我们想算这家店"
+        },
+        {
+          "start": 5.5,
+          "end": 10.5,
+          "title": "还要求门店带“文具”或“可配送”标签。东店两"
+        },
+        {
+          "start": 10.5,
+          "end": 15.5,
+          "title": "按门店编号把标签和销售一起连接，会生成四个组"
+        },
+        {
+          "start": 15.5,
+          "end": 20.5,
+          "title": "每笔销售出现两次，所以直接求和变成100元。"
+        },
+        {
+          "start": 20.5,
+          "end": 25.5,
+          "title": "新增加的是配对，不是销售。原始事实仍是两笔5"
+        },
+        {
+          "start": 25.5,
+          "end": 31.5,
+          "title": "这里只需知道门店有没有目标标签，不需要每个标"
+        },
+        {
+          "start": 31.5,
+          "end": 40.5,
+          "title": "用EXISTS筛出门店，再汇总原销售，得到5"
+        },
+        {
+          "start": 40.5,
+          "end": 45.5,
+          "title": "若要列每个标签下的销售，四个组合就可能正合适"
+        },
+        {
+          "start": 45.5,
+          "end": 51.5,
+          "title": "再换个例子：两笔都卖20元，真实合计是40元"
+        },
+        {
+          "start": 51.5,
+          "end": 57.0,
+          "title": "对金额去重求和只得20。金额相同，不代表同一"
+        },
+        {
+          "start": 57.0,
+          "end": 61.5,
+          "title": "先找哪一步重复了身份，再决定怎样统计。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "C04-01",
+      "chapter": "C04",
+      "title": "订单第三步失败，库存能真正退回吗",
+      "knowledge": "事务",
+      "url": "media/videos/C04-01.mp4",
+      "poster": "media/posters/C04-01.jpg",
+      "duration": 78,
+      "subtitle": "media/subtitles/C04-01.vtt",
+      "subtitleDownload": "media/subtitles/C04-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "title": "买两支笔，要一起留下订单、扣库存、记创建事件"
+        },
+        {
+          "start": 5.0,
+          "end": 10.0,
+          "title": "先开始事务，再保存订单100。此时还没提交。"
+        },
+        {
+          "start": 10.0,
+          "end": 15.0,
+          "title": "库存3减2变1；更新行数必须是1。"
+        },
+        {
+          "start": 15.0,
+          "end": 29.0,
+          "title": "创建事件也写好，提交后再读回三项结果。"
+        },
+        {
+          "start": 29.0,
+          "end": 36.0,
+          "title": "现在从同样初态重来，只把最后事件写成非法的o"
+        },
+        {
+          "start": 36.0,
+          "end": 42.0,
+          "title": "CHECK拒绝第三步，但这不等于前两步已经撤"
+        },
+        {
+          "start": 42.0,
+          "end": 49.0,
+          "title": "应用捕获错误，明确执行ROLLBACK。"
+        },
+        {
+          "start": 49.0,
+          "end": 57.0,
+          "title": "读回库存3、订单零行、事件零行，才有撤回证据"
+        },
+        {
+          "start": 57.0,
+          "end": 72.0,
+          "title": "若一开始只剩一支，扣库存更新零行，也必须撤回"
+        },
+        {
+          "start": 72.0,
+          "end": 78.0,
+          "title": "事务能管这些本地写入，不能顺便撤销已经发生的"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "D02-01",
+      "chapter": "D02",
+      "title": "第二次查库存，还剩多少等待时间",
+      "knowledge": "重试预算",
+      "url": "media/videos/D02-01.mp4",
+      "poster": "media/posters/D02-01.jpg",
+      "duration": 61,
+      "subtitle": "media/subtitles/D02-01.vtt",
+      "subtitleDownload": "media/subtitles/D02-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "title": "查图书库存，不会创建借阅。第一次超时，要不要"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "本例允许超时后再试：总共两次，每次最多1秒。"
+        },
+        {
+          "start": 11.0,
+          "end": 16.0,
+          "title": "第一次等到1秒超时，总预算还剩1.5秒。"
+        },
+        {
+          "start": 16.0,
+          "end": 21.0,
+          "title": "间隔再花0.2秒，第二次开始时只剩1.3秒。"
+        },
+        {
+          "start": 21.0,
+          "end": 26.0,
+          "title": "第二次上限取较小值：1秒和剩余1.3秒，取1"
+        },
+        {
+          "start": 26.0,
+          "end": 31.0,
+          "title": "它用0.1秒回了合法库存3，总耗时1.3秒。"
+        },
+        {
+          "start": 31.0,
+          "end": 41.0,
+          "title": "换个分支：两次都超时，到2.2秒就因次数用完"
+        },
+        {
+          "start": 41.0,
+          "end": 49.0,
+          "title": "若总预算只有1.1秒，首试后连0.2秒间隔都"
+        },
+        {
+          "start": 49.0,
+          "end": 54.5,
+          "title": "先检查剩余预算和次数，才决定是否发下一次请求"
+        },
+        {
+          "start": 54.5,
+          "end": 61.0,
+          "title": "这些数字解释策略；真实调用还需要能落实超时和"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "D03-01",
+      "chapter": "D03",
+      "title": "保存已经成功，回复丢了会不会再存一份",
+      "knowledge": "幂等",
+      "url": "media/videos/D03-01.mp4",
+      "poster": "media/posters/D03-01.jpg",
+      "duration": 58,
+      "subtitle": "media/subtitles/D03-01.vtt",
+      "subtitleDownload": "media/subtitles/D03-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "要新建一条备忘录：周五购物，牛奶2瓶。"
+        },
+        {
+          "start": 5.5,
+          "end": 11.5,
+          "title": "先保存这次意图、原文和稳定编号，再发请求。"
+        },
+        {
+          "start": 11.5,
+          "end": 17.5,
+          "title": "这项服务承诺：同账号24小时内，同编号同内容"
+        },
+        {
+          "start": 17.5,
+          "end": 22.5,
+          "title": "远端已经保存N201，但回来的回复丢了。"
+        },
+        {
+          "start": 22.5,
+          "end": 27.5,
+          "title": "本地超时只能说明没确认，不能说明远端没保存。"
+        },
+        {
+          "start": 27.5,
+          "end": 33.0,
+          "title": "恢复时，从原记录取回同样的编号和完整内容。"
+        },
+        {
+          "start": 33.0,
+          "end": 42.5,
+          "title": "服务找到已有N201，交回它，不再新建一条。"
+        },
+        {
+          "start": 42.5,
+          "end": 48.0,
+          "title": "换一个新编号，可能被当作新事情，再生成N20"
+        },
+        {
+          "start": 48.0,
+          "end": 53.0,
+          "title": "任意加一个header并不会自动获得这种保证"
+        },
+        {
+          "start": 53.0,
+          "end": 58.0,
+          "title": "要重试的是同一件事，必须守住身份、内容和有效"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "D04-01",
+      "chapter": "D04",
+      "title": "自动保存没确认，怎样留下真正能接手的下一步",
+      "knowledge": "人工接续",
+      "url": "media/videos/D04-01.mp4",
+      "poster": "media/posters/D04-01.jpg",
+      "duration": 107.0,
+      "subtitle": "media/subtitles/D04-01.vtt",
+      "subtitleDownload": "media/subtitles/D04-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 8,
+          "title": "本地内容与远端未知"
+        },
+        {
+          "start": 8,
+          "end": 15,
+          "title": "一句转人工与空队列"
+        },
+        {
+          "start": 15,
+          "end": 25,
+          "title": "关联原记录与待核对原因"
+        },
+        {
+          "start": 25,
+          "end": 36,
+          "title": "观察时间、负责角色与处理入口"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "title": "完整草稿"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "title": "两项事务内修改"
+        },
+        {
+          "start": 51,
+          "end": 56,
+          "title": "共同提交"
+        },
+        {
+          "start": 56,
+          "end": 63,
+          "title": "分别读回确认"
+        },
+        {
+          "start": 63,
+          "end": 70,
+          "title": "诚实页面"
+        },
+        {
+          "start": 70,
+          "end": 79,
+          "title": "失败分支的拒绝"
+        },
+        {
+          "start": 79,
+          "end": 87,
+          "title": "回滚并读回"
+        },
+        {
+          "start": 87,
+          "end": 98,
+          "title": "获权后找回原记录"
+        },
+        {
+          "start": 98,
+          "end": 107,
+          "title": "接续材料与真实处理的边界"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "E01-01",
+      "chapter": "E01",
+      "title": "摘要多了一句结论，事实也跟着变了吗",
+      "knowledge": "事实核对",
+      "url": "media/videos/E01-01.mp4",
+      "poster": "media/posters/E01-01.jpg",
+      "duration": 63,
+      "subtitle": "media/subtitles/E01-01.vtt",
+      "subtitleDownload": "media/subtitles/E01-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "读者说：“大厅自助借书机显示离线。我还没有联系工作人员。”"
+        },
+        {
+          "start": 5.5,
+          "end": 10.5,
+          "title": "我们只要一句摘要，帮助馆员快速看清情况。"
+        },
+        {
+          "start": 10.5,
+          "end": 16.0,
+          "title": "模型根据输入与训练得到的模式生成候选，不是在"
+        },
+        {
+          "start": 16.0,
+          "end": 22.0,
+          "title": "候选甲：“读者报告借书机离线，尚未联系工作人"
+        },
+        {
+          "start": 22.0,
+          "end": 28.0,
+          "title": "候选乙却写：“路由器故障已确认，工作人员正在"
+        },
+        {
+          "start": 28.0,
+          "end": 33.0,
+          "title": "句子很顺，也还是新增了原文没有的事实。"
+        },
+        {
+          "start": 33.0,
+          "end": 38.0,
+          "title": "拒绝这份摘要，不会把登记状态从待处理改成已修"
+        },
+        {
+          "start": 38.0,
+          "end": 43.5,
+          "title": "电话与这次摘要无关，就不必发给生成程序。"
+        },
+        {
+          "start": 43.5,
+          "end": 58.5,
+          "title": "展示原文用模板，数反馈用计数；整理措辞才考虑"
+        },
+        {
+          "start": 58.5,
+          "end": 63.0,
+          "title": "生成的是建议；事实和动作，仍要由各自证据负责"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "E04-01",
+      "chapter": "E04",
+      "title": "回答续借问题，怎样把条件一起带过来",
+      "knowledge": "检索",
+      "url": "media/videos/E04-01.mp4",
+      "poster": "media/posters/E04-01.jpg",
+      "duration": 59.5,
+      "subtitle": "media/subtitles/E04-01.vtt",
+      "subtitleDownload": "media/subtitles/E04-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.0,
+          "title": "读者问：“这本书能续借多久？”先看适用的馆规"
+        },
+        {
+          "start": 5.0,
+          "end": 12.0,
+          "title": "R1规定：未逾期、无人预约，才能续借一次，延"
+        },
+        {
+          "start": 12.0,
+          "end": 17.0,
+          "title": "只截“延长7天”，会把决定能不能续借的条件切"
+        },
+        {
+          "start": 17.0,
+          "end": 22.0,
+          "title": "所以这次把完整续借规则放在同一片段里。"
+        },
+        {
+          "start": 22.0,
+          "end": 27.5,
+          "title": "旧版R0已停用，R2只给馆员看，都不进入普通"
+        },
+        {
+          "start": 27.5,
+          "end": 33.0,
+          "title": "在获准范围里找相关资料，再把实际原文交给模型"
+        },
+        {
+          "start": 33.0,
+          "end": 43.5,
+          "title": "回答应保留全部条件，并让引用能追回R1。"
+        },
+        {
+          "start": 43.5,
+          "end": 48.5,
+          "title": "规则允许，不等于这位读者现在已经符合条件。"
+        },
+        {
+          "start": 48.5,
+          "end": 54.0,
+          "title": "要确认资格，必须按权限读取这本书当前的借阅记"
+        },
+        {
+          "start": 54.0,
+          "end": 59.5,
+          "title": "检索补原文，生成组织回答；两步都不能替代条件"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "E05-01",
+      "chapter": "E05",
+      "title": "用户同意修改以后，为什么还要再查一次",
+      "knowledge": "授权检查",
+      "url": "media/videos/E05-01.mp4",
+      "poster": "media/posters/E05-01.jpg",
+      "duration": 65.5,
+      "subtitle": "media/subtitles/E05-01.vtt",
+      "subtitleDownload": "media/subtitles/E05-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "共享清单L7里，牛奶数量1，版本4；甲现在有"
+        },
+        {
+          "start": 5.5,
+          "end": 10.5,
+          "title": "模型提出把牛奶改成2，这时还没有改动清单。"
+        },
+        {
+          "start": 10.5,
+          "end": 16.0,
+          "title": "应用先查允许的动作和字段，再展示具体的1变2"
+        },
+        {
+          "start": 16.0,
+          "end": 22.0,
+          "title": "用户确认绑定这份对象、数值和版本，不能换内容"
+        },
+        {
+          "start": 22.0,
+          "end": 27.0,
+          "title": "但确认以后，甲的编辑权限可能被撤销。"
+        },
+        {
+          "start": 27.0,
+          "end": 33.0,
+          "title": "真正执行前，重新核对可信身份、目标、权限和版"
+        },
+        {
+          "start": 33.0,
+          "end": 37.5,
+          "title": "这次应拒绝，读回数量仍是1。"
+        },
+        {
+          "start": 37.5,
+          "end": 42.5,
+          "title": "现在回到原初态，换成权限和版本都仍有效的分支"
+        },
+        {
+          "start": 42.5,
+          "end": 48.5,
+          "title": "拥有数据的服务，要把检查与更新放在同一受控操"
+        },
+        {
+          "start": 48.5,
+          "end": 60.0,
+          "title": "随后读回数量2、版本5和对应收据，才报告这次"
+        },
+        {
+          "start": 60.0,
+          "end": 65.5,
+          "title": "确认代表同意这份动作；当前条件还要在执行前核"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "E06-01",
+      "chapter": "E06",
+      "title": "新版本更快了，就说明改得更好吗？",
+      "knowledge": "评测",
+      "url": "media/videos/E06-01.mp4",
+      "poster": "media/posters/E06-01.jpg",
+      "duration": 59,
+      "subtitle": "media/subtitles/E06-01.vtt",
+      "subtitleDownload": "media/subtitles/E06-01.srt",
+      "scenes": [
+        {
+          "start": 0.0,
+          "end": 5.5,
+          "title": "新版回答更快，是否值得替换？先定两条不能丢的"
+        },
+        {
+          "start": 5.5,
+          "end": 11.0,
+          "title": "有权用户改2为3，应成功；无权用户同样的建议"
+        },
+        {
+          "start": 11.0,
+          "end": 16.0,
+          "title": "版本甲：合法写成3，无权保持2。"
+        },
+        {
+          "start": 16.0,
+          "end": 21.0,
+          "title": "版本乙更快，但全部拒绝，合法用户也改不了。"
+        },
+        {
+          "start": 21.0,
+          "end": 26.0,
+          "title": "没有越权，不代表这项服务还能用。速度也补不上"
+        },
+        {
+          "start": 26.0,
+          "end": 31.5,
+          "title": "再看版本丙：合法成功，但无权请求也把2改成了"
+        },
+        {
+          "start": 31.5,
+          "end": 36.5,
+          "title": "这类关键边界失败，不能被其他平均表现抵消。"
+        },
+        {
+          "start": 36.5,
+          "end": 42.5,
+          "title": "比较的还不只是模型：提示、资料、代码和配置也"
+        },
+        {
+          "start": 42.5,
+          "end": 54.0,
+          "title": "找到最早偏离的检查位置，修好后再跑受影响的代"
+        },
+        {
+          "start": 54.0,
+          "end": 59.0,
+          "title": "这两例教的是判断方法，不足以证明整套系统永远"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "F01-01",
+      "chapter": "F01",
+      "title": "同一镜像启动两次，停掉一次会留下什么？",
+      "knowledge": "容器",
+      "url": "media/videos/F01-01.mp4",
+      "poster": "media/posters/F01-01.jpg",
+      "duration": 70,
+      "subtitle": "media/subtitles/F01-01.vtt",
+      "subtitleDownload": "media/subtitles/F01-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "同一份程序启动两次，停掉一个会影响谁？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "这个实验没有业务数据，也没有挂载外部目录。"
+        },
+        {
+          "start": 11.0,
+          "end": 17.0,
+          "title": "命令入口把请求交给后台；两边都要能回应。"
+        },
+        {
+          "start": 17.0,
+          "end": 23.0,
+          "title": "镜像保存运行文件与入口；它本身还没有这个运行进程。"
+        },
+        {
+          "start": 23.0,
+          "end": 29.0,
+          "title": "从同一个镜像，建立甲、乙两个容器实例。"
+        },
+        {
+          "start": 29.0,
+          "end": 36.0,
+          "title": "两份运行各有自己的状态和文件改动；改动放在各自可写层。"
+        },
+        {
+          "start": 36.0,
+          "end": 42.0,
+          "title": "只停止甲：甲的主进程停下，乙继续运行。"
+        },
+        {
+          "start": 42.0,
+          "end": 48.0,
+          "title": "停止不等于删除，甲仍能在全部实例列表中找到。"
+        },
+        {
+          "start": 48.0,
+          "end": 54.0,
+          "title": "再删除甲，移除的是甲这个实例及它自己的可写层。"
+        },
+        {
+          "start": 54,
+          "end": 59,
+          "title": "先看乙：删除甲以后，乙仍在运行。"
+        },
+        {
+          "start": 59,
+          "end": 64,
+          "title": "再看镜像：仍是创建两个实例时的同一份。"
+        },
+        {
+          "start": 64,
+          "end": 70,
+          "title": "最后核对主机源文件：内容没有被删除甲改变。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "F03-02",
+      "chapter": "F03",
+      "title": "删除笔记容器后，原来的笔记从哪里读回来？",
+      "knowledge": "数据卷",
+      "url": "media/videos/F03-02.mp4",
+      "poster": "media/posters/F03-02.jpg",
+      "duration": 76,
+      "subtitle": "media/subtitles/F03-02.vtt",
+      "subtitleDownload": "media/subtitles/F03-02.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "删掉笔记容器后，“周末清单：带水”还能读回来吗？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "便条写进数据文件；它所在的/data挂到这个命名卷。"
+        },
+        {
+          "start": 11.0,
+          "end": 17.0,
+          "title": "临时文本在容器自己的可写层，归属与便条不同。"
+        },
+        {
+          "start": 17.0,
+          "end": 23.0,
+          "title": "先记下容器ID、卷身份和便条字段，再替换实例。"
+        },
+        {
+          "start": 23.0,
+          "end": 29.0,
+          "title": "删除旧实例，不同时删除这个命名卷。"
+        },
+        {
+          "start": 29,
+          "end": 36,
+          "title": "新实例出现后，先看它重新接回原来的卷。"
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "title": "另看一个独立对照：这次连接的是另一个空卷。"
+        },
+        {
+          "start": 40,
+          "end": 45,
+          "title": "空卷读回0条。原来的卷和旧便条并没有丢失。"
+        },
+        {
+          "start": 45,
+          "end": 53,
+          "title": "回到原卷：从新实例读回同一条便条，逐项核对。"
+        },
+        {
+          "start": 53,
+          "end": 59,
+          "title": "绑定挂载是另一种关系：主机目录接到容器路径。"
+        },
+        {
+          "start": 59,
+          "end": 63,
+          "title": "先看主机写入，容器从同一目录读回。"
+        },
+        {
+          "start": 63,
+          "end": 67,
+          "title": "再反向写读，两端访问的仍是同一目录。"
+        },
+        {
+          "start": 67,
+          "end": 71,
+          "title": "原卷保留以外，还可以单独导出一份备份。"
+        },
+        {
+          "start": 71,
+          "end": 76,
+          "title": "这次只验证了本机备份读回；还不能据此证明异地恢复。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "F04-01",
+      "chapter": "F04",
+      "title": "笔记服务活着，却拒绝保存：它究竟检查了什么？",
+      "knowledge": "健康检查",
+      "url": "media/videos/F04-01.mp4",
+      "poster": "media/posters/F04-01.jpg",
+      "duration": 87,
+      "subtitle": "media/subtitles/F04-01.vtt",
+      "subtitleDownload": "media/subtitles/F04-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5,
+          "title": "笔记服务能回应，为什么仍拒绝保存“周末清单”？"
+        },
+        {
+          "start": 5,
+          "end": 13,
+          "title": "先看保存所需的字段：旧表缺少标签状态，核心条件不通过。"
+        },
+        {
+          "start": 13,
+          "end": 20,
+          "title": "存活只问能否回应；就绪还要检查保存需要的条件。"
+        },
+        {
+          "start": 20,
+          "end": 23,
+          "title": "换到字段齐全的独立条件，再看写入探针做什么。"
+        },
+        {
+          "start": 23,
+          "end": 27,
+          "title": "只写一条测试行；它不是用户要保存的笔记。"
+        },
+        {
+          "start": 27,
+          "end": 30,
+          "title": "明确回滚测试写入，然后重新读取结果。"
+        },
+        {
+          "start": 30,
+          "end": 34,
+          "title": "读回仍是空表。探针没有留下正式笔记。"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "title": "回到缺字段的原情况：探针、标签请求和正式保存都未开始。"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "title": "再换一个独立条件：结构可写，标签允许以后补。"
+        },
+        {
+          "start": 46,
+          "end": 52,
+          "title": "看可选标签请求：它超时了，正式笔记还没写。"
+        },
+        {
+          "start": 52,
+          "end": 56,
+          "title": "合同允许先保存笔记，并留下待补标签状态。"
+        },
+        {
+          "start": 56,
+          "end": 61,
+          "title": "提交之后再读回：正文存在，标签明确标为待补。"
+        },
+        {
+          "start": 61,
+          "end": 68,
+          "title": "待补状态不等于有人接手，负责人和时间仍待实际确认。"
+        },
+        {
+          "start": 68,
+          "end": 73,
+          "title": "只改一个条件：这次必须先拿到核准标签。"
+        },
+        {
+          "start": 73,
+          "end": 79,
+          "title": "同样超时，这次不能保存；实际读回仍没有笔记。"
+        },
+        {
+          "start": 79,
+          "end": 87,
+          "title": "对照两种合同：能否继续保存，要看标签是不是必需条件。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "F05-01",
+      "chapter": "F05",
+      "title": "一份笔记备份，怎样证明真的能恢复？",
+      "knowledge": "备份恢复",
+      "url": "media/videos/F05-01.mp4",
+      "poster": "media/posters/F05-01.jpg",
+      "duration": 66,
+      "subtitle": "media/subtitles/F05-01.vtt",
+      "subtitleDownload": "media/subtitles/F05-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "备份文件存在，怎样确认它真能把笔记恢复出来？"
+        },
+        {
+          "start": 5.0,
+          "end": 12.0,
+          "title": "这张表自动递增编号；编号5曾提交后删除，现在只剩1和2。"
+        },
+        {
+          "start": 12.0,
+          "end": 18.0,
+          "title": "所以没有其他写入时，下一条编号应是6，不是3。"
+        },
+        {
+          "start": 18.0,
+          "end": 24.0,
+          "title": "在线备份接口取得一致副本，不能随手复制正在写入的主文件。"
+        },
+        {
+          "start": 24,
+          "end": 30,
+          "title": "先认这次备份：取得的时间，以及包含哪些便条和序列。"
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "title": "再认恢复所需的结构和程序身份；完整细节留在随附清单。"
+        },
+        {
+          "start": 36,
+          "end": 41,
+          "title": "在全新恢复目标，先按编号找回原来的两条便条。"
+        },
+        {
+          "start": 41,
+          "end": 46,
+          "title": "现在比对正文：两条原内容都吻合，不只是行数相同。"
+        },
+        {
+          "start": 46,
+          "end": 53,
+          "title": "再在恢复库新增一条，实际得到编号6。"
+        },
+        {
+          "start": 53,
+          "end": 60,
+          "title": "最后回查源库：原便条和序列没有被这次演练改变。"
+        },
+        {
+          "start": 60,
+          "end": 66,
+          "title": "这是同机的隔离恢复演练，还不等于异地容灾。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "X01-01",
+      "chapter": "X01",
+      "title": "输入框里的“3”，怎样变成数据库中已保存的打印订单？",
+      "knowledge": "输入到入库",
+      "url": "media/videos/X01-01.mp4",
+      "poster": "media/posters/X01-01.jpg",
+      "duration": 104,
+      "subtitle": "media/subtitles/X01-01.vtt",
+      "subtitleDownload": "media/subtitles/X01-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "输入框里的“3”，怎样变成数据库里可查的打印订单？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "本例只接受非空标题，以及1到20的整数份数。"
+        },
+        {
+          "start": 11.0,
+          "end": 17.0,
+          "title": "客户端先把文字“3”转成整数3，字形相同，类型已变。"
+        },
+        {
+          "start": 17.0,
+          "end": 22.0,
+          "title": "如果填“urgent”，转换失败，就还没有发出网络请求。"
+        },
+        {
+          "start": 22.0,
+          "end": 28.0,
+          "title": "标题和份数组成JSON，再作为请求正文发给服务。"
+        },
+        {
+          "start": 28,
+          "end": 34,
+          "title": "先看创建意图键：它标识同一次创建。"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "title": "再看请求追踪号：它标识这一次请求，职责不同。"
+        },
+        {
+          "start": 40,
+          "end": 45,
+          "title": "服务拿到自己的输入，先检查标题是否非空。"
+        },
+        {
+          "start": 45,
+          "end": 51,
+          "title": "再核对份数与字段约定；客户端检查不能替代服务检查。"
+        },
+        {
+          "start": 51,
+          "end": 57,
+          "title": "输入合格还不等于订单已提交，另一连接仍看不到订单。"
+        },
+        {
+          "start": 57,
+          "end": 64,
+          "title": "先把订单、创建意图和内容摘要放进同一笔事务。"
+        },
+        {
+          "start": 64,
+          "end": 68,
+          "title": "继续写创建事件。此刻这些写入仍未提交。"
+        },
+        {
+          "start": 68,
+          "end": 72,
+          "title": "再更新下一编号，相关变化仍属于这一笔事务。"
+        },
+        {
+          "start": 72,
+          "end": 77,
+          "title": "独立失败对照：创建事件被拒，先看事务内还留下什么。"
+        },
+        {
+          "start": 77,
+          "end": 82,
+          "title": "明确回滚后，订单和相关变化一起撤回。"
+        },
+        {
+          "start": 82,
+          "end": 85,
+          "title": "回到成功路线：所有变化都准备好，尚未提交。"
+        },
+        {
+          "start": 85,
+          "end": 90,
+          "title": "共同提交后，另一连接才能读到完整记录。"
+        },
+        {
+          "start": 90,
+          "end": 97,
+          "title": "响应只把结果副本交回客户端，原记录继续留在数据库。"
+        },
+        {
+          "start": 97,
+          "end": 104,
+          "title": "再查同一订单，读回相同标题、份数和当前状态。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "X01-02",
+      "chapter": "X01",
+      "title": "配送方已经接单，本地订单为什么还要再保存一次？",
+      "knowledge": "外部交接",
+      "url": "media/videos/X01-02.mp4",
+      "poster": "media/posters/X01-02.jpg",
+      "duration": 77,
+      "subtitle": "media/subtitles/X01-02.vtt",
+      "subtitleDownload": "media/subtitles/X01-02.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "配送方已经接单，本地订单为什么还显示待确认？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "打印订单已在第一笔本地事务提交，制作还没发生。"
+        },
+        {
+          "start": 11.0,
+          "end": 17.0,
+          "title": "应用结束这笔事务，再向配送方发出安排请求。"
+        },
+        {
+          "start": 17.0,
+          "end": 24.0,
+          "title": "请求说明订单P-17和合成办公室地址引用Office-A。"
+        },
+        {
+          "start": 24.0,
+          "end": 30.0,
+          "title": "配送意图键是delivery:P-17，和创建订单的键分工不同。"
+        },
+        {
+          "start": 30,
+          "end": 36,
+          "title": "对方先保存回执；等副本到达应用，再读它的内容。"
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "title": "先看回应状态：这次状态允许继续核对。"
+        },
+        {
+          "start": 40,
+          "end": 44,
+          "title": "再检查正文能否解析为JSON。"
+        },
+        {
+          "start": 44,
+          "end": 49,
+          "title": "最后对应回执、订单和原意图，确认属于同一次安排。"
+        },
+        {
+          "start": 49,
+          "end": 55,
+          "title": "把核对过的回执写进本地订单；当前修改仍未提交。"
+        },
+        {
+          "start": 55,
+          "end": 59,
+          "title": "确认事件也属于这一笔本地事务。"
+        },
+        {
+          "start": 59,
+          "end": 64,
+          "title": "共同提交后，本地才保存下配送已确认的结果。"
+        },
+        {
+          "start": 64,
+          "end": 71,
+          "title": "之后只查询本地已保存记录，没有重新请求配送。"
+        },
+        {
+          "start": 71,
+          "end": 77,
+          "title": "分别判断：配送安排已确认，讲义未制作，实际送达仍无证据。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "P06-01",
+      "chapter": "P06",
+      "title": "该改流程、买工具，还是自己开发？先看什么？",
+      "knowledge": "方案选择",
+      "url": "media/videos/P06-01.mp4",
+      "poster": "media/posters/P06-01.jpg",
+      "duration": 72,
+      "subtitle": "media/subtitles/P06-01.vtt",
+      "subtitleDownload": "media/subtitles/P06-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "想回答“今晚能租吗”，先改流程、买工具，还是自建？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "当前库存更新不及时，而且只有店员能确认出租。"
+        },
+        {
+          "start": 11.0,
+          "end": 17.0,
+          "title": "不先补更新责任，页面或AI只会更快地重复旧信息。"
+        },
+        {
+          "start": 17.0,
+          "end": 24.0,
+          "title": "本例每周最多投入2小时；人工核对库存需要1小时。"
+        },
+        {
+          "start": 24,
+          "end": 31,
+          "title": "先看现成工具的查询依据：来源和更新时间能不能核实。"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "title": "再看能否导出记录，给以后退出或换工具留下条件。"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "title": "最后算维护投入：库存1小时，加工具1小时，刚好到上限。"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "title": "自建AI目前预计每周要4小时，质量也还没有验证。"
+        },
+        {
+          "start": 46,
+          "end": 49,
+          "title": "下面只是假定：库存已可靠，工具条件也已核实。"
+        },
+        {
+          "start": 49,
+          "end": 55,
+          "title": "这时可以小范围试查询；结果仍交给店员确认出租。"
+        },
+        {
+          "start": 55,
+          "end": 60,
+          "title": "换个反例：更新时间缺失，先看它为什么影响判断。"
+        },
+        {
+          "start": 60,
+          "end": 65,
+          "title": "无法判断记录新旧，就收窄页面或回到人工核对。"
+        },
+        {
+          "start": 65,
+          "end": 72,
+          "title": "先保留能维护、能验证的改变；条件变化后，再评估其它方案。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    },
+    {
+      "id": "P12-01",
+      "chapter": "P12",
+      "title": "回复中位数少了 12 分钟，为什么仍不能宣布服务改善？",
+      "knowledge": "效果判断",
+      "url": "media/videos/P12-01.mp4",
+      "poster": "media/posters/P12-01.jpg",
+      "duration": 69,
+      "subtitle": "media/subtitles/P12-01.vtt",
+      "subtitleDownload": "media/subtitles/P12-01.srt",
+      "scenes": [
+        {
+          "start": 0,
+          "end": 5.0,
+          "title": "回复中位数从24分钟变12分钟，服务就变好了吗？"
+        },
+        {
+          "start": 5.0,
+          "end": 11.0,
+          "title": "这里两组各80件，入口与类型相同，每件都完整观察7天。"
+        },
+        {
+          "start": 11.0,
+          "end": 18.0,
+          "title": "80件排序后，取中间两项的平均；不是人人都等12分钟。"
+        },
+        {
+          "start": 18.0,
+          "end": 24.0,
+          "title": "甲有16件再次联系，乙有28件；一件联系多次仍只计一件。"
+        },
+        {
+          "start": 24,
+          "end": 30,
+          "title": "保持同一分母80件，先比较20%和35%这两个比例。"
+        },
+        {
+          "start": 30,
+          "end": 35,
+          "title": "再用35%减20%：增加15个百分点，不是增加15%。"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "title": "再看客户明确确认解决的案例：从56件变成48件。"
+        },
+        {
+          "start": 42,
+          "end": 49,
+          "title": "乙剩下32件没有同样的确认，实际结果仍未知。"
+        },
+        {
+          "start": 49,
+          "end": 55,
+          "title": "已经看见差异，先问两组为什么会不同。"
+        },
+        {
+          "start": 55,
+          "end": 61,
+          "title": "随机分配、人员负荷和记录方式还需核对，不能直接归因。"
+        },
+        {
+          "start": 61,
+          "end": 69,
+          "title": "回到原案例和确认记录补证据，再决定扩大、修改或继续观察。"
+        }
+      ],
+      "narration": false,
+      "captionNote": "短字幕已在画面中；另附字幕文件供下载。"
+    }
+  ],
+  "readingNote": "正文保留原教材的解释与代码。D:\\FDE-Lab 等路径是教学示例，不指向作者电脑。视频用于看清一个问题，不替代整章。",
+  "mapAtlas": "media/maps/atlas.pdf"
+}

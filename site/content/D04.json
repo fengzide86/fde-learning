@@ -1,0 +1,37 @@
+{
+  "id": "D04",
+  "title": "不能确认时，怎样把事情接住",
+  "html": "<p>对 LOCAL-0042 的两次调用都超时了。允许的尝试次数已经用完，合作方也没有交回可用案件编号。程序此时仍要给用户一个结果，但这个结果只能说明本地真正知道的事实。</p>\n<p>可以说“本地已接收，合作方尚未确认，需要核对”；不能说“维修已经安排好”，也不能断言“合作方肯定没有案件”。本章处理的就是自动路线停止以后，事情由谁接住。</p>\n<h2 id=\"d04-s1\">未完成需要有自己的状态</h2>\n<p>本地已经保存 OUT-0042-V1 的完整意图，包括合同版本、冻结输入、摘要和 key，初始状态为 pending。程序只在拿到满足合同的合作方案件结果后，才写 partner_confirmed；无法自动确认时，改为 manual_review，同时建立人工接管记录。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">pending\n├─ 取得可用合作方结果，且本地确认提交成功\n│  └─ partner_confirmed\n└─ 自动路线停止，且本地接管记录提交成功\n   └─ manual_review\n</code></pre></div>\n<p>pending 表示意图存在，但本地还没有最终结论；它可能是在调用中，也可能在程序中断后留存。manual_review 再多说明一件事：自动路线已经停止，并留下待核对入口。这两个状态都不是对方“肯定失败”的证据。</p>\n<p>本例公开结果采用以下字段：</p>\n<div class=\"code-block\"><span class=\"code-language\">json</span><pre><code class=\"language-json\">{\n  &quot;local_case_id&quot;: &quot;LOCAL-0042&quot;,\n  &quot;state&quot;: &quot;manual_review&quot;,\n  &quot;partner_confirmed&quot;: false,\n  &quot;partner_case_id&quot;: null,\n  &quot;manual_review_required&quot;: true,\n  &quot;reason_code&quot;: &quot;provider_timeout&quot;\n}\n</code></pre></div>\n<p>null 表示本地没有可确认的 provider ID，不表示 provider 数据库必定没有案件。状态、布尔值、编号和 reason_code 要共同说同一件事；若 state 写 manual_review，却保留 partner_confirmed=true，消费者会得到互相冲突的指示。</p>\n<h2 id=\"d04-s2\">什么证据才足以写“合作方已确认”？</h2>\n<p>假设当前 provider 合同要求成功 body 为：</p>\n<div class=\"code-block\"><span class=\"code-language\">json</span><pre><code class=\"language-json\">{&quot;case_id&quot;: &quot;P-0001&quot;, &quot;status&quot;: &quot;created&quot;}\n</code></pre></div>\n<p>adapter 检查成功 HTTP 状态、JSON、案件编号格式以及 status 的允许值，随后把 case_id 交给本地，映射成 partner_case_id。这个编号来自当前 intent 的那次调用，调用使用已保存 key 与冻结输入。若某个 provider 另外要求回复回显 key，也应检查它；本册配套的回复没有这个字段，不能编造一次不存在的回显验证。</p>\n<p>真正的确认还要经过本地短事务：将 pending 改成 partner_confirmed，保存 P-0001，提交成功后再向用户报告。只有日志打印“成功”，或内存里已经拿到 P-0001，都不能替代本地提交。</p>\n<p>如果这一步存储失败，外部 P-0001 仍可能存在。本地应保留可恢复意图，暴露本地故障，后续用原 key 核对。既不能把本地写失败归成“供应商不可用”，也不能宣称人工记录已经保存。</p>\n<h2 id=\"d04-s3\">同样进入人工，保留的原因为什么不同？</h2>\n<table>\n<thead>\n<tr>\n<th>已有证据</th>\n<th>可以判断什么</th>\n<th>不应怎样处理</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>两次 timeout</td>\n<td>本地没有得到可用回复</td>\n<td>不以“没做过”为前提生成新 key</td>\n</tr>\n<tr>\n<td>允许重试的 5xx 持续出现</td>\n<td>收到了失败状态，自动机会耗尽</td>\n<td>不无上限增加尝试</td>\n</tr>\n<tr>\n<td>401 或 403</td>\n<td>当前凭据或权限被拒绝</td>\n<td>不把重复相同凭据当修复</td>\n</tr>\n<tr>\n<td>200，但 case_id 改名</td>\n<td>有回复，但当前内容合同不成立</td>\n<td>不猜最相似字段填编号</td>\n</tr>\n<tr>\n<td>合法回复晚于 deadline</td>\n<td>外部结果到达已晚于本地接纳期限</td>\n<td>不把停止接纳解释成远端没执行</td>\n</tr>\n</tbody>\n</table>\n<p>其中“字段改名”的情况最容易制造假成功。fake provider 先创建 P-0001，再返回 <code>{&quot;case_ref&quot;:&quot;P-0001&quot;,&quot;state&quot;:&quot;created&quot;}</code>；本地只认识 case_id 和 status，所以不能确认。外部效果数是 1，本地仍是 manual_review。没有可用编号与没有产生效果，仍然是两件事。</p>\n<p>reason_code 把这些事实归成稳定的本地类别，便于用户界面、日志和处理队列配合；不应把原始 response 或异常原文直接交出去。人工看到 provider_timeout，优先核对已有结果；看到 provider_auth_failure，先找配置与权限负责人。相同最终状态可以有不同恢复路径。</p>\n<h2 id=\"d04-s4\">202 到底承诺了什么？</h2>\n<p>本地接口用 202 接收这项未能自动确认的工作，并明确返回 manual_review。它只表示本地保存了待处理记录，不承诺“后台很快会成功”。HTTP 202 的一般语义也不保证最终执行结果；具体下一步必须由应用合同交代。<a href=\"https://www.rfc-editor.org/rfc/rfc9110.html#section-15.3.3\" target=\"_blank\" rel=\"noopener noreferrer\">RFC 9110 第 15.3.3 节</a></p>\n<p>因此保存本地状态与创建人工记录要在同一个本地事务中完成。否则可能已经显示“正在人工处理”，队列却没有任何工作项。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">BEGIN\n  OUT-0042-V1: pending → manual_review，保存 reason_code\n  新增指向 OUT-0042-V1 的 open 接管记录\nCOMMIT\n→ 才向用户返回已接收的未确认状态\n</code></pre></div>\n<p>这两步都属于本地数据库，所以能够同成或同败。provider 的创建不在这个事务里；本地 rollback 撤回接管记录，也不会删除合作方案件。</p>\n<h2 id=\"d04-s5\">人工接管应让下一步可执行</h2>\n<p>在实际系统中，接管需要明确角色，例如有派单核对权限的 dispatch_reviewer。记录至少能找到原意图、关联失败处理、看到原因和发生时间。完整 key 与 canonical 输入保存在受控意图库，普通队列显示所需引用，不把客户全文或 token 复制一遍。</p>\n<p>配套的人工表内部以 intent_id 标识工作项；简化的列表输出是：</p>\n<div class=\"code-block\"><span class=\"code-language\">json</span><pre><code class=\"language-json\">{\n  &quot;local_case_id&quot;: &quot;LOCAL-0042&quot;,\n  &quot;request_id&quot;: &quot;R-D04-MANUAL&quot;,\n  &quot;reason_code&quot;: &quot;provider_timeout&quot;,\n  &quot;created_at&quot;: &quot;2026-08-29T12:00:00Z&quot;,\n  &quot;status&quot;: &quot;open&quot;\n}\n</code></pre></div>\n<p>这个输出用于验证最小字段，不是一套可投入使用的人工系统。特别是同一 local_case_id 存在多个 intent 时，正式处理入口必须明确选中哪一个工作项；不能只取“案件最新 intent”就处理所有旧接管记录。配套在表内保留 intent_id，但没有实现带鉴权的人工处理页面、通知送达、分派与完成回写。</p>\n<p>真实的下一步应沿原工作项进行：取得权限后读取原 intent；用 provider 提供的查询或核对入口查 key 是否已有结果；若有，校验后关联同一个案件；若明确没有且业务仍需要，按当前合同决定重放；若不能判断，保持未确认并升级给指定负责人。人工也不能用新 key 一键盲发，否则只是把重复副作用从自动程序搬到了人工按钮。</p>\n<p>日志应记录 request_id、操作名、attempt、耗时、错误类别和必要状态。token、Authorization、完整客户摘要、连接串与原始异常不是普通队列的必需输入。白名单先决定哪些字段可以记录，再由这些字段解释决策，通常比把所有内容打印后尝试遮盖更容易验证。<a href=\"https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html\" target=\"_blank\" rel=\"noopener noreferrer\">OWASP Logging Cheat Sheet</a></p>\n<h2 id=\"d04-s6\">哪些情况下可以给一个替代结果？</h2>\n<p>实时容量接口暂不可用，但本地有“09:00 观察到 2 个名额”。如果当前页面只是供工作人员估计繁忙程度，业务允许参考旧值，可以同时显示来源、观察时间以及“非实时，仅供参考”。这是一种受限 fallback。</p>\n<p>它没有确认现在仍有 2 个名额，更没有创建任何案件。所以不能把这个旧容量转成 LOCAL-0042 的 partner_confirmed。来源是容量读取，需求是本次创建结果，两者根本不是同一个事实。</p>\n<table>\n<thead>\n<tr>\n<th>当前任务</th>\n<th>可接受的出口</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>展示大致繁忙程度</td>\n<td>业务允许时，显示带时间和限制的旧容量</td>\n</tr>\n<tr>\n<td>当前凭据无效</td>\n<td>清楚说明不可用，由配置或权限负责人处理</td>\n</tr>\n<tr>\n<td>创建结果未知</td>\n<td>保留未确认，核对已有案件或交给有权限的人</td>\n</tr>\n<tr>\n<td>身份审批、付款确认等依赖可靠证据的决定</td>\n<td>缺少证据就停止，不用猜测或旧值批准</td>\n</tr>\n</tbody>\n</table>\n<p>clear failure、fallback、human handoff 不是三个互斥的“系统等级”。页面可以给受限参考，同时把创建动作交人工；高影响动作可以明确停止，同时提供下一步联系入口。选择取决于这个结果被拿来做什么，不能只看有没有一个值可以显示。</p>\n<p>判断本章最重要的边界，只需看这一行：外部效果 1，本地 manual_review，公开编号 null。这可能完全正确，因为对方已创建但返回的内容无法校验。把它改成 partner_confirmed 需要新的成功证据；把外部效果改成 0 则需要对方未执行的证据。页面更好看不是其中任何一项。</p>\n",
+  "toc": [
+    {
+      "id": "d04-s1",
+      "text": "未完成需要有自己的状态",
+      "level": 2
+    },
+    {
+      "id": "d04-s2",
+      "text": "什么证据才足以写“合作方已确认”？",
+      "level": 2
+    },
+    {
+      "id": "d04-s3",
+      "text": "同样进入人工，保留的原因为什么不同？",
+      "level": 2
+    },
+    {
+      "id": "d04-s4",
+      "text": "202 到底承诺了什么？",
+      "level": 2
+    },
+    {
+      "id": "d04-s5",
+      "text": "人工接管应让下一步可执行",
+      "level": 2
+    },
+    {
+      "id": "d04-s6",
+      "text": "哪些情况下可以给一个替代结果？",
+      "level": 2
+    }
+  ]
+}

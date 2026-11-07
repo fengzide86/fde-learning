@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2155" width="1800" height="2155" role="img" aria-labelledby="title">
+<title id="title">下一次从哪里来，又在哪里停？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2155" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A04  下一次从哪里来，又在哪里停？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A04将A03的单次判断放进重复处理，并用容器保留记录；A05加入失败恢复，A08把内存数据写入文件。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">循环决定下一轮从哪里来；容器和跨轮状态保存已得到的结果。结束时还要分清离开循环还是函数。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">重复执行与多条数据的组织</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">重复与数据来源</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,635.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">按条件重复（while）</text>
+<text x="103.0" y="568.0" font-size="16" fill="#286f64" font-weight="400">条件循环语句</text>
+<text x="103.0" y="590.0" font-size="18" fill="#233734" font-weight="400">每轮前重查条件，循环体负责推进所依赖</text>
+<text x="103.0" y="615.0" font-size="18" fill="#233734" font-weight="400">的值；初次条件为假时一轮也不执行。</text>
+<polyline points="73.0,530.0 73.0,681.0 91.0,681.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="659.0" width="358.75" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,667.0 92.0,786.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="689.0" font-size="21" fill="#286f64" font-weight="700">逐项遍历（for）</text>
+<text x="103.0" y="719.0" font-size="16" fill="#286f64" font-weight="400">循环与数据来源</text>
+<text x="103.0" y="741.0" font-size="18" fill="#233734" font-weight="400">向数据来源依次取得下一项，耗尽后结</text>
+<text x="103.0" y="766.0" font-size="18" fill="#233734" font-weight="400">束；取出一项不等于从原容器删除它。</text>
+<polyline points="73.0,681.0 73.0,832.0 91.0,832.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="810.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="840.0" font-size="21" fill="#233734" font-weight="700">生成序号范围（range）</text>
+<text x="103.0" y="870.0" font-size="18" fill="#53635f" font-weight="400">提供整数序列供循环取用，range(n)从0到</text>
+<text x="103.0" y="895.0" font-size="18" fill="#53635f" font-weight="400">n之前；它提供值，不负责执行循环体。</text>
+<polyline points="73.0,832.0 73.0,961.0 91.0,961.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="939.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="969.0" font-size="21" fill="#233734" font-weight="700">循环中读取输入（input）</text>
+<text x="103.0" y="999.0" font-size="18" fill="#53635f" font-weight="400">把取输入放进每轮才会取得新内容；只在</text>
+<text x="103.0" y="1024.0" font-size="18" fill="#53635f" font-weight="400">循环外读一次无法收到后来的结束指令。</text>
+<polyline points="73.0,961.0 73.0,1090.0 91.0,1090.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1068.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1098.0" font-size="21" fill="#233734" font-weight="700">嵌套循环</text>
+<text x="103.0" y="1128.0" font-size="18" fill="#53635f" font-weight="400">外层每项再启动一轮内层遍历，适合行与</text>
+<text x="103.0" y="1153.0" font-size="18" fill="#53635f" font-weight="400">座位等关系；内层结束后外层仍可继续。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">容器与取值</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="538.0" font-size="21" fill="#233734" font-weight="700">有序记录列表（list）</text>
+<text x="527.75" y="568.0" font-size="16" fill="#286f64" font-weight="400">容器类型</text>
+<text x="527.75" y="590.0" font-size="18" fill="#53635f" font-weight="400">按位置保存多项，允许重复值；其中每一</text>
+<text x="527.75" y="615.0" font-size="18" fill="#53635f" font-weight="400">项称为元素，可逐项遍历，也可按索引取</text>
+<text x="527.75" y="640.0" font-size="18" fill="#53635f" font-weight="400">值。</text>
+<polyline points="497.75,530.0 497.75,706.0 515.75,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="684.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="714.0" font-size="21" fill="#233734" font-weight="700">按位置取值与计数（index / len）</text>
+<text x="527.75" y="744.0" font-size="18" fill="#53635f" font-weight="400">索引从0开始，len取得数量而非最后位</text>
+<text x="527.75" y="769.0" font-size="18" fill="#53635f" font-weight="400">置；越界访问产生IndexError，不自动补</text>
+<text x="527.75" y="794.0" font-size="18" fill="#53635f" font-weight="400">项。</text>
+<polyline points="497.75,706.0 497.75,860.0 515.75,860.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="838.0" width="358.75" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="868.0" font-size="21" fill="#233734" font-weight="700">按键取值（dict）</text>
+<text x="527.75" y="898.0" font-size="16" fill="#286f64" font-weight="400">容器类型与键值关系</text>
+<text x="527.75" y="920.0" font-size="18" fill="#53635f" font-weight="400">按键保存对应的值，同键赋值替换旧值；</text>
+<text x="527.75" y="945.0" font-size="18" fill="#53635f" font-weight="400">直接读取缺失键产生KeyError。</text>
+<polyline points="497.75,860.0 497.75,1011.0 515.75,1011.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="989.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="1019.0" font-size="21" fill="#233734" font-weight="700">判断是否包含（in）</text>
+<text x="527.75" y="1049.0" font-size="18" fill="#53635f" font-weight="400">判断某键是否在字典中，可先检查再取</text>
+<text x="527.75" y="1074.0" font-size="18" fill="#53635f" font-weight="400">值；不等于在值中查找，也不同于for里的</text>
+<text x="527.75" y="1099.0" font-size="18" fill="#53635f" font-weight="400">in。</text>
+<polyline points="497.75,1011.0 497.75,1165.0 515.75,1165.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="1143.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="1173.0" font-size="21" fill="#233734" font-weight="700">列表中的字典</text>
+<text x="527.75" y="1203.0" font-size="18" fill="#53635f" font-weight="400">外层列表组织多条，内层字典组织字段；</text>
+<text x="527.75" y="1228.0" font-size="18" fill="#53635f" font-weight="400">先按位置再按键取值，不自动保证字段齐</text>
+<text x="527.75" y="1253.0" font-size="18" fill="#53635f" font-weight="400">全。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">修改与跨轮状态</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="538.0" font-size="21" fill="#233734" font-weight="700">追加一项（append）</text>
+<text x="952.5" y="568.0" font-size="16" fill="#286f64" font-weight="400">列表方法调用</text>
+<text x="952.5" y="590.0" font-size="18" fill="#53635f" font-weight="400">把一项加入原列表末尾并返回None；与</text>
+<text x="952.5" y="615.0" font-size="18" fill="#53635f" font-weight="400">A02的strip返回新文字不同，不能靠接返</text>
+<text x="952.5" y="640.0" font-size="18" fill="#53635f" font-weight="400">回值取得列表。</text>
+<polyline points="922.5,530.0 922.5,706.0 940.5,706.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="684.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="714.0" font-size="21" fill="#233734" font-weight="700">布尔标记</text>
+<text x="952.5" y="744.0" font-size="18" fill="#53635f" font-weight="400">把扫描中见过的事实跨轮保留，如曾有候</text>
+<text x="952.5" y="769.0" font-size="18" fill="#53635f" font-weight="400">补；循环前初始化，按需要更新而非每轮</text>
+<text x="952.5" y="794.0" font-size="18" fill="#53635f" font-weight="400">清空。</text>
+<polyline points="922.5,706.0 922.5,860.0 940.5,860.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="838.0" width="358.75" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,846.0 941.5,965.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="868.0" font-size="21" fill="#286f64" font-weight="700">累计容器与初始化</text>
+<text x="952.5" y="898.0" font-size="16" fill="#286f64" font-weight="400">跨轮状态安排</text>
+<text x="952.5" y="920.0" font-size="18" fill="#233734" font-weight="400">收集全部结果的容器在循环前建立，各轮</text>
+<text x="952.5" y="945.0" font-size="18" fill="#233734" font-weight="400">添加；每轮重建只会留下当前轮的数据。</text>
+<polyline points="922.5,860.0 922.5,1011.0 940.5,1011.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="989.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="1019.0" font-size="21" fill="#233734" font-weight="700">录入与汇总</text>
+<text x="952.5" y="1049.0" font-size="18" fill="#53635f" font-weight="400">录入把记录放进容器，汇总再遍历读取；</text>
+<text x="952.5" y="1074.0" font-size="18" fill="#53635f" font-weight="400">保存到内存并不自动完成校验或持久化。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">结束范围</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#233734" font-weight="700">自然结束</text>
+<text x="1377.25" y="568.0" font-size="18" fill="#53635f" font-weight="400">while因条件为假结束，for因没有下一项结</text>
+<text x="1377.25" y="593.0" font-size="18" fill="#53635f" font-weight="400">束；离开后仍执行循环后方的代码。</text>
+<polyline points="1347.25,530.0 1347.25,659.0 1365.25,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="637.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="667.0" font-size="21" fill="#233734" font-weight="700">离开循环（break）</text>
+<text x="1377.25" y="697.0" font-size="18" fill="#53635f" font-weight="400">立即离开最内层正在运行的循环，接着执</text>
+<text x="1377.25" y="722.0" font-size="18" fill="#53635f" font-weight="400">行循环后的代码；不结束整层函数调用。</text>
+<polyline points="1347.25,659.0 1347.25,788.0 1365.25,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="766.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="796.0" font-size="21" fill="#233734" font-weight="700">交回结果（return）</text>
+<text x="1377.25" y="826.0" font-size="18" fill="#53635f" font-weight="400">结束整个当前函数并交回结果；查到首条</text>
+<text x="1377.25" y="851.0" font-size="18" fill="#53635f" font-weight="400">即返回时，不再走到函数末尾的未找到路</text>
+<text x="1377.25" y="876.0" font-size="18" fill="#53635f" font-weight="400">线。</text>
+<text x="64" y="1317.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1317.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1342.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1375.0" font-size="21" fill="#233734" font-weight="700">循环中读取输入（input）</text>
+<rect x="750" y="1342.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1375.0" font-size="21" fill="#233734" font-weight="700">追加一项（append）</text>
+<polyline points="538,1379.0 736,1379.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1379.0 726.9955289764732,1383.3496553411123 726.9955289764732,1374.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1367.0" font-size="17" fill="#286f64" font-weight="400">将正常项交给</text>
+<text x="80" y="1425.0" font-size="18" fill="#53635f" font-weight="400">先检查结束指令再添加，避免把end也当成普通记录保存。</text>
+<rect x="64" y="1465.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1498.2" font-size="21" fill="#233734" font-weight="700">累计容器与初始化</text>
+<rect x="750" y="1465.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1498.2" font-size="21" fill="#233734" font-weight="700">逐项遍历（for）</text>
+<polyline points="538,1502.2 736,1502.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1502.2 726.9955289764732,1506.5496553411124 726.9955289764732,1497.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1490.2" font-size="17" fill="#286f64" font-weight="400">保留多条供读取</text>
+<text x="80" y="1548.2" font-size="18" fill="#53635f" font-weight="400">录入结束后，另一段for可依次使用已收集内容，不必重新输入。</text>
+<rect x="64" y="1588.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1621.4" font-size="21" fill="#233734" font-weight="700">判断是否包含（in）</text>
+<rect x="750" y="1588.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1621.4" font-size="21" fill="#233734" font-weight="700">按键取值（dict）</text>
+<polyline points="538,1625.4 736,1625.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1625.4 726.9955289764732,1629.7496553411124 726.9955289764732,1621.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1613.4" font-size="17" fill="#286f64" font-weight="400">保护缺键读取</text>
+<text x="80" y="1671.4" font-size="18" fill="#53635f" font-weight="400">未知键不会自动忽略；只有判断后避开取值，才不会触发本次KeyError。</text>
+<rect x="64" y="1711.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1744.6000000000001" font-size="21" fill="#233734" font-weight="700">离开循环（break）</text>
+<rect x="750" y="1711.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1744.6000000000001" font-size="21" fill="#233734" font-weight="700">嵌套循环</text>
+<polyline points="538,1748.6000000000001 736,1748.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1748.6000000000001 726.9955289764732,1752.9496553411125 726.9955289764732,1744.2503446588878" fill="#286f64"/>
+<text x="594.5" y="1736.6000000000001" font-size="17" fill="#286f64" font-weight="400">只退出内层</text>
+<text x="80" y="1794.6000000000001" font-size="18" fill="#53635f" font-weight="400">内层break不会同时终止外层；要交回整个函数结果则使用return。</text>
+<rect x="64" y="1834.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1867.8000000000002" font-size="21" fill="#233734" font-weight="700">追加一项（append）</text>
+<rect x="750" y="1834.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1867.8000000000002" font-size="21" fill="#233734" font-weight="700">有序记录列表（list）</text>
+<polyline points="538,1871.8000000000002 736,1871.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1871.8000000000002 726.9955289764732,1876.1496553411125 726.9955289764732,1867.4503446588878" fill="#286f64"/>
+<text x="569.0" y="1859.8000000000002" font-size="17" fill="#286f64" font-weight="400">原地增加一个元素</text>
+<text x="80" y="1917.8000000000002" font-size="18" fill="#53635f" font-weight="400">元素是容器中的一项，方法是操作；names.append(name)改变列表，返回值却是None。</text>
+<rect x="64" y="1958.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1991.0000000000002" font-size="21" fill="#233734" font-weight="700">离开循环（break）</text>
+<rect x="750" y="1958.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1991.0000000000002" font-size="21" fill="#233734" font-weight="700">交回结果（return）</text>
+<polyline points="538,1995.0000000000002 736,1995.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1995.0000000000002 726.9955289764732,1999.3496553411126 726.9955289764732,1990.650344658888" fill="#286f64"/>
+<text x="577.5" y="1983.0000000000002" font-size="17" fill="#286f64" font-weight="400">离开范围不同于</text>
+<text x="80" y="2041.0000000000002" font-size="18" fill="#53635f" font-weight="400">break后仍可执行循环后的代码；return交回结果并结束当前函数。</text>
+<polyline points="64,2099.2000000000003 1736,2099.2000000000003" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2129.2000000000003" font-size="17" fill="#53635f" font-weight="400">对照正文：A04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

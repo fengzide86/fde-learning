@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#234e43">
+  <meta name="description" content="从程序、API、数据到 AI 与交付，把技术机制和业务判断连接起来。免费阅读 FDE 自编教材，按需观看视频、查阅记忆表与关系图。">
+  <title>FDE 学习站 · 把系统看明白</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <button class="icon-button mobile-menu" id="menu-toggle" aria-label="打开学习目录" aria-expanded="false" aria-controls="sidebar">☰</button>
+    <a class="brand" href="#/" aria-label="FDE 学习站首页"><span class="brand-mark">f<span>de</span></span><span>技术与产品<span class="brand-small">开放学习资料</span></span></a>
+    <form class="search-form" role="search" id="search-form"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" aria-label="搜索章节或知识点" placeholder="搜索章节、知识点或问题" autocomplete="off"><kbd>/</kbd></form>
+    <a class="header-about" href="#/about">怎样使用</a>
+  </header>
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="学习导航">
+    <nav id="primary-nav"><a href="#/" data-nav="home">学习首页</a><a href="#/library" data-nav="library">教材目录</a><a href="#/videos" data-nav="videos">视频讲解 <span>31</span></a><a href="#/resources" data-nav="resources">记忆表与关系图</a></nav>
+    <div class="nav-label">按顺序学习</div><nav id="book-nav" aria-label="各册教材"></nav>
+    <div class="sidebar-foot">理解机制，练习判断。<br><a href="#/about">材料与使用说明 ↗</a></div>
+  </aside>
+  <main id="main" tabindex="-1"><div class="loading" role="status">正在打开学习资料…</div></main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">网页目录需要启用 JavaScript，也可以直接下载 <a href="./media/books/00.pdf">起始教材 PDF</a>。</div></noscript>
+</body>
+</html>

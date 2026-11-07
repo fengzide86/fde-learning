@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1518" width="1800" height="1518" role="img" aria-labelledby="title">
+<title id="title">出错以后，程序怎样继续？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1518" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A05  出错以后，程序怎样继续？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A05把异常、循环和函数返回接在一起；A06把有清楚职责与接口的代码交给其他模块复用。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">失败改道、重试与结果交付</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">可选迁移：Fuel中的解析与重试</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">分割文字（split）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">字符串方法调用</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">按指定分隔符产生字符串列表；本章用斜杠拆分，不负责转换数字或保证恰好两段。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">拆包赋值</text>
+<text x="103.0" y="731.0" font-size="16" fill="#286f64" font-weight="400">赋值语法机制</text>
+<text x="103.0" y="753.0" font-size="18" fill="#53635f" font-weight="400">把右侧各项依次交给左侧名字；本章两个名字需恰好两项，不匹配时产生ValueError。</text>
+<polyline points="73.0,693.0 73.0,819.0 91.0,819.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="797.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="827.0" font-size="21" fill="#233734" font-weight="700">除零失败（ZeroDivisionError）</text>
+<text x="103.0" y="857.0" font-size="18" fill="#53635f" font-weight="400">真正执行除以零时发出；分割与整数转换可以已经成功，需与范围不合规则区分。</text>
+<polyline points="73.0,819.0 73.0,923.0 91.0,923.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="901.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="931.0" font-size="21" fill="#233734" font-weight="700">多异常共用处理块</text>
+<text x="103.0" y="961.0" font-size="16" fill="#286f64" font-weight="400">except的类型写法</text>
+<text x="103.0" y="983.0" font-size="18" fill="#53635f" font-weight="400">except (ValueError, ZeroDivisionError)接住其中任意一种；不是两种错误必须同时发生。</text>
+<polyline points="73.0,923.0 73.0,1049.0 91.0,1049.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1027.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1057.0" font-size="21" fill="#233734" font-weight="700">进入下一轮（continue）</text>
+<text x="103.0" y="1087.0" font-size="16" fill="#286f64" font-weight="400">循环继续语句</text>
+<text x="103.0" y="1109.0" font-size="18" fill="#53635f" font-weight="400">跳过本轮剩余代码，继续下一轮取项或条件检查；既不离开循环，也不总是重试必需项。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">可选迁移：Taqueria中的查值与结束</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">按键取值并处理缺失（KeyError）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">未知键直接读取会失败；可先用in判断再查菜单，未知菜名时不更新总价。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">规范标题文字与累计金额（title）</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">title返回规范菜名供查键，总价在循环外初始化再跨轮相加；格式化只负责显示。</text>
+<polyline points="922.5,671.0 922.5,775.0 940.5,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="753.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="783.0" font-size="21" fill="#233734" font-weight="700">输入提前结束（EOFError）</text>
+<text x="952.5" y="813.0" font-size="18" fill="#53635f" font-weight="400">input无法再取得下一行时表示输入来源结束；可捕获后break，不是菜名拼错或转换失败。</text>
+<text x="64" y="1173.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1173.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1198.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1231.0" font-size="21" fill="#233734" font-weight="700">分割文字（split）</text>
+<rect x="750" y="1198.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1231.0" font-size="21" fill="#233734" font-weight="700">拆包赋值</text>
+<polyline points="538,1235.0 736,1235.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1235.0 726.9955289764732,1239.3496553411123 726.9955289764732,1230.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1223.0" font-size="17" fill="#286f64" font-weight="400">产生多项供接收</text>
+<text x="80" y="1281.0" font-size="18" fill="#53635f" font-weight="400">&quot;1/2&quot;先变成[&quot;1&quot;,&quot;2&quot;]，再分别赋给两个名字；三项接给两个名字才发生拆包失败。</text>
+<rect x="64" y="1321.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1354.2" font-size="21" fill="#233734" font-weight="700">除零失败（ZeroDivisionError）</text>
+<rect x="750" y="1321.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1354.2" font-size="21" fill="#233734" font-weight="700">多异常共用处理块</text>
+<polyline points="538,1358.2 736,1358.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1358.2 726.9955289764732,1362.5496553411124 726.9955289764732,1353.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1346.2" font-size="17" fill="#286f64" font-weight="400">任一种都可匹配</text>
+<text x="80" y="1404.2" font-size="18" fill="#53635f" font-weight="400">转换失败或除零可共用恢复动作；5/4超出范围仍属于普通if判断。</text>
+<polyline points="64,1462.4 1736,1462.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1492.4" font-size="17" fill="#53635f" font-weight="400">对照正文：A05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

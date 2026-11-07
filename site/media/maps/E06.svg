@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1926" width="1800" height="1926" role="img" aria-labelledby="title">
+<title id="title">版本评测与采用判断</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1926" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E06  版本评测与采用判断</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">汇合分类、对话、检索和工具边界；把可比较的应用证据交给后续交付观察，不把评测值当部署。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">预期来自用途，观察来自实际运行；逐案例比较，不能用平均分掩盖越权或缺失。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">用固定案例评估应用改动</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">比较的对象与标准</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">固定案例与预期</text>
+<text x="103.0" y="568.0" font-size="18" fill="#233734" font-weight="400">从用途定义各案例的状态、允许工具调用及效果；合法工具</text>
+<text x="103.0" y="593.0" font-size="18" fill="#233734" font-weight="400">与越权案例分别核对，不能把总调用少当成全部正确。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">版本材料清单</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">记录模型、提示词、资料、代码与配置，并能追回实际内</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">容；多项同时变化时不能只归因于一项。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="796.0" font-size="21" fill="#233734" font-weight="700">质量判断标准</text>
+<text x="103.0" y="826.0" font-size="18" fill="#53635f" font-weight="400">预先说明保留事实、条件和用途的要求；语义可人工评阅，</text>
+<text x="103.0" y="851.0" font-size="18" fill="#53635f" font-weight="400">模型评分仍需校准。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">观察如何取得</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#233734" font-weight="700">案例独立状态</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#53635f" font-weight="400">每个情境重建本地Fake、检索或工具状态；不沿用上一例的</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#53635f" font-weight="400">收据与权限变化，避免案例相互污染。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,645.0 658.3333333333334,764.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#286f64" font-weight="700">工作流实际采集</text>
+<text x="669.3333333333334" y="697.0" font-size="16" fill="#286f64" font-weight="400">运行观察</text>
+<text x="669.3333333333334" y="719.0" font-size="18" fill="#233734" font-weight="400">从运行返回、工具计数、收据与转接记录形成观察；期望表</text>
+<text x="669.3333333333334" y="744.0" font-size="18" fill="#233734" font-weight="400">不得代替实际状态和计数。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,810.0 657.3333333333334,810.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="788.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="818.0" font-size="21" fill="#233734" font-weight="700">判定器测试夹具</text>
+<text x="669.3333333333334" y="848.0" font-size="16" fill="#286f64" font-weight="400">人为构造的测试数据</text>
+<text x="669.3333333333334" y="870.0" font-size="18" fill="#53635f" font-weight="400">人为构造观察以检验门是否拒绝回归；合成通过表不是工作</text>
+<text x="669.3333333333334" y="895.0" font-size="18" fill="#53635f" font-weight="400">流已运行的证据。</text>
+<polyline points="639.3333333333334,810.0 639.3333333333334,961.0 657.3333333333334,961.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="939.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="969.0" font-size="21" fill="#233734" font-weight="700">人工转接记录</text>
+<text x="669.3333333333334" y="999.0" font-size="18" fill="#53635f" font-weight="400">自动路线停止后创建可接续资料并核对；本地 queued 对象</text>
+<text x="669.3333333333334" y="1024.0" font-size="18" fill="#53635f" font-weight="400">不证明真实人员已经接手。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">采用标准与后续反馈</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,516.0 1224.6666666666667,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#286f64" font-weight="700">指标与采用门槛（metric / gate）</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#233734" font-weight="400">指标描述观察，门决定是否采用；平均质量提高不能抵消越</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#233734" font-weight="400">权、转接缺失或合法功能消失。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">延迟与成本边界</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">区分主机实测耗时、脚本延迟和合成成本；少量样本的 P95 </text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">不能预测真实服务尾部表现。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">分层修复与回归案例</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">从最早偏离的责任层修复，将获准且脱敏的新失败收为可重</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">放案例，再比较改动。</text>
+<polyline points="1205.6666666666667,788.0 1205.6666666666667,917.0 1223.6666666666667,917.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="895.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="925.0" font-size="21" fill="#233734" font-weight="700">受限采用与回退</text>
+<text x="1235.6666666666667" y="955.0" font-size="18" fill="#53635f" font-weight="400">通过当前评测后仍要观察真实结果、费用和接手；保留停自</text>
+<text x="1235.6666666666667" y="980.0" font-size="18" fill="#53635f" font-weight="400">动路线、转人或退回版本的办法。</text>
+<text x="64" y="1088.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1088.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1113.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1146.0" font-size="21" fill="#233734" font-weight="700">工作流实际采集</text>
+<rect x="750" y="1113.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1146.0" font-size="21" fill="#233734" font-weight="700">指标与采用门槛（metric / gate）</text>
+<polyline points="538,1150.0 736,1150.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1150.0 726.9955289764732,1154.3496553411123 726.9955289764732,1145.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1138.0" font-size="17" fill="#286f64" font-weight="400">提供判定输入</text>
+<text x="80" y="1196.0" font-size="18" fill="#53635f" font-weight="400">状态、工具效果和转接必须有自己的来源，不能凭模型自报填写成功。</text>
+<rect x="64" y="1236.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1269.2" font-size="21" fill="#233734" font-weight="700">判定器测试夹具</text>
+<rect x="750" y="1236.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1269.2" font-size="21" fill="#233734" font-weight="700">工作流实际采集</text>
+<polyline points="538,1273.2 736,1273.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1273.2 726.9955289764732,1277.5496553411124 726.9955289764732,1268.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1261.2" font-size="17" fill="#286f64" font-weight="400">不能替代</text>
+<text x="80" y="1319.2" font-size="18" fill="#53635f" font-weight="400">判定逻辑能发现人为变异，并不自动证明采集值来自真实路线。</text>
+<rect x="64" y="1359.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1392.4" font-size="21" fill="#233734" font-weight="700">版本材料清单</text>
+<rect x="750" y="1359.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1392.4" font-size="21" fill="#233734" font-weight="700">固定案例与预期</text>
+<polyline points="538,1396.4 736,1396.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1396.4 726.9955289764732,1400.7496553411124 726.9955289764732,1392.0503446588878" fill="#286f64"/>
+<text x="603.0" y="1384.4" font-size="17" fill="#286f64" font-weight="400">连同保存</text>
+<text x="80" y="1442.4" font-size="18" fill="#53635f" font-weight="400">版本标识须指向实际内容，并保留案例和评分标准；只有合成版本名不足以复现。</text>
+<rect x="64" y="1482.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1515.6000000000001" font-size="21" fill="#233734" font-weight="700">分层修复与回归案例</text>
+<rect x="750" y="1482.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1515.6000000000001" font-size="21" fill="#233734" font-weight="700">固定案例与预期</text>
+<polyline points="538,1519.6000000000001 736,1519.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1519.6000000000001 726.9955289764732,1523.9496553411125 726.9955289764732,1515.2503446588878" fill="#286f64"/>
+<text x="620.0" y="1507.6000000000001" font-size="17" fill="#286f64" font-weight="400">补充</text>
+<text x="80" y="1565.6000000000001" font-size="18" fill="#53635f" font-weight="400">新反馈用于扩充覆盖，不为了放过现有失败而改写原预期。</text>
+<rect x="64" y="1605.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1638.8000000000002" font-size="21" fill="#233734" font-weight="700">固定案例与预期</text>
+<rect x="750" y="1605.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1638.8000000000002" font-size="21" fill="#233734" font-weight="700">工作流实际采集</text>
+<polyline points="538,1642.8000000000002 736,1642.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1642.8000000000002 726.9955289764732,1647.1496553411125 726.9955289764732,1638.4503446588878" fill="#286f64"/>
+<text x="577.5" y="1630.8000000000002" font-size="17" fill="#286f64" font-weight="400">规定待运行情境</text>
+<text x="80" y="1688.8000000000002" font-size="18" fill="#53635f" font-weight="400">预期用于比较，不用于回填实际观察；运行应保留每个案例的独立计数和记录。</text>
+<rect x="64" y="1729.0000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1762.0000000000002" font-size="21" fill="#233734" font-weight="700">指标与采用门槛（metric / gate）</text>
+<rect x="750" y="1729.0000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1762.0000000000002" font-size="21" fill="#233734" font-weight="700">受限采用与回退</text>
+<polyline points="538,1766.0000000000002 736,1766.0000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1766.0000000000002 726.9955289764732,1770.3496553411126 726.9955289764732,1761.650344658888" fill="#286f64"/>
+<text x="577.5" y="1754.0000000000002" font-size="17" fill="#286f64" font-weight="400">仅支持有界采用</text>
+<text x="80" y="1812.0000000000002" font-size="18" fill="#53635f" font-weight="400">Fake 工作流通过说明当前应用边界可检查，不替代真实模型、实际授权或真人接手验证。</text>
+<polyline points="64,1870.2000000000003 1736,1870.2000000000003" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1900.2000000000003" font-size="17" fill="#53635f" font-weight="400">对照正文：E06  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

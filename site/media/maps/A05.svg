@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2103" width="1800" height="2103" role="img" aria-labelledby="title">
+<title id="title">出错以后，程序怎样继续？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2103" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A05  出错以后，程序怎样继续？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A05把异常、循环和函数返回接在一起；A06把有清楚职责与接口的代码交给其他模块复用。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">失败走匹配的 except，正常完成 try 才走 else；重试来自循环，返回整数后仍由 main 判断业务规则。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">失败改道、重试与结果交付</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 1537.125,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 262.875,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">失败阶段与信号</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">语法无法解析（SyntaxError）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">源文件结构无法解析时，普通程序体尚未</text>
+<text x="103.0" y="630.0" font-size="18" fill="#53635f" font-weight="400">开始；运行中的try不能替该文件修复语</text>
+<text x="103.0" y="655.0" font-size="18" fill="#53635f" font-weight="400">法。</text>
+<polyline points="73.0,567.0 73.0,721.0 91.0,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="729.0" font-size="21" fill="#233734" font-weight="700">运行时异常</text>
+<text x="103.0" y="759.0" font-size="18" fill="#53635f" font-weight="400">代码已开始，某项操作做不成时发出失败</text>
+<text x="103.0" y="784.0" font-size="18" fill="#53635f" font-weight="400">信号；它改变控制路线而非自动产生替代</text>
+<text x="103.0" y="809.0" font-size="18" fill="#53635f" font-weight="400">值。</text>
+<polyline points="73.0,721.0 73.0,875.0 91.0,875.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="853.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="883.0" font-size="21" fill="#233734" font-weight="700">值不符合转换或要求（ValueError）</text>
+<text x="103.0" y="913.0" font-size="18" fill="#53635f" font-weight="400">本章主线为整数文字内容无效；可选迁移</text>
+<text x="103.0" y="938.0" font-size="18" fill="#53635f" font-weight="400">中拆包数量不匹配也会发出这一异常。</text>
+<polyline points="73.0,875.0 73.0,1004.0 91.0,1004.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="982.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,990.0 92.0,1134.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="1012.0" font-size="21" fill="#286f64" font-weight="700">赋值未完成</text>
+<text x="103.0" y="1042.0" font-size="16" fill="#286f64" font-weight="400">失败导致的执行结果</text>
+<text x="103.0" y="1064.0" font-size="18" fill="#233734" font-weight="400">右侧失败时本次赋值未发生；不会自动得</text>
+<text x="103.0" y="1089.0" font-size="18" fill="#233734" font-weight="400">到零或None，名字已有旧值时也不会自动</text>
+<text x="103.0" y="1114.0" font-size="18" fill="#233734" font-weight="400">清除。</text>
+<polyline points="73.0,1004.0 73.0,1180.0 91.0,1180.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1158.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1188.0" font-size="21" fill="#233734" font-weight="700">名称未定义（NameError）</text>
+<text x="103.0" y="1218.0" font-size="18" fill="#53635f" font-weight="400">本章独立脚本读取从未建立的名字时发</text>
+<text x="103.0" y="1243.0" font-size="18" fill="#53635f" font-weight="400">生；原因是先前赋值失败，不是try建立局</text>
+<text x="103.0" y="1268.0" font-size="18" fill="#53635f" font-weight="400">部域。</text>
+<polyline points="687.625,437.0 687.625,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="502.0" font-size="23" fill="#286f64" font-weight="700">单次尝试的分路</text>
+<polyline points="497.75,525.0 497.75,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,525.0 497.75,567.0 515.75,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="545.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="575.0" font-size="21" fill="#233734" font-weight="700">尝试这段操作（try）</text>
+<text x="527.75" y="605.0" font-size="16" fill="#286f64" font-weight="400">异常处理结构</text>
+<text x="527.75" y="627.0" font-size="18" fill="#53635f" font-weight="400">围住预期可能失败的操作，异常后跳过块</text>
+<text x="527.75" y="652.0" font-size="18" fill="#53635f" font-weight="400">内余下工作；范围越清楚，越能定位真实</text>
+<text x="527.75" y="677.0" font-size="18" fill="#53635f" font-weight="400">失败。</text>
+<polyline points="497.75,567.0 497.75,743.0 515.75,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="721.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,729.0 516.75,873.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="751.0" font-size="21" fill="#286f64" font-weight="700">按失败类型接手（except）</text>
+<text x="527.75" y="781.0" font-size="16" fill="#286f64" font-weight="400">匹配失败的分支</text>
+<text x="527.75" y="803.0" font-size="18" fill="#233734" font-weight="400">为匹配的已知失败安排恢复路线；不会修</text>
+<text x="527.75" y="828.0" font-size="18" fill="#233734" font-weight="400">好输入、返回失败处继续，也不会自动重</text>
+<text x="527.75" y="853.0" font-size="18" fill="#233734" font-weight="400">试。</text>
+<polyline points="497.75,743.0 497.75,919.0 515.75,919.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="897.0" width="358.75" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,905.0 516.75,1024.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="927.0" font-size="21" fill="#286f64" font-weight="700">正常完成与补充路线（try / else）</text>
+<text x="527.75" y="957.0" font-size="16" fill="#286f64" font-weight="400">正常完成后的分支</text>
+<text x="527.75" y="979.0" font-size="18" fill="#233734" font-weight="400">try无异常且正常到末尾时使用成功结果；</text>
+<text x="527.75" y="1004.0" font-size="18" fill="#233734" font-weight="400">else中的新异常不由前面的except处理。</text>
+<polyline points="497.75,919.0 497.75,1070.0 515.75,1070.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="1048.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="1078.0" font-size="21" fill="#233734" font-weight="700">业务结果判断（if）</text>
+<text x="527.75" y="1108.0" font-size="18" fill="#53635f" font-weight="400">根据已得到的普通值检查业务要求；负数</text>
+<text x="527.75" y="1133.0" font-size="18" fill="#53635f" font-weight="400">能转换成功，却仍可被人数规则拒绝。</text>
+<polyline points="1112.375,437.0 1112.375,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">下一轮与离开范围</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,697.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">循环再试（while）</text>
+<text x="952.5" y="605.0" font-size="16" fill="#286f64" font-weight="400">循环承担的重复</text>
+<text x="952.5" y="627.0" font-size="18" fill="#233734" font-weight="400">把取输入与尝试放入循环，失败后回到条</text>
+<text x="952.5" y="652.0" font-size="18" fill="#233734" font-weight="400">件才有下一轮；循环负责重复，异常负责</text>
+<text x="952.5" y="677.0" font-size="18" fill="#233734" font-weight="400">改道。</text>
+<polyline points="922.5,567.0 922.5,743.0 940.5,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="721.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="751.0" font-size="21" fill="#233734" font-weight="700">明确什么也不做（pass）</text>
+<text x="952.5" y="781.0" font-size="18" fill="#53635f" font-weight="400">在需要语句的块里不做额外动作，随后沿</text>
+<text x="952.5" y="806.0" font-size="18" fill="#53635f" font-weight="400">自然路线继续；自身既不重试也不结束循</text>
+<text x="952.5" y="831.0" font-size="18" fill="#53635f" font-weight="400">环。</text>
+<polyline points="922.5,743.0 922.5,897.0 940.5,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="875.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="905.0" font-size="21" fill="#233734" font-weight="700">离开循环（break）</text>
+<text x="952.5" y="935.0" font-size="18" fill="#53635f" font-weight="400">只离开当前最内层循环，之后可继续运行</text>
+<text x="952.5" y="960.0" font-size="18" fill="#53635f" font-weight="400">函数内的return或其他语句。</text>
+<polyline points="922.5,897.0 922.5,1026.0 940.5,1026.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="1004.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="1034.0" font-size="21" fill="#233734" font-weight="700">交回结果（return）</text>
+<text x="952.5" y="1064.0" font-size="18" fill="#53635f" font-weight="400">结束当前函数并把结果交回调用位置；可</text>
+<text x="952.5" y="1089.0" font-size="18" fill="#53635f" font-weight="400">从循环内部直接交付，但并非循环控制指</text>
+<text x="952.5" y="1114.0" font-size="18" fill="#53635f" font-weight="400">令。</text>
+<polyline points="1537.125,437.0 1537.125,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="502.0" font-size="23" fill="#286f64" font-weight="700">职责、接口与状态</text>
+<polyline points="1347.25,525.0 1347.25,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,525.0 1347.25,567.0 1365.25,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="575.0" font-size="21" fill="#233734" font-weight="700">转换输入并交回（get_int）</text>
+<text x="1377.25" y="605.0" font-size="18" fill="#53635f" font-weight="400">接收提示参数并重试文字转换，返回转换</text>
+<text x="1377.25" y="630.0" font-size="18" fill="#53635f" font-weight="400">成功的整数；不把某活动的人数规则写</text>
+<text x="1377.25" y="655.0" font-size="18" fill="#53635f" font-weight="400">死。</text>
+<polyline points="1347.25,567.0 1347.25,721.0 1365.25,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="729.0" font-size="21" fill="#233734" font-weight="700">组织一次运行（main）</text>
+<text x="1377.25" y="759.0" font-size="18" fill="#53635f" font-weight="400">接住返回的整数，再判断活动规则和计</text>
+<text x="1377.25" y="784.0" font-size="18" fill="#53635f" font-weight="400">算；规则不通过时由自己的循环重新调</text>
+<text x="1377.25" y="809.0" font-size="18" fill="#53635f" font-weight="400">用。</text>
+<polyline points="1347.25,721.0 1347.25,875.0 1365.25,875.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="853.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="883.0" font-size="21" fill="#233734" font-weight="700">参数与返回接口</text>
+<text x="1377.25" y="913.0" font-size="18" fill="#53635f" font-weight="400">prompt传入询问文字，整数由return交</text>
+<text x="1377.25" y="938.0" font-size="18" fill="#53635f" font-weight="400">出；两个部分通过明确的数据约定协作。</text>
+<polyline points="1347.25,875.0 1347.25,1004.0 1365.25,1004.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="982.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="1012.0" font-size="21" fill="#233734" font-weight="700">运行状态与处理边界</text>
+<text x="1377.25" y="1042.0" font-size="18" fill="#53635f" font-weight="400">变量保留当前值，各部分负责自己的失败</text>
+<text x="1377.25" y="1067.0" font-size="18" fill="#53635f" font-weight="400">去向；职责和边界落实在实际赋值与调用</text>
+<text x="1377.25" y="1092.0" font-size="18" fill="#53635f" font-weight="400">中。</text>
+<text x="64" y="1332.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1332.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1357.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1390.0" font-size="21" fill="#233734" font-weight="700">尝试这段操作（try）</text>
+<rect x="750" y="1357.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1390.0" font-size="21" fill="#233734" font-weight="700">正常完成与补充路线（try / else）</text>
+<polyline points="538,1394.0 736,1394.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1394.0 726.9955289764732,1398.3496553411123 726.9955289764732,1389.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1382.0" font-size="17" fill="#286f64" font-weight="400">正常执行到末尾</text>
+<text x="80" y="1440.0" font-size="18" fill="#53635f" font-weight="400">int(&quot;12&quot;)完成赋值后进入else；不是except处理完再进入else。</text>
+<rect x="64" y="1480.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1513.2" font-size="21" fill="#233734" font-weight="700">尝试这段操作（try）</text>
+<rect x="750" y="1480.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1513.2" font-size="21" fill="#233734" font-weight="700">按失败类型接手（except）</text>
+<polyline points="538,1517.2 736,1517.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1517.2 726.9955289764732,1521.5496553411124 726.9955289764732,1512.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1505.2" font-size="17" fill="#286f64" font-weight="400">出现匹配的异常</text>
+<text x="80" y="1563.2" font-size="18" fill="#53635f" font-weight="400">int(&quot;cat&quot;)触发ValueError，跳过try剩余部分及else；未匹配异常不会由这块接住。</text>
+<rect x="64" y="1603.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1636.4" font-size="21" fill="#233734" font-weight="700">值不符合转换或要求（ValueError）</text>
+<rect x="750" y="1603.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1636.4" font-size="21" fill="#233734" font-weight="700">赋值未完成</text>
+<polyline points="538,1640.4 736,1640.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1640.4 726.9955289764732,1644.7496553411124 726.9955289764732,1636.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1628.4" font-size="17" fill="#286f64" font-weight="400">使本次右侧失败</text>
+<text x="80" y="1686.4" font-size="18" fill="#53635f" font-weight="400">NameError是随后读取未建立名字的另一处失败，不能把它写成int的直接异常。</text>
+<rect x="64" y="1726.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1759.6000000000001" font-size="21" fill="#233734" font-weight="700">按失败类型接手（except）</text>
+<rect x="750" y="1726.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1759.6000000000001" font-size="21" fill="#233734" font-weight="700">循环再试（while）</text>
+<polyline points="538,1763.6000000000001 736,1763.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1763.6000000000001 726.9955289764732,1767.9496553411125 726.9955289764732,1759.2503446588878" fill="#286f64"/>
+<text x="594.5" y="1751.6000000000001" font-size="17" fill="#286f64" font-weight="400">完成后回到</text>
+<text x="80" y="1809.6000000000001" font-size="18" fill="#53635f" font-weight="400">有下一轮是因为失败路线仍在循环中；单独except不会再次执行input。</text>
+<rect x="64" y="1849.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1882.8000000000002" font-size="21" fill="#233734" font-weight="700">转换输入并交回（get_int）</text>
+<rect x="750" y="1849.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1882.8000000000002" font-size="21" fill="#233734" font-weight="700">组织一次运行（main）</text>
+<polyline points="538,1886.8000000000002 736,1886.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1886.8000000000002 726.9955289764732,1891.1496553411125 726.9955289764732,1882.4503446588878" fill="#286f64"/>
+<text x="577.5" y="1874.8000000000002" font-size="17" fill="#286f64" font-weight="400">返回整数供判断</text>
+<text x="80" y="1932.8000000000002" font-size="18" fill="#53635f" font-weight="400">cat在转换函数重试；-2已成功返回，由main的业务循环重新调用。</text>
+<text x="64" y="1985.0000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：可选迁移：Fuel中的解析与重试；可选迁移：Taqueria中的查值与结束。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2047.6000000000001 1736,2047.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2077.6000000000004" font-size="17" fill="#53635f" font-weight="400">对照正文：A05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

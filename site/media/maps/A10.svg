@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2476" width="1800" height="2476" role="img" aria-labelledby="title">
+<title id="title">程序运行后，怎样观察和停止？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2476" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A10  程序运行后，怎样观察和停止？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A10从A09的运行条件追到实际进程；B册进一步解释HTTP交接，A12把退出码与报告结果写入使用约定。</text>
+<rect x="64" y="189.0" width="1672" height="88" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先看 normalize_line.py 把 ticket-42 变为 TICKET-42：输出内容、诊断文字和退出码分别说明什么。再把同一观察方式扩展到服务的实例、监听、响应和停止复</text>
+<text x="88" y="253.0" font-size="23" fill="#286f64" font-weight="700">查。</text>
+<text x="64" y="310.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="347.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="347.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="375.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="418.0" font-size="28" fill="#286f64" font-weight="700">进程结果、服务证据与生命周期</text>
+<polyline points="900.0,440.0 900.0,469.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,469.0 1466.3333333333335,469.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,469.0 333.6666666666667,500.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="500.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="534.0" font-size="23" fill="#286f64" font-weight="700">输入、输出与结束结果</text>
+<polyline points="73.0,557.0 73.0,592.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,557.0 73.0,599.0 91.0,599.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="577.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="607.0" font-size="21" fill="#233734" font-weight="700">输入、正常输出与错误输出通道（stdin / stdout / stderr）</text>
+<text x="103.0" y="637.0" font-size="16" fill="#286f64" font-weight="400">输入输出通道</text>
+<text x="103.0" y="659.0" font-size="18" fill="#53635f" font-weight="400">分别接收输入、交出结果与诊断；常显示在同一终端，</text>
+<text x="103.0" y="684.0" font-size="18" fill="#53635f" font-weight="400">stderr有文字不必然代表运行失败。</text>
+<polyline points="73.0,599.0 73.0,750.0 91.0,750.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="728.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="758.0" font-size="21" fill="#233734" font-weight="700">进程结束结果（退出码 / sys.exit）</text>
+<text x="103.0" y="788.0" font-size="16" fill="#286f64" font-weight="400">整次进程的结束结果</text>
+<text x="103.0" y="810.0" font-size="18" fill="#53635f" font-weight="400">本例把main返回整数传给sys.exit成为退出码；普通return不</text>
+<text x="103.0" y="835.0" font-size="18" fill="#53635f" font-weight="400">退出进程，数值按合同解释。</text>
+<polyline points="73.0,750.0 73.0,901.0 91.0,901.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="879.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="909.0" font-size="21" fill="#233734" font-weight="700">读取上一命令退出码（$LASTEXITCODE）</text>
+<text x="103.0" y="939.0" font-size="18" fill="#53635f" font-weight="400">保存当前shell最近原生程序的退出码，应立即留存；不自动</text>
+<text x="103.0" y="964.0" font-size="18" fill="#53635f" font-weight="400">等于job或独立进程里的结果。</text>
+<polyline points="73.0,901.0 73.0,1030.0 91.0,1030.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1008.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1038.0" font-size="21" fill="#233734" font-weight="700">重定向 &gt;／2&gt;</text>
+<text x="103.0" y="1068.0" font-size="18" fill="#53635f" font-weight="400">改变stdout或stderr的接收文件，不改变业务处理；普通覆盖</text>
+<text x="103.0" y="1093.0" font-size="18" fill="#53635f" font-weight="400">重定向会替换目标内容。</text>
+<polyline points="73.0,1030.0 73.0,1159.0 91.0,1159.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1137.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1167.0" font-size="21" fill="#233734" font-weight="700">对象管道与原生边界</text>
+<text x="103.0" y="1197.0" font-size="18" fill="#53635f" font-weight="400">PowerShell内部可传对象，交给Python时需文字等约定；</text>
+<text x="103.0" y="1222.0" font-size="18" fill="#53635f" font-weight="400">JSON输出先是文字，再解析为对象。</text>
+<polyline points="900.0,469.0 900.0,500.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="500.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="534.0" font-size="23" fill="#286f64" font-weight="700">运行实例与继承</text>
+<polyline points="639.3333333333334,557.0 639.3333333333334,592.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,557.0 639.3333333333334,599.0 657.3333333333334,599.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="577.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,585.0 658.3333333333334,704.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="607.0" font-size="21" fill="#286f64" font-weight="700">运行实例及身份（PID）</text>
+<text x="669.3333333333334" y="637.0" font-size="16" fill="#286f64" font-weight="400">运行实例与系统编号</text>
+<text x="669.3333333333334" y="659.0" font-size="18" fill="#233734" font-weight="400">每次启动形成运行实例及独立内存，同文件可有多个实例；</text>
+<text x="669.3333333333334" y="684.0" font-size="18" fill="#233734" font-weight="400">PID标识实例但以后可能复用。</text>
+<polyline points="639.3333333333334,599.0 639.3333333333334,750.0 657.3333333333334,750.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="728.0" width="500.33333333333337" height="135" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="758.0" font-size="21" fill="#233734" font-weight="700">父子环境副本</text>
+<text x="669.3333333333334" y="788.0" font-size="16" fill="#286f64" font-weight="400">进程之间的继承关系</text>
+<text x="669.3333333333334" y="810.0" font-size="18" fill="#53635f" font-weight="400">通常子进程取得启动时父环境的副本；修改自己不回写父进</text>
+<text x="669.3333333333334" y="835.0" font-size="18" fill="#53635f" font-weight="400">程，后续启动才取得父的新值。</text>
+<polyline points="639.3333333333334,750.0 639.3333333333334,901.0 657.3333333333334,901.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="879.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="909.0" font-size="21" fill="#233734" font-weight="700">前台等待</text>
+<text x="669.3333333333334" y="939.0" font-size="18" fill="#53635f" font-weight="400">提示符未回来可能在等输入、计算或等请求；需依据程序工</text>
+<text x="669.3333333333334" y="964.0" font-size="18" fill="#53635f" font-weight="400">作方式判断，而非一律视为卡死。</text>
+<polyline points="1466.3333333333335,469.0 1466.3333333333335,500.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="500.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="534.0" font-size="23" fill="#286f64" font-weight="700">本机服务的分层证据</text>
+<polyline points="1205.6666666666667,557.0 1205.6666666666667,592.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,557.0 1205.6666666666667,599.0 1223.6666666666667,599.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="577.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,585.0 1224.6666666666667,704.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="607.0" font-size="21" fill="#286f64" font-weight="700">服务入口与监听者（地址 / 端口 / listener）</text>
+<text x="1235.6666666666667" y="637.0" font-size="16" fill="#286f64" font-weight="400">服务入口的监听证据</text>
+<text x="1235.6666666666667" y="659.0" font-size="18" fill="#233734" font-weight="400">地址和端口确定网络入口，listener表示正在监听；端口不是</text>
+<text x="1235.6666666666667" y="684.0" font-size="18" fill="#233734" font-weight="400">PID，单进程也可拥有多个端口。</text>
+<polyline points="1205.6666666666667,599.0 1205.6666666666667,750.0 1223.6666666666667,750.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="728.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,736.0 1224.6666666666667,855.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="758.0" font-size="21" fill="#286f64" font-weight="700">进程归属证据</text>
+<text x="1235.6666666666667" y="788.0" font-size="16" fill="#286f64" font-weight="400">本次运行的身份核对</text>
+<text x="1235.6666666666667" y="810.0" font-size="18" fill="#233734" font-weight="400">由OwningProcess追到解释器、命令行和启动时间，确认是</text>
+<text x="1235.6666666666667" y="835.0" font-size="18" fill="#233734" font-weight="400">本次实例；仅名为python不足以认领。</text>
+<polyline points="1205.6666666666667,750.0 1205.6666666666667,901.0 1223.6666666666667,901.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="879.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,887.0 1224.6666666666667,1006.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="909.0" font-size="21" fill="#286f64" font-weight="700">实际请求与HTTP结果</text>
+<text x="1235.6666666666667" y="939.0" font-size="16" fill="#286f64" font-weight="400">这一次请求的证据</text>
+<text x="1235.6666666666667" y="961.0" font-size="18" fill="#233734" font-weight="400">检查单次回应状态及正文，200不等于进程退出码；404可在</text>
+<text x="1235.6666666666667" y="986.0" font-size="18" fill="#233734" font-weight="400">服务仍运行时表示资源未找到。</text>
+<polyline points="1205.6666666666667,901.0 1205.6666666666667,1052.0 1223.6666666666667,1052.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1030.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1060.0" font-size="21" fill="#233734" font-weight="700">本机绑定与目录范围</text>
+<text x="1235.6666666666667" y="1090.0" font-size="18" fill="#53635f" font-weight="400">127.0.0.1只接本机IPv4；localhost需解析；http.server目录参</text>
+<text x="1235.6666666666667" y="1115.0" font-size="18" fill="#53635f" font-weight="400">数不是安全沙箱。</text>
+<polyline points="1205.6666666666667,1052.0 1205.6666666666667,1181.0 1223.6666666666667,1181.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1159.0" width="500.33333333333337" height="135" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,1167.0 1224.6666666666667,1286.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="1189.0" font-size="21" fill="#286f64" font-weight="700">停止与复查</text>
+<text x="1235.6666666666667" y="1219.0" font-size="16" fill="#286f64" font-weight="400">结束动作与结果核对</text>
+<text x="1235.6666666666667" y="1241.0" font-size="18" fill="#233734" font-weight="400">优先用程序停止方式，再核对同一实例及其监听已消失；按</text>
+<text x="1235.6666666666667" y="1266.0" font-size="18" fill="#233734" font-weight="400">身份精确结束，不按名称清空全部。</text>
+<polyline points="1205.6666666666667,1181.0 1205.6666666666667,1332.0 1223.6666666666667,1332.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="1310.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="1340.0" font-size="21" fill="#233734" font-weight="700">观测失败与状态否定</text>
+<text x="1235.6666666666667" y="1370.0" font-size="18" fill="#53635f" font-weight="400">查询报错不等于没有进程或端口空闲；停止动作后应有有界</text>
+<text x="1235.6666666666667" y="1395.0" font-size="18" fill="#53635f" font-weight="400">复查，不能只等待固定秒数就认定成功。</text>
+<text x="64" y="1459.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1459.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1484.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1517.0" font-size="21" fill="#233734" font-weight="700">进程结束结果（退出码 / sys.exit）</text>
+<rect x="750" y="1484.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1517.0" font-size="21" fill="#233734" font-weight="700">读取上一命令退出码（$LASTEXITCODE）</text>
+<polyline points="538,1521.0 736,1521.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1521.0 726.9955289764732,1525.3496553411123 726.9955289764732,1516.6503446588877" fill="#286f64"/>
+<text x="578.201416015625" y="1509.0" font-size="17" fill="#286f64" font-weight="400">由当前shell接收</text>
+<text x="80" y="1567.0" font-size="18" fill="#53635f" font-weight="400">普通函数return只返回到Python调用处，sys.exit才连接进程结束结果。</text>
+<rect x="64" y="1607.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1640.2" font-size="21" fill="#233734" font-weight="700">服务入口与监听者（地址 / 端口 / listener）</text>
+<rect x="750" y="1607.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1640.2" font-size="21" fill="#233734" font-weight="700">进程归属证据</text>
+<polyline points="538,1644.2 736,1644.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1644.2 726.9955289764732,1648.5496553411124 726.9955289764732,1639.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1632.2" font-size="17" fill="#286f64" font-weight="400">按拥有者追踪</text>
+<text x="80" y="1690.2" font-size="18" fill="#53635f" font-weight="400">端口可能由别人占用；先核对启动命令和目标目录才能归属于本次服务。</text>
+<rect x="64" y="1730.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1763.4" font-size="21" fill="#233734" font-weight="700">进程归属证据</text>
+<rect x="750" y="1730.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1763.4" font-size="21" fill="#233734" font-weight="700">停止与复查</text>
+<polyline points="538,1767.4 736,1767.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1767.4 726.9955289764732,1771.7496553411124 726.9955289764732,1763.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1755.4" font-size="17" fill="#286f64" font-weight="400">限定停止目标</text>
+<text x="80" y="1813.4" font-size="18" fill="#53635f" font-weight="400">结合启动时间防止PID复用误认，并检查该实例的监听是否释放。</text>
+<rect x="64" y="1853.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1886.6000000000001" font-size="21" fill="#233734" font-weight="700">运行实例及身份（PID）</text>
+<rect x="750" y="1853.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1886.6000000000001" font-size="21" fill="#233734" font-weight="700">进程归属证据</text>
+<polyline points="538,1890.6000000000001 736,1890.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1890.6000000000001 726.9955289764732,1894.9496553411125 726.9955289764732,1886.2503446588878" fill="#286f64"/>
+<text x="560.5" y="1878.6000000000001" font-size="17" fill="#286f64" font-weight="400">存在但还需确认是谁</text>
+<text x="80" y="1936.6000000000001" font-size="18" fill="#53635f" font-weight="400">同名Python可以有多个实例；PID只是起点，还需启动命令、目录与时间。</text>
+<rect x="64" y="1976.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2009.8000000000002" font-size="21" fill="#233734" font-weight="700">进程归属证据</text>
+<rect x="750" y="1976.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2009.8000000000002" font-size="21" fill="#233734" font-weight="700">服务入口与监听者（地址 / 端口 / listener）</text>
+<polyline points="538,2013.8000000000002 736,2013.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2013.8000000000002 726.9955289764732,2018.1496553411125 726.9955289764732,2009.4503446588878" fill="#286f64"/>
+<text x="552.0" y="2001.8000000000002" font-size="17" fill="#286f64" font-weight="400">另行核对该实例的入口</text>
+<text x="80" y="2059.8" font-size="18" fill="#53635f" font-weight="400">确认自己的进程存在，不证明它已监听；用OwningProcess把监听与实例对应。</text>
+<rect x="64" y="2100.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2133.0" font-size="21" fill="#233734" font-weight="700">服务入口与监听者（地址 / 端口 / listener）</text>
+<rect x="750" y="2100.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2133.0" font-size="21" fill="#233734" font-weight="700">实际请求与HTTP结果</text>
+<polyline points="538,2137.0 736,2137.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2137.0 726.9955289764732,2141.3496553411123 726.9955289764732,2132.6503446588877" fill="#286f64"/>
+<text x="569.0" y="2125.0" font-size="17" fill="#286f64" font-weight="400">还需请求验证内容</text>
+<text x="80" y="2183.0" font-size="18" fill="#53635f" font-weight="400">监听存在但请求missing.json仍可404；预期状态与正文都正确才支持这一次取内容成功。</text>
+<rect x="64" y="2223.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2256.2" font-size="21" fill="#233734" font-weight="700">实际请求与HTTP结果</text>
+<rect x="750" y="2223.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2256.2" font-size="21" fill="#233734" font-weight="700">进程结束结果（退出码 / sys.exit）</text>
+<polyline points="538,2260.2 736,2260.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2260.2 726.9955289764732,2264.549655341112 726.9955289764732,2255.8503446588875" fill="#286f64"/>
+<text x="603.0" y="2248.2" font-size="17" fill="#286f64" font-weight="400">不能替代</text>
+<text x="80" y="2306.2" font-size="18" fill="#53635f" font-weight="400">HTTP 200属于一次响应；服务可以继续运行，尚未产生本次进程结束结果。</text>
+<text x="64" y="2358.3999999999996" font-size="19" fill="#53635f" font-weight="400">同章续图：后台管理方式；访问权限的核对。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,2420.9999999999995 1736,2420.9999999999995" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2450.9999999999995" font-size="17" fill="#53635f" font-weight="400">对照正文：A10  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

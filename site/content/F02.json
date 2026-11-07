@@ -1,0 +1,32 @@
+{
+  "id": "F02",
+  "title": "Dockerfile 怎样把文件变成运行模板",
+  "html": "<p>同事能拿到 <code>app.py</code>，并不表示他已经有正确的 Python 和依赖。镜像把运行文件与默认约定放到一个可识别的产物中；Dockerfile 说明如何从明确输入建立这份产物。</p>\n<p>这一章先追踪一次 build：它读取什么，在哪里安装依赖，最后把哪个命令交给容器。然后再解释怎样复用构建结果、限制不必要权限，以及为什么镜像身份需要记录。</p>\n<h2 id=\"f02-s1\">builder 能看见哪些文件</h2>\n<p>从这里起使用本册独立的 <code>support-stack</code>：工单 API 接收并保存合成工单，另一个本地服务提供容量查询。它不是 E 册的 AI 助手，也不向外部创建预约；本册用它观察构建、运行与数据恢复。</p>\n<p>先从资料文件夹中可见的 <code>02_配套代码_F与综合应用/examples/f_delivery_observability/support-stack</code> 整个复制到自选的独立实验目录。<code>02_配套代码_F与综合应用</code> 是底层 <code>02_配套练习_FX新版</code> 的入口，二者指向同一份配套；后文文件内若出现底层名称，不需要再复制另一份。后续命令都在实验副本的根目录执行，参考资料包保留原样。配套只需 Python 3.13 的标准库，<code>requirements.txt</code> 记录这一依赖边界；本章由 Dockerfile 准备镜像内的 Python，后续直接在 Windows 运行配套脚本时才使用主机 Python。</p>\n<p>进入这个 <code>support-stack</code> 实验副本根目录后执行：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">docker build -t fde-support-stack:1.1.0 .\n</code></pre></div>\n<p>最后的 <code>.</code> 指定 build context，即本次构建可读取的本地文件范围。<code>-t</code> 为产物指定 tag，这里是 <code>fde-support-stack:1.1.0</code>。<code>Dockerfile</code> 默认从这个 context 中寻找；换用另一个 Dockerfile，并不等于自动改了最后这个输入范围。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">实验目录\n├─ app.py、storage.py              应用源码\n├─ requirements.txt              依赖声明\n├─ Dockerfile                    构建说明\n├─ .dockerignore                 排除规则\n├─ tests/                        测试材料\n└─ backups/                      运行后产生的备份\n</code></pre></div>\n<p>builder 不应把虚拟环境、备份和秘密文件都当成程序。配套 <code>.dockerignore</code> 排除 <code>.venv</code>、缓存、<code>.env</code>、数据库文件、backups 和 tests。这些匹配文件从构建上下文中排除，避免成为 COPY 的普通来源。它也减少传输和扫描的无关输入。</p>\n<p><code>.dockerignore</code> 的作用发生在构建输入阶段。若秘密已经由 <code>COPY . /app</code> 进入某一层，后面再删除文件，早期层仍可能包含它。真正的 build secret 应使用专门的 secret mount；不能用普通 <code>ARG</code>、<code>ENV</code> 或先复制后删除代替秘密管理。</p>\n<h2 id=\"f02-s2\">一份实际 Dockerfile 怎样读</h2>\n<p>下面是配套构建文件的主要执行部分。它包含本例运行所需的权限建立，不能把 <code>USER</code> 单独复制出去而省略它的目录条件。</p>\n<div class=\"code-block\"><span class=\"code-language\">dockerfile</span><pre><code class=\"language-dockerfile\">FROM python:3.13-slim-bookworm@sha256:c45a22ea000adfd9cda29364bbe7edd23001ce5cc2ad15857cfbf7766943b9ca\n\nARG APP_VERSION=1.1.0\nARG EXPECTED_SCHEMA_VERSION=1\nENV PYTHONUNBUFFERED=1 \\\n    PYTHONDONTWRITEBYTECODE=1 \\\n    APP_VERSION=${APP_VERSION} \\\n    EXPECTED_SCHEMA_VERSION=${EXPECTED_SCHEMA_VERSION}\n\nRUN groupadd --gid 10001 appgroup \\\n    &amp;&amp; useradd --uid 10001 --gid appgroup --no-create-home appuser \\\n    &amp;&amp; mkdir -p /app /data /backups \\\n    &amp;&amp; chown -R appuser:appgroup /app /data /backups\n\nWORKDIR /app\nCOPY requirements.txt ./\nRUN python -m pip install --no-cache-dir --requirement requirements.txt\nCOPY app.py storage.py observability.py healthcheck.py data_admin.py uat.py ./\nUSER 10001:10001\nEXPOSE 8000 9000\nCMD [&quot;python&quot;, &quot;app.py&quot;]\n</code></pre></div>\n<p><code>FROM</code> 选取已有基础镜像，其中有 Python 和基础文件系统；它没有包含本项目源码。<code>ARG</code> 是构建参数，<code>ENV</code> 在这里把版本和默认设置留进 image 配置。运行时可以覆盖适合按环境改变的默认值，下一章会实际演示。</p>\n<p>第一条 <code>RUN</code> 在镜像构建环境里创建用户与目录。10001 是本例用户和组的数字身份。<code>/data</code> 稍后要保存数据库，所以默认用户需要有写入该位置的权限。容器挂入的实际存储也要满足访问权限；Dockerfile 中目录可写，不代表任意 bind mount 都可写。</p>\n<p><code>WORKDIR /app</code> 让后面的相对目标和默认进程工作目录落在 <code>/app</code>。它没有把 Windows 的 PowerShell 切换到某个目录。第一条 COPY 从 context 复制依赖清单，安装命令随后在镜像环境读取它。配套只用标准库，清单因此没有第三方包；这种结构仍清楚分开依赖输入与应用源码。</p>\n<p>第二条 COPY 加入运行所需模块。最后 <code>USER</code> 设定默认进程身份，<code>CMD</code> 设定默认入口。<code>CMD</code> 的方括号是 exec form：可执行程序和参数分别成为数组元素，而不是要求 shell 再解释一整串文字。</p>\n<p><strong>RUN 在 build 时执行；CMD 在启动容器时提供默认命令。</strong> 把 API 长期服务写进 RUN，builder 会等待该命令结束；把依赖安装当作唯一 CMD，则每次启动只做安装，安装结束后实例也结束。</p>\n<p><code>EXPOSE 8000 9000</code> 记录预计使用的端口元数据。它没有把 Windows 的 18080 端口连接过来，也没有启动一个监听进程。真正监听由应用完成，主机发布由运行配置完成。</p>\n<p>完整变化可以沿文件追踪：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">实验目录的 requirements.txt\n→ image 的 /app/requirements.txt\n→ build 时 Python 安装依赖\n\n实验目录的 app.py 等模块\n→ image 的 /app/*.py\n→ run 时在 /app 执行 python app.py\n</code></pre></div>\n<h2 id=\"f02-s3\">为什么先复制依赖，后复制源码</h2>\n<p>假设只把一个错误回复的文字改了，依赖清单不变。builder 能复用前面相同输入的构建结果，从源码 COPY 附近重新处理；不必因为 source 改变就重新安装相同依赖。</p>\n<p>反过来，如果 requirements.txt 改了，安装步骤的输入改变，后续依赖它的结果需要重新计算。这个机制叫 build cache：它复用可复用的中间结果，不是判断业务代码正确。</p>\n<p>image 中的文件系统变化由 layers 保存。COPY、RUN 等指令会形成文件变化；CMD、ENV 等还会设置镜像配置，不能把每条 Dockerfile 指令都理解成新增业务文件的层。构建日志里的 <code>CACHED</code> 说明某步复用了结果，不能说明依赖没有漏洞或 API 验收已通过。</p>\n<p><code>--no-cache</code> 要求这次不复用已有构建缓存；<code>--pull</code> 尝试取得指定 base 引用。它们并不等价。尤其本例基础镜像固定到 digest，<code>--pull</code> 仍然取得这份指定内容，不会替你选择新的安全修复版本。</p>\n<h2 id=\"f02-s4\">固定身份与更新并不冲突</h2>\n<p>tag 是可读名字，例如 <code>python:3.13-slim-bookworm</code>；维护者可以让它指向新内容。<code>@sha256:...</code> 是内容身份，固定它可避免标签移动悄悄改变 base。代价是更新需要明确进行：核对新引用、修改、重建并验证。</p>\n<p>base 的 digest 只识别基础镜像。最终工单 image 还包含源码和配置，要另取自己的 ID：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">docker image inspect fde-support-stack:1.1.0 --format &#x27;{{.Id}} {{json .Config.Cmd}} {{json .Config.User}}&#x27;\n</code></pre></div>\n<p>应看到一个 <code>sha256:</code> 身份、命令数组 <code>python app.py</code>、用户 <code>10001:10001</code>。把实际 ID 记录为 D1。D1 是本文方便解释的代号，不是可以原样传给 Docker 的镜像名字。</p>\n<p>这些检查有明确用途：Cmd 防止默认入口选错；User 防止以不必要的 root 身份运行；ID 让以后能核对运行的确实是这份产物。任何一项都不能独自证明应用正确或全面安全。</p>\n<h2 id=\"f02-s5\">改了文件以后应该做什么</h2>\n<table>\n<thead>\n<tr>\n<th>实际改变</th>\n<th>下一动作为什么这样选</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>source、依赖或 Dockerfile 改变</td>\n<td>rebuild 产生新镜像，再用它建立新容器</td>\n</tr>\n<tr>\n<td>本次端口或环境变量改变</td>\n<td>recreate 应用新的运行配置；源码不变时无需另建镜像</td>\n</tr>\n<tr>\n<td>同一实例需要重新启动进程</td>\n<td>restart；它仍保留原镜像和原运行配置</td>\n</tr>\n</tbody>\n</table>\n<p>build 成功没有把所有已存在实例自动换成新镜像。这个界限稍后也决定回滚怎么做：先查错在模板、运行配置还是数据，再选择改变相应对象的动作。</p>\n",
+  "toc": [
+    {
+      "id": "f02-s1",
+      "text": "builder 能看见哪些文件",
+      "level": 2
+    },
+    {
+      "id": "f02-s2",
+      "text": "一份实际 Dockerfile 怎样读",
+      "level": 2
+    },
+    {
+      "id": "f02-s3",
+      "text": "为什么先复制依赖，后复制源码",
+      "level": 2
+    },
+    {
+      "id": "f02-s4",
+      "text": "固定身份与更新并不冲突",
+      "level": 2
+    },
+    {
+      "id": "f02-s5",
+      "text": "改了文件以后应该做什么",
+      "level": 2
+    }
+  ]
+}

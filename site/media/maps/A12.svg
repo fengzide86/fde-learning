@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2612" width="1800" height="2612" role="img" aria-labelledby="title">
+<title id="title">离开当前环境还能重新运行吗？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="2612" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A12  离开当前环境还能重新运行吗？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A12把A09运行条件、A10结果证据和A11代码快照连成可重建交付；A13打开同一程序解释内部实现。</text>
+<rect x="64" y="189.0" width="1672" height="88" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先对上 tickets.json → ticket_organizer.py → report.json。当前输入处理正确，与不带旧环境仍能重建，是两种承诺；只有后一项才继续绑定版本、依赖和新环</text>
+<text x="88" y="253.0" font-size="23" fill="#286f64" font-weight="700">境证据。</text>
+<text x="64" y="310.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="310.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="622.0" y="338.0" width="556.0" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="662.0" y="381.0" font-size="28" fill="#286f64" font-weight="700">当前运行正确与可重建交付的两种承诺</text>
+<polyline points="900.0,403.0 900.0,432.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,432.0 1537.125,432.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,432.0 262.875,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="463.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="497.0" font-size="23" fill="#286f64" font-weight="700">先确定承诺，再准备交付</text>
+<polyline points="73.0,520.0 73.0,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,520.0 73.0,562.0 91.0,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="540.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,548.0 92.0,692.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="570.0" font-size="21" fill="#286f64" font-weight="700">当前输入与结果</text>
+<text x="103.0" y="600.0" font-size="16" fill="#286f64" font-weight="400">一次运行的证据</text>
+<text x="103.0" y="622.0" font-size="18" fill="#233734" font-weight="400">输入文件交给程序后，核对新报告中的内</text>
+<text x="103.0" y="647.0" font-size="18" fill="#233734" font-weight="400">容、计数与退出码；修改输入再运行，才</text>
+<text x="103.0" y="672.0" font-size="18" fill="#233734" font-weight="400">能验证规则对变化的反应。</text>
+<polyline points="73.0,562.0 73.0,738.0 91.0,738.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="716.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,724.0 92.0,868.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="746.0" font-size="21" fill="#286f64" font-weight="700">无旧环境的重建承诺</text>
+<text x="103.0" y="776.0" font-size="16" fill="#286f64" font-weight="400">另一组运行条件</text>
+<text x="103.0" y="798.0" font-size="18" fill="#233734" font-weight="400">只凭确定版本、依赖记录和输入重新取得</text>
+<text x="103.0" y="823.0" font-size="18" fill="#233734" font-weight="400">结果；旧目录跑通不能代替这份证据，同</text>
+<text x="103.0" y="848.0" font-size="18" fill="#233734" font-weight="400">机重建也不代表另一台电脑已实测。</text>
+<polyline points="73.0,738.0 73.0,914.0 91.0,914.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="892.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="922.0" font-size="21" fill="#233734" font-weight="700">源码、测试与样例</text>
+<text x="103.0" y="952.0" font-size="18" fill="#53635f" font-weight="400">提供程序能力、可重复检查及可核对输入</text>
+<text x="103.0" y="977.0" font-size="18" fill="#53635f" font-weight="400">输出；本项目运行只用标准库，测试另需</text>
+<text x="103.0" y="1002.0" font-size="18" fill="#53635f" font-weight="400">pytest。</text>
+<polyline points="73.0,914.0 73.0,1068.0 91.0,1068.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1046.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1076.0" font-size="21" fill="#233734" font-weight="700">README与RELEASE_NOTES</text>
+<text x="103.0" y="1106.0" font-size="18" fill="#53635f" font-weight="400">记录Python条件、依赖、目录、入口、结</text>
+<text x="103.0" y="1131.0" font-size="18" fill="#53635f" font-weight="400">果、限制与恢复方法，使陌生使用者能按</text>
+<text x="103.0" y="1156.0" font-size="18" fill="#53635f" font-weight="400">事实操作。</text>
+<polyline points="73.0,1068.0 73.0,1222.0 91.0,1222.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1200.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1230.0" font-size="21" fill="#233734" font-weight="700">配置与空条件</text>
+<text x="103.0" y="1260.0" font-size="18" fill="#53635f" font-weight="400">当前没有必需环境变量或秘密也应明确写</text>
+<text x="103.0" y="1285.0" font-size="18" fill="#53635f" font-weight="400">出；将来配置只留名字用途及占位，真实</text>
+<text x="103.0" y="1310.0" font-size="18" fill="#53635f" font-weight="400">秘密另行提供。</text>
+<polyline points="73.0,1222.0 73.0,1376.0 91.0,1376.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="1354.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="1384.0" font-size="21" fill="#233734" font-weight="700">运行合同与退出码</text>
+<text x="103.0" y="1414.0" font-size="18" fill="#53635f" font-weight="400">合同同时解释报告和退出码：0全有效，2</text>
+<text x="103.0" y="1439.0" font-size="18" fill="#53635f" font-weight="400">含拒绝但报告完整；1参数，3输入格式，</text>
+<text x="103.0" y="1464.0" font-size="18" fill="#53635f" font-weight="400">4文件操作失败。</text>
+<polyline points="687.625,432.0 687.625,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="463.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="497.0" font-size="23" fill="#286f64" font-weight="700">依赖记录与安装状态</text>
+<polyline points="497.75,520.0 497.75,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,520.0 497.75,562.0 515.75,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="540.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,548.0 516.75,692.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="570.0" font-size="21" fill="#286f64" font-weight="700">依赖安装清单（requirements.txt）</text>
+<text x="527.75" y="600.0" font-size="16" fill="#286f64" font-weight="400">依赖安装记录</text>
+<text x="527.75" y="622.0" font-size="18" fill="#233734" font-weight="400">记录需安装的包与版本，是安装输入而非</text>
+<text x="527.75" y="647.0" font-size="18" fill="#233734" font-weight="400">已经安装的环境；遗漏依赖可能被旧环境</text>
+<text x="527.75" y="672.0" font-size="18" fill="#233734" font-weight="400">掩盖。</text>
+<polyline points="497.75,562.0 497.75,738.0 515.75,738.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="716.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,724.0 516.75,868.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="746.0" font-size="21" fill="#286f64" font-weight="700">新建隔离环境（venv）</text>
+<text x="527.75" y="776.0" font-size="16" fill="#286f64" font-weight="400">重建的安装状态</text>
+<text x="527.75" y="798.0" font-size="18" fill="#233734" font-weight="400">在新目录用选定Python建立环境，不搬旧</text>
+<text x="527.75" y="823.0" font-size="18" fill="#233734" font-weight="400">安装状态；显式调用其中解释器即可，不</text>
+<text x="527.75" y="848.0" font-size="18" fill="#233734" font-weight="400">依赖激活。</text>
+<polyline points="497.75,738.0 497.75,914.0 515.75,914.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="892.0" width="358.75" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="922.0" font-size="21" fill="#233734" font-weight="700">同解释器安装与验证</text>
+<text x="527.75" y="952.0" font-size="18" fill="#53635f" font-weight="400">用新Python安装记录的依赖并运行测试及</text>
+<text x="527.75" y="977.0" font-size="18" fill="#53635f" font-weight="400">入口，使安装位置和实际执行对象一致。</text>
+<polyline points="497.75,914.0 497.75,1043.0 515.75,1043.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="1021.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="1051.0" font-size="21" fill="#233734" font-weight="700">包来源与离线运行</text>
+<text x="527.75" y="1081.0" font-size="18" fill="#53635f" font-weight="400">程序运行离线不代表首次安装测试工具无</text>
+<text x="527.75" y="1106.0" font-size="18" fill="#53635f" font-weight="400">需包源；重建仍需可用软件源或本地包缓</text>
+<text x="527.75" y="1131.0" font-size="18" fill="#53635f" font-weight="400">存。</text>
+<polyline points="1112.375,432.0 1112.375,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="463.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="497.0" font-size="23" fill="#286f64" font-weight="700">内容身份与隔离检出</text>
+<polyline points="922.5,520.0 922.5,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,520.0 922.5,562.0 940.5,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="540.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,548.0 941.5,692.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="570.0" font-size="21" fill="#286f64" font-weight="700">已验证的代码快照（commit）</text>
+<text x="952.5" y="600.0" font-size="16" fill="#286f64" font-weight="400">测试所对应的代码身份</text>
+<text x="952.5" y="622.0" font-size="18" fill="#233734" font-weight="400">测试与入口完成后核对受管理内容仍与</text>
+<text x="952.5" y="647.0" font-size="18" fill="#233734" font-weight="400">HEAD一致，再记录完整提交ID，绑定证据</text>
+<text x="952.5" y="672.0" font-size="18" fill="#233734" font-weight="400">与代码。</text>
+<polyline points="922.5,562.0 922.5,738.0 940.5,738.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="716.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="746.0" font-size="21" fill="#233734" font-weight="700">没有未提交变化（status）</text>
+<text x="952.5" y="776.0" font-size="18" fill="#53635f" font-weight="400">受控副本中无未解释的受管理或未跟踪变</text>
+<text x="952.5" y="801.0" font-size="18" fill="#53635f" font-weight="400">化；忽略的环境和报告仍可能存在，不能</text>
+<text x="952.5" y="826.0" font-size="18" fill="#53635f" font-weight="400">证明磁盘空白。</text>
+<polyline points="922.5,738.0 922.5,892.0 940.5,892.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="870.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="900.0" font-size="21" fill="#233734" font-weight="700">从确定提交建立独立检出（worktree）</text>
+<text x="952.5" y="930.0" font-size="18" fill="#53635f" font-weight="400">从精确提交建立新工作目录，不携带未提</text>
+<text x="952.5" y="955.0" font-size="18" fill="#53635f" font-weight="400">交源码和旧环境；共享仓库历史，非独立</text>
+<text x="952.5" y="980.0" font-size="18" fill="#53635f" font-weight="400">可搬备份。</text>
+<polyline points="922.5,892.0 922.5,1046.0 940.5,1046.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="1024.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,1032.0 941.5,1176.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="1054.0" font-size="21" fill="#286f64" font-weight="700">重建结果核对</text>
+<text x="952.5" y="1084.0" font-size="16" fill="#286f64" font-weight="400">身份与行为两类证据</text>
+<text x="952.5" y="1106.0" font-size="18" fill="#233734" font-weight="400">比较HEAD、初末状态、实际测试、入口退</text>
+<text x="952.5" y="1131.0" font-size="18" fill="#233734" font-weight="400">出码及解析后的新报告；同提交ID本身不</text>
+<text x="952.5" y="1156.0" font-size="18" fill="#233734" font-weight="400">证明可运行。</text>
+<polyline points="1537.125,432.0 1537.125,463.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="463.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="497.0" font-size="23" fill="#286f64" font-weight="700">版本交流与保证范围</text>
+<polyline points="1347.25,520.0 1347.25,555.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,520.0 1347.25,562.0 1365.25,562.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="540.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="570.0" font-size="21" fill="#233734" font-weight="700">版本身份与标记（VERSION / tag）</text>
+<text x="1377.25" y="600.0" font-size="18" fill="#53635f" font-weight="400">VERSION随源码进入提交，tag给已验证提</text>
+<text x="1377.25" y="625.0" font-size="18" fill="#53635f" font-weight="400">交一个便于交流的名字；之后编辑文件不</text>
+<text x="1377.25" y="650.0" font-size="18" fill="#53635f" font-weight="400">会自动改变它。</text>
+<polyline points="1347.25,562.0 1347.25,716.0 1365.25,716.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="694.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="724.0" font-size="21" fill="#233734" font-weight="700">Python打包</text>
+<text x="1377.25" y="754.0" font-size="18" fill="#53635f" font-weight="400">为统一安装、多个模块和入口等改变分发</text>
+<text x="1377.25" y="779.0" font-size="18" fill="#53635f" font-weight="400">方式；当前源码交付已够用，打包不会补</text>
+<text x="1377.25" y="804.0" font-size="18" fill="#53635f" font-weight="400">出遗漏运行条件。</text>
+<polyline points="1347.25,716.0 1347.25,870.0 1365.25,870.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="848.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="878.0" font-size="21" fill="#233734" font-weight="700">同机重建边界</text>
+<text x="1377.25" y="908.0" font-size="18" fill="#53635f" font-weight="400">排除旧项目环境与未提交源码依赖，但仍</text>
+<text x="1377.25" y="933.0" font-size="18" fill="#53635f" font-weight="400">用同机系统和Python；不能宣称其他机器</text>
+<text x="1377.25" y="958.0" font-size="18" fill="#53635f" font-weight="400">或系统已实测。</text>
+<polyline points="1347.25,870.0 1347.25,1024.0 1365.25,1024.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="1002.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="1032.0" font-size="21" fill="#233734" font-weight="700">写出与恢复限制</text>
+<text x="1377.25" y="1062.0" font-size="18" fill="#53635f" font-weight="400">本版单文件本地处理，同输出只允许一个</text>
+<text x="1377.25" y="1087.0" font-size="18" fill="#53635f" font-weight="400">写进程；可重新生成报告，不承诺强杀、</text>
+<text x="1377.25" y="1112.0" font-size="18" fill="#53635f" font-weight="400">断电或并发恢复。</text>
+<text x="64" y="1528.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1528.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1553.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1586.0" font-size="21" fill="#233734" font-weight="700">当前输入与结果</text>
+<rect x="750" y="1553.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1586.0" font-size="21" fill="#233734" font-weight="700">运行合同与退出码</text>
+<polyline points="538,1590.0 736,1590.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1590.0 726.9955289764732,1594.3496553411123 726.9955289764732,1585.6503446588877" fill="#286f64"/>
+<text x="594.5" y="1578.0" font-size="17" fill="#286f64" font-weight="400">按约定解释</text>
+<text x="80" y="1636.0" font-size="18" fill="#53635f" font-weight="400">报告存在不等于内容正确；有效 JSON 应核对接受2、拒绝0及退出码0，含拒绝的 CSV 则按另一组预期判断。</text>
+<rect x="64" y="1676.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1709.2" font-size="21" fill="#233734" font-weight="700">当前输入与结果</text>
+<rect x="750" y="1676.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1709.2" font-size="21" fill="#233734" font-weight="700">无旧环境的重建承诺</text>
+<polyline points="538,1713.2 736,1713.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1713.2 726.9955289764732,1717.5496553411124 726.9955289764732,1708.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1701.2" font-size="17" fill="#286f64" font-weight="400">不能独自证明</text>
+<text x="80" y="1759.2" font-size="18" fill="#53635f" font-weight="400">先分清要作出哪种承诺；证明重建时仍需把运行结果绑定到明确内容与新的环境，而不是多跑一遍同一目录。</text>
+<rect x="64" y="1799.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1832.4" font-size="21" fill="#233734" font-weight="700">依赖安装清单（requirements.txt）</text>
+<rect x="750" y="1799.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1832.4" font-size="21" fill="#233734" font-weight="700">新建隔离环境（venv）</text>
+<polyline points="538,1836.4 736,1836.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1836.4 726.9955289764732,1840.7496553411124 726.9955289764732,1832.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1824.4" font-size="17" fill="#286f64" font-weight="400">指导安装重建</text>
+<text x="80" y="1882.4" font-size="18" fill="#53635f" font-weight="400">搬运旧venv会带入旧路径和隐藏依赖，无法验证记录完整。</text>
+<rect x="64" y="1922.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1955.6000000000001" font-size="21" fill="#233734" font-weight="700">已验证的代码快照（commit）</text>
+<rect x="750" y="1922.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1955.6000000000001" font-size="21" fill="#233734" font-weight="700">从确定提交建立独立检出（worktree）</text>
+<polyline points="538,1959.6000000000001 736,1959.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1959.6000000000001 726.9955289764732,1963.9496553411125 726.9955289764732,1955.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1947.6000000000001" font-size="17" fill="#286f64" font-weight="400">指定检出内容</text>
+<text x="80" y="2005.6000000000001" font-size="18" fill="#53635f" font-weight="400">检出精确ID并核对HEAD，让新运行不依赖源工作区的后来编辑。</text>
+<rect x="64" y="2045.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2078.8" font-size="21" fill="#233734" font-weight="700">从确定提交建立独立检出（worktree）</text>
+<rect x="750" y="2045.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2078.8" font-size="21" fill="#233734" font-weight="700">重建结果核对</text>
+<polyline points="538,2082.8 736,2082.8" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2082.8 726.9955289764732,2087.1496553411125 726.9955289764732,2078.450344658888" fill="#286f64"/>
+<text x="569.0" y="2070.8" font-size="17" fill="#286f64" font-weight="400">提供独立验证目录</text>
+<text x="80" y="2128.8" font-size="18" fill="#53635f" font-weight="400">新目录再建立环境，测试与真实入口共同证明本次运行。</text>
+<rect x="64" y="2169.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2202.0" font-size="21" fill="#233734" font-weight="700">版本身份与标记（VERSION / tag）</text>
+<rect x="750" y="2169.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2202.0" font-size="21" fill="#233734" font-weight="700">已验证的代码快照（commit）</text>
+<polyline points="538,2206.0 736,2206.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2206.0 726.9955289764732,2210.3496553411123 726.9955289764732,2201.6503446588877" fill="#286f64"/>
+<text x="569.0" y="2194.0" font-size="17" fill="#286f64" font-weight="400">指向证据对应内容</text>
+<text x="80" y="2252.0" font-size="18" fill="#53635f" font-weight="400">测试后新增版本文件也算内容变化，须新提交并重新取证。</text>
+<rect x="64" y="2292.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2325.2" font-size="21" fill="#233734" font-weight="700">新建隔离环境（venv）</text>
+<rect x="750" y="2292.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2325.2" font-size="21" fill="#233734" font-weight="700">同解释器安装与验证</text>
+<polyline points="538,2329.2 736,2329.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2329.2 726.9955289764732,2333.549655341112 726.9955289764732,2324.8503446588875" fill="#286f64"/>
+<text x="543.400390625" y="2317.2" font-size="17" fill="#286f64" font-weight="400">由同一Python安装和执行</text>
+<text x="80" y="2375.2" font-size="18" fill="#53635f" font-weight="400">有requirements不等于装好了；装好了也仍需实际运行测试和程序入口。</text>
+<rect x="64" y="2415.3999999999996" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="2448.3999999999996" font-size="21" fill="#233734" font-weight="700">重建结果核对</text>
+<rect x="750" y="2415.3999999999996" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="2448.3999999999996" font-size="21" fill="#233734" font-weight="700">同机重建边界</text>
+<polyline points="538,2452.3999999999996 736,2452.3999999999996" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,2452.3999999999996 726.9955289764732,2456.749655341112 726.9955289764732,2448.0503446588873" fill="#286f64"/>
+<text x="569.0" y="2440.3999999999996" font-size="17" fill="#286f64" font-weight="400">结论仍受条件限制</text>
+<text x="80" y="2498.3999999999996" font-size="18" fill="#53635f" font-weight="400">同机新目录排除了旧项目状态，不能据此声称另一台电脑或另一操作系统已经实测。</text>
+<polyline points="64,2556.5999999999995 1736,2556.5999999999995" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="2586.5999999999995" font-size="17" fill="#53635f" font-weight="400">对照正文：A12  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

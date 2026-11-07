@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1606" width="1800" height="1606" role="img" aria-labelledby="title">
+<title id="title">创建读回与实验验证</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1606" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">B / HTTP 与 API</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">B05  创建读回与实验验证</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">综合 B01–B04 的交接与检查；重启后记录消失引出 C 册持久数据，两个配套并不共享数据库。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">用本次创建返回的编号去查询，再比较读回的记录；只看到成功状态，不足以证明找回了同一条工单。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">可运行接口的身份连接与验证范围</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">业务结果的一致性</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">返回ID驱动查询</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">从本次创建回应取编号作为下一次GET的path；再次创建可</text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">有新编号，不应写死T-42。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,682.0 92.0,779.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="704.0" font-size="21" fill="#286f64" font-weight="700">创建与读回比较</text>
+<text x="103.0" y="734.0" font-size="18" fill="#233734" font-weight="400">没有中间修改时两份公开结果应相同；字段类型正确仍不能</text>
+<text x="103.0" y="759.0" font-size="18" fill="#233734" font-weight="400">证明取得本次目标记录。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">失败位置与已有效果</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">输入422阻止创建，查询404不撤销之前创建；客户端超时也</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">不能证明服务未创建。</text>
+<polyline points="73.0,825.0 73.0,954.0 91.0,954.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="932.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,940.0 92.0,1037.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="962.0" font-size="21" fill="#286f64" font-weight="700">内存状态寿命</text>
+<text x="103.0" y="992.0" font-size="18" fill="#233734" font-weight="400">app.state.tickets是进程内字典；重启建新应用会清空，HTTP</text>
+<text x="103.0" y="1017.0" font-size="18" fill="#233734" font-weight="400">成功不等于持久保存。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">独立的检查责任</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#233734" font-weight="700">客户端工单合同</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#53635f" font-weight="400">检查状态、JSON媒体类型、对象及五字段类型；整数检查排</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#53635f" font-weight="400">除布尔值，仍需验证业务关联。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#233734" font-weight="700">双服务关联验证</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#53635f" font-weight="400">分别核对成功、500映射、慢响应和坏输入，检查每请求独</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#53635f" font-weight="400">立ID在实际经过的阶段沿用。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">证据的观察距离</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">接口测试与传输替身（TestClient / MockTransport）</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">前者验证应用接口，后者固定传输结果检验客户端；二者均</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">不能证明真实端口已接通。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">真实调用与日志</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">本机跨进程调用补运行交接，日志解释已记录阶段；退出码</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">和缺失日志都不能代替精确断言。</text>
+<text x="64" y="1081.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1081.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1106.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1139.0" font-size="21" fill="#233734" font-weight="700">返回ID驱动查询</text>
+<rect x="750" y="1106.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1139.0" font-size="21" fill="#233734" font-weight="700">创建与读回比较</text>
+<polyline points="538,1143.0 736,1143.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1143.0 726.9955289764732,1147.3496553411123 726.9955289764732,1138.6503446588877" fill="#286f64"/>
+<text x="586.0" y="1131.0" font-size="17" fill="#286f64" font-weight="400">建立比较对象</text>
+<text x="80" y="1189.0" font-size="18" fill="#53635f" font-weight="400">使用真实返回的ID，才把两次独立HTTP交换联系为同一条记录的验证。</text>
+<rect x="64" y="1229.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1262.2" font-size="21" fill="#233734" font-weight="700">客户端工单合同</text>
+<rect x="750" y="1229.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1262.2" font-size="21" fill="#233734" font-weight="700">创建与读回比较</text>
+<polyline points="538,1266.2 736,1266.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1266.2 726.9955289764732,1270.5496553411124 726.9955289764732,1261.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1254.2" font-size="17" fill="#286f64" font-weight="400">仍需验证关联</text>
+<text x="80" y="1312.2" font-size="18" fill="#53635f" font-weight="400">类型和字段齐全的另一条工单，依然不满足本次创建读回的业务关系。</text>
+<rect x="64" y="1352.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1385.4" font-size="21" fill="#233734" font-weight="700">接口测试与传输替身（TestClient / MockTransport）</text>
+<rect x="750" y="1352.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1385.4" font-size="21" fill="#233734" font-weight="700">真实调用与日志</text>
+<polyline points="538,1389.4 736,1389.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1389.4 726.9955289764732,1393.7496553411124 726.9955289764732,1385.0503446588878" fill="#286f64"/>
+<text x="577.5" y="1377.4" font-size="17" fill="#286f64" font-weight="400">由运行证据补充</text>
+<text x="80" y="1435.4" font-size="18" fill="#53635f" font-weight="400">受控测试能稳定重现分支，真实调用补监听证据，日志又不能代替断言。</text>
+<text x="64" y="1487.6000000000001" font-size="19" fill="#53635f" font-weight="400">同章续图：运行准备与安全收尾。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1550.2 1736,1550.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1580.2" font-size="17" fill="#53635f" font-weight="400">对照正文：B05  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

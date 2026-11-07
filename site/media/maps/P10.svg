@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1512" width="1800" height="1512" role="img" aria-labelledby="title">
+<title id="title">未知、验证与下一步</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1512" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P10  未知、验证与下一步</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">承接 P09 原型，也能回到调查、工作试行或技术核对；验证服务当前决定，而非要求做完所有方法。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">先找最影响决定的未知，再选择能够检验它的方法；原型可用不等于技术和收益已成立。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">选择能区分关键未知的证据</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">未知与假设</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,516.0 92.0,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="538.0" font-size="21" fill="#286f64" font-weight="700">决定所依赖的未知</text>
+<text x="103.0" y="568.0" font-size="18" fill="#233734" font-weight="400">区分需要是否存在、表达是否易懂、事实能否取得、工作能</text>
+<text x="103.0" y="593.0" font-size="18" fill="#233734" font-weight="400">否持续与投入是否值得。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">可被推翻的假设</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">写明适用对象、条件、改变与期望结果，再列出会削弱解释</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">的观察；不把反例归罪于用户。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,774.0 92.0,871.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="796.0" font-size="21" fill="#286f64" font-weight="700">方法与证据匹配</text>
+<text x="103.0" y="826.0" font-size="18" fill="#233734" font-weight="400">按最可能影响决定的缺口选访谈、原型、试行或技术核对；</text>
+<text x="103.0" y="851.0" font-size="18" fill="#233734" font-weight="400">不同方法不能相互冒充证明。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">任务观察的可信度</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#233734" font-weight="700">中性的真实任务</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#53635f" font-weight="400">让参与者按情境自行判断和操作，不把正确答案或按钮位置</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#53635f" font-weight="400">塞进题目；先记录首次反应。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#233734" font-weight="700">观察与适用对象</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#53635f" font-weight="400">查看寻找、解释、下一步和提示依赖；参与者与使用条件应</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#53635f" font-weight="400">匹配声称覆盖的范围。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,788.0 657.3333333333334,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="796.0" font-size="21" fill="#233734" font-weight="700">模拟与小样本边界</text>
+<text x="669.3333333333334" y="826.0" font-size="18" fill="#53635f" font-weight="400">编写的观察不算真实用户测试；少量真实任务可暴露断点，</text>
+<text x="669.3333333333334" y="851.0" font-size="18" fill="#53635f" font-weight="400">也不能直接估算全体错误率。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">原型、能力与投入决定</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#233734" font-weight="700">人工补位的原型</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#53635f" font-weight="400">用人临时代替后台可观察体验连贯性；须说明模拟，不证明</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#53635f" font-weight="400">最新数据、并发、权限或恢复可用。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">有界技术核对</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">在适当隔离和授权下核对关键能力；发现事实不可取得时应</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">调整范围，而非继续宣称可自动完成。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,774.0 1224.6666666666667,871.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#286f64" font-weight="700">预先明确的决策条件</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#233734" font-weight="400">开始前说明什么结果会支持继续、修改或停止；证据要求随</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#233734" font-weight="400">错误后果和投入阶段变化。</text>
+<polyline points="1205.6666666666667,788.0 1205.6666666666667,917.0 1223.6666666666667,917.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="895.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="925.0" font-size="21" fill="#233734" font-weight="700">试行与持续收益</text>
+<text x="1235.6666666666667" y="955.0" font-size="18" fill="#53635f" font-weight="400">原型主要回答体验，实际工作试行检查承接，长期投入还需</text>
+<text x="1235.6666666666667" y="980.0" font-size="18" fill="#53635f" font-weight="400">采用、结果与成本记录。</text>
+<text x="64" y="1044.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1044.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1069.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1102.0" font-size="21" fill="#233734" font-weight="700">决定所依赖的未知</text>
+<rect x="750" y="1069.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1102.0" font-size="21" fill="#233734" font-weight="700">方法与证据匹配</text>
+<polyline points="538,1106.0 736,1106.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1106.0 726.9955289764732,1110.3496553411123 726.9955289764732,1101.6503446588877" fill="#286f64"/>
+<text x="603.0" y="1094.0" font-size="17" fill="#286f64" font-weight="400">决定所需</text>
+<text x="80" y="1152.0" font-size="18" fill="#53635f" font-weight="400">最大限制若是无人维护，精修页面并不能替代小范围工作试行。</text>
+<rect x="64" y="1192.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1225.2" font-size="21" fill="#233734" font-weight="700">方法与证据匹配</text>
+<rect x="750" y="1192.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1225.2" font-size="21" fill="#233734" font-weight="700">有界技术核对</text>
+<polyline points="538,1229.2 736,1229.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1229.2 726.9955289764732,1233.5496553411124 726.9955289764732,1224.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1217.2" font-size="17" fill="#286f64" font-weight="400">能力未知时选</text>
+<text x="80" y="1275.2" font-size="18" fill="#53635f" font-weight="400">当决定依赖实际能力时另做核对；演示中由人补上的步骤不能证明系统已具备它。</text>
+<rect x="64" y="1315.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1348.4" font-size="21" fill="#233734" font-weight="700">可被推翻的假设</text>
+<rect x="750" y="1315.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1348.4" font-size="21" fill="#233734" font-weight="700">预先明确的决策条件</text>
+<polyline points="538,1352.4 736,1352.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1352.4 726.9955289764732,1356.7496553411124 726.9955289764732,1348.0503446588878" fill="#286f64"/>
+<text x="620.0" y="1340.4" font-size="17" fill="#286f64" font-weight="400">形成</text>
+<text x="80" y="1398.4" font-size="18" fill="#53635f" font-weight="400">观察应能改变具体决定，不能无限收集材料后仍不知下一步。</text>
+<polyline points="64,1456.6000000000001 1736,1456.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1486.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P10  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

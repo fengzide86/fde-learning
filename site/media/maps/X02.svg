@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1600" width="1800" height="1600" role="img" aria-labelledby="title">
+<title id="title">相同失败码与不同事实</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1600" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">X / 一套应用怎样连接起来</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">X02  相同失败码与不同事实</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">在 X01 两笔事务之间寻找最早偏离；复用 B 的交换边界、C 的提交事实和D的稳定意图，避免只凭状态码重试。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">相同失败码可能对应不同已发生事实；先找提交位置，再决定恢复原意图还是转人工。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">依据持久状态区分失败与恢复位置</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 1466.3333333333335,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,437.0 333.6666666666667,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">两种503的持久事实</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,553.0 92.0,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="575.0" font-size="21" fill="#286f64" font-weight="700">创建前数据条件失败</text>
+<text x="103.0" y="605.0" font-size="18" fill="#233734" font-weight="400">输入已合法但必要读取受锁阻塞，核心事务尚未开始；无工</text>
+<text x="103.0" y="630.0" font-size="18" fill="#233734" font-weight="400">单、编号未消耗，合作方零调用。</text>
+<polyline points="73.0,567.0 73.0,696.0 91.0,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,682.0 92.0,779.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="704.0" font-size="21" fill="#286f64" font-weight="700">派单确认未持久化</text>
+<text x="103.0" y="734.0" font-size="18" fill="#233734" font-weight="400">本地工单已保存且合作方已有结果，第二笔事务却未确认；</text>
+<text x="103.0" y="759.0" font-size="18" fill="#233734" font-weight="400">本地仍pending并返回503。</text>
+<polyline points="73.0,696.0 73.0,825.0 91.0,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="833.0" font-size="21" fill="#233734" font-weight="700">日志位置与状态核对</text>
+<text x="103.0" y="863.0" font-size="18" fill="#53635f" font-weight="400">前置读取失败不同于事务内失败；缺提交日志不能独证回</text>
+<text x="103.0" y="888.0" font-size="18" fill="#53635f" font-weight="400">滚，还须核对正确数据库和计数器。</text>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="502.0" font-size="23" fill="#286f64" font-weight="700">恢复资格与重复效果</text>
+<polyline points="639.3333333333334,525.0 639.3333333333334,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,525.0 639.3333333333334,567.0 657.3333333333334,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,553.0 658.3333333333334,650.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="575.0" font-size="21" fill="#286f64" font-weight="700">同意图受控恢复</text>
+<text x="669.3333333333334" y="605.0" font-size="18" fill="#233734" font-weight="400">故障解除后保持创建键和完整输入，用新请求ID继续；已有</text>
+<text x="669.3333333333334" y="630.0" font-size="18" fill="#233734" font-weight="400">pending时取原工单并核对原派单。</text>
+<polyline points="639.3333333333334,567.0 639.3333333333334,696.0 657.3333333333334,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="704.0" font-size="21" fill="#233734" font-weight="700">调用次数与外部效果（calls / effects）</text>
+<text x="669.3333333333334" y="734.0" font-size="18" fill="#53635f" font-weight="400">恢复可增加第二次外部调用却仍只有一次安排；同派单键返</text>
+<text x="669.3333333333334" y="759.0" font-size="18" fill="#53635f" font-weight="400">回原结果，不能把次数等同效果。</text>
+<polyline points="639.3333333333334,696.0 639.3333333333334,825.0 657.3333333333334,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="833.0" font-size="21" fill="#233734" font-weight="700">稳定意图的范围</text>
+<text x="669.3333333333334" y="863.0" font-size="18" fill="#53635f" font-weight="400">X依据不可变工单字段、创建键与摘要恢复受限路线；不能</text>
+<text x="669.3333333333334" y="888.0" font-size="18" fill="#53635f" font-weight="400">假定已照搬D册完整输入合同。</text>
+<polyline points="1466.3333333333335,437.0 1466.3333333333335,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="468.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="502.0" font-size="23" fill="#286f64" font-weight="700">降级状态与等待边界</text>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,525.0 1205.6666666666667,567.0 1223.6666666666667,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="545.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="575.0" font-size="21" fill="#233734" font-weight="700">暂时接受与人工接管（202 Accepted）</text>
+<text x="1235.6666666666667" y="605.0" font-size="18" fill="#53635f" font-weight="400">本地工单已存，自动派单未确认；第二笔事务保存人工状</text>
+<text x="1235.6666666666667" y="630.0" font-size="18" fill="#53635f" font-weight="400">态、待办和事件，最低接收目标成立。</text>
+<polyline points="1205.6666666666667,567.0 1205.6666666666667,696.0 1223.6666666666667,696.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="674.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="704.0" font-size="21" fill="#233734" font-weight="700">已收束意图的重放</text>
+<text x="1235.6666666666667" y="734.0" font-size="18" fill="#53635f" font-weight="400">人工待查已作为本地结果保存时，重放只读旧结果；不重新</text>
+<text x="1235.6666666666667" y="759.0" font-size="18" fill="#53635f" font-weight="400">调用合作方或赠送一轮预算。</text>
+<polyline points="1205.6666666666667,696.0 1205.6666666666667,825.0 1223.6666666666667,825.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="803.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="833.0" font-size="21" fill="#233734" font-weight="700">服务器错误、超时与有限预算（500）</text>
+<text x="1235.6666666666667" y="863.0" font-size="18" fill="#53635f" font-weight="400">500已有回应，超时仍可能产生效果；阶段等待、退避和总</text>
+<text x="1235.6666666666667" y="888.0" font-size="18" fill="#53635f" font-weight="400">预算约束不同，不保证强制硬取消。</text>
+<text x="64" y="952.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="952.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="977.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1010.0" font-size="21" fill="#233734" font-weight="700">创建前数据条件失败</text>
+<rect x="750" y="977.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1010.0" font-size="21" fill="#233734" font-weight="700">派单确认未持久化</text>
+<polyline points="538,1014.0 736,1014.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1014.0 726.9955289764732,1018.3496553411123 726.9955289764732,1009.6503446588877" fill="#286f64"/>
+<text x="569.0" y="1002.0" font-size="17" fill="#286f64" font-weight="400">可有相同公开状态</text>
+<text x="80" y="1060.0" font-size="18" fill="#53635f" font-weight="400">同为503，前者没有本地或外部效果，后者两边已有事实，恢复必须依据具体状态。</text>
+<rect x="64" y="1100.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1133.2" font-size="21" fill="#233734" font-weight="700">派单确认未持久化</text>
+<rect x="750" y="1100.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1133.2" font-size="21" fill="#233734" font-weight="700">同意图受控恢复</text>
+<polyline points="538,1137.2 736,1137.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1137.2 726.9955289764732,1141.5496553411124 726.9955289764732,1132.8503446588877" fill="#286f64"/>
+<text x="577.5" y="1125.2" font-size="17" fill="#286f64" font-weight="400">依赖原意图恢复</text>
+<text x="80" y="1183.2" font-size="18" fill="#53635f" font-weight="400">恢复原工单并以原派单键取回已存在结果，再保存第二笔事务；不能另建新意图。</text>
+<rect x="64" y="1223.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1256.4" font-size="21" fill="#233734" font-weight="700">同意图受控恢复</text>
+<rect x="750" y="1223.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1256.4" font-size="21" fill="#233734" font-weight="700">调用次数与外部效果（calls / effects）</text>
+<polyline points="538,1260.4 736,1260.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1260.4 726.9955289764732,1264.7496553411124 726.9955289764732,1256.0503446588878" fill="#286f64"/>
+<text x="603.0" y="1248.4" font-size="17" fill="#286f64" font-weight="400">分别核对</text>
+<text x="80" y="1306.4" font-size="18" fill="#53635f" font-weight="400">安全pending恢复的预期可以是两次调用一次效果，不能要求所有重放都零新增调用。</text>
+<rect x="64" y="1346.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1379.6000000000001" font-size="21" fill="#233734" font-weight="700">暂时接受与人工接管（202 Accepted）</text>
+<rect x="750" y="1346.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1379.6000000000001" font-size="21" fill="#233734" font-weight="700">已收束意图的重放</text>
+<polyline points="538,1383.6000000000001 736,1383.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1383.6000000000001 726.9955289764732,1387.9496553411125 726.9955289764732,1379.2503446588878" fill="#286f64"/>
+<text x="577.5" y="1371.6000000000001" font-size="17" fill="#286f64" font-weight="400">形成可复用终态</text>
+<text x="80" y="1429.6000000000001" font-size="18" fill="#53635f" font-weight="400">人工接管已经保存不等于远端失败，但本例不再自动重开一轮尝试。</text>
+<text x="64" y="1481.8000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：其他入口与独立分支。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1544.4 1736,1544.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1574.4" font-size="17" fill="#53635f" font-weight="400">对照正文：X02  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

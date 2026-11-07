@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1952" width="1800" height="1952" role="img" aria-labelledby="title">
+<title id="title">幂等意图与受控恢复</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1952" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">D / 外部依赖可靠性</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">D03  幂等意图与受控恢复</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 C 册本地持久化用于外部动作身份；幂等保护与D02时间预算是重试的不同条件，D04处理未确认出口。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">重传同一件事须沿用已保存的输入和键，对方也须认出原结果；两次调用可以只产生一次业务效果。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">主图 · 先把关键关系接起来</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">同一业务意图的重传与副作用边界</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 1537.125,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,437.0 262.875,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">几种不同身份</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">案件ID、intent 与 request ID</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">不同寿命的身份</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">案件指业务对象，intent指一次稳定外部动</text>
+<text x="103.0" y="652.0" font-size="18" fill="#53635f" font-weight="400">作，请求标识指一次运行；同意图可跨多</text>
+<text x="103.0" y="677.0" font-size="18" fill="#53635f" font-weight="400">次运行。</text>
+<polyline points="73.0,567.0 73.0,743.0 91.0,743.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="721.0" width="358.75" height="160" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,729.0 92.0,873.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="751.0" font-size="21" fill="#286f64" font-weight="700">稳定幂等键（idempotency key）</text>
+<text x="103.0" y="781.0" font-size="16" fill="#286f64" font-weight="400">重传识别键</text>
+<text x="103.0" y="803.0" font-size="18" fill="#233734" font-weight="400">建立意图时生成并持久保存，所有传输读</text>
+<text x="103.0" y="828.0" font-size="18" fill="#233734" font-weight="400">取原键；每次尝试换键会被识别为新的业</text>
+<text x="103.0" y="853.0" font-size="18" fill="#233734" font-weight="400">务动作。</text>
+<polyline points="687.625,437.0 687.625,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="502.0" font-size="23" fill="#286f64" font-weight="700">不可变的重放材料</text>
+<polyline points="497.75,525.0 497.75,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,525.0 497.75,567.0 515.75,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="545.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,553.0 516.75,675.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="575.0" font-size="21" fill="#286f64" font-weight="700">合同版本与冻结 payload</text>
+<text x="527.75" y="605.0" font-size="18" fill="#233734" font-weight="400">首次调用前保存字段合同版本和规范化完</text>
+<text x="527.75" y="630.0" font-size="18" fill="#233734" font-weight="400">整输入；同一意图的重试不得从可变表单</text>
+<text x="527.75" y="655.0" font-size="18" fill="#233734" font-weight="400">重建内容。</text>
+<polyline points="497.75,567.0 497.75,721.0 515.75,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="699.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="729.0" font-size="21" fill="#233734" font-weight="700">意图规范化与指纹（canonicalization / digest）</text>
+<text x="527.75" y="759.0" font-size="16" fill="#286f64" font-weight="400">确定表示与内容指纹</text>
+<text x="527.75" y="781.0" font-size="18" fill="#53635f" font-weight="400">按当前合同生成确定表示再取摘要以比较</text>
+<text x="527.75" y="806.0" font-size="18" fill="#53635f" font-weight="400">一致性；摘要不能还原输入，也不是加密</text>
+<text x="527.75" y="831.0" font-size="18" fill="#53635f" font-weight="400">保存。</text>
+<polyline points="497.75,721.0 497.75,897.0 515.75,897.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="875.0" width="358.75" height="160" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="905.0" font-size="21" fill="#233734" font-weight="700">持久 pending</text>
+<text x="527.75" y="935.0" font-size="16" fill="#286f64" font-weight="400">本地未确认状态</text>
+<text x="527.75" y="957.0" font-size="18" fill="#53635f" font-weight="400">把意图、冻结输入、摘要、key和未知状态</text>
+<text x="527.75" y="982.0" font-size="18" fill="#53635f" font-weight="400">一起提交；仅有内存键或已发送标志不足</text>
+<text x="527.75" y="1007.0" font-size="18" fill="#53635f" font-weight="400">以恢复。</text>
+<polyline points="1112.375,437.0 1112.375,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">合作方的幂等合同</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="941.5,553.0 941.5,675.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="952.5" y="575.0" font-size="21" fill="#286f64" font-weight="700">幂等键与原始结果（key / result）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#233734" font-weight="400">合作方持久绑定键、原输入和结果；同键</text>
+<text x="952.5" y="630.0" font-size="18" fill="#233734" font-weight="400">同内容返回原结果，同键异内容拒绝冲</text>
+<text x="952.5" y="655.0" font-size="18" fill="#233734" font-weight="400">突。</text>
+<polyline points="922.5,567.0 922.5,721.0 940.5,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="729.0" font-size="21" fill="#233734" font-weight="700">调用次数与业务效果</text>
+<text x="952.5" y="759.0" font-size="18" fill="#53635f" font-weight="400">请求可传两次而仅新增一个案件；幂等约</text>
+<text x="952.5" y="784.0" font-size="18" fill="#53635f" font-weight="400">束预期效果，不要求每次状态码或回应字</text>
+<text x="952.5" y="809.0" font-size="18" fill="#53635f" font-weight="400">节相同。</text>
+<polyline points="1537.125,437.0 1537.125,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="468.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="502.0" font-size="23" fill="#286f64" font-weight="700">两边独立提交与恢复</text>
+<polyline points="1347.25,525.0 1347.25,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,525.0 1347.25,567.0 1365.25,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="545.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="575.0" font-size="21" fill="#233734" font-weight="700">本地与远端事务</text>
+<text x="1377.25" y="605.0" font-size="18" fill="#53635f" font-weight="400">各自只保护本地状态，任一回滚不撤销另</text>
+<text x="1377.25" y="630.0" font-size="18" fill="#53635f" font-weight="400">一方；网络等待不应伪装成跨系统共同事</text>
+<text x="1377.25" y="655.0" font-size="18" fill="#53635f" font-weight="400">务。</text>
+<polyline points="1347.25,567.0 1347.25,721.0 1365.25,721.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="699.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="729.0" font-size="21" fill="#233734" font-weight="700">旧 pending 的恢复资格</text>
+<text x="1377.25" y="759.0" font-size="18" fill="#53635f" font-weight="400">当前版本、完整冻结输入及相同业务摘要</text>
+<text x="1377.25" y="784.0" font-size="18" fill="#53635f" font-weight="400">才具备受控重放材料；缺任一项不能猜测</text>
+<text x="1377.25" y="809.0" font-size="18" fill="#53635f" font-weight="400">重发。</text>
+<polyline points="1347.25,721.0 1347.25,875.0 1365.25,875.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="853.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="883.0" font-size="21" fill="#233734" font-weight="700">新内容与新意图</text>
+<text x="1377.25" y="913.0" font-size="18" fill="#53635f" font-weight="400">业务输入变化须保留旧记录并建立新意图</text>
+<text x="1377.25" y="938.0" font-size="18" fill="#53635f" font-weight="400">与键；新建动作不会自动取消旧合作方案</text>
+<text x="1377.25" y="963.0" font-size="18" fill="#53635f" font-weight="400">件。</text>
+<polyline points="1347.25,875.0 1347.25,1029.0 1365.25,1029.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="1007.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="1037.0" font-size="21" fill="#233734" font-weight="700">本地确认写入失败</text>
+<text x="1377.25" y="1067.0" font-size="18" fill="#53635f" font-weight="400">远端成功但本地未确认时保留完整意图；</text>
+<text x="1377.25" y="1092.0" font-size="18" fill="#53635f" font-weight="400">显式恢复用原键取回结果，不生成新键补</text>
+<text x="1377.25" y="1117.0" font-size="18" fill="#53635f" font-weight="400">做。</text>
+<text x="64" y="1181.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1181.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1206.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1239.0" font-size="21" fill="#233734" font-weight="700">稳定幂等键（idempotency key）</text>
+<rect x="750" y="1206.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1239.0" font-size="21" fill="#233734" font-weight="700">幂等键与原始结果（key / result）</text>
+<polyline points="538,1243.0 736,1243.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1243.0 726.9955289764732,1247.3496553411123 726.9955289764732,1238.6503446588877" fill="#286f64"/>
+<text x="569.0" y="1231.0" font-size="17" fill="#286f64" font-weight="400">依赖对方持久绑定</text>
+<text x="80" y="1289.0" font-size="18" fill="#53635f" font-weight="400">只有键名没有合作方保存和重放合同，无法保证重复传输不新增效果。</text>
+<rect x="64" y="1329.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1362.2" font-size="21" fill="#233734" font-weight="700">合同版本与冻结 payload</text>
+<rect x="750" y="1329.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1362.2" font-size="21" fill="#233734" font-weight="700">旧 pending 的恢复资格</text>
+<polyline points="538,1366.2 736,1366.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1366.2 726.9955289764732,1370.5496553411124 726.9955289764732,1361.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1354.2" font-size="17" fill="#286f64" font-weight="400">提供恢复材料</text>
+<text x="80" y="1412.2" font-size="18" fill="#53635f" font-weight="400">完整输入能重放，摘要只能比较；当前输入变化时必须拒绝塞入旧意图。</text>
+<rect x="64" y="1452.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1485.4" font-size="21" fill="#233734" font-weight="700">本地与远端事务</text>
+<rect x="750" y="1452.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1485.4" font-size="21" fill="#233734" font-weight="700">本地确认写入失败</text>
+<polyline points="538,1489.4 736,1489.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1489.4 726.9955289764732,1493.7496553411124 726.9955289764732,1485.0503446588878" fill="#286f64"/>
+<text x="569.0" y="1477.4" font-size="17" fill="#286f64" font-weight="400">造成独立失败窗口</text>
+<text x="80" y="1535.4" font-size="18" fill="#53635f" font-weight="400">合作方已提交时本地仍可能写失败，必须依靠原意图恢复，不能认为远端已回滚。</text>
+<rect x="64" y="1575.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1608.6000000000001" font-size="21" fill="#233734" font-weight="700">幂等键与原始结果（key / result）</text>
+<rect x="750" y="1575.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1608.6000000000001" font-size="21" fill="#233734" font-weight="700">调用次数与业务效果</text>
+<polyline points="538,1612.6000000000001 736,1612.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1612.6000000000001 726.9955289764732,1616.9496553411125 726.9955289764732,1608.2503446588878" fill="#286f64"/>
+<text x="586.0" y="1600.6000000000001" font-size="17" fill="#286f64" font-weight="400">约束重复效果</text>
+<text x="80" y="1658.6000000000001" font-size="18" fill="#53635f" font-weight="400">第一次已提交但回复丢失，第二次取回原结果可形成两次调用一次效果。</text>
+<rect x="64" y="1698.8000000000002" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1731.8000000000002" font-size="21" fill="#233734" font-weight="700">意图规范化与指纹（canonicalization / digest）</text>
+<rect x="750" y="1698.8000000000002" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1731.8000000000002" font-size="21" fill="#233734" font-weight="700">合同版本与冻结 payload</text>
+<polyline points="538,1735.8000000000002 736,1735.8000000000002" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1735.8000000000002 726.9955289764732,1740.1496553411125 726.9955289764732,1731.4503446588878" fill="#286f64"/>
+<text x="560.5" y="1723.8000000000002" font-size="17" fill="#286f64" font-weight="400">只能比较，不能还原</text>
+<text x="80" y="1781.8000000000002" font-size="18" fill="#53635f" font-weight="400">摘要验证内容一致性；真正重新发送仍要读取保存的完整输入，不能从摘要猜回正文。</text>
+<text x="64" y="1834.0000000000002" font-size="19" fill="#53635f" font-weight="400">同章续图：合同条件与实验能证明的范围。后页继续展开；分面不表示它们不属于本章。</text>
+<polyline points="64,1896.6000000000001 1736,1896.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1926.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：D03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

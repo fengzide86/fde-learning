@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 995" width="1800" height="995" role="img" aria-labelledby="title">
+<title id="title">跨服务交接与定位</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="995" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">B / HTTP 与 API</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">B04  跨服务交接与定位</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 B02 的接收端与 B03 的调用端放进同一服务；不同交换的状态、结果和日志必须分别解释。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="698.0732421875" y="386.0" font-size="28" fill="#286f64" font-weight="700">两段HTTP交换的责任与关联证据</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">怎样验证各段交接</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">记录型 supplier 替身</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">替换函数交接，记录参数和调用次数，验证零调用及公开错误映射；未测试真实adapter。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">传输替身与双服务验证</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">MockTransport测试adapter面对HTTP结果；两个真实本机服务再补监听和进程间交接证据。</text>
+<text x="64" y="773.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="773.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="798.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="831.0" font-size="21" fill="#233734" font-weight="700">本地输入与目标检查（见主图）</text>
+<rect x="750" y="798.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="831.0" font-size="21" fill="#233734" font-weight="700">记录型 supplier 替身</text>
+<polyline points="538,835.0 736,835.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,835.0 726.9955289764732,839.3496553411123 726.9955289764732,830.6503446588877" fill="#286f64"/>
+<text x="586.0" y="823.0" font-size="17" fill="#286f64" font-weight="400">用零调用验证</text>
+<text x="80" y="881.0" font-size="18" fill="#53635f" font-weight="400">422或404本身未完整证明外部调用被阻止，还要观察调用记录没有新增。</text>
+<polyline points="64,939.2 1736,939.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="969.2" font-size="17" fill="#53635f" font-weight="400">对照正文：B04  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1735" width="1800" height="1735" role="img" aria-labelledby="title">
+<title id="title">业务与技术的双向联系</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1735" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P13  业务与技术的双向联系</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">在技术 A–F/X 后汇合产品判断，再按具体问题返回对应技术能力；学习顺序不是业务请求必须经过的站点顺序。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">业务说明值得做什么，技术检验能怎样做到；事实、权限或成本变化时，两边共同调整范围。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">让业务选择与系统能力相互核对</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 1537.125,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="262.875,400.0 262.875,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">选择成立的业务条件</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">问题依据与有效范围</text>
+<text x="103.0" y="568.0" font-size="18" fill="#53635f" font-weight="400">把具体经历、定向样本、试用缺口和新条</text>
+<text x="103.0" y="593.0" font-size="18" fill="#53635f" font-weight="400">件分开；局部材料不代表全体客户或长期</text>
+<text x="103.0" y="618.0" font-size="18" fill="#53635f" font-weight="400">收益。</text>
+<polyline points="73.0,530.0 73.0,684.0 91.0,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="662.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="92.0,670.0 92.0,792.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="103.0" y="692.0" font-size="21" fill="#286f64" font-weight="700">事实、授权与范围</text>
+<text x="103.0" y="722.0" font-size="18" fill="#233734" font-weight="400">有维护状态不等于有当前日程，能读日程</text>
+<text x="103.0" y="747.0" font-size="18" fill="#233734" font-weight="400">也不等于有确认权；功能范围要匹配两类</text>
+<text x="103.0" y="772.0" font-size="18" fill="#233734" font-weight="400">条件。</text>
+<polyline points="73.0,684.0 73.0,838.0 91.0,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="816.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="846.0" font-size="21" fill="#233734" font-weight="700">维护与人工接续</text>
+<text x="103.0" y="876.0" font-size="18" fill="#53635f" font-weight="400">有人保持事实可信并接住未知事项，状态</text>
+<text x="103.0" y="901.0" font-size="18" fill="#53635f" font-weight="400">页面才可能持续有用；AI 不是固定表达的</text>
+<text x="103.0" y="926.0" font-size="18" fill="#53635f" font-weight="400">必要前提。</text>
+<polyline points="687.625,400.0 687.625,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="488.75" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="502.75" y="465.0" font-size="23" fill="#286f64" font-weight="700">业务约定怎样接入系统</text>
+<polyline points="497.75,488.0 497.75,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="497.75,488.0 497.75,530.0 515.75,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="538.0" font-size="21" fill="#233734" font-weight="700">规则到可核对行为</text>
+<text x="527.75" y="568.0" font-size="18" fill="#53635f" font-weight="400">把记录、来源、更新时间、角色和允许状</text>
+<text x="527.75" y="593.0" font-size="18" fill="#53635f" font-weight="400">态落实为可追踪行为；读取失败不得填成</text>
+<text x="527.75" y="618.0" font-size="18" fill="#53635f" font-weight="400">没有安排。</text>
+<polyline points="497.75,530.0 497.75,684.0 515.75,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="527.75" y="692.0" font-size="21" fill="#233734" font-weight="700">按问题定位技术</text>
+<text x="527.75" y="722.0" font-size="18" fill="#53635f" font-weight="400">条件、交换、存储、可靠性、AI 和恢复分</text>
+<text x="527.75" y="747.0" font-size="18" fill="#53635f" font-weight="400">别解决业务需要；章节编号不是请求必经</text>
+<text x="527.75" y="772.0" font-size="18" fill="#53635f" font-weight="400">顺序。</text>
+<polyline points="497.75,684.0 497.75,838.0 515.75,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="515.75" y="816.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="516.75,824.0 516.75,946.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="527.75" y="846.0" font-size="21" fill="#286f64" font-weight="700">双向交接</text>
+<text x="527.75" y="876.0" font-size="18" fill="#233734" font-weight="400">业务给出有理由的行为与限制，技术用实</text>
+<text x="527.75" y="901.0" font-size="18" fill="#233734" font-weight="400">际能力和失败证据检验；不成立时共同调</text>
+<text x="527.75" y="926.0" font-size="18" fill="#233734" font-weight="400">整承诺。</text>
+<polyline points="1112.375,400.0 1112.375,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="465.0" font-size="23" fill="#286f64" font-weight="700">变化与实际后果</text>
+<polyline points="922.5,488.0 922.5,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,488.0 922.5,530.0 940.5,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="508.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="538.0" font-size="21" fill="#233734" font-weight="700">变化的影响关系</text>
+<text x="952.5" y="568.0" font-size="18" fill="#53635f" font-weight="400">新增能力后重看授权、客户意愿、当前条</text>
+<text x="952.5" y="593.0" font-size="18" fill="#53635f" font-weight="400">件、重复效果和异常承接；不能只解除按</text>
+<text x="952.5" y="618.0" font-size="18" fill="#53635f" font-weight="400">钮限制。</text>
+<polyline points="922.5,530.0 922.5,684.0 940.5,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="692.0" font-size="21" fill="#233734" font-weight="700">取消与跨界后果</text>
+<text x="952.5" y="722.0" font-size="18" fill="#53635f" font-weight="400">撤销预约记录不自动撤回已出行或已采</text>
+<text x="952.5" y="747.0" font-size="18" fill="#53635f" font-weight="400">购；分别核实各系统和人员实际停止了什</text>
+<text x="952.5" y="772.0" font-size="18" fill="#53635f" font-weight="400">么。</text>
+<polyline points="1537.125,400.0 1537.125,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1338.25" y="431.0" width="397.75" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1352.25" y="465.0" font-size="23" fill="#286f64" font-weight="700">价值判断与迁移</text>
+<polyline points="1347.25,488.0 1347.25,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1347.25,488.0 1347.25,530.0 1365.25,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="508.0" width="358.75" height="138" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1366.25,516.0 1366.25,638.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1377.25" y="538.0" font-size="21" fill="#286f64" font-weight="700">改善机制与价值证据</text>
+<text x="1377.25" y="568.0" font-size="18" fill="#233734" font-weight="400">先看维护、承接与解释发生，再观察客户</text>
+<text x="1377.25" y="593.0" font-size="18" fill="#233734" font-weight="400">结果和额外工作；无客户或成本记录就保</text>
+<text x="1377.25" y="618.0" font-size="18" fill="#233734" font-weight="400">留不确定性。</text>
+<polyline points="1347.25,530.0 1347.25,684.0 1365.25,684.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="662.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="692.0" font-size="21" fill="#233734" font-weight="700">记录方式与指标解释</text>
+<text x="1377.25" y="722.0" font-size="18" fill="#53635f" font-weight="400">记录增加可能让问题看似增多，省略未知</text>
+<text x="1377.25" y="747.0" font-size="18" fill="#53635f" font-weight="400">可能使结果虚好；比较指标需对齐期间、</text>
+<text x="1377.25" y="772.0" font-size="18" fill="#53635f" font-weight="400">范围与记录口径。</text>
+<polyline points="1347.25,684.0 1347.25,838.0 1365.25,838.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="816.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="846.0" font-size="21" fill="#233734" font-weight="700">有界决定与回看条件</text>
+<text x="1377.25" y="876.0" font-size="18" fill="#53635f" font-weight="400">把选择、理由、限制、观察和暂停条件接</text>
+<text x="1377.25" y="901.0" font-size="18" fill="#53635f" font-weight="400">起来；新证据回到受影响的判断，继续、</text>
+<text x="1377.25" y="926.0" font-size="18" fill="#53635f" font-weight="400">缩小或停止。</text>
+<polyline points="1347.25,838.0 1347.25,992.0 1365.25,992.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1365.25" y="970.0" width="358.75" height="138" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1377.25" y="1000.0" font-size="21" fill="#233734" font-weight="700">跨业务迁移</text>
+<text x="1377.25" y="1030.0" font-size="18" fill="#53635f" font-weight="400">迁移沿问题、工作和证据判断的方法；换</text>
+<text x="1377.25" y="1055.0" font-size="18" fill="#53635f" font-weight="400">到报销等场景后，角色、规则、风险与成</text>
+<text x="1377.25" y="1080.0" font-size="18" fill="#53635f" font-weight="400">本必须重查。</text>
+<text x="64" y="1144.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1144.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1169.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1202.0" font-size="21" fill="#233734" font-weight="700">事实、授权与范围</text>
+<rect x="750" y="1169.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1202.0" font-size="21" fill="#233734" font-weight="700">规则到可核对行为</text>
+<polyline points="538,1206.0 736,1206.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1206.0 726.9955289764732,1210.3496553411123 726.9955289764732,1201.6503446588877" fill="#286f64"/>
+<text x="620.0" y="1194.0" font-size="17" fill="#286f64" font-weight="400">约束</text>
+<text x="80" y="1252.0" font-size="18" fill="#53635f" font-weight="400">缺当前日程和确认权时可说明已知状态，不能把可读事实提升为自动预约能力。</text>
+<rect x="64" y="1292.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1325.2" font-size="21" fill="#233734" font-weight="700">双向交接</text>
+<rect x="750" y="1292.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1325.2" font-size="21" fill="#233734" font-weight="700">事实、授权与范围</text>
+<polyline points="538,1329.2 736,1329.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1329.2 726.9955289764732,1333.5496553411124 726.9955289764732,1324.8503446588877" fill="#286f64"/>
+<text x="603.0" y="1317.2" font-size="17" fill="#286f64" font-weight="400">重定承诺</text>
+<text x="80" y="1375.2" font-size="18" fill="#53635f" font-weight="400">若只支持每日同步，或缺少当前日程与确认权，应调整实时承诺、范围或工作安排；不能把限制藏起来或用 AI 补造事实。</text>
+<rect x="64" y="1415.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1448.4" font-size="21" fill="#233734" font-weight="700">记录方式与指标解释</text>
+<rect x="750" y="1415.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1448.4" font-size="21" fill="#233734" font-weight="700">改善机制与价值证据</text>
+<polyline points="538,1452.4 736,1452.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1452.4 726.9955289764732,1456.7496553411124 726.9955289764732,1448.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1440.4" font-size="17" fill="#286f64" font-weight="400">限定可比结论</text>
+<text x="80" y="1498.4" font-size="18" fill="#53635f" font-weight="400">记录变多或省略未知都可能改变指标；口径改变不能直接证明业务改善或恶化。</text>
+<rect x="64" y="1538.6000000000001" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1571.6000000000001" font-size="21" fill="#233734" font-weight="700">改善机制与价值证据</text>
+<rect x="750" y="1538.6000000000001" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1571.6000000000001" font-size="21" fill="#233734" font-weight="700">有界决定与回看条件</text>
+<polyline points="538,1575.6000000000001 736,1575.6000000000001" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1575.6000000000001 726.9955289764732,1579.9496553411125 726.9955289764732,1571.2503446588878" fill="#286f64"/>
+<text x="603.0" y="1563.6000000000001" font-size="17" fill="#286f64" font-weight="400">支持调整</text>
+<text x="80" y="1621.6000000000001" font-size="18" fill="#53635f" font-weight="400">页面能读取不能证明客户问题改善；扩大使用应观察维护、客户结果与额外负担。</text>
+<polyline points="64,1679.8000000000002 1736,1679.8000000000002" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1709.8000000000002" font-size="17" fill="#53635f" font-weight="400">对照正文：P13  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

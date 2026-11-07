@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1017" width="1800" height="1017" role="img" aria-labelledby="title">
+<title id="title">数据结构与约束</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1017" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">C / 数据与日志</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">C03  数据结构与约束</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">把 C02 读取时依赖的关系写成保存规则；C04再保证多处合法写入共同完成业务动作。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">可信事实的身份、约束与结构变化</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">旧事实的迁移</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">结构迁移（migration）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">已有库的结构变更</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">把旧结构与旧行一起转换；修改建表文件不会改变现有库，新增未知偏好应保持NULL。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">副本演练与回滚</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">先查不合新规则的旧行，失败明确撤回并读回；复制成功也不等于依赖已处理和正式切换。</text>
+<text x="64" y="795.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="795.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="820.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="853.0" font-size="21" fill="#233734" font-weight="700">结构迁移（migration）</text>
+<rect x="750" y="820.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="853.0" font-size="21" fill="#233734" font-weight="700">副本演练与回滚</text>
+<polyline points="538,857.0 736,857.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,857.0 726.9955289764732,861.3496553411123 726.9955289764732,852.6503446588877" fill="#286f64"/>
+<text x="586.0" y="845.0" font-size="17" fill="#286f64" font-weight="400">必须验证恢复</text>
+<text x="80" y="903.0" font-size="18" fill="#53635f" font-weight="400">新约束拒绝旧行时不能静默丢弃或猜测修正，错误本身也不等于全局回滚。</text>
+<polyline points="64,961.2 1736,961.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="991.2" font-size="17" fill="#53635f" font-weight="400">对照正文：C03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

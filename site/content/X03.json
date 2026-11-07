@@ -1,0 +1,47 @@
+{
+  "id": "X03",
+  "title": "怎样证明重放没有多建一张工单？",
+  "html": "<p>调用者没看见结果，重新发了一次请求。API 返回 200 和 T-42。只凭这两个值能否确认“没有重复创建、没有重复派单”？还不够：程序可能错误地新建了隐藏记录，再返回旧编号；也可能本地只有一张票，却向外部派了两次单。</p>\n<p>现在只保护一个具体承诺：<strong>同一创建意图使用同一 key 和完全相同的输入重放，应该得到原工单，且不增加已经完成的业务效果。</strong> 需要的证据由这项承诺决定，不按工具数量决定。</p>\n<h2 id=\"x03-s1\">两次请求怎样指向同一件事？</h2>\n<p>普通成功实验从空数据库开始：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">第一次：R-X-42\nkey=ticket-create:Printer-7:offline-001，payload=P\n→ 201，T-42，idempotency_replayed=false\n\n第二次：R-X-REPLAY-42\nkey仍相同，payload仍为P\n→ 200，同一T-42，idempotency_replayed=true\n</code></pre></div>\n<p>两次 request ID 用来区分两次 HTTP 处理，key 连接稳定意图。它们不是用户身份，也不是访问权限。为所有调用统一填一个 request ID，会让日志难以区分第一次创建和后来的重放；每次换一个 key，则会把同一业务意图变成多个新意图。</p>\n<p>API 在第一笔事务中按 create_key 查询旧行，比较本次规范化 payload 的摘要。摘要相同并且旧 assignment 已经收束时，直接返回已保存工单，不进入 partner.assign。若摘要不同，返回 409，原行保持不变。</p>\n<p>改变主题后仍用旧 key，不是“同一请求再试一次”。例如把“打印机离线”改成“打印机仍然离线”，内容已不同，必须先判断这是修改现有工单还是新的业务动作；不能让幂等实现默默覆盖原意图。</p>\n<h2 id=\"x03-s2\">四份证据怎样互相补足？</h2>\n<p>对于已经 partner_confirmed 的普通路线，最小充分核对可以是：</p>\n<table>\n<thead>\n<tr>\n<th>观察位置</th>\n<th>本例预期</th>\n<th>排除什么误解</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>创建与重放 response</td>\n<td>201→200，同一 T-42，replayed 标记改变</td>\n<td>重放不能冒充新的创建</td>\n</tr>\n<tr>\n<td>tickets 与创建事件</td>\n<td>只有一张票、一条 ticket_created</td>\n<td>同一结果文字不能遮住重复持久化</td>\n</tr>\n<tr>\n<td>provider calls/effects</td>\n<td>都保持 1</td>\n<td>本地一张票不代表外部只有一项安排</td>\n</tr>\n<tr>\n<td>第二次请求日志</td>\n<td>ticket_intent_replayed，无新 commit/partner 事件</td>\n<td>说明这次经过的控制路径</td>\n</tr>\n</tbody>\n</table>\n<p>它们彼此支持，却没有互相替代。response 说明公开合同；查询说明当前数据库；Fake 计数说明当前受控外部效果；日志说明应用怎样记录这次运行。</p>\n<p>pending 恢复则使用另一组预期：provider_calls 可以从 1 增到 2，provider_effects 仍是 1，因为第二次请求确实继续了尚未收束的外部交接。若把“所有重放都不能增加调用数”作为全局规则，反而会错误拒绝 X02 的安全恢复路线。</p>\n<h2 id=\"x03-s3\">用一段可运行实验把这些断言接在一起</h2>\n<p>下面程序保存为实验副本中的 <code>x03_replay_check.py</code>。它使用配套 <code>walkthrough.synthetic_system()</code> 准备已经说明的应用、临时数据库、模拟合作方、模型、工具和日志流；退出 with 时关闭连接并清理临时数据库。辅助函数只负责建立这些对象，创建、重放和检查都在下面可见。</p>\n<div class=\"code-block\"><span class=\"code-language\">python</span><pre><code class=\"language-python\">import json\n\nfrom walkthrough import BODY, headers, synthetic_system\n\nwith synthetic_system() as (client, store, partner, model, tool, logs):\n    first = client.post(\n        &quot;/tickets&quot;, json=BODY, headers=headers(&quot;R-X-42&quot;)\n    )\n    replay = client.post(\n        &quot;/tickets&quot;, json=BODY, headers=headers(&quot;R-X-REPLAY-42&quot;)\n    )\n    assert first.status_code == 201\n    assert replay.status_code == 200\n    assert replay.json()[&quot;idempotency_replayed&quot;] is True\n    assert replay.json()[&quot;ticket&quot;] == first.json()[&quot;ticket&quot;]\n    assert store.count_tickets() == 1\n    assert partner.call_count == 1\n    assert partner.effect_count == 1\n\n    events = store.events(&quot;T-42&quot;)\n    assert sum(e[&quot;event_type&quot;] == &quot;ticket_created&quot; for e in events) == 1\n\n    fetched = client.get(\n        &quot;/tickets/T-42&quot;, headers={&quot;X-Request-ID&quot;: &quot;R-X-44&quot;}\n    )\n    assert fetched.json()[&quot;ticket&quot;] == first.json()[&quot;ticket&quot;]\n\n    records = [json.loads(line) for line in logs.getvalue().splitlines()]\n    second_events = [\n        r[&quot;event&quot;] for r in records\n        if r[&quot;request_id&quot;] == &quot;R-X-REPLAY-42&quot;\n    ]\n    assert second_events == [\n        &quot;request_received&quot;, &quot;validation_passed&quot;,\n        &quot;ticket_intent_replayed&quot;, &quot;response_completed&quot;,\n    ]\n    assert &quot;打印机离线&quot; not in logs.getvalue()\n\nprint(&quot;同一工单；一次创建；一次外部效果；重放与读回符合约定。&quot;)\n</code></pre></div>\n<p>BODY 是 X01 展示的四字段输入，headers() 加入固定创建 key 和传入的 request ID。这里没有隐藏一个网络服务：client 是 TestClient；它调用本地 API 应用，数据库使用真实临时 SQLite，partner 的 HTTPX request 由 MockTransport 交给有状态 Fake。</p>\n<p>直接运行这段程序即可得到断言结果。若把重放 payload 中的 subject 改掉，预期应改为 409，后面的“同一成功结果”断言不再适用。这一次修改已经足够暴露是否理解 key 与输入的绑定，不必反复添加同类题。</p>\n<h2 id=\"x03-s4\">SQL 查询为什么还要关心物理字段名？</h2>\n<p>API 使用 ticket_status，数据库使用 status。需要直接检查事实时，查询必须符合真正的 schema：</p>\n<div class=\"code-block\"><span class=\"code-language\">sql</span><pre><code class=\"language-sql\">SELECT ticket_id, priority, status AS ticket_status, assignment_status\nFROM tickets\nWHERE ticket_id = :ticket_id;\n</code></pre></div>\n<p>把 T-42 作为参数绑定到 <code>:ticket_id</code>，得到本地行。<code>AS ticket_status</code> 是结果列别名，没有给数据库增加同名物理列。SQL 查询与 API 的公开映射在这里接上了，但并未变成同一层。</p>\n<p>查询的连接目标同样重要。旧实验数据库里查不到 T-42，不能证明当前 API 没保存；在正确文件里查到 T-42，也不能证明调用者取得了正确 response。因此排障报告要说明连接的文件与本次环境，而不是只贴一张“有一行”的结果。</p>\n<h2 id=\"x03-s5\">为什么还要保留小测试？</h2>\n<p>上面的组合实验已经走过多个组件，但不适合解释每一种失败。例如转换输入错了，最先失败可能是最后的 201 断言；你仍需要回到 parse_priority 的输入才能知道它为何没有发请求。</p>\n<p>纯函数测试可固定 <code>&quot;3&quot;</code>、<code>&quot;urgent&quot;</code> 与 <code>&quot;-3&quot;</code>，快速判断转换和范围；事务测试在 event INSERT 处制造拒绝，检查票与计数器一起撤回；partner 测试模拟“提交后丢回复”，直接核 calls=2、effects=1；AI 测试固定坏引用和越权建议，判断工具次数是否为零。每一个小实验都保留要检查的实现，只替换与当前问题无关的不稳定边界。</p>\n<p>测试用例的名称或 case_id 表示“哪一种条件”；request_id 表示“哪一次 HTTP 处理”。同一个测试可以运行很多次，也可以发出四个不同请求。把它们写成相同字符串不会让独立活动变成一次真实运行。</p>\n<p>运行配套测试时：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">&amp; $xPython -m pytest -q\nif ($LASTEXITCODE -ne 0) { throw &#x27;至少一项已登记行为不符合预期。&#x27; }\n</code></pre></div>\n<p>结果只对这套实现与这些输入成立。TestClient 的通过不证明端口、DNS 或容器网络；模拟外部结果也不证明真实供应商的 TLS、凭据、容量和服务水平。它们的价值在于让本地行为可以反复检查，而不是扩大结论。</p>\n<h2 id=\"x03-s6\">从进程内协作扩大到两个真实进程</h2>\n<p><code>host_integration_check.py</code> 另启动 API 与模拟合作方两个 Uvicorn 进程，分别监听动态 loopback 端口。HTTPX 真正经过本机连接发送 JSON，API 在系统临时目录中使用自己的 tickets.db，合作方使用另一文件 receipts.db。</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">&amp; $xPython .\\host_integration_check.py\nif ($LASTEXITCODE -ne 0) { throw &#x27;双进程主机集成没有通过。&#x27; }\n</code></pre></div>\n<p>它验证普通创建、政策请求、API 重启后读回同一文件；随后验证合作方重启后的 receipt 仍在，以及应用备份恢复后的指定业务路线。程序结束时关闭自己的进程并清理自己的临时目录，不终止未知进程。</p>\n<p>这比 TestClient 增加了本机 socket、端口、进程启动与重启证据，仍没有经过 Compose service DNS 或 named volume。观察范围扩大到哪里，结论就写到哪里。</p>\n<h2 id=\"x03-s7\">一次 UAT 为什么有四个请求编号？</h2>\n<p>UAT 是 User Acceptance Testing，这里把它做成一条合成客户路线：创建、同意图重放、GET 读回、请求政策草稿。它不是打开服务首页，也不是代替真实客户验收。</p>\n<p><code>uat.py</code> 接受已运行 API 的 loopback 地址。它默认 <code>--initial-create-mode fresh</code>：第一条请求必须是新创建；接着第二条才是 replay。已有 T-42 上切换 AI 场景或恢复配置时，用 <code>--initial-create-mode replay</code>，明确第一条也应取回旧意图。模式选错就失败，不自动把错误基线接受为成功。</p>\n<p>创建、重放、查询和政策请求分别使用 request ID。UAT 检查创建结果、重放结果和 GET 的全部公开工单字段相等，再检查政策状态、原因、来源与 tool_called。调用次数与外部效果还需由对应 Fake 的记录或专门测试补足；仅运行 uat.py 不会凭空知道合作方内部状态。</p>\n<p>例如在普通已完成的 T-42 上，将 Fake Model 配置改成 close_proposal 后，UAT 的期望是：既有意图 replay、工单仍 open、政策 needs_human、原因 tool_permission_denied、tool_called=false。恢复 grounded 配置后再发新请求，应重新取得 accepted_draft。这里“恢复配置”不等于撤销工单，也不重新创建同一意图。</p>\n<h2 id=\"x03-s8\">日志怎样解释一次处理，又怎样保护输入？</h2>\n<p>正常 R-X-42 应按顺序记录 request_received、validation_passed、ticket_transaction_committed、partner_attempts_completed、assignment_transaction_committed、response_completed。重放请求走的是另一条较短事件链，政策请求又有自己的 policy_candidate_checked。</p>\n<p>日志保存 request ID、合成 ticket ID、阶段、结果、状态码、原因、允许的版本与计数。它不保存 subject、完整请求、prompt、模型草稿、token 或原始异常。排障不需要把每个输入长期复制进日志；需要的是足以连接当前处理的允许字段。</p>\n<p>日志也会有缺陷。若出现“已 commit”事件，数据库却没有目标行，下一步核对事件时机与查询目标，不能让日志文字覆盖持久事实。若只收集到了最后 response_completed，也不能反推所有中间动作一定发生。</p>\n<p>同一 request ID 帮我们把线索接起来，数据行和副作用计数帮我们判断线索是否支持真实结果。这样，测试、日志、查询与 UAT 才是合作的证据，不是一串可以互相替代的绿色标签。</p>\n",
+  "toc": [
+    {
+      "id": "x03-s1",
+      "text": "两次请求怎样指向同一件事？",
+      "level": 2
+    },
+    {
+      "id": "x03-s2",
+      "text": "四份证据怎样互相补足？",
+      "level": 2
+    },
+    {
+      "id": "x03-s3",
+      "text": "用一段可运行实验把这些断言接在一起",
+      "level": 2
+    },
+    {
+      "id": "x03-s4",
+      "text": "SQL 查询为什么还要关心物理字段名？",
+      "level": 2
+    },
+    {
+      "id": "x03-s5",
+      "text": "为什么还要保留小测试？",
+      "level": 2
+    },
+    {
+      "id": "x03-s6",
+      "text": "从进程内协作扩大到两个真实进程",
+      "level": 2
+    },
+    {
+      "id": "x03-s7",
+      "text": "一次 UAT 为什么有四个请求编号？",
+      "level": 2
+    },
+    {
+      "id": "x03-s8",
+      "text": "日志怎样解释一次处理，又怎样保护输入？",
+      "level": 2
+    }
+  ]
+}

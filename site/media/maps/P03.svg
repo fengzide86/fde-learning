@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1383" width="1800" height="1383" role="img" aria-labelledby="title">
+<title id="title">调查与证据范围</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1383" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">P / 产品与业务</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">P03  调查与证据范围</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续角色与价值问题；用访谈、观察和记录理解工作，为流程分析与方案选择划定证据范围。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">用经历、观察和记录核对解释；材料是什么、怎样取得，决定它能支持多大结论。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="278.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="306.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="349.0" font-size="28" fill="#286f64" font-weight="700">让业务判断保留可检验依据</text>
+<polyline points="900.0,371.0 900.0,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 1466.3333333333335,400.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="333.6666666666667,400.0 333.6666666666667,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="465.0" font-size="23" fill="#286f64" font-weight="700">不同取证方法</text>
+<polyline points="73.0,488.0 73.0,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,488.0 73.0,530.0 91.0,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="538.0" font-size="21" fill="#233734" font-weight="700">具体经历访谈</text>
+<text x="103.0" y="568.0" font-size="18" fill="#53635f" font-weight="400">从最近任务、行动和后果问起；引导式赞同不证明会采用，</text>
+<text x="103.0" y="593.0" font-size="18" fill="#53635f" font-weight="400">过去记忆也需允许范围内核对。</text>
+<polyline points="73.0,530.0 73.0,659.0 91.0,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="667.0" font-size="21" fill="#233734" font-weight="700">工作观察</text>
+<text x="103.0" y="697.0" font-size="18" fill="#53635f" font-weight="400">看见口述省略的查找、转交和等待；观察者影响、时段差异</text>
+<text x="103.0" y="722.0" font-size="18" fill="#53635f" font-weight="400">和屏幕外动作仍会限制结论。</text>
+<polyline points="73.0,659.0 73.0,788.0 91.0,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="796.0" font-size="21" fill="#233734" font-weight="700">系统记录与交叉核对</text>
+<text x="103.0" y="826.0" font-size="18" fill="#53635f" font-weight="400">记录可帮助判断顺序和频率，访谈可解释影响；须了解记录</text>
+<text x="103.0" y="851.0" font-size="18" fill="#53635f" font-weight="400">如何产生，三者互相补充。</text>
+<polyline points="900.0,400.0 900.0,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="630.3333333333334" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="644.3333333333334" y="465.0" font-size="23" fill="#286f64" font-weight="700">材料的不同地位</text>
+<polyline points="639.3333333333334,488.0 639.3333333333334,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="639.3333333333334,488.0 639.3333333333334,530.0 657.3333333333334,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,516.0 658.3333333333334,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="538.0" font-size="21" fill="#286f64" font-weight="700">事实、意见与假设</text>
+<text x="669.3333333333334" y="568.0" font-size="18" fill="#233734" font-weight="400">分开可见事件、人的感受或主张、待检验解释；不把方案意</text>
+<text x="669.3333333333334" y="593.0" font-size="18" fill="#233734" font-weight="400">见写成效果证明。</text>
+<polyline points="639.3333333333334,530.0 639.3333333333334,659.0 657.3333333333334,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="658.3333333333334,645.0 658.3333333333334,742.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="669.3333333333334" y="667.0" font-size="21" fill="#286f64" font-weight="700">可反驳的解释</text>
+<text x="669.3333333333334" y="697.0" font-size="18" fill="#233734" font-weight="400">明确什么观察支持或削弱解释；遇到反例应重新核对解释，</text>
+<text x="669.3333333333334" y="722.0" font-size="18" fill="#233734" font-weight="400">而非继续套用原判断。</text>
+<polyline points="639.3333333333334,659.0 639.3333333333334,788.0 657.3333333333334,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="657.3333333333334" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="669.3333333333334" y="796.0" font-size="21" fill="#233734" font-weight="700">必要记录与隐私</text>
+<text x="669.3333333333334" y="826.0" font-size="18" fill="#53635f" font-weight="400">保留对象、场景、事实和待核对处所需材料；事前取得许</text>
+<text x="669.3333333333334" y="851.0" font-size="18" fill="#53635f" font-weight="400">可，匿名仍可能留下识别线索。</text>
+<polyline points="1466.3333333333335,400.0 1466.3333333333335,431.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="1196.6666666666667" y="431.0" width="539.3333333333334" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="1210.6666666666667" y="465.0" font-size="23" fill="#286f64" font-weight="700">样本与判断边界</text>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,523.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="1205.6666666666667,488.0 1205.6666666666667,530.0 1223.6666666666667,530.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="508.0" width="500.33333333333337" height="113" rx="5" fill="#eaf2ee" stroke="#286f64"/>
+<polyline points="1224.6666666666667,516.0 1224.6666666666667,613.0" fill="none" stroke="#286f64" stroke-width="4"/>
+<text x="1235.6666666666667" y="538.0" font-size="21" fill="#286f64" font-weight="700">样本选择与分母</text>
+<text x="1235.6666666666667" y="568.0" font-size="18" fill="#233734" font-weight="400">定向重复联系样本的比例只描述该集合；增加数量不能自动</text>
+<text x="1235.6666666666667" y="593.0" font-size="18" fill="#233734" font-weight="400">修复范围偏差或缺失记录。</text>
+<polyline points="1205.6666666666667,530.0 1205.6666666666667,659.0 1223.6666666666667,659.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="637.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="667.0" font-size="21" fill="#233734" font-weight="700">边界案例</text>
+<text x="1235.6666666666667" y="697.0" font-size="18" fill="#53635f" font-weight="400">有意了解失败、新手、放弃和不愿采用者；对象选择服务当</text>
+<text x="1235.6666666666667" y="722.0" font-size="18" fill="#53635f" font-weight="400">前未知，不能只找配合者。</text>
+<polyline points="1205.6666666666667,659.0 1205.6666666666667,788.0 1223.6666666666667,788.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="1223.6666666666667" y="766.0" width="500.33333333333337" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="1235.6666666666667" y="796.0" font-size="21" fill="#233734" font-weight="700">可继续判断的问题</text>
+<text x="1235.6666666666667" y="826.0" font-size="18" fill="#53635f" font-weight="400">把对象、受阻位置、影响、证据范围与待查内容连起来；调</text>
+<text x="1235.6666666666667" y="851.0" font-size="18" fill="#53635f" font-weight="400">查能支持取舍但不代替负责人授权。</text>
+<text x="64" y="915.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="915.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="940.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="973.0" font-size="21" fill="#233734" font-weight="700">系统记录与交叉核对</text>
+<rect x="750" y="940.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="973.0" font-size="21" fill="#233734" font-weight="700">可反驳的解释</text>
+<polyline points="538,977.0 736,977.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,977.0 726.9955289764732,981.3496553411123 726.9955289764732,972.6503446588877" fill="#286f64"/>
+<text x="620.0" y="965.0" font-size="17" fill="#286f64" font-weight="400">检验</text>
+<text x="80" y="1023.0" font-size="18" fill="#53635f" font-weight="400">口述、动作和时间记录相互补充，也要检查记录本身是否漏掉工作。</text>
+<rect x="64" y="1063.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1096.2" font-size="21" fill="#233734" font-weight="700">样本选择与分母</text>
+<rect x="750" y="1063.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1096.2" font-size="21" fill="#233734" font-weight="700">可继续判断的问题</text>
+<polyline points="538,1100.2 736,1100.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1100.2 726.9955289764732,1104.5496553411124 726.9955289764732,1095.8503446588877" fill="#286f64"/>
+<text x="586.0" y="1088.2" font-size="17" fill="#286f64" font-weight="400">限制结论范围</text>
+<text x="80" y="1146.2" font-size="18" fill="#53635f" font-weight="400">二十个重复联系案例不能推出全公司业务有相同比例的问题。</text>
+<rect x="64" y="1186.4" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1219.4" font-size="21" fill="#233734" font-weight="700">事实、意见与假设</text>
+<rect x="750" y="1186.4" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1219.4" font-size="21" fill="#233734" font-weight="700">具体经历访谈</text>
+<polyline points="538,1223.4 736,1223.4" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1223.4 726.9955289764732,1227.7496553411124 726.9955289764732,1219.0503446588878" fill="#286f64"/>
+<text x="586.0" y="1211.4" font-size="17" fill="#286f64" font-weight="400">明确待查部分</text>
+<text x="80" y="1269.4" font-size="18" fill="#53635f" font-weight="400">下一次调查应填补关键未知，而不是再搜集一份对既定方案的赞同。</text>
+<polyline points="64,1327.6000000000001 1736,1327.6000000000001" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1357.6000000000001" font-size="17" fill="#53635f" font-weight="400">对照正文：P03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

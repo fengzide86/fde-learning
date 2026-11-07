@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1351" width="1800" height="1351" role="img" aria-labelledby="title">
+<title id="title">程序运行后，怎样观察和停止？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1351" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A10  程序运行后，怎样观察和停止？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A10从A09的运行条件追到实际进程；B册进一步解释HTTP交接，A12把退出码与报告结果写入使用约定。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="704.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">进程结果、服务证据与生命周期</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">后台管理方式</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">后台作业对象（job）</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">会话管理后台工作，可收取输出和等待；job.Id不是PID，Completed不保证Python退出0。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">停止和清理作业（Stop-Job / Remove-Job）</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">前者请求停止工作，后者移除管理记录；记录消失不能单独证明所有子进程和资源已释放。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="783.5" height="113" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">启动独立进程（Start-Process）</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">在本机Windows独立启动并取得进程对象，需明确日志和收尾责任；不会自动提供服务恢复能</text>
+<text x="103.0" y="838.0" font-size="18" fill="#53635f" font-weight="400">力。</text>
+<polyline points="73.0,775.0 73.0,904.0 91.0,904.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="882.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="912.0" font-size="21" fill="#233734" font-weight="700">进程结束结果（ExitCode）</text>
+<text x="103.0" y="942.0" font-size="18" fill="#53635f" font-weight="400">用对象等待并读取该实例退出码，必要时早留句柄；结果缺失不能当0，结束后仍需核对。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">访问权限的核对</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">身份、目标与操作</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">权限失败需指出哪个身份对哪个路径执行读或写；能够启动不代表能访问所有资源。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">文件访问权限（Windows ACL）</text>
+<text x="952.5" y="709.0" font-size="16" fill="#286f64" font-weight="400">访问控制规则</text>
+<text x="952.5" y="731.0" font-size="18" fill="#53635f" font-weight="400">记录允许和拒绝等访问规则，结合组与继承判断；看到所有者名字不证明任何操作都被允许。</text>
+<text x="64" y="1006.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1006.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1031.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1064.0" font-size="21" fill="#233734" font-weight="700">启动独立进程（Start-Process）</text>
+<rect x="750" y="1031.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1064.0" font-size="21" fill="#233734" font-weight="700">进程结束结果（ExitCode）</text>
+<polyline points="538,1068.0 736,1068.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1068.0 726.9955289764732,1072.3496553411123 726.9955289764732,1063.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1056.0" font-size="17" fill="#286f64" font-weight="400">交回对象供管理</text>
+<text x="80" y="1114.0" font-size="18" fill="#53635f" font-weight="400">独立进程结果应从对应对象读取，不能沿用父shell的LASTEXITCODE。</text>
+<rect x="64" y="1154.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1187.2" font-size="21" fill="#233734" font-weight="700">文件访问权限（Windows ACL）</text>
+<rect x="750" y="1154.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1187.2" font-size="21" fill="#233734" font-weight="700">身份、目标与操作</text>
+<polyline points="538,1191.2 736,1191.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1191.2 726.9955289764732,1195.5496553411124 726.9955289764732,1186.8503446588877" fill="#286f64"/>
+<text x="543.5" y="1179.2" font-size="17" fill="#286f64" font-weight="400">为具体访问提供规则线索</text>
+<text x="80" y="1237.2" font-size="18" fill="#53635f" font-weight="400">先确定谁对哪个路径做读还是写；不要从看见Owner名字推断所有操作都允许。</text>
+<polyline points="64,1295.4 1736,1295.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1325.4" font-size="17" fill="#53635f" font-weight="400">对照正文：A10  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

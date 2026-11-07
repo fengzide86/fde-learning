@@ -1,0 +1,42 @@
+{
+  "id": "guide-F",
+  "title": "交付、观察与恢复：导读与查用",
+  "html": "<p>你把已经能运行的工单程序交给另一位同事。他启动了进程，却打不开页面；改好端口以后，重新建立运行实例，昨天的工单又不见了。源码没有丢，问题出在源码之外：程序怎样取得运行环境、请求怎样进入、数据实际保存在哪，以及操作者凭什么判断已经恢复。</p>\n<p>本册从这些具体问题出发。学完以后，你应能沿一个操作指出：它改变的是程序模板、运行实例、配置还是持久数据；成功证据在哪里；下一位操作者怎样重复同一条路线。</p>\n<h2 id=\"guide-f-s1\">第一次只看这里</h2>\n<p>直接进入 F01。第一次只追一个运行对象：源码怎样成为可启动对象，什么证据才说明它真的可用。</p>\n<p>本册的详细关系图、章节路线和查用说明放在全书后部。遇到‘这一步和前后哪里相连’时再回看，不需要在第一轮先读完。</p>\n<h2 id=\"guide-f-s2\">把六章放回同一套运行与恢复关系</h2>\n<p>现在看一张已经具体可解释的图。构建产物、运行配置与持久数据在创建实例时相遇；观察与验收检查这个实际组合，恢复再根据失败对象选择动作。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">源码 + 依赖 + Dockerfile\n          ↓ build\n       image D1 ───────────────┐\n                              ↓\nCompose 运行配置 ─────→ API 容器与容量容器\n                              │\n主机请求 → published port → API handler\n                              ├─ service DNS → 容量读取\n                              └─ SQLite → 挂载点 → named volume\n                                                   │\n状态与日志、业务读回 ← 实际运行结果                  └─ backup B1\n                                                           ↓\n                                   新目标 + 精确程序 + 隔离配置\n                                                           ↓\n                                           关键数据读回 + 新写入 UAT\n</code></pre></div>\n<p>需要构建时找 Dockerfile 和 context；需要改变地址时找运行配置；实例替换丢数据时找实际数据库路径和挂载；进程活着却不接单时找探针与公开失败原因；升级失败时先核对程序、配置和数据的兼容组合。这些选择来自对象关系，不来自记住一长串命令。</p>\n<table>\n<thead>\n<tr>\n<th>当前现象</th>\n<th>回到哪条关系</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>CLI 存在却联系不到 Server</td>\n<td>F01 的 client→daemon 入口</td>\n</tr>\n<tr>\n<td>容器打印版本就退出</td>\n<td>F01/F02 的主进程与 CMD</td>\n</tr>\n<tr>\n<td>Windows 请求失败，容器内探针成功</td>\n<td>F03 的 host port→container port→listener</td>\n</tr>\n<tr>\n<td>recreate 后旧工单不见</td>\n<td>F03 的 SQLite path→mount→volume</td>\n</tr>\n<tr>\n<td>live 成功、ready 返回 schema mismatch</td>\n<td>F04 的版本期望与核心接单检查</td>\n</tr>\n<tr>\n<td>备份可读却恢复后字段不同</td>\n<td>F05 的备份时点、关键记录与隔离读回</td>\n</tr>\n<tr>\n<td>回滚标签正确但行为不对</td>\n<td>F05 的实际 image ID、配置与数据兼容</td>\n</tr>\n<tr>\n<td>操作者仍要猜等多久或失败后做什么</td>\n<td>F06 的步骤证据与失败出口</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"guide-f-s3\">什么时候再进入构建与分发扩展</h3>\n<p>项目需要先编译前端或二进制，而最终运行只需编译产物时，才需要进一步学习 multi-stage build：构建阶段保存工具，最终阶段只复制所需产物。此时应已理解 COPY 的来源、最后 stage 的文件、Cmd 和 User，学完回到 F02 验证实际 image。</p>\n<p>另一台机器必须取得精确镜像时，再进入 registry、repository、push/pull、凭据与 repository digest。学完回到 F05，以目标机器实际取得的身份和 UAT 连接分发与运行证据。单机练习不必为展示这些名称提前接入外部仓库。</p>\n<p>Kubernetes、复杂云网络、集中监控平台、多架构构建、完整签名与供应链平台不承担本例成功条件。真实项目出现相应需求时再增加它们；明确的文件来源、运行对象、数据、探针、备份和恢复关系仍然要保留。</p>\n<p>下一本《一套应用怎样连接起来》会把这些交付关系接回 Python、HTTP、数据库、外部调用与受约束 AI。它使用自己的独立数据和完整应用，复用 T-42 作为便于追踪的公开编号。接起来的重点是上一段交出的值、状态和证据，是否被下一段按准确含义接收。</p>\n<h3 id=\"guide-f-s4\">官方查用入口与版本边界</h3>\n<p>下列是持续更新的官方操作文档（live，复核日期 2026-09-07）。安装前置、具体 Compose 选项和基础镜像更新，应在实际操作时重新核对；书中的输入、实例、配置与数据关系不依赖界面恰好显示哪种颜色。</p>\n<ul>\n<li><a href=\"https://docs.docker.com/get-started/docker-overview/\" target=\"_blank\" rel=\"noopener noreferrer\">Docker 概念与后台服务</a></li>\n<li><a href=\"https://docs.docker.com/desktop/setup/install/windows-install/\" target=\"_blank\" rel=\"noopener noreferrer\">Docker Desktop Windows 安装前置</a></li>\n<li><a href=\"https://docs.docker.com/build/concepts/context/\" target=\"_blank\" rel=\"noopener noreferrer\">Build context 与 .dockerignore</a></li>\n<li><a href=\"https://docs.docker.com/reference/dockerfile/\" target=\"_blank\" rel=\"noopener noreferrer\">Dockerfile：RUN、CMD、ENV、USER 与 HEALTHCHECK</a></li>\n<li><a href=\"https://docs.docker.com/build/building/best-practices/#pin-base-image-versions\" target=\"_blank\" rel=\"noopener noreferrer\">固定基础镜像版本与更新</a></li>\n<li><a href=\"https://docs.docker.com/compose/how-tos/networking/\" target=\"_blank\" rel=\"noopener noreferrer\">Compose 网络与服务名称</a></li>\n<li><a href=\"https://docs.docker.com/compose/how-tos/startup-order/\" target=\"_blank\" rel=\"noopener noreferrer\">Compose 启动顺序与健康条件</a></li>\n<li><a href=\"https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/\" target=\"_blank\" rel=\"noopener noreferrer\">Compose 环境变量注入</a></li>\n<li><a href=\"https://docs.docker.com/reference/cli/docker/compose/config/\" target=\"_blank\" rel=\"noopener noreferrer\">Compose config</a></li>\n<li><a href=\"https://docs.docker.com/reference/cli/docker/compose/restart/\" target=\"_blank\" rel=\"noopener noreferrer\">Compose restart 的配置边界</a></li>\n<li><a href=\"https://docs.docker.com/engine/network/port-publishing/\" target=\"_blank\" rel=\"noopener noreferrer\">主机端口发布</a></li>\n<li><a href=\"https://docs.docker.com/engine/storage/volumes/\" target=\"_blank\" rel=\"noopener noreferrer\">Docker volumes</a></li>\n<li><a href=\"https://docs.docker.com/engine/logging/\" target=\"_blank\" rel=\"noopener noreferrer\">Docker 日志</a></li>\n<li><a href=\"https://docs.python.org/3.13/library/sqlite3.html\" target=\"_blank\" rel=\"noopener noreferrer\">Python 3.13 sqlite3 与 backup</a></li>\n<li><a href=\"https://sqlite.org/uri.html\" target=\"_blank\" rel=\"noopener noreferrer\">SQLite URI 与 immutable 前提</a></li>\n</ul>\n<p>Dockerfile 中的完整 base digest 是配套固定的构建输入，更新时应作为明确变更。本文的工单、验收、备份清单与恢复脚本是围绕这些公开机制构造的合成示例，不是 Docker 官方作业，也不代表真实客户环境已获得同样的验证。</p>\n<h2 id=\"guide-f-s5\">本册总览（需要时再回看）</h2>\n<p>这里保留整册地图、章节关系和查用入口；第一次阅读不需要先读完。</p>\n<h2 id=\"guide-f-s6\">本册知识结构总览</h2>\n<p>先按需要解决的问题分组。章节顺序帮助理解，图中的分组不是一套请求必须依次经过的执行步骤。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">怎样把程序交给别人运行？\n│\n├─ 交出的东西与正在运行的东西是什么关系？\n│  ├─ 源码、image、container、主进程、Docker 后台服务    F01\n│  └─ 从哪些文件构建、依赖怎样安装、默认运行什么          F02\n│\n├─ 这一次运行怎样接上请求与数据？\n│  ├─ 运行配置、主机端口、容器端口、服务名称             F03\n│  └─ 哪些文件随实例消失，哪些应放持久存储               F03\n│\n├─ 现在究竟能不能完成承诺？\n│  └─ 进程、存活检查、就绪检查、业务验收、关联日志        F04\n│\n└─ 失败以后怎样回去，并让别人也能完成？\n   ├─ 精确版本、备份、隔离恢复、兼容数据与回滚           F05\n   └─ 操作手册、客户验收、失败出口和交接                 F06\n</code></pre></div>\n<p>构建解决“运行需要的文件从哪里来”，配置解决“这一次使用哪些地址和数据”，健康检查解决“当前能否满足指定条件”，恢复解决“怎样回到一个已知可用的组合”。它们相互配合：正确的镜像可能配错端口，正确的端口可能接到不兼容数据库；数据库恢复成功以后，应用仍需读写它才能形成恢复后的业务证据。</p>\n<h3 id=\"guide-f-s7\">用一套小应用看见这些关系</h3>\n<p>配套包含两个 Python 服务。API 接收合成打印机工单；容量服务返回是否有可用容量。正常时，API 保存工单并标为 <code>capacity_confirmed</code>；容量不可用时仍保存工单，标为 <code>manual_review</code>，留给人工处理。这里查询容量，没有向外部创建预约，也没有实现 D 册的幂等写请求。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">Windows 上的请求\n      ↓\n工单 API ──查询容量──→ 本地模拟容量服务\n      ↓\nSQLite：工单编号、设备、症状、处理状态、创建时间\n</code></pre></div>\n<p>这是一份独立的教学应用。干净数据库的第一张工单叫 T-42；编号与别册相同不表示它们共用数据库。F 的 <code>capacity_confirmed</code> 是这份小程序的状态，不能替代 X 册外部派单的 <code>partner_confirmed</code>。</p>\n<p>本册既给出离线可追踪的例子，也给出实际运行的方法。阅读时需要理解文件、地址、状态怎样连接；完整参数、备份脚本和长清单可以查用。真正执行以后，再用当前环境的输出验证自己的判断。读完解释与独立完成操作，是不同的学习证据。</p>\n",
+  "toc": [
+    {
+      "id": "guide-f-s1",
+      "text": "第一次只看这里",
+      "level": 2
+    },
+    {
+      "id": "guide-f-s2",
+      "text": "把六章放回同一套运行与恢复关系",
+      "level": 2
+    },
+    {
+      "id": "guide-f-s3",
+      "text": "什么时候再进入构建与分发扩展",
+      "level": 3
+    },
+    {
+      "id": "guide-f-s4",
+      "text": "官方查用入口与版本边界",
+      "level": 3
+    },
+    {
+      "id": "guide-f-s5",
+      "text": "本册总览（需要时再回看）",
+      "level": 2
+    },
+    {
+      "id": "guide-f-s6",
+      "text": "本册知识结构总览",
+      "level": 2
+    },
+    {
+      "id": "guide-f-s7",
+      "text": "用一套小应用看见这些关系",
+      "level": 3
+    }
+  ]
+}

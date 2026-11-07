@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1326" width="1800" height="1326" role="img" aria-labelledby="title">
+<title id="title">对话状态与真实反馈</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1326" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">E / 受约束的 AI 应用</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">E03  对话状态与真实反馈</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续输出用途验证；把界面、请求和存储分开，为后续检索资料与人工交接保留可靠输入。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="746.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">会话上下文与已验证状态</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">请求与显示生命周期</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">取消与超时</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">发送前取消可证明零调用；发送后取消或超时不证明外部未处理，迟到回应也须隔离。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">流式临时片段（streaming）</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">低风险片段可标明未核验后临时显示；可能引人立即执行的步骤须完整验证后再展示。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">真实反馈与人工接手</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">说明当前状态、依据和更新时间，失败交出必要事实与原因；后台日志不能替代页面反馈。</text>
+<polyline points="73.0,775.0 73.0,879.0 91.0,879.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="857.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="887.0" font-size="21" fill="#233734" font-weight="700">会话存储与恢复</text>
+<text x="103.0" y="917.0" font-size="18" fill="#53635f" font-weight="400">区分内存、浏览器、后端与供应商保存；重新恢复时仍须核对访问权限和当前业务事实。</text>
+<text x="64" y="981.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="981.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1006.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1039.0" font-size="21" fill="#233734" font-weight="700">流式临时片段（streaming）</text>
+<rect x="750" y="1006.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1039.0" font-size="21" fill="#233734" font-weight="700">当前界面内容（screen）（见主图）</text>
+<polyline points="538,1043.0 736,1043.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1043.0 726.9955289764732,1047.3496553411123 726.9955289764732,1038.6503446588877" fill="#286f64"/>
+<text x="569.0" y="1031.0" font-size="17" fill="#286f64" font-weight="400">低风险时可预览于</text>
+<text x="80" y="1089.0" font-size="18" fill="#53635f" font-weight="400">预览须标明未核验；未完成或被取消的回答不能因已经显示就进入已接受历史。</text>
+<rect x="64" y="1129.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1162.2" font-size="21" fill="#233734" font-weight="700">实际发送消息（messages）（见主图）</text>
+<rect x="750" y="1129.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1162.2" font-size="21" fill="#233734" font-weight="700">取消与超时</text>
+<polyline points="538,1166.2 736,1166.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1166.2 726.9955289764732,1170.5496553411124 726.9955289764732,1161.8503446588877" fill="#286f64"/>
+<text x="569.0" y="1154.2" font-size="17" fill="#286f64" font-weight="400">已发送后仍需处理</text>
+<text x="80" y="1212.2" font-size="18" fill="#53635f" font-weight="400">取消等待与撤销供应商已进行的处理不同；迟到结果不得回填已放弃的回合。</text>
+<polyline points="64,1270.4 1736,1270.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1300.4" font-size="17" fill="#53635f" font-weight="400">对照正文：E03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

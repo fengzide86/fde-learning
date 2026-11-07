@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1140" width="1800" height="1140" role="img" aria-labelledby="title">
+<title id="title">客户端与可用回应</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1140" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">B / HTTP 与 API</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">B03  客户端与可用回应</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">接续 B01 的状态和内容区别，给 B04 的服务内调用提供清晰的成功值与失败类型。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="690.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">客户端调用、结果合同与失败分类</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 1324.75,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="475.25,437.0 475.25,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">可重复的边界测试</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="783.5" height="110" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">受控传输替身（MockTransport）</text>
+<text x="103.0" y="605.0" font-size="16" fill="#286f64" font-weight="400">传输替身</text>
+<text x="103.0" y="627.0" font-size="18" fill="#53635f" font-weight="400">在HTTPX传输边界接收已构造请求并返回受控回应或异常；能核对method、地址、头与body。</text>
+<polyline points="73.0,567.0 73.0,693.0 91.0,693.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="671.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="701.0" font-size="21" fill="#233734" font-weight="700">受控超时与真实等待</text>
+<text x="103.0" y="731.0" font-size="18" fill="#53635f" font-weight="400">直接抛出ReadTimeout证明异常分支，未真的等待；进程、端口与真实超时另需运行验证。</text>
+<polyline points="1324.75,437.0 1324.75,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="913.5" y="468.0" width="822.5" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="927.5" y="502.0" font-size="23" fill="#286f64" font-weight="700">连接复用与等待范围</text>
+<polyline points="922.5,525.0 922.5,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="922.5,525.0 922.5,567.0 940.5,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="545.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="575.0" font-size="21" fill="#233734" font-weight="700">客户端连接复用（Client / 连接池）</text>
+<text x="952.5" y="605.0" font-size="18" fill="#53635f" font-weight="400">集中共同配置并在条件允许时复用连接；每次请求仍独立，with或应用生命周期负责关闭。</text>
+<polyline points="922.5,567.0 922.5,671.0 940.5,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="940.5" y="649.0" width="783.5" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="952.5" y="679.0" font-size="21" fill="#233734" font-weight="700">阶段 timeout</text>
+<text x="952.5" y="709.0" font-size="18" fill="#53635f" font-weight="400">分别限制connect、read、write、pool等待；read针对下一块数据，不是整项工作的总秒表。</text>
+<text x="64" y="795.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="795.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="820.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="853.0" font-size="21" fill="#233734" font-weight="700">阶段 timeout</text>
+<rect x="750" y="820.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="853.0" font-size="21" fill="#233734" font-weight="700">传输失败（见主图）</text>
+<polyline points="538,857.0 736,857.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,857.0 726.9955289764732,861.3496553411123 726.9955289764732,852.6503446588877" fill="#286f64"/>
+<text x="603.0" y="845.0" font-size="17" fill="#286f64" font-weight="400">到期形成</text>
+<text x="80" y="903.0" font-size="18" fill="#53635f" font-weight="400">先捕获具体 TimeoutException 保留超时类别；超时不自动取消远端操作。</text>
+<rect x="64" y="943.2" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="976.2" font-size="21" fill="#233734" font-weight="700">受控传输替身（MockTransport）</text>
+<rect x="750" y="943.2" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="976.2" font-size="21" fill="#233734" font-weight="700">适配层失败分类（adapter异常）（见主图）</text>
+<polyline points="538,980.2 736,980.2" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,980.2 726.9955289764732,984.5496553411124 726.9955289764732,975.8503446588877" fill="#286f64"/>
+<text x="586.0" y="968.2" font-size="17" fill="#286f64" font-weight="400">检验翻译边界</text>
+<text x="80" y="1026.2" font-size="18" fill="#53635f" font-weight="400">可稳定制造 503、坏 JSON 或超时，验证真正 adapter 的分类，不依赖公网。</text>
+<polyline points="64,1084.4 1736,1084.4" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1114.4" font-size="17" fill="#53635f" font-weight="400">对照正文：B03  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

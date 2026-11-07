@@ -1,0 +1,17 @@
+# Local authoring and verification evidence is not part of the public site.
+qa/
+.cache/
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Exporting reads the owner's local library; publish its allowlisted output only.
+scripts/export_content.py
+scripts/*local*.py

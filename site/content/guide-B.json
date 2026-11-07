@@ -1,0 +1,67 @@
+{
+  "id": "guide-B",
+  "title": "HTTP 与 API：导读与查用",
+  "html": "<p>一个程序已经能整理工单，但如果工单来自网页，或者处理结果要交给另一个程序，单靠当前文件里的函数调用就不够了。对方可能运行在另一个进程、另一台电脑上，也不一定使用 Python。它需要知道：把什么送到哪里，会收到什么，失败时怎样分辨。</p>\n<p>这一册学习的就是<strong>两个程序之间怎样把事情交代清楚，并确认这次交接实际发生了什么</strong>。先看一条完整请求和回应，再进入接收方的 Python 函数；随后从调用方检查结果，最后把两个服务连起来寻找失败位置。贯穿的例子是一个小型支持工单接口：创建工单、读取记录，以及请另一个服务生成一段摘要。</p>\n<p>HTTP 是这里交换消息的约定；API 是一个程序对外提供能力的使用约定。两者的区别，会从第一条工单请求中展开。读完后，应当能看着一条调用说出：谁主动发起，谁处理，输入在哪，什么结果才可以继续用；有问题时先查哪一段，而不是只记住几个工具名字。</p>\n<h2 id=\"guide-b-s1\">第一次只看这里</h2>\n<p>直接进入 B01。第一次只追一条交换：Python 值怎样变成 request，另一个程序怎样用 response 回答。</p>\n<p>本册的详细关系图、章节路线和查用说明放在全书后部。遇到‘这一步和前后哪里相连’时再回看，不需要在第一轮先读完。</p>\n<h2 id=\"guide-b-s2\">知识关系总览｜把消息、函数和证据放回同一张图</h2>\n<p>学习时按一条请求逐步展开；真正使用时，常常要反过来从问题找到工具。下面不按章节重复步骤，而把容易混淆的关系放到一起。</p>\n<h3 id=\"guide-b-s3\">API、HTTP、JSON，是同一种东西的三个名字吗？</h3>\n<p>不是。假设一个仓储程序对外提供“查询某件商品库存”的能力：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">外部能力与约定：查询库存，要给哪个商品编号，会返回什么\n             ↓ 这项 HTTP API 选择通过 HTTP 交换\n请求与回应：GET /stock/P-7 → 200 与结果\n             ↓ 这条回应选择 JSON 表示数据\n数据表示：{&quot;product_id&quot;:&quot;P-7&quot;,&quot;available&quot;:12}\n             ↓ 调用方解析\n程序里的值：Python dict，可读取 available 并继续判断\n</code></pre></div>\n<p>API 说明怎么使用一项能力；HTTP 规定这次消息交换怎样组织；JSON 表示消息中的数据。API 不一定都通过 HTTP，HTTP body 也不一定都用 JSON。本册把它们组合，是因为这种组合能让不同程序清楚地交换结构化数据。</p>\n<p>Python dict 与 JSON 也不是替代工具二选一。dict 在程序内组织值，JSON 在程序边界处表示信息；同一任务可以先后用到两者。<code>response.json()</code> 是把表示解析回值，不会自动替程序证明所有字段和业务关系都正确。</p>\n<h3 id=\"guide-b-s4\">选地址、动作还是 body，到底各在决定什么？</h3>\n<p>设想要读取商品 <code>P-7</code> 的库存，再请求为它建立一次补货：</p>\n<table>\n<thead>\n<tr>\n<th>消息中的部分</th>\n<th>当前回答的问题</th>\n<th>例子</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>host 与 port</td>\n<td>交给哪个正在提供服务的网络入口</td>\n<td>本机某个监听地址</td>\n</tr>\n<tr>\n<td>path</td>\n<td>使用哪个接口或指向哪个资源</td>\n<td><code>/stock/P-7</code></td>\n</tr>\n<tr>\n<td>query</td>\n<td>本次怎样筛选、展开或呈现结果</td>\n<td><code>?warehouse=W-2</code></td>\n</tr>\n<tr>\n<td>method</td>\n<td>这次打算读取，还是请求发生变化</td>\n<td><code>GET</code> 读取；该接口用 <code>POST</code> 创建补货</td>\n</tr>\n<tr>\n<td>body</td>\n<td>操作需要携带哪些结构化输入</td>\n<td>商品编号与补货数量</td>\n</tr>\n<tr>\n<td>headers</td>\n<td>消息应怎样解释，或附带什么上下文</td>\n<td><code>Content-Type</code>、<code>X-Request-ID</code></td>\n</tr>\n</tbody>\n</table>\n<p>path、query、body 都可能成为服务函数的参数，但来处与意思不同。参数在函数里都是值，不意味着请求里可以随便交换位置。具体接口说数量来自 JSON body，就不能只往 URL 后面加 <code>?quantity=10</code>，期待框架自动把它当成那个字段。</p>\n<p>GET 和 POST 也不是按“简单用 GET，复杂用 POST”选择。先看要使用的接口如何约定读取或改变，再看输入放哪里。读取一个很长的结果仍然可以是 GET；一个很短的创建请求仍可能需要 POST。对于没有实现的 method，换个动词不会让服务自动获得相应能力。</p>\n<h3 id=\"guide-b-s5\">看上去都是检查，为什么要放在不同地方？</h3>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">调用方                                服务端\n准备要发送的值  ───── request ─────→  解析、校验输入\n                                      ↓\n                                  判断当前业务状态\n                                      ↓\n                                  执行并产生内部结果\n                                      ↓\n                                  检查、选择公开输出\n检查实际回应    ←──── response ────────┘\n  ↓\n继续使用结果\n</code></pre></div>\n<p>输入 model 回答“进来的值是否满足约定”，例如优先级能否成为范围内整数。业务判断回答“现在是否允许这件事”，例如目标工单是否存在、修改依据的版本是否过时。公开输出约束回答“这份内部结果能否成为承诺的对外回应”。客户端检查则回答“这一次实际收到的内容能不能交给我的后续代码”。</p>\n<p><strong>检查是否可以合并，要看它们检查的对象和时机是否真的相同，不能只看它们都叫校验。</strong></p>\n<p>输入不合法时，FastAPI 默认的 <code>422</code> 可以发生在 endpoint 正文之前；目标不存在时，业务代码可以主动返回 <code>404</code>；输出缺少必需字段时，通常是服务端的实现错误，默认形成 <code>500</code>。三者都可能让用户看到失败，但要修复的位置不同。尤其输出失败发生得晚，不能据此推断之前的写入没有发生。</p>\n<p>这也是为什么不把整个函数包进一个“出错就返回输入错误”的大 <code>try</code>。那样会把服务自身的错误也交给调用者负责，丢掉真正的失败位置。</p>\n<h3 id=\"guide-b-s6\">FastAPI、Uvicorn、HTTPX，谁代替谁？</h3>\n<p>它们通常是配合，而不是替代。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">调用进程                         服务进程\nHTTPX 主动发请求  ── HTTP ──→  Uvicorn 接收并交给应用\n                                    ↓\n                              FastAPI 找 route、校验和调用\n                                    ↓\n                              endpoint 处理具体业务\n</code></pre></div>\n<p>只调用一个 Python 函数，不会自动经过 HTTP，也不会自动触发整条 FastAPI 请求处理。启动了 Uvicorn，若 route 或输入约定不对，请求仍然可以失败。HTTPX 能正常得到一个 Response，也不代表回应一定是业务成功。</p>\n<p>当服务端还需要请求摘要服务时，它会在另一段交换中使用 HTTPX，临时成为调用方。client/server 描述的是这一段交互的角色，不是给某个程序贴上永久身份。</p>\n<h3 id=\"guide-b-s7\">失败时，先看哪里，才不容易改错地方？</h3>\n<table>\n<thead>\n<tr>\n<th>现在看见什么</th>\n<th>首先要分清的关系</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>发请求的操作抛出连接或等待异常</td>\n<td>这次调用没有交回完整可用 Response；先查地址、监听或对应等待阶段</td>\n</tr>\n<tr>\n<td>已收到 <code>404</code>、<code>422</code>、<code>502</code> 等状态</td>\n<td>已有回应；看 method、目标、状态与错误内容，而非先怪 JSON parser</td>\n</tr>\n<tr>\n<td><code>200</code>，但媒体类型不符合当前约定</td>\n<td>状态成功不等于内容约定成立</td>\n</tr>\n<tr>\n<td>JSON 能解析，却缺字段或类型不对</td>\n<td>解析只建立了值，客户端需要的结构仍未成立</td>\n</tr>\n<tr>\n<td>类型都正确，却读回另一条记录</td>\n<td>结构正确不等于业务关联正确；检查编号怎样从上次结果进入下次请求</td>\n</tr>\n<tr>\n<td>外层收到 <code>504</code></td>\n<td>先说明是哪一层返回了它，不能当成内层供应商一定返回过同一个状态</td>\n</tr>\n</tbody>\n</table>\n<p>这不是要求遇到每个错误都从第一行重新查。已经得到 Response，就不必否认所有网络交接；输入校验的日志和零调用断言已经成立，就先修输入，不去改供应商。好证据的作用，是缩小下一步需要调查的范围。</p>\n<p><code>request_id</code> 能把相关记录找在一起，但它既不是业务工单编号，也不让重复请求自动安全。两次请求可以操作同一条工单，却应该有各自的请求标识。重复请求会不会造成两次业务效果，是后续可靠性设计要解决的另一项问题。</p>\n<h3 id=\"guide-b-s8\">哪些动作值得用熟，哪些细节需要时再查？</h3>\n<p>经常要自己做出的判断是：这次在读还是在改，值放在哪里，结果在哪一步可继续使用，失败属于哪一段。<code>GET/POST</code>、status 与 body 的区别、<code>json=</code> 的位置、route 与函数的对应、<code>raise_for_status()</code> 和 <code>response.json()</code> 各自做什么，会在后面的数据库接口与 AI 调用中不断复用，应逐渐做到能选、能改、能解释，而不是只觉得眼熟。</p>\n<p>不必记住所有状态码、所有 timeout 参数和完整框架配置。忘记具体写法时，先确定需要的是哪种作用，再查对应文档。比如知道“要限制等待下一块响应数据”，就能找到 read timeout；知道“要限制对外字段”，就能找到 response model。可查的写法之所以找得回来，依靠的是已经建立的关系，而不是把所有细节留成一团模糊印象。</p>\n<p>到这里，系统已经从“一个程序处理自己的值”，扩展成“几个程序按约定交接”。下一步的数据保存、外部依赖恢复和 AI 结果检查，都能挂在这些已有位置上；不需要把每一个新库都当成一门互不相干的知识。</p>\n<h2 id=\"guide-b-s9\">需要继续查阅时</h2>\n<p>正文主例可以离线理解。以下为官方查用入口，页面会持续更新；运行随书项目时以项目依赖文件与本次实验结果为准，不把网页最新示例当成已安装版本的保证。</p>\n<ul>\n<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview\" target=\"_blank\" rel=\"noopener noreferrer\">MDN：HTTP 总览</a>、<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods\" target=\"_blank\" rel=\"noopener noreferrer\">请求方法</a>、<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status\" target=\"_blank\" rel=\"noopener noreferrer\">状态码</a>：查消息结构、方法与状态的语义。</li>\n<li><a href=\"https://docs.python.org/3/library/json.html\" target=\"_blank\" rel=\"noopener noreferrer\">Python：JSON</a>：查 Python 值与 JSON 表示的转换。</li>\n<li><a href=\"https://fastapi.tiangolo.com/tutorial/first-steps/\" target=\"_blank\" rel=\"noopener noreferrer\">FastAPI：First Steps</a>、<a href=\"https://fastapi.tiangolo.com/tutorial/body/\" target=\"_blank\" rel=\"noopener noreferrer\">Request Body</a>、<a href=\"https://fastapi.tiangolo.com/tutorial/response-model/\" target=\"_blank\" rel=\"noopener noreferrer\">Response Model</a>、<a href=\"https://fastapi.tiangolo.com/tutorial/testing/\" target=\"_blank\" rel=\"noopener noreferrer\">Testing</a>：查 route、输入、输出与接口测试。</li>\n<li><a href=\"https://docs.pydantic.dev/latest/concepts/models/\" target=\"_blank\" rel=\"noopener noreferrer\">Pydantic：Models</a>、<a href=\"https://docs.pydantic.dev/latest/concepts/pydantic_settings/\" target=\"_blank\" rel=\"noopener noreferrer\">Settings</a>：查模型值、类型处理与运行配置。</li>\n<li><a href=\"https://www.python-httpx.org/quickstart/\" target=\"_blank\" rel=\"noopener noreferrer\">HTTPX：QuickStart</a>、<a href=\"https://www.python-httpx.org/advanced/clients/\" target=\"_blank\" rel=\"noopener noreferrer\">Clients</a>、<a href=\"https://www.python-httpx.org/advanced/timeouts/\" target=\"_blank\" rel=\"noopener noreferrer\">Timeouts</a>、<a href=\"https://www.python-httpx.org/advanced/transports/\" target=\"_blank\" rel=\"noopener noreferrer\">Transports</a>：查主动调用、连接复用、等待边界和受控传输。</li>\n<li><a href=\"https://uvicorn.dev/settings/\" target=\"_blank\" rel=\"noopener noreferrer\">Uvicorn：Settings</a>：查服务启动与监听参数。</li>\n<li><a href=\"https://fastapi.tiangolo.com/tutorial/header-params/\" target=\"_blank\" rel=\"noopener noreferrer\">FastAPI：Header 参数</a>、<a href=\"https://fastapi.tiangolo.com/tutorial/handling-errors/\" target=\"_blank\" rel=\"noopener noreferrer\">错误处理</a>、<a href=\"https://fastapi.tiangolo.com/advanced/response-headers/\" target=\"_blank\" rel=\"noopener noreferrer\">回应 Header</a>，以及 <a href=\"https://docs.python.org/3/howto/logging.html\" target=\"_blank\" rel=\"noopener noreferrer\">Python：Logging HOWTO</a>：查关联标识与事件记录所用的具体入口。</li>\n</ul>\n<p>如果浏览器和脚本的表现不一致，而且已经确认请求本身相同，再进入浏览器缓存、跨来源限制等按需材料；如果服务出现重复前置检查或多个独立接口组，才需要继续查共享依赖和 router。它们是遇到具体压力后的扩展，不影响这里的基本交接关系成立。</p>\n<h2 id=\"guide-b-s10\">本册总览（需要时再回看）</h2>\n<p>这里保留整册地图、章节关系和查用入口；第一次阅读不需要先读完。</p>\n<h2 id=\"guide-b-s11\">本册知识结构总览</h2>\n<p>下面是同一次程序交接的几个观察角度，不是必须依次背下来的五个类别。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">两个程序怎样一起完成一件事？\n│\n├─ 交换约定：怎样表达“请做什么”和“做得怎样”\n│  ├─ URL、method：目标在哪里，要对它做什么\n│  ├─ headers、body：说明怎样解释消息，携带实际数据\n│  └─ status、回应内容：处理结果是什么，返回了什么\n│\n├─ 数据表示：Python 的值怎样变成双方都能读的 JSON\n│\n├─ 接收与处理：请求怎样进入函数，谁检查输入和业务条件\n│\n├─ 调用与使用：怎样发送请求，怎样拒绝不可用的回应\n│\n└─ 观察与验证：怎样从报文、日志和测试找回实际发生的事\n</code></pre></div>\n<p>这些关系会组合在一起。例如，创建工单时，URL 和 method 指出创建入口，JSON body 带来标题与优先级；服务端检查这些值后建立记录，回应把新编号交回。调用方再把这个编号放进下一次查询的地址。<strong>上一次的结果，能成为下一次请求的输入；两边的程序并不共享同一个 Python 变量。</strong></p>\n<p>FastAPI、HTTPX、Uvicorn 和浏览器也会陆续出现。先知道它们不是四套互相竞争的 HTTP：FastAPI 帮助接收方把请求交给 Python 函数，HTTPX 帮助 Python 主动发起调用，Uvicorn 让服务实际运行并监听，浏览器的 Network 面板用来观察浏览器发出的请求。具体怎么做，会在需要它的时候讲。</p>\n<h2 id=\"guide-b-s12\">从哪里读到哪里</h2>\n<table>\n<thead>\n<tr>\n<th>章节</th>\n<th>要回答的问题</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>B01</td>\n<td>另一个程序怎样收到工单，并把创建结果交回？</td>\n</tr>\n<tr>\n<td>B02</td>\n<td>收到请求后，为什么会运行这个 Python 函数？</td>\n</tr>\n<tr>\n<td>B03</td>\n<td>拿到回应以后，怎样判断结果可以继续用？</td>\n</tr>\n<tr>\n<td>B04</td>\n<td>一次工作经过两个服务，怎样找到最早失败的位置？</td>\n</tr>\n<tr>\n<td>B05</td>\n<td>把服务与客户端实际放在一起，能否创建后再读回同一条记录？</td>\n</tr>\n</tbody>\n</table>\n<p>先读例子中的输入和结果就能理解主线；B05 集中给出电脑上的准备与运行方法。不需要一边首次认识 HTTP，一边提前配置所有工具。各章都有足以追踪当前问题的上下文，B02 的小程序也会从头给出，不要求记得某份旧练习。</p>\n<p>这里不要求默写整份服务代码。值得逐渐用熟的是少量经常发生的动作：读完整地址和 method，查看 status 与 body，用 <code>json=</code> 提交结构化数据，用 route 和输入 model 接入函数，把异常检查放在对应操作周围。更重要的是能解释这些动作为什么在那里。完整配置、少用的参数和错误码细节，在实际需要时查用即可。</p>\n<p>本册后部的“知识关系总览”会按关系再整理一次：哪些工具各管一段，哪些检查看似重复却不能互相替代，以及什么时候选择哪一个。第一次阅读先认识要探索的范围，需要时再回看收束。</p>\n",
+  "toc": [
+    {
+      "id": "guide-b-s1",
+      "text": "第一次只看这里",
+      "level": 2
+    },
+    {
+      "id": "guide-b-s2",
+      "text": "知识关系总览｜把消息、函数和证据放回同一张图",
+      "level": 2
+    },
+    {
+      "id": "guide-b-s3",
+      "text": "API、HTTP、JSON，是同一种东西的三个名字吗？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s4",
+      "text": "选地址、动作还是 body，到底各在决定什么？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s5",
+      "text": "看上去都是检查，为什么要放在不同地方？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s6",
+      "text": "FastAPI、Uvicorn、HTTPX，谁代替谁？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s7",
+      "text": "失败时，先看哪里，才不容易改错地方？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s8",
+      "text": "哪些动作值得用熟，哪些细节需要时再查？",
+      "level": 3
+    },
+    {
+      "id": "guide-b-s9",
+      "text": "需要继续查阅时",
+      "level": 2
+    },
+    {
+      "id": "guide-b-s10",
+      "text": "本册总览（需要时再回看）",
+      "level": 2
+    },
+    {
+      "id": "guide-b-s11",
+      "text": "本册知识结构总览",
+      "level": 2
+    },
+    {
+      "id": "guide-b-s12",
+      "text": "从哪里读到哪里",
+      "level": 2
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1307" width="1800" height="1307" role="img" aria-labelledby="title">
+<title id="title">怎样确认运行条件没有找错？</title>
+<desc>实线用于知识归组，不是执行顺序；带文字的箭头说明实际联系。强调色标出读图主线，不代表其余内容不重要。</desc>
+<style>text {font-family:DengXian,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;}</style>
+<rect width="1800" height="1307" fill="white"/>
+<text x="64" y="51" font-size="20" fill="#286f64" font-weight="700">A / 程序与工具</text>
+<text x="64" y="99" font-size="34" fill="#233734" font-weight="700">A09  怎样确认运行条件没有找错？</text>
+<text x="64" y="149.0" font-size="20" fill="#53635f" font-weight="400">A09把A01路径和A06包安装落实到运行证据；A10观察具体进程，A12用记录的条件重建环境。</text>
+<rect x="64" y="189.0" width="1672" height="56" rx="5" fill="#eaf2ee" stroke="#eaf2ee"/>
+<text x="88" y="221.0" font-size="23" fill="#286f64" font-weight="700">这里单独展开另一组关系，便于看清归属与交接；分面本身不表示选修或可以省略。</text>
+<text x="64" y="278.0" font-size="22" fill="#286f64" font-weight="700">续图 · 与主图共同构成本章关系</text>
+<text x="64" y="315.0" font-size="22" fill="#286f64" font-weight="700">知识归类</text>
+<text x="192" y="315.0" font-size="17" fill="#53635f" font-weight="400">实线表示按本章关注点归组，不表示先后执行，也不是唯一分类。</text>
+<rect x="640.0" y="343.0" width="520" height="65" rx="8" fill="#eaf2ee" stroke="#286f64"/>
+<text x="732.0" y="386.0" font-size="28" fill="#286f64" font-weight="700">运行身份、依赖与配置来源</text>
+<polyline points="900.0,408.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,437.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polyline points="900.0,437.0 900.0,468.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<rect x="64.0" y="468.0" width="1672.0" height="57" rx="8" fill="#eaf2ee" stroke="#a9bab4"/>
+<text x="78.0" y="502.0" font-size="23" fill="#286f64" font-weight="700">定位代码与辅助判断</text>
+<polyline points="73.0,525.0 73.0,560.0" fill="none" stroke="#a9bab4" stroke-width="2"/>
+<polyline points="73.0,525.0 73.0,567.0 91.0,567.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="545.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="575.0" font-size="21" fill="#233734" font-weight="700">按名称找文件</text>
+<text x="103.0" y="605.0" font-size="18" fill="#53635f" font-weight="400">按目录范围、后缀与通配符定位文件，返回完整路径；先决定范围再递归，避免扫安装环境。</text>
+<polyline points="73.0,567.0 73.0,671.0 91.0,671.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="649.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="679.0" font-size="21" fill="#233734" font-weight="700">按内容找文件</text>
+<text x="103.0" y="709.0" font-size="18" fill="#53635f" font-weight="400">按文本查定义、导入和调用所在行，随后读取上下文；命中注释或代码不证明实际执行。</text>
+<polyline points="73.0,671.0 73.0,775.0 91.0,775.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="753.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="783.0" font-size="21" fill="#233734" font-weight="700">传递对象属性（PowerShell 管道）</text>
+<text x="103.0" y="813.0" font-size="18" fill="#53635f" font-weight="400">命令间传文件等带属性的对象，Select-Object取属性；并非先显示表格再拆文字。</text>
+<polyline points="73.0,775.0 73.0,879.0 91.0,879.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="857.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="887.0" font-size="21" fill="#233734" font-weight="700">类型提示、格式与诊断</text>
+<text x="103.0" y="917.0" font-size="18" fill="#53635f" font-weight="400">提示表达预期，格式工具整理写法，诊断发现部分问题；普通Python不因注解自动校验输入。</text>
+<polyline points="73.0,879.0 73.0,983.0 91.0,983.0" fill="none" stroke="#a9bab4" stroke-width="1.5"/>
+<rect x="91.0" y="961.0" width="1633.0" height="88" rx="5" fill="#ffffff" stroke="#d7e0db"/>
+<text x="103.0" y="991.0" font-size="21" fill="#233734" font-weight="700">运行条件说明</text>
+<text x="103.0" y="1021.0" font-size="18" fill="#53635f" font-weight="400">记录目录、解释器、安装、入口和预期证据，让下次可照做；完整版本重建由A12补充。</text>
+<text x="64" y="1085.0" font-size="22" fill="#286f64" font-weight="700">关键横向联系</text>
+<text x="240" y="1085.0" font-size="17" fill="#53635f" font-weight="400">同一知识点可以参与多种关系；箭头上的词才是连接含义。</text>
+<rect x="64" y="1110.0" width="460" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="80" y="1143.0" font-size="21" fill="#233734" font-weight="700">按内容找文件</text>
+<rect x="750" y="1110.0" width="986" height="58" rx="6" fill="#ffffff" stroke="#a9bab4"/>
+<text x="766" y="1143.0" font-size="21" fill="#233734" font-weight="700">脚本位置与绝对路径（__file__ / Path.resolve，见主图）</text>
+<polyline points="538,1147.0 736,1147.0" fill="none" stroke="#286f64" stroke-width="2"/>
+<polygon points="736,1147.0 726.9955289764732,1151.3496553411123 726.9955289764732,1142.6503446588877" fill="#286f64"/>
+<text x="577.5" y="1135.0" font-size="17" fill="#286f64" font-weight="400">定位待运行内容</text>
+<text x="80" y="1193.0" font-size="18" fill="#53635f" font-weight="400">找到代码以后，还需确认执行的确是这份文件。</text>
+<polyline points="64,1251.2 1736,1251.2" fill="none" stroke="#a9bab4" stroke-width="1"/>
+<text x="64" y="1281.2" font-size="17" fill="#53635f" font-weight="400">对照正文：A09  ·  地图用于找关系，具体操作与例外仍回到本章。</text>
+</svg>

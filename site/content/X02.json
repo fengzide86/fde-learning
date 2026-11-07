@@ -1,0 +1,32 @@
+{
+  "id": "X02",
+  "title": "同样返回 503，为什么处理方式不同？",
+  "html": "<p><strong>本章先判断：同一个状态码出现时，失败发生前已经留下了哪些本地和合作方事实；下一步应查证、停止、重试还是转人工。</strong></p>\n<p>现在沿刚才的创建路线制造失败。调用者看到 503，想知道能否再次提交。直接回答“503 就重试”会漏掉最重要的一件事：失败发生之前，本地和合作方分别已经保存了什么？</p>\n<p>本章比较两次互相独立的实验。它们都从空数据库开始，固定输入仍是 Printer-7、打印机离线、整数 3。两次的 T-42 只是各自数据库的第一张票，不能把一条实验留下的行带进另一条。</p>\n<h2 id=\"x02-s1\">第一种 503：连本地创建都没开始</h2>\n<p>让另一个 SQLite connection 持有排他锁，再向 API 提交合法请求。API 已经通过输入验证，随后检查必要的数据读取条件；读取受锁阻塞并达到本地等待限制，于是停止创建。</p>\n<p>这个受控场景在 <code>walkthrough.py write-blocked</code> 中运行：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">&amp; $xPython .\\walkthrough.py write-blocked\nif ($LASTEXITCODE -ne 0) { throw &#x27;写入前失败路线与预期不一致。&#x27; }\n</code></pre></div>\n<p>可观察到的先后关系是：</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">R-X-52 到达 API\n→ validation_passed\n→ 必要数据库读取失败\n→ ticket_write_precondition_failed：database_unavailable\n→ response_completed：503\n\n释放实验锁后读取：tickets=0，next_ticket_number=42\nprovider_calls=0，provider_effects=0\n</code></pre></div>\n<p>最后一项已确认的前进是输入合法；下一项本应是数据条件可用，实际在这里停止。没有工单是预期结果，不是另一个新故障。</p>\n<p>为什么事件名不是 ticket_transaction_failed？因为这次锁首先挡住了创建之前的读取检查，还没有进入 create_intent 的事务。若另一个实验让读取检查通过，再使事务内写入失败，才会走到事务失败事件。同样的公开原因可以来自相邻位置，日志要记录实际发生的那一段。</p>\n<p>“没有 commit 日志”本身不能独立证明 rollback：日志也可能漏记、收集失败或查询条件错了。这里还在释放锁后核对了正确数据库中的行数和计数器，再结合 provider 调用为零，才得到闭合证据。</p>\n<p>故障解除后，本项目允许用相同 key 和完全相同 payload 再次尝试。这时没有旧意图，下一次仍可创建本实验的 T-42。这个规则来自当前程序明确处理的持久化失败，不推广为任意代理或第三方返回 503 都允许安全重试。</p>\n<h2 id=\"x02-s2\">第二种 503：工单与合作方结果都已存在</h2>\n<p>这次让第一笔事务和合作方调用正常完成，只在第二笔事务保存之前制造失败。应用刚取得 PA-1，却没能把派单确认写入本地。响应的 detail 是：</p>\n<div class=\"code-block\"><span class=\"code-language\">json</span><pre><code class=\"language-json\">{&quot;code&quot;:&quot;assignment_result_not_persisted&quot;,&quot;ticket_id&quot;:&quot;T-42&quot;}\n</code></pre></div>\n<p>现在三份事实为：本地有 T-42/open/pending；合作方有一项 PA-1；调用者收到了 503。它们并不矛盾，分别属于不同位置。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">核心事务已 COMMIT\n→ 模拟合作方已产生 PA-1\n→ 第二笔事务未保存确认\n→ 本地 assignment_status 仍 pending\n→ 503 明确指出结果尚未持久化\n</code></pre></div>\n<p>不能把“API 失败”解释成“工单不存在”，也不能把 PA-1 的成功回复解释成“本地已经 partner_confirmed”。这正是必须保留 pending 的原因：应用承认有一个尚未收束的交接。</p>\n<p><code>walkthrough.py pending-recovery</code> 会在同一次独立实验中继续恢复：</p>\n<div class=\"code-block\"><span class=\"code-language\">powershell</span><pre><code class=\"language-powershell\">&amp; $xPython .\\walkthrough.py pending-recovery\nif ($LASTEXITCODE -ne 0) { throw &#x27;pending 恢复路线与预期不一致。&#x27; }\n</code></pre></div>\n<p>程序解除注入的保存故障，换新的 request ID，再传相同创建 key 和 payload。create_intent 识别旧行，返回同一个 T-42，且 assignment_status 仍 pending。应用据此继续派单交接；合作方收到相同 assignment:T-42 和相同内容，交回已经保存的 PA-1，不创建第二项效果。</p>\n<p>第二笔事务这次提交成功。HTTP 返回 200，idempotency_replayed=true，表示本请求在继续原有创建意图。最终应有一张工单、两次合作方调用、一项合作方效果，assignment_status=partner_confirmed。<strong>两次调用不等于两次安排。</strong></p>\n<p>原有 D 册为其独立案件应用保存了版本化 canonical payload，用于判断跨请求恢复资格。X 这里依据自身不可变的工单字段、create_key 与输入摘要恢复这条受限派单路线；不能把 X 的字段集合说成 D 的全部 payload 合同已经照搬。</p>\n<h2 id=\"x02-s3\">外部失败为什么有时返回 202？</h2>\n<p>把合作方改成每次都返回 500，创建仍先保存 T-42。adapter 在有限次数和预算内尝试，无法取得可用确认后，第二笔事务写入 assignment_status=manual_review，同时加入人工接管行和对应事件。</p>\n<div class=\"code-block\"><span class=\"code-language\">text</span><pre><code class=\"language-text\">本地 T-42 已保存\n→ partner 两次 500，无确认结果\n→ manual_review + manual_handoffs 一起提交\n→ HTTP 202，local_saved=true，partner_confirmed=false\n</code></pre></div>\n<p>用户的最低目标“保存工单并让后续人员能够接手”成立；自动派单目标没有完成。所以它是一个明确降级结果，而不是把失败偷偷换成成功。</p>\n<p><code>walkthrough.py degraded</code> 应得到创建 202、重放 200、两次 provider calls、零次 provider effects，以及一条人工接管记录。重放已经收束的 manual_review 意图只读回旧结果，不重新消耗一轮重试预算。</p>\n<p>本例的自动尝试最多两次。每次开始前重新计算剩余时间，传入不超过剩余时间的 timeout，退避等待也受预算限制。HTTPX 的 timeout 约束连接、读、写和连接池等传输阶段；它不是对整个业务调用强制执行的统一墙钟闹钟。代码还能在返回后拒绝超出预算的结果、停止后续尝试，不能声称正在进行的所有底层阶段累计绝不会超时。</p>\n<p>timeout 又与这里的 500 不同。500 已经是收到的回复；timeout 表示当前阶段没有及时得到所需结果，合作方可能已经做了。本地人工接管记录不能据此写“对方肯定没创建”。需要核对的是那一次派单意图，不是盲目再建一个新 key。</p>\n<h2 id=\"x02-s4\">先判断有没有请求，再判断请求停在哪里</h2>\n<p>503 的两条路线都进入了业务函数。若输入更早就被拒绝，调查应停在更早的位置。</p>\n<table>\n<thead>\n<tr>\n<th>实际观察</th>\n<th>当前能定位到哪里</th>\n<th>下一份有用证据</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>parse_priority 对 urgent 报错，HTTP 调用为零</td>\n<td>客户端转换</td>\n<td>当前文字与转换入口</td>\n</tr>\n<tr>\n<td>HTTPX 报 ConnectError，没有 response</td>\n<td>目标连接边界</td>\n<td>实际 URL、端口、监听进程与服务端接收情况</td>\n</tr>\n<tr>\n<td>priority 为字符串，API 返回 422</td>\n<td>输入合同</td>\n<td>本次 request body 与字段错误位置</td>\n</tr>\n<tr>\n<td>validation 通过，数据读取失败，503</td>\n<td>创建之前的数据条件</td>\n<td>正确数据库路径、锁与该次失败事件</td>\n</tr>\n<tr>\n<td>本地 pending，合作方有结果，503</td>\n<td>第二笔事务交接</td>\n<td>本地行、稳定意图及合作方已有 receipt</td>\n</tr>\n<tr>\n<td>本地 manual_review，202</td>\n<td>可选派单降级</td>\n<td>人工接管原因与后续处理者</td>\n</tr>\n</tbody>\n</table>\n<p>这张表帮助选择下一项调查，不要求每次逐行运行全部工具。若已看见 422 且没有业务入口事件，就没有依据先改 SQL 索引。若没有取得 HTTP response，也不能把 transport exception 编造为一个服务器 500。</p>\n<p>定位应从已知输入出发比较期望与实际，但实际收集证据可以从最容易观察的位置开始。客户先给了一条 response，就先确认它属于哪次请求，再向前寻找最后成功与首次偏离。调查顺序不必等于执行顺序。</p>\n<h2 id=\"x02-s5\">另一条分支失败，会不会改变已经保存的工单？</h2>\n<p>假设 R-X-43 的政策请求返回 HTTP 200，但 policy_draft.status=needs_human，reason_code=citation_not_retrieved。这表示 API 成功交回了一个“候选不能采用”的业务结果，不表示模型内容可用。</p>\n<p>本次检索得到 policy-2026 §4，模型却引用其他来源。最早失去依据的位置在候选引用验证，工单 T-42 不应因此被删除或改状态。工具越权也是如此：<code>walkthrough.py ai-permission</code> 会产生 needs_human / tool_permission_denied，tool_calls=0。</p>\n<p>另一个容易混淆的位置是健康检查。应用进程可以回答 /live，但 expected schema=2、数据库 metadata 仍记 1 时，/ready 返回 503，写入也被拦住。这个 X 应用的原因码叫 schema_version_mismatch；F 中较小项目可能使用不同字符串。共通的是期望与实际不相容，不是各示例自动共用一个 reason-code 命名空间。</p>\n<p>看到失败后，先保留本次 request ID、输入形状、公开原因和对应持久事实。重启、修改 retry 或换配置都是会改变现场的动作；它们应当针对已经定位的关系。修复完成后，再重跑当初暴露问题的最小场景，检查那一处偏离是否消失。</p>\n",
+  "toc": [
+    {
+      "id": "x02-s1",
+      "text": "第一种 503：连本地创建都没开始",
+      "level": 2
+    },
+    {
+      "id": "x02-s2",
+      "text": "第二种 503：工单与合作方结果都已存在",
+      "level": 2
+    },
+    {
+      "id": "x02-s3",
+      "text": "外部失败为什么有时返回 202？",
+      "level": 2
+    },
+    {
+      "id": "x02-s4",
+      "text": "先判断有没有请求，再判断请求停在哪里",
+      "level": 2
+    },
+    {
+      "id": "x02-s5",
+      "text": "另一条分支失败，会不会改变已经保存的工单？",
+      "level": 2
+    }
+  ]
+}
